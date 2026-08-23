@@ -171,18 +171,21 @@ export default function DisciplinePage() {
               return <article className="rounded-lg border border-line bg-surface p-6 shadow-card" key={principle.id}><Icon className="h-5 w-5 text-brand" aria-hidden="true" /><h2 className="mt-5 font-medium text-heading">{principle.title}</h2><p className="mt-2 text-sm leading-6 text-muted">{principle.description}</p></article>;
             })}
           </section>
-          <section className="mt-10 rounded-lg border border-line bg-[#0B1117] p-6 text-white" aria-label={t("pages.discipline.statsLabel")}>
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-5">
-              {[
-                ["statTotal", data.stats.totalDecisions, "text-white"],
-                ["statOpen", data.stats.open, "text-white"],
-                ["statReviewed", data.stats.reviewed, "text-white"],
-                ["statHit", data.stats.hit, "text-market-positive"],
-                ["statWrong", data.stats.wrong, "text-market-negative"],
-              ].map(([label, value, color]) => <div key={label as string}><p className="text-xs text-white/60">{t(`pages.discipline.${label}`)}</p><p className={`mt-2 text-3xl font-medium tabular-nums ${color}`}>{valueOrDash(value as number | null)}</p></div>)}
-            </div>
-            <p className="mt-6 text-xs text-white/60">{t("pages.discipline.coverage", { value: data.stats.reviewCoveragePct ?? "—" })} · {t("pages.discipline.dataSource")}</p>
+          <section className="mt-10 grid grid-cols-2 border-y border-line sm:grid-cols-5" aria-label={t("pages.discipline.statsLabel")}>
+            {[
+              ["statTotal", data.stats.totalDecisions, "text-heading"],
+              ["statOpen", data.stats.open, "text-heading"],
+              ["statReviewed", data.stats.reviewed, "text-heading"],
+              ["statHit", data.stats.hit, "text-market-positive"],
+              ["statWrong", data.stats.wrong, "text-market-negative"],
+            ].map(([label, value, color]) => (
+              <div className="border-b border-line px-4 py-5 last:border-b-0 sm:border-r sm:border-b-0 sm:last:border-r-0" key={label as string}>
+                <p className="text-xs text-muted">{t(`pages.discipline.${label}`)}</p>
+                <p className={`mt-2 text-3xl font-medium tabular-nums ${color}`}>{valueOrDash(value as number | null)}</p>
+              </div>
+            ))}
           </section>
+          <p className="mt-4 text-xs text-muted">{t("pages.discipline.coverage", { value: data.stats.reviewCoveragePct ?? "—" })} · {t("pages.discipline.dataSource")}</p>
           <section className="mt-14" aria-labelledby="framework-title"><h2 className="text-xl font-medium text-heading" id="framework-title">{t("pages.discipline.frameworkTitle")}</h2><p className="mt-2 text-sm text-muted">{t("pages.discipline.frameworkSubtitle")}</p><div className="mt-6 grid gap-4 sm:grid-cols-2">{data.framework.map(renderFrameworkRule)}</div></section>
           <section className="mt-14" aria-labelledby="logs-title"><h2 className="text-xl font-medium text-heading" id="logs-title">{t("pages.discipline.logsTitle")}</h2><p className="mt-2 text-sm text-muted">{t("pages.discipline.logsSubtitle")}</p><div className="mt-6 space-y-4">{data.decisionLogs.map(renderLog)}</div></section>
           <section className="mt-14 border-t border-line bg-surfaceSubtle px-5 py-8 sm:px-6" aria-labelledby="timeline-title"><h2 className="text-xl font-medium text-heading" id="timeline-title">{t("pages.discipline.timelineTitle")}</h2><div className="mt-6 space-y-6">{data.timeline.map((item) => <div className="grid gap-3 border-l-2 border-brand pl-5 sm:grid-cols-[9rem_1fr]" key={`${item.date}-${item.actionType}`}><time className="font-mono text-xs text-brand">{item.date ?? "—"}</time><div><p className="text-sm leading-6 text-text">{item.summary}</p><div className="mt-2 flex gap-2">{item.ruleIds.map((id) => <span className="rounded-full bg-surface px-2 py-1 font-mono text-xs text-brand" key={id}>{id}</span>)}</div></div></div>)}</div></section>
