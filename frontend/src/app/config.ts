@@ -3,9 +3,11 @@ export const runtimeMode =
 
 const basePath = import.meta.env.BASE_URL || "/";
 
+// snapshot 模式强制走 {basePath}snapshots（不受 .env.local 的 VITE_API_BASE_URL 干扰）
 export const apiBaseUrl =
-  import.meta.env.VITE_API_BASE_URL ||
-  (runtimeMode === "snapshot" ? `${basePath}snapshots` : "/api");
+  runtimeMode === "snapshot"
+    ? `${basePath}snapshots`
+    : import.meta.env.VITE_API_BASE_URL || "/api";
 
 export const appConfig = {
   runtimeMode,

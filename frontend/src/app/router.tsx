@@ -27,13 +27,10 @@ const localeRoute = (element: ReactNode) => ({
   ],
 });
 
-export const router = createHashRouter(
-  [
-    { path: "/", element: <Navigate to="/zh" replace /> },
-    localeRoute(<SiteShell />),
-    { path: "*", element: <Navigate to="/zh" replace /> },
-  ],
-  { basename: import.meta.env.VITE_BASE_PATH || "/" },
-);
+export const router = createHashRouter([
+  { path: "/", element: <Navigate to="/zh" replace /> },
+  localeRoute(<SiteShell />),
+  { path: "*", element: <Navigate to="/zh" replace /> },
+]);
 
 export { locales };

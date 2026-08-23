@@ -67,27 +67,27 @@ export class SnapshotClient implements DataProvider {
   }
 
   async getArchitecture(): Promise<ArchitectureData> {
-    const data = await this.read<unknown>("/snapshots/architecture.json", null);
+    const data = await this.read<unknown>("architecture.json", null);
     return data === null ? emptyArchitecture : mapArchitectureResponse(data);
   }
 
   async getAssets(): Promise<AssetsData> {
-    const data = await this.read<unknown>("/snapshots/data-assets.json", null);
+    const data = await this.read<unknown>("data-assets.json", null);
     return data === null ? emptyAssets : mapAssetsResponse(data);
   }
 
   async getDecisions(): Promise<DecisionSummary> {
-    const data = await this.read<unknown>("/snapshots/decision-desk.json", null);
+    const data = await this.read<unknown>("decision-desk.json", null);
     return data === null ? emptyDecisions : mapDecisionsResponse(data);
   }
 
   async getDiscipline(): Promise<DisciplineData> {
-    const data = await this.read<unknown>("/snapshots/discipline.json", null);
+    const data = await this.read<unknown>("discipline.json", null);
     return data === null ? emptyDiscipline : mapDisciplineResponse(data);
   }
 
   async getMarket(): Promise<MarketData> {
-    const data = await this.read<unknown>("/snapshots/market.json", null);
+    const data = await this.read<unknown>("market.json", null);
     return data === null ? emptyMarket : mapMarketResponse(data);
   }
 
