@@ -23,6 +23,8 @@
 - **站点**：https://yuyeccc.github.io/qianboshi-portfolio/（GitHub Pages，hash 路由）
 - **仓库**：github.com/Yuyeccc/qianboshi-portfolio（main 分支，Actions 自动部署）
 - **快照生成**：`C:/Python314/python.exe backend/scripts/generate_snapshots.py`（生成 frontend/public/snapshots/ 8 个 JSON，含 briefs.json 内嵌 20 篇全文；改数据后重跑 + push 即自动部署）
+- **一键更新**：`C:/Python314/python.exe backend/scripts/update_site.py`（生成快照 → git 提交 → push，无变更自动跳过）
+- **自动定时**：Hermes cron `dfd0263d3595`「作品集站点快照更新」，每天 23:00，no-agent 模式跑 ~/AppData/Local/hermes/scripts/update_qianboshi_site.py（脚本副本），deliver local。手动触发：`hermes cron run dfd0263d3595`
 - **部署工作流**：`.github/workflows/deploy.yml`（npm ci → build:snapshot → upload-pages-artifact → deploy-pages）
 
 ## ⚠️ 部署血泪坑（2026-08-23）
