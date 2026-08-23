@@ -1,0 +1,170 @@
+{
+  "discipline_data": {
+    "meta": {
+      "generated_at": "2026-08-23T06:10:02.375001+00:00",
+      "source": "live"
+    },
+    "principles": [
+      {
+        "id": "p1",
+        "title": "观点必须有来源",
+        "description": "每条观点记录分析师/来源/日期"
+      },
+      {
+        "id": "p2",
+        "title": "预测必须有时间窗口",
+        "description": "每个判断挂 maturity，到期自动复盘"
+      },
+      {
+        "id": "p3",
+        "title": "到期后必须记录结果",
+        "description": "复盘回填收益并判定 hit/wrong"
+      }
+    ],
+    "stats": {
+      "total_decisions": 5,
+      "open": 3,
+      "reviewed": 2,
+      "hit": 0,
+      "wrong": 2,
+      "review_coverage_pct": 40,
+      "generated_at": "2026-08-23T06:10:02.375001+00:00"
+    },
+    "framework": [
+      {
+        "rule_id": "r1",
+        "title": "情绪定方向",
+        "description": "恐慌贪婪定多空，不追涨杀跌",
+        "status": "active"
+      },
+      {
+        "rule_id": "r2",
+        "title": "纪律定仓位",
+        "description": "按档位计划分批建仓，仓位不由感觉决定",
+        "status": "active"
+      },
+      {
+        "rule_id": "r3",
+        "title": "止损定退出",
+        "description": "预设失效条件，触达即退出",
+        "status": "active"
+      },
+      {
+        "rule_id": "r4",
+        "title": "到期必复盘",
+        "description": "判断挂时间窗口，到期自动复盘",
+        "status": "active"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2026-08-06",
+        "action_type": "decision",
+        "summary": "建立 5 条决策日志，记录方向、依据与时间窗口",
+        "rule_ids": [
+          "r1",
+          "r2"
+        ]
+      },
+      {
+        "date": "2026-08-11",
+        "action_type": "review",
+        "summary": "2 条判断到期复盘，记录结果与修正",
+        "rule_ids": [
+          "r4"
+        ]
+      }
+    ],
+    "decision_logs": [
+      {
+        "decision_id": "dec_2026-08-06_ALUMINUM_001",
+        "date": "2026-08-06",
+        "asset_name": "铝",
+        "direction": "bullish",
+        "horizon": "medium",
+        "conviction": 0.65,
+        "thesis": "铝有结构性逻辑：国内电解铝成本优势、无产量过剩、价格距高位已跌40-50%、神火7月回购3亿股权，关注神火",
+        "key_reasons": [
+          "国内电解铝相对便宜",
+          "铝无产量过剩",
+          "价格距高位跌40-50%"
+        ],
+        "status": "open",
+        "review": null
+      },
+      {
+        "decision_id": "dec_2026-08-06_BAIJIU_001",
+        "date": "2026-08-06",
+        "asset_name": "白酒",
+        "direction": "bearish",
+        "horizon": "short",
+        "conviction": 0.7,
+        "thesis": "白酒消费颓势明显，年轻人不爱喝白酒，短期之内很难缓过来",
+        "key_reasons": [
+          "消费整体颓势",
+          "年轻人白酒消费习惯减弱",
+          "白酒需求端承压"
+        ],
+        "status": "reviewed",
+        "review": {
+          "review_date": "2026-08-11",
+          "result_label": "wrong",
+          "outcome_return": 2.3256,
+          "horizon_days": 5
+        }
+      },
+      {
+        "decision_id": "dec_2026-08-06_TECH_001",
+        "date": "2026-08-06",
+        "asset_name": "科技股",
+        "direction": "bearish",
+        "horizon": "short",
+        "conviction": 0.6,
+        "thesis": "科技股周二周三已大涨，位置偏高不敢进，预计回调：光模块相对还好，其他半导体周四可能下跌套人",
+        "key_reasons": [
+          "科技股短期涨幅过大",
+          "半导体位置偏高",
+          "不愿承担套牢风险"
+        ],
+        "status": "reviewed",
+        "review": {
+          "review_date": "2026-08-11",
+          "result_label": "wrong",
+          "outcome_return": 1.9048,
+          "horizon_days": 5
+        }
+      },
+      {
+        "decision_id": "dec_2026-08-06_INNOV_DRUG_001",
+        "date": "2026-08-06",
+        "asset_name": "创新药",
+        "direction": "bullish",
+        "horizon": "medium",
+        "conviction": 0.6,
+        "thesis": "医疗板块已阴跌很久，创新药被带下来只是简单带下来，未来有涨的趋势，想买港股创新药（需进一步分析）",
+        "key_reasons": [
+          "医疗板块阴跌已久，估值压力释放",
+          "被大盘带下来而非基本面恶化"
+        ],
+        "status": "open",
+        "review": null
+      },
+      {
+        "decision_id": "dec_2026-08-06_GOLD_001",
+        "date": "2026-08-06",
+        "asset_name": "黄金",
+        "direction": "bullish",
+        "horizon": "medium",
+        "conviction": 0.7,
+        "thesis": "黄金强相关于美元加息降息，8月已兑现9月加息趋势，该跌的已跌得差不多；预计再震荡一段时间后，9月开始往上走",
+        "key_reasons": [
+          "8月已兑现9月加息预期，利空出尽",
+          "美元加息周期末端，黄金压力释放",
+          "该跌的已经跌得差不多"
+        ],
+        "status": "open",
+        "review": null
+      }
+    ]
+  }
+}

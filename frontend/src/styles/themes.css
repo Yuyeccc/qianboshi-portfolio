@@ -1,0 +1,84 @@
+:root,
+[data-theme="product"] {
+  --color-bg: #F7F8FA;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #FFFFFF;
+  --color-surface-subtle: #F7F9FC;
+  --color-surface-brand: #E6F5F3;
+  --color-border: #E5E7EB;
+  --color-border-strong: #C9D4DE;
+  --color-heading: #111827;
+  --color-text: #4B5563;
+  --color-muted: #6B7280;
+  --color-brand: #0B7A75;
+  --color-brand-strong: #09635F;
+  --color-brand-hover: #08635F;
+  --color-market-positive: #E05252;
+  --color-market-negative: #26A269;
+  --color-warning: #D99A2B;
+  --color-info: #4D91E8;
+  --color-data-flow: #0B7A75;
+  --color-model: #4D91E8;
+  --color-llm: #6B5CC5;
+  --color-scheduled: #B17A1D;
+  --shadow-panel: 0 12px 30px rgba(50, 50, 93, 0.12),
+    0 3px 8px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 8px 24px rgba(50, 50, 93, 0.06);
+  --shadow-card-hover: 0 14px 34px rgba(50, 50, 93, 0.11);
+}
+
+[data-theme="architecture"] {
+  --color-bg: #0B1117;
+  --color-surface: #111A23;
+  --color-surface-raised: #17232E;
+  --color-surface-subtle: #111A23;
+  --color-surface-brand: #123B38;
+  --color-border: #263542;
+  --color-border-strong: #385263;
+  --color-heading: #F4F7FB;
+  --color-text: #C9D5DF;
+  --color-muted: #8293A3;
+  --color-brand: #5DE2D0;
+  --color-brand-strong: #7DE8D8;
+  --color-brand-hover: #88EDE0;
+  --color-data-flow: #5DE2D0;
+  --color-model: #6EA8FE;
+  --color-llm: #A78BFA;
+  --color-scheduled: #F4C46B;
+  --color-market-positive: #E05252;
+  --color-market-negative: #26A269;
+  --color-warning: #F4C46B;
+  --color-info: #6EA8FE;
+  --shadow-panel: 0 12px 30px rgba(0, 0, 0, 0.24),
+    0 3px 8px rgba(0, 0, 0, 0.18);
+  --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.25);
+  --shadow-card-hover: 0 14px 38px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="terminal"] {
+  --color-bg: #0D1218;
+  --color-surface: #141B23;
+  --color-surface-raised: #1B2530;
+  --color-surface-subtle: #141B23;
+  --color-surface-brand: #153A3A;
+  --color-border: #293642;
+  --color-border-strong: #3A4B59;
+  --color-heading: #F1F5F9;
+  --color-text: #CBD5E1;
+  --color-muted: #81909D;
+  --color-brand: #0B7A75;
+  --color-brand-strong: #35B8AE;
+  --color-brand-hover: #0F918A;
+  --color-market-positive: #E05252;
+  --color-market-negative: #26A269;
+  --color-warning: #D99A2B;
+  --color-info: #4D91E8;
+  --color-data-flow: #0B7A75;
+  --color-model: #4D91E8;
+  --color-llm: #7C6AC7;
+  --color-scheduled: #D99A2B;
+  --shadow-panel: 0 12px 30px rgba(0, 0, 0, 0.24),
+    0 3px 8px rgba(0, 0, 0, 0.18);
+  --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 14px 38px rgba(0, 0, 0, 0.4);
+}

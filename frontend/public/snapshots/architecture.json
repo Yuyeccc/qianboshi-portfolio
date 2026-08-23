@@ -1,0 +1,313 @@
+{
+  "architecture_data": {
+    "meta": {
+      "generated_at": "2026-08-23T06:10:01.970795+00:00",
+      "source": "live"
+    },
+    "summary_tags": [
+      "Python-first",
+      "GPU ASR",
+      "RAG-enabled",
+      "Event-driven Review",
+      "Feishu Delivery"
+    ],
+    "pipeline_status": {
+      "scheduler": "active",
+      "last_checked": "2026-08-22 22:39",
+      "detected_today": 8,
+      "processed_total": 138,
+      "queue_pending": 0,
+      "channels": [
+        {
+          "name": "史诗级韭菜",
+          "uid": "322005137",
+          "last_check": "2026-08-22 22:37",
+          "total_videos": 50
+        },
+        {
+          "name": "深研一点",
+          "uid": "179666921",
+          "last_check": "2026-08-22 22:37",
+          "total_videos": 50
+        },
+        {
+          "name": "钱博士直播",
+          "uid": "480741488",
+          "last_check": "2026-08-22 22:38",
+          "total_videos": 50
+        },
+        {
+          "name": "钱博士短视频",
+          "uid": "1129838925",
+          "last_check": "2026-08-22 22:38",
+          "total_videos": 50
+        },
+        {
+          "name": "笨笨的韭菜",
+          "uid": "11473291",
+          "last_check": "2026-08-22 22:37",
+          "total_videos": 50
+        },
+        {
+          "name": "趋势天哥",
+          "uid": "1372241958",
+          "last_check": "2026-08-22 22:38",
+          "total_videos": 50
+        }
+      ]
+    },
+    "layers": [
+      {
+        "layer_id": "source",
+        "layer_name": "采集层",
+        "layer_name_en": "Source Layer",
+        "description": "从 B 站财经 UP 主持续采集直播与短视频",
+        "nodes": [
+          {
+            "name": "B站财经UP主",
+            "role": "6 个内容源：钱博士直播/短视频/深研一点/笨笨的韭菜/史诗级韭菜/趋势天哥",
+            "tech": "Bilibili API"
+          },
+          {
+            "name": "直播录像",
+            "role": "全量收录直播回放",
+            "tech": "monitor_bilibili"
+          },
+          {
+            "name": "短视频",
+            "role": "短视频观点补充",
+            "tech": "Bilibili API"
+          }
+        ]
+      },
+      {
+        "layer_id": "acquisition",
+        "layer_name": "采集下载层",
+        "layer_name_en": "Acquisition Layer",
+        "description": "定时调度、下载与去重",
+        "nodes": [
+          {
+            "name": "定时调度",
+            "role": "工作日 22:00 cron 检测新视频",
+            "tech": "Hermes cron"
+          },
+          {
+            "name": "音视频下载",
+            "role": "下载 wav 音频，失败重试",
+            "tech": "yt-dlp"
+          },
+          {
+            "name": "去重与记录",
+            "role": "BV 去重，处理记录持久化",
+            "tech": "pipeline_queue.json"
+          }
+        ]
+      },
+      {
+        "layer_id": "speech",
+        "layer_name": "语音转写层",
+        "layer_name_en": "Speech Layer",
+        "description": "GPU 加速语音转写，产出带时间戳的逐句文本",
+        "nodes": [
+          {
+            "name": "GPU 转写",
+            "role": "faster-whisper 时间戳级转写",
+            "tech": "faster-whisper + CUDA"
+          },
+          {
+            "name": "分段处理",
+            "role": "长视频分片转写避免超时",
+            "tech": "batch_transcribe_gpu"
+          },
+          {
+            "name": "失败重试",
+            "role": "转写失败自动重试，不阻塞队列",
+            "tech": "drain_queue"
+          }
+        ]
+      },
+      {
+        "layer_id": "understanding",
+        "layer_name": "语义理解层",
+        "layer_name_en": "Understanding Layer",
+        "description": "ASR 纠错 + LLM 结构化抽取，把口语转成结构化观点",
+        "nodes": [
+          {
+            "name": "ASR 纠错",
+            "role": "两轮纠错：术语表/上下文修正",
+            "tech": "batch_asr_fix"
+          },
+          {
+            "name": "LLM 结构化",
+            "role": "抽取观点/资产/多空方向/时间窗口/置信度",
+            "tech": "DeepSeek LLM"
+          },
+          {
+            "name": "观点入库",
+            "role": "实体归一化 + 证据链保留（view_id/source/date/analyst）",
+            "tech": "view_extractor"
+          }
+        ]
+      },
+      {
+        "layer_id": "knowledge",
+        "layer_name": "知识层",
+        "layer_name_en": "Knowledge Layer",
+        "description": "向量检索 + 结构化库，观点可追溯可检索",
+        "nodes": [
+          {
+            "name": "结构化观点库",
+            "role": "9727 条观点，实体/多空/周期索引",
+            "tech": "structured_views.jsonl"
+          },
+          {
+            "name": "向量检索",
+            "role": "11011 chunks，新鲜度加权排序",
+            "tech": "ChromaDB + MiniLM"
+          },
+          {
+            "name": "笔记沉淀",
+            "role": "987 篇 Markdown 笔记",
+            "tech": "Obsidian vault"
+          }
+        ]
+      },
+      {
+        "layer_id": "decision",
+        "layer_name": "决策层",
+        "layer_name_en": "Decision Layer",
+        "description": "把研究资产组织成可复盘的决策产物",
+        "nodes": [
+          {
+            "name": "盘前简报",
+            "role": "8 章日报：大势/持仓/决策台/多空对照/资产卡",
+            "tech": "agent.py"
+          },
+          {
+            "name": "多空对照卡",
+            "role": "多头/空头/分歧/共识，8 张资产卡",
+            "tech": "debate_card_builder"
+          },
+          {
+            "name": "预测事件",
+            "role": "31320 个观点事件，回测命中率",
+            "tech": "prediction_events"
+          }
+        ]
+      },
+      {
+        "layer_id": "delivery",
+        "layer_name": "交付复盘层",
+        "layer_name_en": "Delivery & Review Layer",
+        "description": "推送飞书 + 决策到期自动复盘，形成闭环",
+        "nodes": [
+          {
+            "name": "飞书推送",
+            "role": "简报/持仓/复盘推送到群",
+            "tech": "Feishu API"
+          },
+          {
+            "name": "决策复盘",
+            "role": "到期自动回填收益并生成复盘",
+            "tech": "decision_review_generator"
+          },
+          {
+            "name": "MCP 工具",
+            "role": "9 个工具暴露给 Agent 实时查询",
+            "tech": "FastMCP"
+          }
+        ]
+      }
+    ],
+    "view_lifecycle": [
+      {
+        "step": "视频片段",
+        "detail": "B站直播回放/短视频"
+      },
+      {
+        "step": "转写文本",
+        "detail": "faster-whisper 带时间戳"
+      },
+      {
+        "step": "ASR 修正",
+        "detail": "术语表+上下文纠错"
+      },
+      {
+        "step": "结构化观点",
+        "detail": "资产/多空/周期/置信度"
+      },
+      {
+        "step": "RAG chunk",
+        "detail": "向量化入库，可检索"
+      },
+      {
+        "step": "资产卡/多空卡",
+        "detail": "进入投研资产"
+      },
+      {
+        "step": "预测事件",
+        "detail": "挂回测窗口"
+      },
+      {
+        "step": "到期复盘",
+        "detail": "收益回填+命中判定"
+      }
+    ],
+    "mcp_tools": [
+      {
+        "name": "pipeline_status",
+        "input": "无",
+        "output": "流水线各环节实时状态",
+        "purpose": "检查监控/队列/转写/RAG 是否健康"
+      },
+      {
+        "name": "queue_list",
+        "input": "limit",
+        "output": "待处理任务列表",
+        "purpose": "查看积压与处理进度"
+      },
+      {
+        "name": "logs_tail",
+        "input": "file/lines",
+        "output": "日志尾部",
+        "purpose": "排查流水线运行问题"
+      },
+      {
+        "name": "rag_stats",
+        "input": "无",
+        "output": "向量库 chunk/笔记统计",
+        "purpose": "核对知识库规模与健康"
+      },
+      {
+        "name": "get_asset_analysis_card",
+        "input": "asset_id",
+        "output": "资产分析卡",
+        "purpose": "驱动因素→状态→影响→证据"
+      },
+      {
+        "name": "get_debate_card",
+        "input": "entity/lookback_days",
+        "output": "多空对照卡",
+        "purpose": "多头/空头/分歧/共识一屏对照"
+      },
+      {
+        "name": "get_evidence_pack",
+        "input": "asset_id/horizon",
+        "output": "证据包",
+        "purpose": "10+1 字段聚合全证据"
+      },
+      {
+        "name": "get_decision_review",
+        "input": "asset_id/use_llm",
+        "output": "决策复盘报告",
+        "purpose": "判断→结果→认知修正"
+      },
+      {
+        "name": "list_user_decisions",
+        "input": "status",
+        "output": "决策日志",
+        "purpose": "用户拍板记录与状态"
+      }
+    ]
+  }
+}

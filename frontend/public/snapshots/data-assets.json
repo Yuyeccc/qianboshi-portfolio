@@ -1,0 +1,257 @@
+{
+  "assets": {
+    "metrics": {
+      "structured_views": 9727,
+      "prediction_events": 31320,
+      "notes": 987,
+      "rag_chunks": 11011,
+      "analysts": 11,
+      "asset_cards": 8,
+      "generated_at": "2026-08-23T06:10:02.362381+00:00"
+    },
+    "stance_dist": [
+      {
+        "name": "bullish",
+        "label_zh": "看多",
+        "value": 2465
+      },
+      {
+        "name": "bearish",
+        "label_zh": "看空",
+        "value": 1793
+      },
+      {
+        "name": "neutral",
+        "label_zh": "中性",
+        "value": 4791
+      },
+      {
+        "name": "watch",
+        "label_zh": "观察",
+        "value": 303
+      },
+      {
+        "name": "risk",
+        "label_zh": "风险",
+        "value": 375
+      }
+    ],
+    "horizon_dist": [
+      {
+        "name": "intraday",
+        "label_zh": "日内",
+        "value": 1756
+      },
+      {
+        "name": "short",
+        "label_zh": "短期",
+        "value": 2308
+      },
+      {
+        "name": "medium",
+        "label_zh": "中期",
+        "value": 1319
+      },
+      {
+        "name": "long",
+        "label_zh": "长期",
+        "value": 246
+      },
+      {
+        "name": "unknown",
+        "label_zh": "未标注",
+        "value": 4098
+      }
+    ],
+    "source_contrib": [
+      {
+        "name": "钱博士直播",
+        "views": 4441
+      },
+      {
+        "name": "钱博士短视频",
+        "views": 1180
+      },
+      {
+        "name": "笨笨的韭菜",
+        "views": 752
+      },
+      {
+        "name": "史诗级韭菜",
+        "views": 737
+      },
+      {
+        "name": "趋势天哥",
+        "views": 655
+      },
+      {
+        "name": "旗帜鲜明",
+        "views": 572
+      },
+      {
+        "name": "李一恩",
+        "views": 469
+      },
+      {
+        "name": "投机大拿",
+        "views": 322
+      },
+      {
+        "name": "柏年说",
+        "views": 274
+      },
+      {
+        "name": "任泽平",
+        "views": 253
+      }
+    ],
+    "analyst_rank": [
+      {
+        "name": "任泽平",
+        "hit_rate": 0.7941,
+        "samples": 34
+      },
+      {
+        "name": "笨笨的韭菜",
+        "hit_rate": 0.6667,
+        "samples": 18
+      },
+      {
+        "name": "财联社",
+        "hit_rate": 0.6667,
+        "samples": 3
+      },
+      {
+        "name": "旗帜鲜明",
+        "hit_rate": 0.6,
+        "samples": 55
+      },
+      {
+        "name": "史诗级韭菜",
+        "hit_rate": 0.6,
+        "samples": 10
+      },
+      {
+        "name": "李一恩",
+        "hit_rate": 0.584,
+        "samples": 125
+      },
+      {
+        "name": "柏年说",
+        "hit_rate": 0.5,
+        "samples": 10
+      },
+      {
+        "name": "钱博士直播",
+        "hit_rate": 0.4884,
+        "samples": 86
+      }
+    ],
+    "debate_cards": [
+      {
+        "entity": "国产替代",
+        "bullish": 98,
+        "bearish": 76,
+        "neutral": 130,
+        "consensus": "neutral",
+        "disagreement": 0.4706,
+        "updated": "2026-08-06T16:18:41"
+      },
+      {
+        "entity": "300502.SZ",
+        "bullish": 106,
+        "bearish": 68,
+        "neutral": 117,
+        "consensus": "neutral",
+        "disagreement": 0.4503,
+        "updated": "2026-08-06T16:18:45"
+      },
+      {
+        "entity": "300308.SZ",
+        "bullish": 106,
+        "bearish": 68,
+        "neutral": 117,
+        "consensus": "neutral",
+        "disagreement": 0.4503,
+        "updated": "2026-08-06T16:18:44"
+      },
+      {
+        "entity": "大盘",
+        "bullish": 84,
+        "bearish": 60,
+        "neutral": 140,
+        "consensus": "neutral",
+        "disagreement": 0.4054,
+        "updated": "2026-08-05T20:55:39"
+      },
+      {
+        "entity": "半导体",
+        "bullish": 78,
+        "bearish": 58,
+        "neutral": 126,
+        "consensus": "neutral",
+        "disagreement": 0.4158,
+        "updated": "2026-08-06T01:14:38"
+      },
+      {
+        "entity": "光模块",
+        "bullish": 84,
+        "bearish": 72,
+        "neutral": 84,
+        "consensus": "neutral",
+        "disagreement": 0.576,
+        "updated": "2026-08-06T01:14:39"
+      },
+      {
+        "entity": "159813.SZ",
+        "bullish": 75,
+        "bearish": 56,
+        "neutral": 92,
+        "consensus": "neutral",
+        "disagreement": 0.487,
+        "updated": "2026-08-06T16:18:43"
+      },
+      {
+        "entity": "先进制程",
+        "bullish": 75,
+        "bearish": 56,
+        "neutral": 92,
+        "consensus": "neutral",
+        "disagreement": 0.487,
+        "updated": "2026-08-06T16:18:43"
+      }
+    ],
+    "sample_views": [
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-08-16",
+        "stance": "neutral",
+        "claim": "CPU（共封装光学）技术路径——CPU不用EML激光器和DSP（确定性不用），用CW激光器（功率从70毫瓦提升到300毫瓦），需要保偏光纤和保偏FAU，普通FA"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-08-16",
+        "stance": "neutral",
+        "claim": "核电产业链的时间节奏——设备端现在是好时候，原料端27年开始是好时候，发电端30年以后才是好时候。"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-08-16",
+        "stance": "neutral",
+        "claim": "情绪与基本面的关系——知道基本面会涨但不知道情绪什么时候起来；情绪起来可能三倍五倍，没有情绪可能只有3%5%。"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-08-16",
+        "stance": "neutral",
+        "claim": "板块内\"二哥比大哥好\"的规律——任何板块里边都是二哥比大哥好（弹性更大）。"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-08-16",
+        "stance": "neutral",
+        "claim": "黄金与美债利率的反向关系——黄金是零利率资产，美债利率越低，黄金相对吸引力越高。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "decisions_data": {
+    "stats": {
+      "total": 5,
+      "open": 3,
+      "reviewed": 2,
+      "hit": 0,
+      "wrong": 2,
+      "generated_at": "2026-08-23T06:10:02.368571+00:00"
+    },
+    "decisions": [
+      {
+        "decision_id": "dec_2026-08-06_TECH_001",
+        "asset_name": "科技股",
+        "asset_type": "sector",
+        "decision_date": "2026-08-06",
+        "horizon": "short",
+        "direction": "bearish",
+        "conviction": 0.6,
+        "thesis": "科技股周二周三已大涨，位置偏高不敢进，预计回调：光模块相对还好，其他半导体周四可能下跌套人。",
+        "status": "reviewed",
+        "review_result": "wrong"
+      },
+      {
+        "decision_id": "dec_2026-08-06_INNOV_DRUG_001",
+        "asset_name": "创新药",
+        "asset_type": "sector",
+        "decision_date": "2026-08-06",
+        "horizon": "medium",
+        "direction": "bullish",
+        "conviction": 0.6,
+        "thesis": "医疗板块已阴跌很久，创新药被带下来只是简单带下来，未来有涨的趋势，想买港股创新药（需进一步分析）。",
+        "status": "open",
+        "review_result": null
+      },
+      {
+        "decision_id": "dec_2026-08-06_BAIJIU_001",
+        "asset_name": "白酒",
+        "asset_type": "sector",
+        "decision_date": "2026-08-06",
+        "horizon": "short",
+        "direction": "bearish",
+        "conviction": 0.7,
+        "thesis": "白酒消费颓势明显，年轻人不爱喝白酒，短期之内很难缓过来。",
+        "status": "reviewed",
+        "review_result": "wrong"
+      },
+      {
+        "decision_id": "dec_2026-08-06_ALUMINUM_001",
+        "asset_name": "铝",
+        "asset_type": "commodity",
+        "decision_date": "2026-08-06",
+        "horizon": "medium",
+        "direction": "bullish",
+        "conviction": 0.65,
+        "thesis": "铝有结构性逻辑：国内电解铝成本优势、无产量过剩、价格距高位已跌40-50%、神火7月回购3亿股权，关注神火。",
+        "status": "open",
+        "review_result": null
+      },
+      {
+        "decision_id": "dec_2026-08-06_GOLD_001",
+        "asset_name": "黄金",
+        "asset_type": "commodity",
+        "decision_date": "2026-08-06",
+        "horizon": "medium",
+        "direction": "bullish",
+        "conviction": 0.7,
+        "thesis": "黄金强相关于美元加息降息，8月已兑现9月加息趋势，该跌的已跌得差不多；预计再震荡一段时间后，9月开始往上走。",
+        "status": "open",
+        "review_result": null
+      }
+    ],
+    "asset_cards": [
+      {
+        "asset_id": "AI",
+        "asset_name": "AI应用",
+        "asset_type": "theme",
+        "description": "AI应用中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "应用商业化",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "算力需求",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "美股AI映射",
+            "current_state": "近5日走强+3.16%",
+            "impact_direction": "positive",
+            "impact_strength": "medium"
+          }
+        ]
+      },
+      {
+        "asset_id": "INNOV_DRUG",
+        "asset_name": "创新药",
+        "asset_type": "sector",
+        "description": "创新药中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "BD出海",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "创新药个股",
+            "current_state": "看多0/看空0/中性1（近30天）；药明康德中性(钱博士直播 7.23)",
+            "impact_direction": "negative",
+            "impact_strength": "medium"
+          },
+          {
+            "factor_name": "创新药指数",
+            "current_state": "近5日走强+3.61%",
+            "impact_direction": "positive",
+            "impact_strength": "high"
+          }
+        ]
+      },
+      {
+        "asset_id": "SEMI",
+        "asset_name": "半导体",
+        "asset_type": "sector",
+        "description": "半导体中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "北美云厂商资本开支",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "国产替代",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "英伟达产业链",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "medium"
+          }
+        ]
+      },
+      {
+        "asset_id": "ROBOT",
+        "asset_name": "机器人",
+        "asset_type": "theme",
+        "description": "机器人中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "人形机器人量产",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "政策支持",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "medium"
+          },
+          {
+            "factor_name": "机器人ETF",
+            "current_state": "近5日走强+12.30%",
+            "impact_direction": "positive",
+            "impact_strength": "medium"
+          }
+        ]
+      },
+      {
+        "asset_id": "BAIJIU",
+        "asset_name": "白酒",
+        "asset_type": "sector",
+        "description": "白酒中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "年轻人消费",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "medium"
+          },
+          {
+            "factor_name": "消费景气",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "白酒指数",
+            "current_state": "数据缺失",
+            "impact_direction": "neutral",
+            "impact_strength": "medium"
+          }
+        ]
+      },
+      {
+        "asset_id": "TECH",
+        "asset_name": "科技",
+        "asset_type": "sector",
+        "description": "科技中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "光模块景气",
+            "current_state": "近5日走弱-11.01%",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "半导体ETF",
+            "current_state": "近5日走强+1.36%",
+            "impact_direction": "positive",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "存储周期",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          }
+        ]
+      },
+      {
+        "asset_id": "ALUMINUM",
+        "asset_name": "铝",
+        "asset_type": "commodity",
+        "description": "铝中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "新能源用铝",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "medium"
+          },
+          {
+            "factor_name": "氧化铝成本",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "紫金矿业代理",
+            "current_state": "近5日走强+5.47%",
+            "impact_direction": "positive",
+            "impact_strength": "medium"
+          }
+        ]
+      },
+      {
+        "asset_id": "GOLD",
+        "asset_name": "黄金",
+        "asset_type": "commodity",
+        "description": "黄金中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "地缘风险",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "medium"
+          },
+          {
+            "factor_name": "央行购金",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "美债实际利率",
+            "current_state": "近5日走强+0.32%",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "decision_id": "dec_2026-08-06_TECH_001",
+        "asset_name": "科技股",
+        "direction": "bearish",
+        "review_date": "2026-08-11",
+        "result_label": "wrong",
+        "outcome_return": 1.9048,
+        "horizon_days": 5,
+        "new_rule_learned": null
+      },
+      {
+        "decision_id": "dec_2026-08-06_BAIJIU_001",
+        "asset_name": "白酒",
+        "direction": "bearish",
+        "review_date": "2026-08-11",
+        "result_label": "wrong",
+        "outcome_return": 2.3256,
+        "horizon_days": 5,
+        "new_rule_learned": null
+      }
+    ]
+  }
+}

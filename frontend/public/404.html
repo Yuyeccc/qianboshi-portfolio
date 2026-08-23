@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 · 钱博士Agent</title>
+    <script>
+      // GitHub Pages SPA 路由回退：找不到的路径重写到根路由
+      var path = window.location.pathname;
+      if (path !== "/" && !path.match(/\.(json|png|jpg|svg|js|css|ico)$/)) {
+        window.location.replace("/" + (path.startsWith("/zh") ? "zh" : "") + "#" + path);
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #f7f8fa;
+        color: #0f172a;
+        font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+      .card { text-align: center; padding: 48px; }
+      h1 { font-size: 56px; margin: 0; letter-spacing: 2px; }
+      p { color: #64748b; margin-top: 12px; }
+      a { color: #2563eb; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>404</h1>
+      <p>页面不存在或已移动</p>
+      <p><a href="/">← 返回首页</a></p>
+    </div>
+  </body>
+</html>
