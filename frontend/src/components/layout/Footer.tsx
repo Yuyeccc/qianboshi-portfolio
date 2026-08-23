@@ -20,10 +20,11 @@ export default function Footer() {
           </span>
 
           <a
-            href="#"
+            href="https://github.com/Yuyeccc"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={t("footer.github", "GitHub 项目地址")}
             className="inline-flex items-center gap-2 text-text transition-colors hover:text-brand"
-            onClick={(event) => event.preventDefault()}
           >
             <Github size={15} strokeWidth={1.8} aria-hidden="true" />
             <span>{t("footer.github", "GitHub")}</span>
