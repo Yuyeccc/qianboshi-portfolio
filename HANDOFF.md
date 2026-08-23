@@ -16,7 +16,23 @@
 | 2f | 实盘纪律页（白底复盘风：原则/KPI带/框架4卡/决策日志5条/时间线，已脱敏） | ✅ |
 | 2g | 简报行情区块（美股三大指数卡+AI链10chips+A股指数+持仓代理决策验证，SVG 5日走势） | ✅ |
 
-**6 页完成 + 简报行情增强**。剩余：Phase 5（快照生成 + GitHub Pages 部署 + 打磨）、关于页 2h（AboutPage 还是占位）。
+**6 页完成 + 简报行情增强 + Phase 5 部署完成**。剩余：关于页 2h（AboutPage 还是占位）。
+
+## 线上部署（2026-08-23 ✅）
+
+- **站点**：https://yuyeccc.github.io/qianboshi-portfolio/（GitHub Pages，hash 路由）
+- **仓库**：github.com/Yuyeccc/qianboshi-portfolio（main 分支，Actions 自动部署）
+- **快照生成**：`C:/Python314/python.exe backend/scripts/generate_snapshots.py`（生成 frontend/public/snapshots/ 8 个 JSON，含 briefs.json 内嵌 20 篇全文；改数据后重跑 + push 即自动部署）
+- **部署工作流**：`.github/workflows/deploy.yml`（npm ci → build:snapshot → upload-pages-artifact → deploy-pages）
+
+## ⚠️ 部署血泪坑（2026-08-23）
+
+1. **Vite base 子路径**：GH Pages 部署在 /qianboshi-portfolio/ 下，vite.config.ts 必须用 `loadEnv(mode)` 读 `VITE_BASE_PATH` 设 `base`（.env.snapshot 里配 /qianboshi-portfolio/）
+2. **路由用 createHashRouter（不带 basename）**：GH Pages 无 SPA fallback，BrowserRouter 深链 404；hash 路由 URL 形如 `/#/zh/...`
+3. **snapshot-client 所有路径必须相对**（`read("market.json")` 而非 `read("/snapshots/market.json")`）——绝对路径绕过 basePath 前缀直接 404；read() 内部自动拼 apiBaseUrl
+4. **.env.local 优先级高于 .env.snapshot**：VITE_API_BASE_URL=/api 会污染 snapshot 构建 → config.ts 里 snapshot 模式强制 `${basePath}snapshots`，不读 env
+5. **vite preview 验证必须 `--mode snapshot`**：默认 mode 把 JS 请求 fallback 成 text/html 导致页面空白（本地 dev/preview 空白≠线上坏）；改代码后 preview 要重启（它缓存文件列表）
+6. **404.html 不要放重定向脚本**（会拼错 URL 干扰 hash 路由），简单静态页即可
 
 ## 二、服务状态（写文档时在跑）
 

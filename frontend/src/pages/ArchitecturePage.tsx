@@ -189,7 +189,7 @@ export default function ArchitecturePage() {
                 </span>
               </div>
               <h1 className="mt-4 text-4xl font-semibold tracking-tight text-heading sm:text-5xl">
-                System Architecture
+                {t("pages.architecture.title", "System Architecture")}
               </h1>
               <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
                 {t(

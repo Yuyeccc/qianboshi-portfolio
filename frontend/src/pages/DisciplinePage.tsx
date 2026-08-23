@@ -154,8 +154,8 @@ export default function DisciplinePage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
       <header>
-        <h1 className="display-title text-4xl text-heading sm:text-5xl">Trading Discipline</h1>
-        <p className="mt-4 text-lg leading-8 text-text">记录观点，不追逐结果；到期复盘，不修改历史</p>
+        <h1 className="display-title text-4xl text-heading sm:text-5xl">{t("pages.discipline.title", "Trading Discipline")}</h1>
+        <p className="mt-4 text-lg leading-8 text-text">{t("pages.discipline.subtitle", "记录观点，不追逐结果；到期复盘，不修改历史")}</p>
       </header>
       {loading ? (
         <div className="mt-12 border-y border-line py-16 text-center text-sm text-muted" role="status">{t("pages.discipline.loading")}</div>
