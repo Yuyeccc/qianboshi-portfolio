@@ -276,15 +276,6 @@ export class SnapshotClient implements DataProvider {
         ? params.pageSize
         : 20;
 
-    const pageData = await this.read<unknown>(
-      `notes/index-page-${page}.json`,
-      null,
-    );
-
-    if (pageData !== null) {
-      return mapNotesResponse(pageData);
-    }
-
     const fullIndex = await this.read<unknown>("notes-index.json", null);
     if (fullIndex === null) return emptyNotesData;
 
