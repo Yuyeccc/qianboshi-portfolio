@@ -1,0 +1,24 @@
+{
+  "preset_id": "semiconductor-pullback",
+  "label": "半导体 回调",
+  "query": "半导体 回调",
+  "rag_data": {
+    "data": [
+      {
+        "rank": 1,
+        "content": "## 结论\n\n（需要结合当时具体数据判断，但核心思路是：板块极度拥挤时追高风险大）",
+        "source": "2026.6.25 半导体再次进入逼空行情 短视频解读.md",
+        "section": "结论",
+        "score": 0.3527,
+        "raw_score": 0.4633,
+        "type": "short_video"
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "page_size": 10,
+      "total": 1,
+      "has_more": false
+    }
+  }
+}

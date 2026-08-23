@@ -1,0 +1,54 @@
+{
+  "suggestions": [
+    {
+      "label": "黄金 美元指数",
+      "query": "黄金 美元指数",
+      "asset_id": "GOLD"
+    },
+    {
+      "label": "半导体 回调",
+      "query": "半导体 回调",
+      "asset_id": "SEMI"
+    },
+    {
+      "label": "光模块 新易盛",
+      "query": "光模块 新易盛",
+      "asset_id": "AI"
+    },
+    {
+      "label": "AI 应用 商业化",
+      "query": "AI 应用 商业化",
+      "asset_id": "AI"
+    },
+    {
+      "label": "机器人 产业链",
+      "query": "机器人 产业链",
+      "asset_id": "ROBOT"
+    },
+    {
+      "label": "白酒 景气度",
+      "query": "白酒 景气度",
+      "asset_id": "BAIJIU"
+    },
+    {
+      "label": "铝 供需",
+      "query": "铝 供需",
+      "asset_id": "ALUMINUM"
+    },
+    {
+      "label": "创新药 出海",
+      "query": "创新药 出海",
+      "asset_id": "INNOV_DRUG"
+    },
+    {
+      "label": "科技股 估值",
+      "query": "科技股 估值",
+      "asset_id": "TECH"
+    },
+    {
+      "label": "市场 风险偏好",
+      "query": "市场 风险偏好",
+      "asset_id": null
+    }
+  ]
+}

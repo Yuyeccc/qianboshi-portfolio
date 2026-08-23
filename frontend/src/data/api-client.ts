@@ -2,13 +2,24 @@ import { apiBaseUrl } from "@/app/config";
 import {
   AboutData,
   ArchitectureData,
+  AssetEvidencePack,
+  AssetViewsData,
   AssetsData,
   BriefDetail,
   BriefItem,
   DecisionSummary,
   DisciplineData,
+  ListNotesParams,
   MarketData,
+  NotesListData,
   OverviewData,
+  Pagination,
+  RagData,
+  RagQueryParams,
+  RagSuggestionItem,
+  VaultAssetsIndex,
+  VaultNoteDetail,
+  VaultSummary,
 } from "@/types";
 import { DataProvider } from "./provider";
 
@@ -108,6 +119,47 @@ export const emptyMarket: MarketData = {
   usStocks: [],
   cnIndices: [],
   proxyAssets: [],
+};
+
+export const emptyVaultSummary: VaultSummary = {
+  meta: { status: "pending", updatedAt: null, source: "api" },
+  notesCount: null,
+  viewsCount: null,
+  chunksCount: null,
+  assetsCount: null,
+  latestNoteDate: null,
+  modes: [],
+};
+
+export const emptyNotesData: NotesListData = {
+  data: [],
+  pagination: { page: 1, pageSize: 20, total: 0, hasMore: false },
+};
+
+export const emptyVaultAssets: VaultAssetsIndex = {
+  data: [],
+  generatedAt: null,
+};
+
+export const emptyRagData: RagData = {
+  data: [],
+  pagination: { page: 1, pageSize: 10, total: 0, hasMore: false },
+  degraded: false,
+};
+
+export const emptyEvidencePack: AssetEvidencePack = {
+  assetId: "",
+  assetName: "",
+  asOfDate: null,
+  assetCard: null,
+  factorStates: [],
+  debateCard: null,
+  latestViews: [],
+  analystScores: [],
+  marketSnapshot: null,
+  userDecisionHistory: [],
+  ragEvidence: [],
+  summary: null,
 };
 
 type JsonRecord = Record<string, unknown>;
@@ -590,6 +642,182 @@ export function mapMarketResponse(input: unknown): MarketData {
   };
 }
 
+function mapPagination(value: unknown): Pagination {
+  const p = isRecord(value) ? value : {};
+  return {
+    page: numberOrZero(p.page),
+    pageSize: numberOrZero(readField(p, "page_size", "pageSize")),
+    total: numberOrZero(p.total),
+    hasMore: Boolean(readField(p, "has_more", "hasMore")),
+  };
+}
+
+export function mapVaultSummaryResponse(input: unknown): VaultSummary {
+  if (!isRecord(input)) return emptyVaultSummary;
+  const payload = isRecord(input.vault_summary)
+    ? input.vault_summary
+    : isRecord(input.vaultSummary)
+      ? input.vaultSummary
+      : input;
+  const meta = isRecord(payload.meta) ? payload.meta : {};
+  return {
+    meta: {
+      status:
+        meta.status === "ready" || meta.status === "error"
+          ? meta.status
+          : "pending",
+      updatedAt: nullableString(readField(meta, "updated_at", "updatedAt")),
+      source:
+        meta.source === "live" || meta.source === "snapshot"
+          ? meta.source
+          : "api",
+    },
+    notesCount: nullableNumber(readField(payload, "notes_count", "notesCount")),
+    viewsCount: nullableNumber(readField(payload, "views_count", "viewsCount")),
+    chunksCount: nullableNumber(
+      readField(payload, "chunks_count", "chunksCount"),
+    ),
+    assetsCount: nullableNumber(
+      readField(payload, "assets_count", "assetsCount"),
+    ),
+    latestNoteDate: nullableString(
+      readField(payload, "latest_note_date", "latestNoteDate"),
+    ),
+    modes: recordArray(payload.modes).map(stringOrEmpty),
+  };
+}
+
+export function mapNotesResponse(input: unknown): NotesListData {
+  if (!isRecord(input)) return emptyNotesData;
+  const payload = isRecord(input.notes_data) ? input.notes_data : input;
+  return {
+    data: recordArray(payload.data).map((item) => ({
+      noteId: stringOrEmpty(readField(item, "note_id", "noteId")),
+      filename: stringOrEmpty(item.filename),
+      title: stringOrEmpty(item.title),
+      noteDate: nullableString(readField(item, "note_date", "noteDate")),
+      createdAt: nullableString(readField(item, "created_at", "createdAt")),
+      tags: recordArray(item.tags).map(stringOrEmpty),
+      source: nullableString(item.source),
+      excerpt: stringOrEmpty(item.excerpt),
+      structuredViewCount: nullableNumber(
+        readField(item, "structured_view_count", "structuredViewCount"),
+      ),
+      sizeBytes: nullableNumber(readField(item, "size_bytes", "sizeBytes")),
+    })),
+    pagination: mapPagination(payload.pagination),
+  };
+}
+
+export function mapNoteDetailResponse(input: unknown): VaultNoteDetail | null {
+  if (!isRecord(input)) return null;
+  const note = isRecord(input.note) ? input.note : input;
+  if (!stringOrEmpty(readField(note, "note_id", "noteId"))) return null;
+  return {
+    noteId: stringOrEmpty(readField(note, "note_id", "noteId")),
+    filename: stringOrEmpty(note.filename),
+    title: stringOrEmpty(note.title),
+    noteDate: nullableString(readField(note, "note_date", "noteDate")),
+    createdAt: nullableString(readField(note, "created_at", "createdAt")),
+    tags: recordArray(note.tags).map(stringOrEmpty),
+    source: nullableString(note.source),
+    excerpt: stringOrEmpty(note.excerpt),
+    structuredViewCount: nullableNumber(
+      readField(note, "structured_view_count", "structuredViewCount"),
+    ),
+    sizeBytes: nullableNumber(readField(note, "size_bytes", "sizeBytes")),
+    content: stringOrEmpty(note.content),
+    relatedViews: recordArray(
+      readField(note, "related_views", "relatedViews"),
+    ).map((view) => ({
+      viewId: stringOrEmpty(readField(view, "view_id", "viewId")),
+      analyst: stringOrEmpty(view.analyst),
+      claim: stringOrEmpty(view.claim),
+      date: nullableString(view.date),
+      stance: stringOrEmpty(view.stance),
+      confidence: nullableNumber(view.confidence),
+      section: nullableString(view.section),
+      evidence: stringOrEmpty(view.evidence),
+    })),
+  };
+}
+
+export function mapVaultAssetsResponse(input: unknown): VaultAssetsIndex {
+  if (!isRecord(input)) return emptyVaultAssets;
+  const payload = isRecord(input.assets_index) ? input.assets_index : input;
+  return {
+    data: recordArray(payload.data).map((item) => ({
+      assetId: stringOrEmpty(readField(item, "asset_id", "assetId")),
+      assetName: stringOrEmpty(readField(item, "asset_name", "assetName")),
+      assetType: stringOrEmpty(readField(item, "asset_type", "assetType")),
+      description: stringOrEmpty(item.description),
+      factors: recordArray(item.factors).map((factor) => ({
+        factorName: stringOrEmpty(readField(factor, "factor_name", "factorName")),
+        currentState: stringOrEmpty(readField(factor, "current_state", "currentState")),
+        impactDirection: stringOrEmpty(readField(factor, "impact_direction", "impactDirection")),
+        impactStrength: stringOrEmpty(readField(factor, "impact_strength", "impactStrength")),
+      })),
+      factorCount: numberOrZero(readField(item, "factor_count", "factorCount")),
+      bullishCount: numberOrZero(readField(item, "bullish_count", "bullishCount")),
+      bearishCount: numberOrZero(readField(item, "bearish_count", "bearishCount")),
+      neutralCount: numberOrZero(readField(item, "neutral_count", "neutralCount")),
+      consensusDirection: nullableString(
+        readField(item, "consensus_direction", "consensusDirection"),
+      ),
+      disagreementLevel: nullableNumber(
+        readField(item, "disagreement_level", "disagreementLevel"),
+      ),
+    })),
+    generatedAt: nullableString(readField(payload, "generated_at", "generatedAt")),
+  };
+}
+
+// 别名：snapshot-client 兼容命名
+export const mapAssetsIndexResponse = mapVaultAssetsResponse;
+
+export function mapEvidencePackResponse(input: unknown): AssetEvidencePack | null {
+  if (!isRecord(input)) return null;
+  const pack = isRecord(input.evidence_pack) ? input.evidence_pack : input;
+  if (!stringOrEmpty(readField(pack, "asset_id", "assetId"))) return null;
+  const result: AssetEvidencePack = {
+    assetId: stringOrEmpty(readField(pack, "asset_id", "assetId")),
+    assetName: stringOrEmpty(readField(pack, "asset_name", "assetName")),
+    asOfDate: nullableString(readField(pack, "as_of_date", "asOfDate")),
+    assetCard: isRecord(pack.asset_card) ? (pack.asset_card as Record<string, unknown>) : isRecord(readField(pack, "asset_card", "assetCard")) ? (readField(pack, "asset_card", "assetCard") as Record<string, unknown>) : null,
+    factorStates: recordArray(readField(pack, "factor_states", "factorStates")),
+    debateCard: isRecord(pack.debate_card) ? (pack.debate_card as Record<string, unknown>) : isRecord(readField(pack, "debate_card", "debateCard")) ? (readField(pack, "debate_card", "debateCard") as Record<string, unknown>) : null,
+    latestViews: recordArray(readField(pack, "latest_views", "latestViews")),
+    analystScores: recordArray(readField(pack, "analyst_scores", "analystScores")),
+    marketSnapshot: isRecord(pack.market_snapshot) ? (pack.market_snapshot as Record<string, unknown>) : isRecord(readField(pack, "market_snapshot", "marketSnapshot")) ? (readField(pack, "market_snapshot", "marketSnapshot") as Record<string, unknown>) : null,
+    userDecisionHistory: recordArray(readField(pack, "user_decision_history", "userDecisionHistory")),
+    ragEvidence: recordArray(readField(pack, "rag_evidence", "ragEvidence")),
+    summary: nullableString(pack.summary),
+  };
+  return result;
+}
+
+export function mapRagResponse(input: unknown): RagData {
+  if (!isRecord(input)) return emptyRagData;
+  const payload = isRecord(input.rag_data) ? input.rag_data : input;
+  return {
+    data: recordArray(payload.data).map((item) => ({
+      rank: numberOrZero(item.rank),
+      content: stringOrEmpty(item.content),
+      source: stringOrEmpty(item.source),
+      section: nullableString(item.section),
+      score: nullableNumber(item.score) ?? 0,
+      rawScore: nullableNumber(readField(item, "raw_score", "rawScore")) ?? 0,
+      type: stringOrEmpty(item.type),
+    })),
+    pagination: mapPagination(payload.pagination),
+    degraded: Boolean(payload.degraded),
+    reason: nullableString(payload.reason),
+    snapshotLimited: Boolean(
+      readField(payload, "snapshot_limited", "snapshotLimited"),
+    ),
+  };
+}
+
 export function mapOverviewResponse(input: unknown): OverviewData {
   if (!isRecord(input)) return emptyOverview;
   const metrics = isRecord(input.metrics) ? input.metrics : {};
@@ -725,5 +953,116 @@ export class ApiClient implements DataProvider {
       content: data.brief.content,
       generatedAt: data.brief.generated_at ?? data.brief.generatedAt ?? null,
     };
+  }
+
+  async getVaultSummary(): Promise<VaultSummary> {
+    const data = await this.get<unknown>("/v1/vault/summary", null);
+    return data === null ? emptyVaultSummary : mapVaultSummaryResponse(data);
+  }
+
+  async listNotes(params: ListNotesParams = {}): Promise<NotesListData> {
+    const query = new URLSearchParams();
+    if (params.page) query.set("page", String(params.page));
+    if (params.pageSize) query.set("page_size", String(params.pageSize));
+    if (params.query) query.set("query", params.query);
+    if (params.dateFrom) query.set("date_from", params.dateFrom);
+    if (params.dateTo) query.set("date_to", params.dateTo);
+    if (params.tags?.length) query.set("tags", params.tags.join(","));
+    if (params.source) query.set("source", params.source);
+    if (params.sort) query.set("sort", params.sort);
+    const qs = query.toString();
+    const data = await this.get<unknown>(
+      `/v1/notes${qs ? `?${qs}` : ""}`,
+      null,
+    );
+    return data === null ? emptyNotesData : mapNotesResponse(data);
+  }
+
+  async getNoteDetail(noteId: string): Promise<VaultNoteDetail | null> {
+    const data = await this.get<unknown>(
+      `/v1/notes/${encodeURIComponent(noteId)}`,
+      null,
+    );
+    if (data === null) return null;
+    return mapNoteDetailResponse(data);
+  }
+
+  async getVaultAssets(): Promise<VaultAssetsIndex> {
+    const data = await this.get<unknown>("/v1/vault/assets", null);
+    return data === null ? emptyVaultAssets : mapVaultAssetsResponse(data);
+  }
+
+  async getAssetEvidencePack(
+    assetId: string,
+    horizon: string = "medium",
+  ): Promise<AssetEvidencePack | null> {
+    const data = await this.get<unknown>(
+      `/v1/vault/assets/${encodeURIComponent(assetId)}/evidence-pack?horizon=${encodeURIComponent(horizon)}`,
+      null,
+    );
+    if (data === null) return null;
+    return mapEvidencePackResponse(data);
+  }
+
+  async getAssetViews(
+    assetId: string,
+    page: number = 1,
+    pageSize: number = 10,
+  ): Promise<AssetViewsData> {
+    const data = await this.get<unknown>(
+      `/v1/vault/assets/${encodeURIComponent(assetId)}/views?page=${page}&page_size=${pageSize}`,
+      null,
+    );
+    if (data === null) return { data: [], pagination: { page: 1, pageSize, total: 0, hasMore: false } };
+    return {
+      data: (data as any).data ?? [],
+      pagination: (data as any).pagination ?? { page, pageSize, total: 0, hasMore: false },
+    };
+  }
+
+  async ragQuery(params: RagQueryParams): Promise<RagData> {
+    const body = {
+      text: params.text,
+      top_k: params.topK ?? 10,
+      score_threshold: params.scoreThreshold ?? 0,
+      max_days: params.maxDays ?? null,
+      page: params.page ?? 1,
+      page_size: params.pageSize ?? 10,
+    };
+    try {
+      const response = await fetch(`${apiBaseUrl}/v1/rag/query`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!response.ok) return emptyRagData;
+      return mapRagResponse(await response.json());
+    } catch {
+      return emptyRagData;
+    }
+  }
+
+  async getRagSuggestions(): Promise<RagSuggestionItem[]> {
+    const data = await this.get<unknown>("/v1/rag/suggestions", null);
+    if (data === null) return [];
+    const items = (data as any).suggestions ?? [];
+    return items.map((item: any) => ({
+      label: String(item.label ?? ""),
+      query: String(item.query ?? ""),
+      assetId: item.asset_id ?? item.assetId ?? null,
+    }));
+  }
+
+  async openNoteLocal(noteId: string): Promise<{ opened: boolean; noteId: string }> {
+    try {
+      const response = await fetch(
+        `${apiBaseUrl}/v1/notes/${encodeURIComponent(noteId)}/open-local`,
+        { method: "POST" },
+      );
+      if (!response.ok) return { opened: false, noteId };
+      return { opened: true, noteId };
+    } catch {
+      return { opened: false, noteId };
+    }
   }
 }

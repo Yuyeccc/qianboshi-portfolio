@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-08-23T14:24:30.494140+00:00",
+  "counts": {
+    "notes": 987,
+    "note_details": 987,
+    "assets": 8,
+    "evidence_packs": 24,
+    "rag_presets": 8
+  },
+  "modes": [
+    "notes",
+    "search",
+    "assets"
+  ],
+  "note_count": 987,
+  "preset_ids": [
+    "gold-dollar",
+    "semiconductor-pullback",
+    "optical-module",
+    "ai-commercialization",
+    "robotics",
+    "aluminum",
+    "innovative-drugs",
+    "baijiu"
+  ],
+  "total_bytes": 14812842
+}

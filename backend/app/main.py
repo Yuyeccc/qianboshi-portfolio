@@ -1,8 +1,15 @@
-from fastapi import APIRouter, FastAPI, HTTPException
+from typing import Any
+
+from fastapi import APIRouter, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from app.repositories.architecture_repo import get_architecture_data
+from app.repositories.asset_vault_repo import (
+    get_asset_evidence_pack,
+    get_asset_views,
+    get_assets_index,
+)
 from app.repositories.assets_repo import get_assets_data
 from app.repositories.brief_repo import get_brief, list_briefs
 from app.repositories.decisions_repo import get_decisions_data
@@ -13,12 +20,28 @@ from app.repositories.overview_repo import (
     get_overview_metrics,
     get_system_status,
 )
+from app.repositories.rag_vault_repo import rag_query, rag_suggestions
+from app.repositories.vault_repo import (
+    get_note_detail,
+    get_vault_summary,
+    list_notes,
+    open_note_local,
+)
 
 
 class MetaResponse(BaseModel):
     data_mode: str
     phase: str
     status: str
+
+
+class RagQueryRequest(BaseModel):
+    text: str = ""
+    top_k: int = Field(default=10, ge=1, le=100)
+    score_threshold: float = Field(default=0.0, ge=0.0, le=1.0)
+    max_days: int | None = Field(default=None, ge=1)
+    page: int = Field(default=1, ge=1)
+    page_size: int = Field(default=10, ge=1, le=100)
 
 
 app = FastAPI(
@@ -101,6 +124,114 @@ def get_discipline() -> dict:
 @api_router.get("/market")
 def get_market() -> dict:
     return {"market_data": get_market_data()}
+
+
+@api_router.get("/vault/summary")
+def get_vault_summary_endpoint() -> dict:
+    return {"vault_summary": get_vault_summary()}
+
+
+@api_router.get("/notes")
+def get_notes(
+    page: int = Query(default=1, ge=1),
+    page_size: int = Query(default=20, ge=1, le=100),
+    query: str | None = Query(default=None),
+    date_from: str | None = Query(default=None),
+    date_to: str | None = Query(default=None),
+    tags: list[str] | None = Query(default=None),
+    source: str | None = Query(default=None),
+    sort: str = Query(default="date_desc"),
+) -> dict:
+    return {
+        "notes_data": list_notes(
+            page=page,
+            page_size=page_size,
+            query=query,
+            date_from=date_from,
+            date_to=date_to,
+            tags=tags,
+            source=source,
+            sort=sort,
+        )
+    }
+
+
+@api_router.get("/notes/{note_id}")
+def get_note(note_id: str) -> dict:
+    note = get_note_detail(note_id)
+    if note is None:
+        raise HTTPException(status_code=404, detail={"error": "note not found"})
+    return {"note": note}
+
+
+@api_router.post("/notes/{note_id}/open-local")
+def open_local_note(note_id: str) -> dict:
+    try:
+        return open_note_local(note_id)
+    except PermissionError:
+        raise HTTPException(
+            status_code=403,
+            detail={"error": "local note opening is disabled"},
+        )
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail={"error": "note not found"})
+    except OSError as error:
+        raise HTTPException(
+            status_code=500,
+            detail={"error": str(error) or "unable to open note"},
+        )
+
+
+@api_router.get("/vault/assets")
+def get_vault_assets() -> dict:
+    return {"assets_index": get_assets_index()}
+
+
+@api_router.get("/vault/assets/{asset_id}/evidence-pack")
+def get_vault_asset_evidence_pack(
+    asset_id: str,
+    horizon: str = Query(default="medium"),
+) -> dict:
+    return {
+        "evidence_pack": get_asset_evidence_pack(
+            asset_id=asset_id,
+            horizon=horizon,
+        )
+    }
+
+
+@api_router.get("/vault/assets/{asset_id}/views")
+def get_vault_asset_views(
+    asset_id: str,
+    page: int = Query(default=1, ge=1),
+    page_size: int = Query(default=20, ge=1, le=100),
+) -> dict:
+    return {
+        "views_data": get_asset_views(
+            asset_id=asset_id,
+            page=page,
+            page_size=page_size,
+        )
+    }
+
+
+@api_router.post("/rag/query")
+def query_rag(request: RagQueryRequest) -> dict[str, Any]:
+    return {
+        "rag_data": rag_query(
+            text=request.text,
+            top_k=request.top_k,
+            score_threshold=request.score_threshold,
+            max_days=request.max_days,
+            page=request.page,
+            page_size=request.page_size,
+        )
+    }
+
+
+@api_router.get("/rag/suggestions")
+def get_rag_suggestions() -> dict:
+    return {"suggestions": rag_suggestions()}
 
 
 app.include_router(api_router)

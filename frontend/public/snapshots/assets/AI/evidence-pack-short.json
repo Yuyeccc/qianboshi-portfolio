@@ -1,0 +1,671 @@
+{
+  "evidence_pack": {
+    "asset_id": "AI",
+    "asset_name": "AI应用",
+    "as_of_date": "2026-08-23",
+    "asset_card": {
+      "asset_id": "AI",
+      "asset_name": "AI应用",
+      "asset_type": "theme",
+      "version": 1,
+      "default_horizon": "medium",
+      "description": "AI应用中期趋势分析框架",
+      "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\ai.yaml",
+      "as_of_date": "2026-08-23",
+      "factors": [
+        {
+          "asset_id": "AI",
+          "factor_id": "COMPUTE_DEMAND",
+          "factor_name": "算力需求",
+          "as_of_date": "2026-08-23",
+          "raw_value": {
+            "query_terms": [
+              "算力",
+              "推理",
+              "大模型"
+            ],
+            "lookback_days": 30,
+            "current_count": 21,
+            "previous_count": 280
+          },
+          "current_state": "观点热度下降",
+          "change_direction": "down",
+          "impact_direction": "negative",
+          "impact_strength": "high",
+          "confidence": 0.8,
+          "evidence_refs": [
+            "2a08be705f169834",
+            "6348430db91463a6",
+            "fae40aee9752ba74"
+          ],
+          "summary": "算力需求观点热度下降，对AI构成negative影响。",
+          "card_version": 1,
+          "state_id": "AI_1_COMPUTE_DEMAND_2026-08-23"
+        },
+        {
+          "asset_id": "AI",
+          "factor_id": "APP_COMMERCIALIZATION",
+          "factor_name": "应用商业化",
+          "as_of_date": "2026-08-23",
+          "raw_value": {
+            "query_terms": [
+              "AI应用",
+              "商业化",
+              "订阅"
+            ],
+            "lookback_days": 30,
+            "current_count": 5,
+            "previous_count": 10
+          },
+          "current_state": "观点热度下降",
+          "change_direction": "down",
+          "impact_direction": "negative",
+          "impact_strength": "high",
+          "confidence": 0.8,
+          "evidence_refs": [
+            "71176203ef655501",
+            "a89f224b51ed3988",
+            "b086b59891bd0e2d"
+          ],
+          "summary": "应用商业化观点热度下降，对AI构成negative影响。",
+          "card_version": 1,
+          "state_id": "AI_1_APP_COMMERCIALIZATION_2026-08-23"
+        },
+        {
+          "asset_id": "AI",
+          "factor_id": "US_AI_MAPPING",
+          "factor_name": "美股AI映射",
+          "as_of_date": "2026-08-23",
+          "raw_value": {
+            "symbol": "NVDA",
+            "close": 214.72,
+            "date": "2026-08-23",
+            "pct_change_5d": -3.0259,
+            "pct_change_20d": null,
+            "source": "price_trends"
+          },
+          "current_state": "近5日走弱-3.03%",
+          "change_direction": "down",
+          "impact_direction": "negative",
+          "impact_strength": "medium",
+          "confidence": 0.8,
+          "evidence_refs": [
+            "yfinance"
+          ],
+          "summary": "美股AI映射近5日走弱-3.03%，对AI构成negative影响。",
+          "card_version": 1,
+          "state_id": "AI_1_US_AI_MAPPING_2026-08-23"
+        }
+      ],
+      "logic_chain_summary": "当前AI应用的负向压力来自算力需求、应用商业化、美股AI映射。"
+    },
+    "factor_states": [
+      {
+        "factor_id": "COMPUTE_DEMAND",
+        "factor_name": "算力需求",
+        "current_state": "观点热度下降",
+        "impact_direction": "negative",
+        "evidence_refs": [
+          "2a08be705f169834",
+          "6348430db91463a6",
+          "fae40aee9752ba74"
+        ]
+      },
+      {
+        "factor_id": "APP_COMMERCIALIZATION",
+        "factor_name": "应用商业化",
+        "current_state": "观点热度下降",
+        "impact_direction": "negative",
+        "evidence_refs": [
+          "71176203ef655501",
+          "a89f224b51ed3988",
+          "b086b59891bd0e2d"
+        ]
+      },
+      {
+        "factor_id": "US_AI_MAPPING",
+        "factor_name": "美股AI映射",
+        "current_state": "近5日走弱-3.03%",
+        "impact_direction": "negative",
+        "evidence_refs": [
+          "yfinance"
+        ]
+      }
+    ],
+    "debate_card": {
+      "card_id": "debate_AI应用_short_2026-06-18_2026-08-16",
+      "entity_id": "AI应用",
+      "entity_name": "AI应用",
+      "entity_type": "theme",
+      "horizon": "short",
+      "window": {
+        "start": "2026-06-18",
+        "end": "2026-08-16"
+      },
+      "highlights": [],
+      "counts": {
+        "bullish": 0,
+        "bearish": 0,
+        "risk": 0,
+        "neutral": 0,
+        "watch": 0
+      },
+      "metrics": {
+        "consensus_direction": "neutral",
+        "disagreement_level": 0.0,
+        "confidence_level": 0.0,
+        "novelty_level": 0.0,
+        "net_stance_score": 0.0
+      },
+      "summary": "AI应用：多头0条，空头0条，风险0条，中性0条，共识方向=neutral，分歧度=0.00。",
+      "bullish": [],
+      "bearish": [],
+      "risk": [],
+      "neutral": [],
+      "watch": [],
+      "disagreements": [],
+      "consensus": [],
+      "new_changes": [],
+      "items": [],
+      "created_at": "2026-08-23T22:24:41",
+      "updated_at": "2026-08-23T22:24:41"
+    },
+    "latest_views": [
+      {
+        "analyst": "钱博士直播",
+        "claim": "中长线：看空（风险预警）🐻📉",
+        "confidence": 0.91,
+        "date": "2026-08-16",
+        "entities": {
+          "etfs": [
+            "159813.SZ"
+          ],
+          "sectors": [
+            "半导体"
+          ],
+          "stocks": [
+            "688981.SS"
+          ],
+          "themes": [
+            "先进制程",
+            "国产替代",
+            "设备材料"
+          ]
+        },
+        "evidence": "中长线：看空（风险预警）🐻📉 逻辑：英伟达两年升级一代芯片，每代性能乘以3到5倍，旧机器没人用，数据中心硬件五年后可能变成\"破烂\"。如果美国AI公司收入不足以覆盖租赁成本，多米诺骨牌会倒下。 (00:00:00-00:00:00) 英美达两年升级一代，每升级一代它的性能可能要乘以3或者乘以5……所以大家新人都去买新的机器，旧的机器就没有人用了 (00:00:00-00:00:00) 如果一旦有一天美国的人工智能中心他的收入入不付出，这个多米诺的骨牌就啪啦啪啦啪啦就倒了",
+        "horizon": "medium",
+        "logic": "英伟达两年升级一代芯片，每代性能乘以3到5倍，旧机器没人用，数据中心硬件五年后可能变成\"破烂\"。如果美国AI公司收入不足以覆盖租赁成本，多米诺骨牌会倒下。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_stance",
+          "has_horizon",
+          "has_risk"
+        ],
+        "risk": "中长线：看空（风险预警）🐻📉 逻辑：英伟达两年升级一代芯片，每代性能乘以3到5倍，旧机器没人用，数据中心硬件五年后可能变成\"破烂\"。如果美国AI公司收入不足以覆盖租赁成本，多米诺骨牌会倒下。 (00:00:00-00:00:00) 英美达两年升级一代，每升级一代它的性能可能要乘以3或者乘以5……所以大家新人都去买新的机器，旧的机器就没有人用了 (00:00:00-00:00:00) 如果一旦有一天美国的人工智能中心他的收入入不付出，这个",
+        "section": "博通/阿波罗/Anthropic债券风险",
+        "source_bv": "BV15dbR6sEc6",
+        "source_file": "钱博士 2026.8.16 BV15dbR6sEc6.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV15dbR6sEc6.md",
+        "source_type": "livestream",
+        "stance": "bearish",
+        "timestamp": "00:00:00-00:00:00",
+        "version": 1,
+        "view_id": "abbd0fb9fef49a33",
+        "view_type": "risk",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.8335
+      },
+      {
+        "analyst": "钱博士直播",
+        "claim": "涉及资产：AI硬件方向（半导体为主）",
+        "confidence": 0.91,
+        "date": "2026-08-16",
+        "entities": {
+          "etfs": [
+            "159813.SZ"
+          ],
+          "sectors": [
+            "半导体",
+            "算力"
+          ],
+          "stocks": [
+            "300308.SZ",
+            "300502.SZ",
+            "688981.SS"
+          ],
+          "themes": [
+            "先进制程",
+            "国产替代",
+            "设备材料"
+          ],
+          "us_mapping": [
+            "AMD",
+            "AVGO",
+            "MRVL",
+            "NVDA"
+          ]
+        },
+        "evidence": "涉及资产：AI硬件方向（半导体为主） 影响与结果：近期涨幅过大后回调，主播认为这是斜率修正而非趋势结束。 逻辑：市场从混沌普涨到分化，AI硬件确定性最高，但短期涨幅过大需要修正。 依据类型：逻辑推演 (00:22:24-00:22:30) 然后这次掉下来之后呢 其实我其实我也去看过一些就很多这种科技股的一个协律啊 (00:22:72-00:22:78) 涨幅过于夸张 协律过于高了 那么把协律什么是强行修正回来 还是回到之前的那个协律",
+        "horizon": "short",
+        "logic": "市场从混沌普涨到分化，AI硬件确定性最高，但短期涨幅过大需要修正。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_stance",
+          "has_horizon",
+          "has_risk"
+        ],
+        "risk": "涉及资产：AI硬件方向（半导体为主） 影响与结果：近期涨幅过大后回调，主播认为这是斜率修正而非趋势结束。 逻辑：市场从混沌普涨到分化，AI硬件确定性最高，但短期涨幅过大需要修正。 依据类型：逻辑推演 (00:22:24-00:22:30) 然后这次掉下来之后呢 其实我其实我也去看过一些就很多这种科技股的一个协律啊 (00:22:72-00:22:78) 涨幅过于夸张 协律过于高了 那么把协律什么是强行修正回来 还是回到之前的那个协律",
+        "section": "AI硬件/算力",
+        "source_bv": "BV1BSbR6bENQ",
+        "source_file": "钱博士 2026.8.16 BV1BSbR6bENQ.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV1BSbR6bENQ.md",
+        "source_type": "livestream",
+        "stance": "bearish",
+        "timestamp": "00:22:24-00:22:30",
+        "version": 1,
+        "view_id": "080ac2681c1736c7",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.8335
+      },
+      {
+        "analyst": "钱博士直播",
+        "claim": "短线：看空 🐻📉",
+        "confidence": 0.91,
+        "date": "2026-08-16",
+        "entities": {
+          "etfs": [
+            "159813.SZ"
+          ],
+          "sectors": [
+            "半导体"
+          ],
+          "stocks": [
+            "688981.SS"
+          ],
+          "themes": [
+            "先进制程",
+            "国产替代",
+            "设备材料"
+          ]
+        },
+        "evidence": "短线：看空 🐻📉 逻辑：好消息少、坏消息多，向下意愿强于向上意愿。 (00:22:56-00:22:66) 像这个半导体，他就是好消息少，坏消息多，所以他就有点难受，他就朝另外一个方向 (00:23:32-00:23:60) 半导体是没有什么坏消息但没什么好消息，没有什么好消息就导致了……你可以看到的半导体这一边里边，往下的意愿强于往上的意愿 (00:67:91-00:67:97) 半导体现在回调的意愿是比较强的，但是海外人工智能供应链回调的意愿没有那么强 涉及资产：半导体二哥（国内某半导体公司）",
+        "horizon": "short",
+        "logic": "好消息少、坏消息多，向下意愿强于向上意愿。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_stance",
+          "has_horizon",
+          "has_risk"
+        ],
+        "risk": "短线：看空 🐻📉 逻辑：好消息少、坏消息多，向下意愿强于向上意愿。 (00:22:56-00:22:66) 像这个半导体，他就是好消息少，坏消息多，所以他就有点难受，他就朝另外一个方向 (00:23:32-00:23:60) 半导体是没有什么坏消息但没什么好消息，没有什么好消息就导致了……你可以看到的半导体这一边里边，往下的意愿强于往上的意愿 (00:67:91-00:67:97) 半导体现在回调的意愿是比较强的，但是海外人工智能供应链",
+        "section": "半导体",
+        "source_bv": "BV1n2bR6hEV4",
+        "source_file": "钱博士 2026.8.16 BV1n2bR6hEV4.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV1n2bR6hEV4.md",
+        "source_type": "livestream",
+        "stance": "bearish",
+        "timestamp": "00:22:56-00:22:66",
+        "version": 1,
+        "view_id": "572227a446c83589",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.8335
+      },
+      {
+        "analyst": "钱博士直播",
+        "claim": "短线：看多 🐂📈",
+        "confidence": 0.83,
+        "date": "2026-08-16",
+        "entities": {
+          "sectors": [
+            "PCB",
+            "算力",
+            "黄金有色"
+          ],
+          "stocks": [
+            "300308.SZ",
+            "300502.SZ",
+            "601899.SS"
+          ],
+          "themes": [
+            "AI服务器",
+            "CCL",
+            "周期",
+            "美元",
+            "资源品",
+            "通胀",
+            "高速板"
+          ],
+          "us_mapping": [
+            "AMD",
+            "AVGO",
+            "MRVL",
+            "NVDA"
+          ]
+        },
+        "evidence": "短线：看多 🐂📈 逻辑：PCB产业链往上意愿强于往下意愿。周五液冷、覆铜板等基本面偏好的板块已经\"憋不住\"开始表现。 (00:00:00-00:00:00) 但是在PCB产业量里边，往上的意愿强于往下的意愿 (00:00:00-00:00:00) 像周五的时候你看像夜冷啊像覆铜板啊这些基本面偏好的这种，就有点憋不住了",
+        "horizon": "short",
+        "logic": "PCB产业链往上意愿强于往下意愿。周五液冷、覆铜板等基本面偏好的板块已经\"憋不住\"开始表现。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_stance",
+          "has_horizon"
+        ],
+        "risk": "",
+        "section": "PCB产业链",
+        "source_bv": "BV15dbR6sEc6",
+        "source_file": "钱博士 2026.8.16 BV15dbR6sEc6.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV15dbR6sEc6.md",
+        "source_type": "livestream",
+        "stance": "bullish",
+        "timestamp": "00:00:00-00:00:00",
+        "version": 1,
+        "view_id": "8df30c4c93919d25",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.7755
+      },
+      {
+        "analyst": "钱博士直播",
+        "claim": "短线：中性 🦀➡️",
+        "confidence": 0.83,
+        "date": "2026-08-16",
+        "entities": {
+          "sectors": [
+            "算力"
+          ],
+          "stocks": [
+            "300308.SZ",
+            "300502.SZ"
+          ],
+          "us_mapping": [
+            "AMD",
+            "AVGO",
+            "MRVL",
+            "NVDA"
+          ]
+        },
+        "evidence": "短线：中性 🦀➡️ 逻辑：AI硬件近期涨幅过于夸张，斜率过高，回调属于斜率修正，回到近两三年的正常斜率上，并非完全走A。 (00:22:31-00:22:41) AI 硬件啊 大家可以去看看啊 其实呢 他并不是完全走A啊 如果你把比如说2024年年底 或者是2025年啊 上半年，比如说你把他周K或者越K打开啊 (00:22:44-00:22:54) 他呢 无非就是什么呢 最近两三个月 涨幅过于夸张了 他给他A 怎么上去他就怎么回来 然后呢 重新回到最近两三年的这个协律上去 (00:22:61-00:22:71) 你啊 之前太飘了 涨幅太大了啊 而且这个你呢是什么 多数 负数，就很多企业都是这样的 整个AI硬件方向呢 就是尤其是半岛级为主，涨幅过于夸张 协律过于高了 那么把协律什么是强行修正回来 还是回到之前的那个协律",
+        "horizon": "short",
+        "logic": "AI硬件近期涨幅过于夸张，斜率过高，回调属于斜率修正，回到近两三年的正常斜率上，并非完全走A。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_horizon",
+          "has_risk"
+        ],
+        "risk": "短线：中性 🦀➡️ 逻辑：AI硬件近期涨幅过于夸张，斜率过高，回调属于斜率修正，回到近两三年的正常斜率上，并非完全走A。 (00:22:31-00:22:41) AI 硬件啊 大家可以去看看啊 其实呢 他并不是完全走A啊 如果你把比如说2024年年底 或者是2025年啊 上半年，比如说你把他周K或者越K打开啊 (00:22:44-00:22:54) 他呢 无非就是什么呢 最近两三个月 涨幅过于夸张了 他给他A 怎么上去他就怎么回来 然后",
+        "section": "AI硬件/算力",
+        "source_bv": "BV1BSbR6bENQ",
+        "source_file": "钱博士 2026.8.16 BV1BSbR6bENQ.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV1BSbR6bENQ.md",
+        "source_type": "livestream",
+        "stance": "neutral",
+        "timestamp": "00:22:31-00:22:41",
+        "version": 1,
+        "view_id": "1e67ca5d884fbce6",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.7755
+      },
+      {
+        "analyst": "钱博士直播",
+        "claim": "涉及资产：阳光电源、国内电力设备企业",
+        "confidence": 0.83,
+        "date": "2026-08-16",
+        "entities": {
+          "sectors": [
+            "算力"
+          ],
+          "stocks": [
+            "300308.SZ",
+            "300502.SZ"
+          ],
+          "us_mapping": [
+            "AMD",
+            "AVGO",
+            "MRVL",
+            "NVDA"
+          ]
+        },
+        "evidence": "涉及资产：阳光电源、国内电力设备企业 影响与结果：国内电力企业因缺乏垄断性，股价定位和预期不会很高；北美电力瓶颈利好有海外业务的电力设备企业，但面临政策限制风险。 逻辑：国内电力供应能力强但竞争充分，北美电力建设周期长、工程师短缺。 依据类型：逻辑推演 (00:12:70-00:12:80) 已知27年ai算力产能不是瓶颈算 算力才是 算力才是瓶颈应该吵什么 阳光电源怎么样 (00:13:56-00:13:68) 虽然这个在国外业务也多 嗯 但是大家都知道嘛 这个就是这个相关的配套 其实北美也在持续的收紧啊 尤其浪费啊",
+        "horizon": "unknown",
+        "logic": "国内电力供应能力强但竞争充分，北美电力建设周期长、工程师短缺。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_stance",
+          "has_risk"
+        ],
+        "risk": "涉及资产：阳光电源、国内电力设备企业 影响与结果：国内电力企业因缺乏垄断性，股价定位和预期不会很高；北美电力瓶颈利好有海外业务的电力设备企业，但面临政策限制风险。 逻辑：国内电力供应能力强但竞争充分，北美电力建设周期长、工程师短缺。 依据类型：逻辑推演 (00:12:70-00:12:80) 已知27年ai算力产能不是瓶颈算 算力才是 算力才是瓶颈应该吵什么 阳光电源怎么样 (00:13:56-00:13:68) 虽然这个在国外业务也多",
+        "section": "电力板块（国内vs北美）",
+        "source_bv": "BV1BSbR6bENQ",
+        "source_file": "钱博士 2026.8.16 BV1BSbR6bENQ.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV1BSbR6bENQ.md",
+        "source_type": "livestream",
+        "stance": "risk",
+        "timestamp": "00:12:70-00:12:80",
+        "version": 1,
+        "view_id": "5965cd0dbf195f0c",
+        "view_type": "risk",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.7755
+      },
+      {
+        "analyst": "钱博士直播",
+        "claim": "短线：看多 🐂📈",
+        "confidence": 0.83,
+        "date": "2026-08-16",
+        "entities": {
+          "sectors": [
+            "PCB",
+            "黄金有色"
+          ],
+          "stocks": [
+            "601899.SS"
+          ],
+          "themes": [
+            "AI服务器",
+            "CCL",
+            "周期",
+            "美元",
+            "资源品",
+            "通胀",
+            "高速板"
+          ]
+        },
+        "evidence": "短线：看多 🐂📈 逻辑：向上意愿强于向下意愿，基本面偏好。 (00:23:61-00:23:66) 但是在pcb产业量里边，往上的意愿强于往下的意愿 (00:22:43-00:22:48) 像周五的时候，你看像夜冷啊像覆铜板啊这些基本面偏好的这种，就有点憋不住了",
+        "horizon": "short",
+        "logic": "向上意愿强于向下意愿，基本面偏好。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_stance",
+          "has_horizon"
+        ],
+        "risk": "",
+        "section": "PCB产业链",
+        "source_bv": "BV1n2bR6hEV4",
+        "source_file": "钱博士 2026.8.16 BV1n2bR6hEV4.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV1n2bR6hEV4.md",
+        "source_type": "livestream",
+        "stance": "bullish",
+        "timestamp": "00:23:61-00:23:66",
+        "version": 1,
+        "view_id": "44c798f1ff1c7421",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.7755
+      },
+      {
+        "analyst": "钱博士直播",
+        "claim": "短线：中性偏多 🦀➡️",
+        "confidence": 0.83,
+        "date": "2026-08-16",
+        "entities": {
+          "sectors": [
+            "光模块"
+          ],
+          "stocks": [
+            "300308.SZ",
+            "300394.SZ",
+            "300502.SZ"
+          ],
+          "themes": [
+            "北美云厂商资本开支",
+            "海外算力",
+            "英伟达产业链"
+          ],
+          "us_mapping": [
+            "AVGO",
+            "MRVL",
+            "NVDA"
+          ]
+        },
+        "evidence": "短线：中性偏多 🦀➡️ 逻辑：达子半官宣进入量产，周一可能有反应但大概只反应一天，因为过去两周相关标的已反应激烈。CPU对光模块不构成强烈竞争，但情绪上不是正面。 (00:06:90-00:07:05) 我觉得周一能有反应，但是大概律过，估计可能就反应一天，因为过去这里边相关的这些在过去两周里边其实反应已经很激烈了 (00:48:81-00:48:87) CPU就是达个发布了说进入到量产，但它官方公告没有 (00:51:10-00:51:20) 它原则上来说对光模块不构成强烈的竞争，对光模块该用还用 (00:54:43-00:54:56) CPU进展没有那么快，这东西快不了。但是他有可能是大家会觉得你用了CPU了还用光模块吗……所以情绪上对光模块肯定不是正面的，但其实也不负面",
+        "horizon": "short",
+        "logic": "达子半官宣进入量产，周一可能有反应但大概只反应一天，因为过去两周相关标的已反应激烈。CPU对光模块不构成强烈竞争，但情绪上不是正面。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_stance",
+          "has_horizon"
+        ],
+        "risk": "",
+        "section": "CPU/CPO交换机",
+        "source_bv": "BV1n2bR6hEV4",
+        "source_file": "钱博士 2026.8.16 BV1n2bR6hEV4.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV1n2bR6hEV4.md",
+        "source_type": "livestream",
+        "stance": "bullish",
+        "timestamp": "00:06:90-00:07:05",
+        "version": 1,
+        "view_id": "aac74f9988e63801",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.7755
+      },
+      {
+        "analyst": "钱博士直播",
+        "claim": "短线：中性 🦀➡️",
+        "confidence": 0.75,
+        "date": "2026-08-16",
+        "entities": {
+          "sectors": [
+            "光模块"
+          ],
+          "stocks": [
+            "300308.SZ",
+            "300394.SZ",
+            "300502.SZ"
+          ],
+          "themes": [
+            "北美云厂商资本开支",
+            "海外算力",
+            "英伟达产业链"
+          ],
+          "us_mapping": [
+            "AVGO",
+            "MRVL",
+            "NVDA"
+          ]
+        },
+        "evidence": "短线：中性 🦀➡️ 逻辑：光模块大公司没有方向意愿，FCC事件影响较大，大家不知道该怎么应对。CPU对光模块不构成强烈竞争，光模块该用还用，但散户情绪上会有疑问。 (00:00:00-00:00:00) 光嘛就是没有意愿，就是有就光膜块这种，大光大光膜块公司没有意愿，你们fcc这个事影响还是挺大的，大家不知道该怎么着 (00:00:00-00:00:00) 普通散户他就会有这个疑问，所以情绪上对光模块肯定不是正面的，但其实也不负面 (00:00:00-00:00:00) 跟光膜块有关的公司受到的实际影响不大，有一话叫什么伤害性不大，侮辱性极强",
+        "horizon": "short",
+        "logic": "光模块大公司没有方向意愿，FCC事件影响较大，大家不知道该怎么应对。CPU对光模块不构成强烈竞争，光模块该用还用，但散户情绪上会有疑问。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_horizon"
+        ],
+        "risk": "",
+        "section": "光模块",
+        "source_bv": "BV15dbR6sEc6",
+        "source_file": "钱博士 2026.8.16 BV15dbR6sEc6.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV15dbR6sEc6.md",
+        "source_type": "livestream",
+        "stance": "neutral",
+        "timestamp": "00:00:00-00:00:00",
+        "version": 1,
+        "view_id": "79b9c46fdc70a850",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.7175
+      }
+    ],
+    "analyst_scores": [],
+    "market_snapshot": {
+      "NVDA": {
+        "price": 214.72,
+        "change_pct": -0.98,
+        "updated": "2026-08-23T12:44:21.903537",
+        "name": null
+      },
+      "159813.SZ": {
+        "price": 0.74,
+        "change_pct": 0.0,
+        "updated": "2026-08-23T12:44:20.462198",
+        "name": null
+      }
+    },
+    "user_decision_history": [],
+    "rag_evidence": [
+      {
+        "content": "### AI硬件/算力\n短线：看多🐂📈  \n中长线：看多🐂📈  \n逻辑：主播认为AI硬件这条线资金一直在做，市场共识越来越高；算力需求在北美出现指数级增长，而供给明显小于需求，这使得相关硬件和上游环节持续走强。",
+        "source": "趋势天哥 2026.1.28 BV1Sy6EBiEYe.md",
+        "section": "观点分析",
+        "score": 0.3239,
+        "raw_score": 0.5196,
+        "date": "2026-01-28",
+        "type": "livestream",
+        "weights": {
+          "sim_weighted": 0.1039,
+          "freshness": 0.1,
+          "freshness_weighted": 0.06,
+          "type_score": 0.8,
+          "type_weighted": 0.16
+        }
+      },
+      {
+        "content": "## 精炼总结\n> 市场呈结构性行情，资金集中在AI算力（昇腾/豆包产业链）、电池和商业航天等板块轮动。白酒板块因五粮液事件引发行业信任危机，整体承压。油价维持高位利好能源股，AI大模型开启收费模式，提升算力需求及估值逻辑。",
+        "source": "钱博士直播 BV1XZRJB2ECZ.md",
+        "section": "精炼总结",
+        "score": 0.3136,
+        "raw_score": 0.4682,
+        "date": "2026-06-01",
+        "type": "livestream",
+        "weights": {
+          "sim_weighted": 0.0936,
+          "freshness": 0.1,
+          "freshness_weighted": 0.06,
+          "type_score": 0.8,
+          "type_weighted": 0.16
+        }
+      }
+    ],
+    "summary": "AI应用：分析卡有factors，多空对照0多0空，分析师0条历史分，近期观点9条，用户决策0条。"
+  }
+}

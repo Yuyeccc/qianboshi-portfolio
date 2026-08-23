@@ -6,7 +6,7 @@
       "reviewed": 2,
       "hit": 0,
       "wrong": 2,
-      "generated_at": "2026-08-23T10:39:40.473792+00:00"
+      "generated_at": "2026-08-23T14:24:30.449310+00:00"
     },
     "decisions": [
       {
@@ -91,8 +91,8 @@
           },
           {
             "factor_name": "美股AI映射",
-            "current_state": "近5日走强+3.16%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-3.03%",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           }
         ]
@@ -105,19 +105,19 @@
         "factors": [
           {
             "factor_name": "BD出海",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度持平",
+            "impact_direction": "neutral",
             "impact_strength": "high"
           },
           {
             "factor_name": "创新药个股",
-            "current_state": "看多0/看空0/中性1（近30天）；药明康德中性(钱博士直播 7.23)",
+            "current_state": "看多0/看空1/中性0（近30天）；药明康德看空(钱博士直播 8.14)",
             "impact_direction": "negative",
             "impact_strength": "medium"
           },
           {
             "factor_name": "创新药指数",
-            "current_state": "近5日走强+3.61%",
+            "current_state": "近5日走强+4.71%",
             "impact_direction": "positive",
             "impact_strength": "high"
           }
@@ -131,8 +131,8 @@
         "factors": [
           {
             "factor_name": "北美云厂商资本开支",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
@@ -195,8 +195,8 @@
           },
           {
             "factor_name": "白酒指数",
-            "current_state": "数据缺失",
-            "impact_direction": "neutral",
+            "current_state": "近5日走弱-2.33%",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           }
         ]
@@ -209,14 +209,14 @@
         "factors": [
           {
             "factor_name": "光模块景气",
-            "current_state": "近5日走弱-11.01%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+4.77%",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
             "factor_name": "半导体ETF",
-            "current_state": "近5日走强+1.36%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-0.95%",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
@@ -247,7 +247,7 @@
           },
           {
             "factor_name": "紫金矿业代理",
-            "current_state": "近5日走强+5.47%",
+            "current_state": "近5日走强+0.70%",
             "impact_direction": "positive",
             "impact_strength": "medium"
           }
@@ -261,8 +261,8 @@
         "factors": [
           {
             "factor_name": "地缘风险",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "medium"
           },
           {

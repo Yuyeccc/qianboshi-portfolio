@@ -1,0 +1,1072 @@
+{
+  "evidence_pack": {
+    "asset_id": "ROBOT",
+    "asset_name": "机器人",
+    "as_of_date": "2026-08-23",
+    "asset_card": {
+      "asset_id": "ROBOT",
+      "asset_name": "机器人",
+      "asset_type": "theme",
+      "version": 1,
+      "default_horizon": "medium",
+      "description": "机器人中期趋势分析框架",
+      "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\robot.yaml",
+      "as_of_date": "2026-08-23",
+      "factors": [
+        {
+          "asset_id": "ROBOT",
+          "factor_id": "HUMANOID_MASS_PRODUCTION",
+          "factor_name": "人形机器人量产",
+          "as_of_date": "2026-08-23",
+          "raw_value": {
+            "query_terms": [
+              "人形机器人",
+              "量产",
+              "特斯拉optimus"
+            ],
+            "lookback_days": 30,
+            "current_count": 2,
+            "previous_count": 29
+          },
+          "current_state": "观点热度下降",
+          "change_direction": "down",
+          "impact_direction": "negative",
+          "impact_strength": "high",
+          "confidence": 0.8,
+          "evidence_refs": [
+            "b3cc7e873c159045",
+            "aac74f9988e63801"
+          ],
+          "summary": "人形机器人量产观点热度下降，对ROBOT构成negative影响。",
+          "card_version": 1,
+          "state_id": "ROBOT_1_HUMANOID_MASS_PRODUCTION_2026-08-23"
+        },
+        {
+          "asset_id": "ROBOT",
+          "factor_id": "POLICY_SUPPORT",
+          "factor_name": "政策支持",
+          "as_of_date": "2026-08-23",
+          "raw_value": {
+            "query_terms": [
+              "机器人",
+              "政策",
+              "补贴"
+            ],
+            "lookback_days": 30,
+            "current_count": 15,
+            "previous_count": 144
+          },
+          "current_state": "观点热度下降",
+          "change_direction": "down",
+          "impact_direction": "negative",
+          "impact_strength": "medium",
+          "confidence": 0.8,
+          "evidence_refs": [
+            "0dbecb19a0ea109f",
+            "f514d237164b13a4",
+            "2263f317bd5862df"
+          ],
+          "summary": "政策支持观点热度下降，对ROBOT构成negative影响。",
+          "card_version": 1,
+          "state_id": "ROBOT_1_POLICY_SUPPORT_2026-08-23"
+        },
+        {
+          "asset_id": "ROBOT",
+          "factor_id": "ROBOT_ETF",
+          "factor_name": "机器人ETF",
+          "as_of_date": "2026-08-23",
+          "raw_value": {
+            "symbol": "159770.SZ",
+            "close": 1.05,
+            "date": "2026-08-06",
+            "pct_change_5d": 12.2995,
+            "pct_change_20d": -8.4568,
+            "source": "price_trends"
+          },
+          "current_state": "近5日走强+12.30%",
+          "change_direction": "up",
+          "impact_direction": "positive",
+          "impact_strength": "medium",
+          "confidence": 0.8,
+          "evidence_refs": [
+            "yfinance"
+          ],
+          "summary": "机器人ETF近5日走强+12.30%，对ROBOT构成positive影响。",
+          "card_version": 1,
+          "state_id": "ROBOT_1_ROBOT_ETF_2026-08-23"
+        }
+      ],
+      "logic_chain_summary": "当前机器人的正向驱动来自机器人ETF，负向压力来自人形机器人量产、政策支持。"
+    },
+    "factor_states": [
+      {
+        "factor_id": "HUMANOID_MASS_PRODUCTION",
+        "factor_name": "人形机器人量产",
+        "current_state": "观点热度下降",
+        "impact_direction": "negative",
+        "evidence_refs": [
+          "b3cc7e873c159045",
+          "aac74f9988e63801"
+        ]
+      },
+      {
+        "factor_id": "POLICY_SUPPORT",
+        "factor_name": "政策支持",
+        "current_state": "观点热度下降",
+        "impact_direction": "negative",
+        "evidence_refs": [
+          "0dbecb19a0ea109f",
+          "f514d237164b13a4",
+          "2263f317bd5862df"
+        ]
+      },
+      {
+        "factor_id": "ROBOT_ETF",
+        "factor_name": "机器人ETF",
+        "current_state": "近5日走强+12.30%",
+        "impact_direction": "positive",
+        "evidence_refs": [
+          "yfinance"
+        ]
+      }
+    ],
+    "debate_card": {
+      "card_id": "debate_机器人_medium_2026-06-18_2026-08-16",
+      "entity_id": "机器人",
+      "entity_name": "机器人",
+      "entity_type": "sector",
+      "horizon": "medium",
+      "window": {
+        "start": "2026-06-18",
+        "end": "2026-08-16"
+      },
+      "highlights": [
+        "高置信",
+        "强分歧"
+      ],
+      "counts": {
+        "bullish": 6,
+        "bearish": 6,
+        "risk": 0,
+        "neutral": 1,
+        "watch": 0
+      },
+      "metrics": {
+        "consensus_direction": "mixed",
+        "disagreement_level": 0.9231,
+        "confidence_level": 0.7692,
+        "novelty_level": 0.0,
+        "net_stance_score": 0.0
+      },
+      "summary": "机器人：多头6条，空头6条，风险0条，中性1条，共识方向=mixed，分歧度=0.92。",
+      "bullish": [
+        {
+          "view_id": "a445d4374254f373",
+          "analyst": "旗帜鲜明",
+          "claim": "中长线：中性 🦀➡️",
+          "logic": "重申此前早已看多并布局科技，但目前存在公募基金追涨科技的巨大信号，暗示板块可能过热，存在潜在风险。同时强调，科技股能赚钱不是因为涨得高，而是因为过去三个月能拿住，考验的是定力。",
+          "confidence": 0.91,
+          "evidence": "中长线：中性 🦀➡️ 逻辑：重申此前早已看多并布局科技，但目前存在公募基金追涨科技的巨大信号，暗示板块可能过热，存在潜在风险。同时强调，科技股能赚钱不是因为涨得高，而是因为过去三个月能拿住，考验的是定力。 (00:00:00-00:00:00) 真正厉害的人 三个月前就看到了 … 想明白真正的光和心的机会 是在现在吗 明明是在三个月前 (00:00:00-00:00:00) 最近有一个非常非常大的信号 就是公穆基金 初清追涨科技 这个大家记住就行了 (00:00:00-00:00:00) 这个市场上没有人看长科技的时候 我是科技最大的拥护者 你那个时候你妖不师 你还没突然的 你信不信 还我天天看空科技 你是天天没看我呀你 你不知道我吗 涉及资产：半导体、机器人、软件、消费电子、元气件",
+          "analyst_score": {
+            "analyst": "旗帜鲜明",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 20,
+            "hit_rate": 0.6,
+            "avg_return": -2.0972,
+            "score": 0.6,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "bc332751f5927ee4",
+          "analyst": "柏年说",
+          "claim": "中长线：看多 🐂📈",
+          "logic": "科技板块的行情大概率会延续。逻辑在于，美联储的“加息预期”可能在9月告一段落，资金有望回流新兴市场；国内有重要科技公司（如长鑫、某机器人公司）需要上市融资，需要活跃的市场环境；同时，中报业绩有望持续超预期，为行情提供支撑。",
+          "confidence": 0.83,
+          "evidence": "中长线：看多 🐂📈 逻辑：科技板块的行情大概率会延续。逻辑在于，美联储的“加息预期”可能在9月告一段落，资金有望回流新兴市场；国内有重要科技公司（如长鑫、某机器人公司）需要上市融资，需要活跃的市场环境；同时，中报业绩有望持续超预期，为行情提供支撑。 (00:12:11-00:12:21) 科技行情依旧会延续，可以扣3 (02:25:20-02:25:46) 9月份不是讲了吗，就是说下半年...这一轮整个带动市场调整的最大的变量...美联储，他的加息可能就告一段落...预期告一段了转向这个降息...整个这个钱可能就要留下新兴市场 (02:26:00-02:26:24) 我们还有一些公司要上市...你如果场子量了之后...我们要支持科技企业发展，你怎么支持场子量了...所以说，那么它背后肯定会有些力量的加持和推动 涉及资产：科技板块整体",
+          "analyst_score": {
+            "analyst": "柏年说",
+            "entity": "159770.SZ",
+            "horizon": "medium",
+            "window_days": 5,
+            "sample_count": 1,
+            "hit_rate": 0.0,
+            "avg_return": -7.7912,
+            "score": 0.0,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "28e18ab559e7964b",
+          "analyst": "钱博士短视频",
+          "claim": "中长线：看多🐂📈",
+          "logic": "他认为机器人产业链会像新能源汽车一样，除了本体公司之外，核心零部件、供应链公司也会持续受益。",
+          "confidence": 0.83,
+          "evidence": "中长线：看多🐂📈 逻辑：他认为机器人产业链会像新能源汽车一样，除了本体公司之外，核心零部件、供应链公司也会持续受益。 (00:01:31-00:01:39) 机群这个行业跟单单单电路车很像。 (00:01:21-00:01:31) 除了本体公司以害，还值得关注的是核心定不见公司上。 (00:01:27-00:01:31) 涉及到的公司有几十家。 涉及资产：机器人本体公司",
+          "analyst_score": {
+            "analyst": "钱博士短视频",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 16,
+            "hit_rate": 0.4375,
+            "avg_return": -5.2682,
+            "score": 0.4375,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "b82246e28afca3c8",
+          "analyst": "钱博士短视频",
+          "claim": "中长线：看多🐂📈",
+          "logic": "机器人零部件是持续性利好的承接方向，随着量产推进和订单披露，供应链有望反复被提及。",
+          "confidence": 0.83,
+          "evidence": "中长线：看多🐂📈 逻辑：机器人零部件是持续性利好的承接方向，随着量产推进和订单披露，供应链有望反复被提及。 (00:01:20-00:01:26) 后续可能会有一些公司陆续披露订单，这种就是持续性的利好。 涉及资产：谐波减速器 影响与结果：主播认为它是机器人上肢的重要核心零部件。 逻辑：因为机器人上肢要用谐波减速器，且相关资产集中度较高。",
+          "analyst_score": {
+            "analyst": "钱博士短视频",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 16,
+            "hit_rate": 0.4375,
+            "avg_return": -5.2682,
+            "score": 0.4375,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "54298bcf2e2700d6",
+          "analyst": "钱博士直播",
+          "claim": "中长线：看多 🐂📈",
+          "logic": "他强调机器人之所以没凉，是因为未来出货预期可能上升，而且“马上就要量产了”。",
+          "confidence": 0.83,
+          "evidence": "中长线：看多 🐂📈 逻辑：他强调机器人之所以没凉，是因为未来出货预期可能上升，而且“马上就要量产了”。 (00:09:24-00:09:36) “未来出货预期有可能上升的...马上就要量产了” 涉及资产：机器人 影响与结果：主播认为机器人板块经历起落，但并未失去中长期想象空间。 逻辑：未来量产/出货预期支撑了板块的持续性。",
+          "analyst_score": {
+            "analyst": "钱博士直播",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 18,
+            "hit_rate": 0.5556,
+            "avg_return": -1.8823,
+            "score": 0.5556,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "a984e0ef2985c238",
+          "analyst": "钱博士直播",
+          "claim": "主播调侃优必选机器人男朋友。",
+          "logic": "",
+          "confidence": 0.75,
+          "evidence": "内容：主播调侃优必选机器人男朋友。 (01:10:05-01:10:12)你买完那之后你就你你就相信你请了一个1米八三的优必选机器人男朋友回家。 (00:51:13-00:51:15)，(00:51:35-00:54:38)，(00:54:40-01:01:41)，(01:01:43-01:07:17)，(01:07:26-01:07:39)，(01:07:52-01:07:57)，(01:11:35-01:11:36)，(01:44:55-01:45:05)，(01:45:52-01:46:27)，(01:46:48-01:47:53)，(01:52:17-01:54:39) 中长线：看多 🐂📈",
+          "analyst_score": {
+            "analyst": "钱博士直播",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 18,
+            "hit_rate": 0.5556,
+            "avg_return": -1.8823,
+            "score": 0.5556,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        }
+      ],
+      "bearish": [
+        {
+          "view_id": "05de5741ff5d8af9",
+          "analyst": "旗帜鲜明",
+          "claim": "中长线：看空 🐻📉",
+          "logic": "以光通信板块为例，其指数在短时间内大幅下跌，几乎吞没全年涨幅，这种快速下跌后若无充分换手，理论上很难直接反转向上。",
+          "confidence": 0.91,
+          "evidence": "中长线：看空 🐻📉 逻辑：以光通信板块为例，其指数在短时间内大幅下跌，几乎吞没全年涨幅，这种快速下跌后若无充分换手，理论上很难直接反转向上。 (00:00:00-00:00:00) 光通信这是光通信的四月八号...整个今年的掌服就一直就全吃回来了。 (00:00:00-00:00:00) 它能不能这种下跌的角度所呈现出来的量是这么小的量...他说理论上是很难走出这种情况。 涉及资产：纯粹芯片、光通信、消费电子、元器件、CPU、存储芯片、机器人、固态电池、商业航天、创业板、科创板等。 影响与结果：持续下跌，部分指数跌回数月前水平。盘中虽有高开，但多为高开低走。",
+          "analyst_score": {
+            "analyst": "旗帜鲜明",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 20,
+            "hit_rate": 0.6,
+            "avg_return": -2.0972,
+            "score": 0.6,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "cf95351c4adb7f68",
+          "analyst": "旗帜鲜明",
+          "claim": "中长线：看空 🐻📉",
+          "logic": "当前并非泡沫破裂，只是涨多后的正常回调。但高位品种回调幅度深、上方套牢盘重，20天内都不建议再研究关注。必须等到充分杀跌、筹码交换后才有参与价值。",
+          "confidence": 0.91,
+          "evidence": "中长线：看空 🐻📉 逻辑：当前并非泡沫破裂，只是涨多后的正常回调。但高位品种回调幅度深、上方套牢盘重，20天内都不建议再研究关注。必须等到充分杀跌、筹码交换后才有参与价值。 (00:14:58-00:15:06) 现在算不算泡沫破裂。我可以给你答案不是。现在根本不是泡沫破裂。现在就是涨太多了，贵了，贵了就得跌一点 (00:24:08-00:24:19) 腰塌了的腰中，对吧腰部比较明确的固态电池，对吧离电池，固态电池，吸土这些腰部的塌下来的，你看就行了，对吧至少20天内你别研究他了，就不要研究他了 涉及资产：消费电子、光模块、PCB、机器人、固态电池、锂电池、稀土等前期热门高位科技股 影响与结果：连续两日暴跌，两天跌去15-16个点，套牢大量散户。",
+          "analyst_score": {
+            "analyst": "旗帜鲜明",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 20,
+            "hit_rate": 0.6,
+            "avg_return": -2.0972,
+            "score": 0.6,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "b0b627ff46318dcc",
+          "analyst": "旗帜鲜明",
+          "claim": "中长线：看空🐻📉",
+          "logic": "高位板块仍处于漫长调整初期，未来下跌空间和时间都很大，不要侥幸。",
+          "confidence": 0.91,
+          "evidence": "中长线：看空🐻📉 逻辑：高位板块仍处于漫长调整初期，未来下跌空间和时间都很大，不要侥幸。 依据类型：逻辑推演 (2351.58-2361.54) 这怎么可能啊 爹完了反弹 涨完了再跌下去 … 你知道他未来不管怎么走 … 多大的空间去做对称呢 涉及资产：消费电子、元器件、通信设备、机器人等 影响与结果：最近一个月普遍下跌，仅偶有反弹",
+          "analyst_score": {
+            "analyst": "旗帜鲜明",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 20,
+            "hit_rate": 0.6,
+            "avg_return": -2.0972,
+            "score": 0.6,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "3cac9ef7c38e9a42",
+          "analyst": "旗帜鲜明",
+          "claim": "中长线：看空 🐻📉",
+          "logic": "从高位抱团中被淘汰，资金撤出，回归弱势。",
+          "confidence": 0.83,
+          "evidence": "中长线：看空 🐻📉 逻辑：从高位抱团中被淘汰，资金撤出，回归弱势。 (00:38:21-00:38:24) 机器人是最早掉队的…这已经掉队了",
+          "analyst_score": {
+            "analyst": "旗帜鲜明",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 20,
+            "hit_rate": 0.6,
+            "avg_return": -2.0972,
+            "score": 0.6,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "3e0eb652905ca834",
+          "analyst": "钱博士直播",
+          "claim": "中长线：看空🐻📉",
+          "logic": "行业敏感、难以形成持续强势。",
+          "confidence": 0.83,
+          "evidence": "中长线：看空🐻📉 他认为教育和农业这类行业敏感、不能成为“持续暴力”的行业，因此不适合长期持有。 (00:27:14-00:27:38) “教育行业和农业方向…都不能长期持有…不能成为持续暴力的行业的” 涉及资产：教育、农业、房地产、机器人 影响与结果：被归类为不适合长期持有的方向。 逻辑：行业敏感、难以形成持续强势。",
+          "analyst_score": {
+            "analyst": "钱博士直播",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 18,
+            "hit_rate": 0.5556,
+            "avg_return": -1.8823,
+            "score": 0.5556,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        },
+        {
+          "view_id": "888b89d33d0d3ae8",
+          "analyst": "钱博士直播",
+          "claim": "中长线：看空 🐻📉",
+          "logic": "与大盘形成“跷跷板”效应。若下半年大盘如预期上涨，将对光和芯形成资金虹吸的压力，因此中长线不看好。",
+          "confidence": 0.83,
+          "evidence": "中长线：看空 🐻📉 逻辑：与大盘形成“跷跷板”效应。若下半年大盘如预期上涨，将对光和芯形成资金虹吸的压力，因此中长线不看好。 (18:74:64-18:89:20) 如果你相信下半年大盘会破4300 你大方向上光和心就不能买...因为光和心是和大盘畅反掉的现在 (19:18:40-19:22:80) 我的个人观点是下半年大盘会向上突破心的高点，所以我不能选跟大盘畅反掉的东西 涉及资产：光刻胶/芯片、半导体、人工智能、机器人等 影响与结果：科技股整体表现疲软，机器人大跌，半导体大幅冲高回落。",
+          "analyst_score": {
+            "analyst": "钱博士直播",
+            "entity": "159770.SZ",
+            "horizon": "intraday,medium,short,unknown",
+            "window_days": 5,
+            "sample_count": 18,
+            "hit_rate": 0.5556,
+            "avg_return": -1.8823,
+            "score": 0.5556,
+            "updated_at": "2026-08-06T16:11:43"
+          }
+        }
+      ],
+      "risk": [],
+      "neutral": [
+        {
+          "view_id": "c9bce198d2032e38",
+          "analyst": "投机大拿",
+          "claim": "中长线：中性🦀➡️",
+          "logic": "他把商业航天、机器人、AI算力都归到“规划里的未来产业”，认为这些方向有机会，但不同人的体验取决于买入时点和手艺，不能用单日涨跌判断长期。",
+          "confidence": 0.75,
+          "evidence": "中长线：中性🦀➡️ 逻辑：他把商业航天、机器人、AI算力都归到“规划里的未来产业”，认为这些方向有机会，但不同人的体验取决于买入时点和手艺，不能用单日涨跌判断长期。 (00:48:28-00:49:06) “機器人商業行程AI算力，那麼這不都是未來產業嗎。” (00:54:18-00:55:06) “在當前這個階段，寫進食物規劃裡邊，從產業未來角度上看都是有機會的。” 涉及资产：火箭回收 影响与结果：他明确说这是“国内可回收火箭的技术突破”，但没有直接把它推导成板块必涨。",
+          "analyst_score": null
+        }
+      ],
+      "watch": [],
+      "disagreements": [
+        {
+          "topic": "机器人方向分歧",
+          "bullish_side": [
+            "中长线：中性 🦀➡️",
+            "中长线：看多 🐂📈",
+            "中长线：看多🐂📈"
+          ],
+          "bearish_side": [
+            "中长线：看空 🐻📉",
+            "中长线：看空 🐻📉",
+            "中长线：看空🐻📉"
+          ]
+        }
+      ],
+      "consensus": [],
+      "new_changes": [],
+      "items": [
+        {
+          "view_id": "c9bce198d2032e38",
+          "stance": "neutral",
+          "analyst": "投机大拿",
+          "date": "2026-07-13",
+          "claim": "中长线：中性🦀➡️",
+          "logic": "他把商业航天、机器人、AI算力都归到“规划里的未来产业”，认为这些方向有机会，但不同人的体验取决于买入时点和手艺，不能用单日涨跌判断长期。",
+          "risk": "",
+          "evidence": "中长线：中性🦀➡️ 逻辑：他把商业航天、机器人、AI算力都归到“规划里的未来产业”，认为这些方向有机会，但不同人的体验取决于买入时点和手艺，不能用单日涨跌判断长期。 (00:48:28-00:49:06) “機器人商業行程AI算力，那麼這不都是未來產業嗎。” (00:54:18-00:55:06) “在當前這個階段，寫進食物規劃裡邊，從產業未來角度上看都是有機會的。” 涉及资产：火箭回收 影响与结果：他明确说这是“国内可回收火箭的技术突破”，但没有直接把它推导成板块必涨。",
+          "confidence": 0.75,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": null,
+          "source_file": "投机大拿 2026.07.13 BV1uXNC6sEto.md"
+        },
+        {
+          "view_id": "a445d4374254f373",
+          "stance": "bullish",
+          "analyst": "旗帜鲜明",
+          "date": "2026-06-23",
+          "claim": "中长线：中性 🦀➡️",
+          "logic": "重申此前早已看多并布局科技，但目前存在公募基金追涨科技的巨大信号，暗示板块可能过热，存在潜在风险。同时强调，科技股能赚钱不是因为涨得高，而是因为过去三个月能拿住，考验的是定力。",
+          "risk": "中长线：中性 🦀➡️ 逻辑：重申此前早已看多并布局科技，但目前存在公募基金追涨科技的巨大信号，暗示板块可能过热，存在潜在风险。同时强调，科技股能赚钱不是因为涨得高，而是因为过去三个月能拿住，考验的是定力。 (00:00:00-00:00:00) 真正厉害的人 三个月前就看到了 … 想明白真正的光和心的机会 是在现在吗 明明是在三个月前 (00:00:00-00:00:00) 最近有一个非常非常大的信号 就是公穆基金 初清追涨科技 这个大",
+          "evidence": "中长线：中性 🦀➡️ 逻辑：重申此前早已看多并布局科技，但目前存在公募基金追涨科技的巨大信号，暗示板块可能过热，存在潜在风险。同时强调，科技股能赚钱不是因为涨得高，而是因为过去三个月能拿住，考验的是定力。 (00:00:00-00:00:00) 真正厉害的人 三个月前就看到了 … 想明白真正的光和心的机会 是在现在吗 明明是在三个月前 (00:00:00-00:00:00) 最近有一个非常非常大的信号 就是公穆基金 初清追涨科技 这个大家记住就行了 (00:00:00-00:00:00) 这个市场上没有人看长科技的时候 我是科技最大的拥护者 你那个时候你妖不师 你还没突然的 你信不信 还我天天看空科技 你是天天没看我呀你 你不知道我吗 涉及资产：半导体、机器人、软件、消费电子、元气件",
+          "confidence": 0.91,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.6,
+          "source_file": "旗帜鲜明 2026.06.23 BV1k47g6jE57.md"
+        },
+        {
+          "view_id": "3cac9ef7c38e9a42",
+          "stance": "bearish",
+          "analyst": "旗帜鲜明",
+          "date": "2026-06-29",
+          "claim": "中长线：看空 🐻📉",
+          "logic": "从高位抱团中被淘汰，资金撤出，回归弱势。",
+          "risk": "",
+          "evidence": "中长线：看空 🐻📉 逻辑：从高位抱团中被淘汰，资金撤出，回归弱势。 (00:38:21-00:38:24) 机器人是最早掉队的…这已经掉队了",
+          "confidence": 0.83,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.6,
+          "source_file": "旗帜鲜明 2026.06.29 BV1KNTL66Ec9.md"
+        },
+        {
+          "view_id": "b0b627ff46318dcc",
+          "stance": "bearish",
+          "analyst": "旗帜鲜明",
+          "date": "2026-07-08",
+          "claim": "中长线：看空🐻📉",
+          "logic": "高位板块仍处于漫长调整初期，未来下跌空间和时间都很大，不要侥幸。",
+          "risk": "中长线：看空🐻📉 逻辑：高位板块仍处于漫长调整初期，未来下跌空间和时间都很大，不要侥幸。 依据类型：逻辑推演 (2351.58-2361.54) 这怎么可能啊 爹完了反弹 涨完了再跌下去 … 你知道他未来不管怎么走 … 多大的空间去做对称呢 涉及资产：消费电子、元器件、通信设备、机器人等 影响与结果：最近一个月普遍下跌，仅偶有反弹",
+          "evidence": "中长线：看空🐻📉 逻辑：高位板块仍处于漫长调整初期，未来下跌空间和时间都很大，不要侥幸。 依据类型：逻辑推演 (2351.58-2361.54) 这怎么可能啊 爹完了反弹 涨完了再跌下去 … 你知道他未来不管怎么走 … 多大的空间去做对称呢 涉及资产：消费电子、元器件、通信设备、机器人等 影响与结果：最近一个月普遍下跌，仅偶有反弹",
+          "confidence": 0.91,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.6,
+          "source_file": "旗帜鲜明 2026.07.08 BV1EPMi6REe4.md"
+        },
+        {
+          "view_id": "cf95351c4adb7f68",
+          "stance": "bearish",
+          "analyst": "旗帜鲜明",
+          "date": "2026-07-14",
+          "claim": "中长线：看空 🐻📉",
+          "logic": "当前并非泡沫破裂，只是涨多后的正常回调。但高位品种回调幅度深、上方套牢盘重，20天内都不建议再研究关注。必须等到充分杀跌、筹码交换后才有参与价值。",
+          "risk": "中长线：看空 🐻📉 逻辑：当前并非泡沫破裂，只是涨多后的正常回调。但高位品种回调幅度深、上方套牢盘重，20天内都不建议再研究关注。必须等到充分杀跌、筹码交换后才有参与价值。 (00:14:58-00:15:06) 现在算不算泡沫破裂。我可以给你答案不是。现在根本不是泡沫破裂。现在就是涨太多了，贵了，贵了就得跌一点 (00:24:08-00:24:19) 腰塌了的腰中，对吧腰部比较明确的固态电池，对吧离电池，固态电池，吸土这些腰部的塌下来",
+          "evidence": "中长线：看空 🐻📉 逻辑：当前并非泡沫破裂，只是涨多后的正常回调。但高位品种回调幅度深、上方套牢盘重，20天内都不建议再研究关注。必须等到充分杀跌、筹码交换后才有参与价值。 (00:14:58-00:15:06) 现在算不算泡沫破裂。我可以给你答案不是。现在根本不是泡沫破裂。现在就是涨太多了，贵了，贵了就得跌一点 (00:24:08-00:24:19) 腰塌了的腰中，对吧腰部比较明确的固态电池，对吧离电池，固态电池，吸土这些腰部的塌下来的，你看就行了，对吧至少20天内你别研究他了，就不要研究他了 涉及资产：消费电子、光模块、PCB、机器人、固态电池、锂电池、稀土等前期热门高位科技股 影响与结果：连续两日暴跌，两天跌去15-16个点，套牢大量散户。",
+          "confidence": 0.91,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.6,
+          "source_file": "旗帜鲜明 2026.07.14 BV1ZDNQ6oEVb.md"
+        },
+        {
+          "view_id": "05de5741ff5d8af9",
+          "stance": "bearish",
+          "analyst": "旗帜鲜明",
+          "date": "2026-07-20",
+          "claim": "中长线：看空 🐻📉",
+          "logic": "以光通信板块为例，其指数在短时间内大幅下跌，几乎吞没全年涨幅，这种快速下跌后若无充分换手，理论上很难直接反转向上。",
+          "risk": "中长线：看空 🐻📉 逻辑：以光通信板块为例，其指数在短时间内大幅下跌，几乎吞没全年涨幅，这种快速下跌后若无充分换手，理论上很难直接反转向上。 (00:00:00-00:00:00) 光通信这是光通信的四月八号...整个今年的掌服就一直就全吃回来了。 (00:00:00-00:00:00) 它能不能这种下跌的角度所呈现出来的量是这么小的量...他说理论上是很难走出这种情况。 涉及资产：纯粹芯片、光通信、消费电子、元器件、CPU、存储芯片、",
+          "evidence": "中长线：看空 🐻📉 逻辑：以光通信板块为例，其指数在短时间内大幅下跌，几乎吞没全年涨幅，这种快速下跌后若无充分换手，理论上很难直接反转向上。 (00:00:00-00:00:00) 光通信这是光通信的四月八号...整个今年的掌服就一直就全吃回来了。 (00:00:00-00:00:00) 它能不能这种下跌的角度所呈现出来的量是这么小的量...他说理论上是很难走出这种情况。 涉及资产：纯粹芯片、光通信、消费电子、元器件、CPU、存储芯片、机器人、固态电池、商业航天、创业板、科创板等。 影响与结果：持续下跌，部分指数跌回数月前水平。盘中虽有高开，但多为高开低走。",
+          "confidence": 0.91,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.6,
+          "source_file": "旗帜鲜明 2026.07.20 BV1XBK16vEtf.md"
+        },
+        {
+          "view_id": "bc332751f5927ee4",
+          "stance": "bullish",
+          "analyst": "柏年说",
+          "date": "2026-07-04",
+          "claim": "中长线：看多 🐂📈",
+          "logic": "科技板块的行情大概率会延续。逻辑在于，美联储的“加息预期”可能在9月告一段落，资金有望回流新兴市场；国内有重要科技公司（如长鑫、某机器人公司）需要上市融资，需要活跃的市场环境；同时，中报业绩有望持续超预期，为行情提供支撑。",
+          "risk": "",
+          "evidence": "中长线：看多 🐂📈 逻辑：科技板块的行情大概率会延续。逻辑在于，美联储的“加息预期”可能在9月告一段落，资金有望回流新兴市场；国内有重要科技公司（如长鑫、某机器人公司）需要上市融资，需要活跃的市场环境；同时，中报业绩有望持续超预期，为行情提供支撑。 (00:12:11-00:12:21) 科技行情依旧会延续，可以扣3 (02:25:20-02:25:46) 9月份不是讲了吗，就是说下半年...这一轮整个带动市场调整的最大的变量...美联储，他的加息可能就告一段落...预期告一段了转向这个降息...整个这个钱可能就要留下新兴市场 (02:26:00-02:26:24) 我们还有一些公司要上市...你如果场子量了之后...我们要支持科技企业发展，你怎么支持场子量了...所以说，那么它背后肯定会有些力量的加持和推动 涉及资产：科技板块整体",
+          "confidence": 0.83,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.0,
+          "source_file": "柏年说 2026.07.04 BV1R1TZ6GE7x.md"
+        },
+        {
+          "view_id": "888b89d33d0d3ae8",
+          "stance": "bearish",
+          "analyst": "钱博士直播",
+          "date": "2026-06-22",
+          "claim": "中长线：看空 🐻📉",
+          "logic": "与大盘形成“跷跷板”效应。若下半年大盘如预期上涨，将对光和芯形成资金虹吸的压力，因此中长线不看好。",
+          "risk": "",
+          "evidence": "中长线：看空 🐻📉 逻辑：与大盘形成“跷跷板”效应。若下半年大盘如预期上涨，将对光和芯形成资金虹吸的压力，因此中长线不看好。 (18:74:64-18:89:20) 如果你相信下半年大盘会破4300 你大方向上光和心就不能买...因为光和心是和大盘畅反掉的现在 (19:18:40-19:22:80) 我的个人观点是下半年大盘会向上突破心的高点，所以我不能选跟大盘畅反掉的东西 涉及资产：光刻胶/芯片、半导体、人工智能、机器人等 影响与结果：科技股整体表现疲软，机器人大跌，半导体大幅冲高回落。",
+          "confidence": 0.83,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.5556,
+          "source_file": "钱博士直播复盘 2026.06.22 BV1sX7P6NEJv.md"
+        },
+        {
+          "view_id": "3e0eb652905ca834",
+          "stance": "bearish",
+          "analyst": "钱博士直播",
+          "date": "2026-06-24",
+          "claim": "中长线：看空🐻📉",
+          "logic": "行业敏感、难以形成持续强势。",
+          "risk": "",
+          "evidence": "中长线：看空🐻📉 他认为教育和农业这类行业敏感、不能成为“持续暴力”的行业，因此不适合长期持有。 (00:27:14-00:27:38) “教育行业和农业方向…都不能长期持有…不能成为持续暴力的行业的” 涉及资产：教育、农业、房地产、机器人 影响与结果：被归类为不适合长期持有的方向。 逻辑：行业敏感、难以形成持续强势。",
+          "confidence": 0.83,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.5556,
+          "source_file": "钱博士直播复盘 2026.06.24 BV1tCjX6rEiS.md"
+        },
+        {
+          "view_id": "54298bcf2e2700d6",
+          "stance": "bullish",
+          "analyst": "钱博士直播",
+          "date": "2026-07-02",
+          "claim": "中长线：看多 🐂📈",
+          "logic": "他强调机器人之所以没凉，是因为未来出货预期可能上升，而且“马上就要量产了”。",
+          "risk": "",
+          "evidence": "中长线：看多 🐂📈 逻辑：他强调机器人之所以没凉，是因为未来出货预期可能上升，而且“马上就要量产了”。 (00:09:24-00:09:36) “未来出货预期有可能上升的...马上就要量产了” 涉及资产：机器人 影响与结果：主播认为机器人板块经历起落，但并未失去中长期想象空间。 逻辑：未来量产/出货预期支撑了板块的持续性。",
+          "confidence": 0.83,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.5556,
+          "source_file": "钱博士直播复盘 2026.07.02 BV1seTE67Eao.md"
+        },
+        {
+          "view_id": "28e18ab559e7964b",
+          "stance": "bullish",
+          "analyst": "钱博士短视频",
+          "date": "2026-07-03",
+          "claim": "中长线：看多🐂📈",
+          "logic": "他认为机器人产业链会像新能源汽车一样，除了本体公司之外，核心零部件、供应链公司也会持续受益。",
+          "risk": "",
+          "evidence": "中长线：看多🐂📈 逻辑：他认为机器人产业链会像新能源汽车一样，除了本体公司之外，核心零部件、供应链公司也会持续受益。 (00:01:31-00:01:39) 机群这个行业跟单单单电路车很像。 (00:01:21-00:01:31) 除了本体公司以害，还值得关注的是核心定不见公司上。 (00:01:27-00:01:31) 涉及到的公司有几十家。 涉及资产：机器人本体公司",
+          "confidence": 0.83,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.4375,
+          "source_file": "钱博士短视频 BV1xmT466EEK.md"
+        },
+        {
+          "view_id": "b82246e28afca3c8",
+          "stance": "bullish",
+          "analyst": "钱博士短视频",
+          "date": "2026-07-03",
+          "claim": "中长线：看多🐂📈",
+          "logic": "机器人零部件是持续性利好的承接方向，随着量产推进和订单披露，供应链有望反复被提及。",
+          "risk": "",
+          "evidence": "中长线：看多🐂📈 逻辑：机器人零部件是持续性利好的承接方向，随着量产推进和订单披露，供应链有望反复被提及。 (00:01:20-00:01:26) 后续可能会有一些公司陆续披露订单，这种就是持续性的利好。 涉及资产：谐波减速器 影响与结果：主播认为它是机器人上肢的重要核心零部件。 逻辑：因为机器人上肢要用谐波减速器，且相关资产集中度较高。",
+          "confidence": 0.83,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.4375,
+          "source_file": "钱博士短视频 BV1xmT466EEK.md"
+        },
+        {
+          "view_id": "a984e0ef2985c238",
+          "stance": "bullish",
+          "analyst": "钱博士直播",
+          "date": "2026-06-30",
+          "claim": "主播调侃优必选机器人男朋友。",
+          "logic": "",
+          "risk": "",
+          "evidence": "内容：主播调侃优必选机器人男朋友。 (01:10:05-01:10:12)你买完那之后你就你你就相信你请了一个1米八三的优必选机器人男朋友回家。 (00:51:13-00:51:15)，(00:51:35-00:54:38)，(00:54:40-01:01:41)，(01:01:43-01:07:17)，(01:07:26-01:07:39)，(01:07:52-01:07:57)，(01:11:35-01:11:36)，(01:44:55-01:45:05)，(01:45:52-01:46:27)，(01:46:48-01:47:53)，(01:52:17-01:54:39) 中长线：看多 🐂📈",
+          "confidence": 0.75,
+          "cluster_id": "",
+          "cluster_label": "",
+          "analyst_score_snapshot": 0.5556,
+          "source_file": "钱博士直播总结 2026.06.30.md"
+        }
+      ],
+      "created_at": "2026-08-23T22:25:09",
+      "updated_at": "2026-08-23T22:25:09"
+    },
+    "latest_views": [],
+    "analyst_scores": [
+      {
+        "analyst": "任泽平",
+        "entity": "159770.SZ",
+        "horizon": "intraday,short,unknown",
+        "window_days": 1,
+        "sample_count": 6,
+        "hit_rate": 0.0,
+        "avg_return": -2.3349,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "任泽平",
+        "entity": "159770.SZ",
+        "horizon": "intraday,short,unknown",
+        "window_days": 3,
+        "sample_count": 6,
+        "hit_rate": 0.8333,
+        "avg_return": 0.1072,
+        "score": 0.8333,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "任泽平",
+        "entity": "159770.SZ",
+        "horizon": "intraday,short,unknown",
+        "window_days": 5,
+        "sample_count": 6,
+        "hit_rate": 0.0,
+        "avg_return": -6.2344,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "任泽平",
+        "entity": "159770.SZ",
+        "horizon": "intraday,short,unknown",
+        "window_days": 10,
+        "sample_count": 6,
+        "hit_rate": 0.0,
+        "avg_return": -9.8892,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "任泽平",
+        "entity": "159770.SZ",
+        "horizon": "intraday,short,unknown",
+        "window_days": 20,
+        "sample_count": 6,
+        "hit_rate": 0.0,
+        "avg_return": -18.1499,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "史诗级韭菜",
+        "entity": "159770.SZ",
+        "horizon": "medium,short",
+        "window_days": 1,
+        "sample_count": 2,
+        "hit_rate": 0.0,
+        "avg_return": -0.7955,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "史诗级韭菜",
+        "entity": "159770.SZ",
+        "horizon": "medium,short",
+        "window_days": 3,
+        "sample_count": 2,
+        "hit_rate": 0.0,
+        "avg_return": -3.9777,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "史诗级韭菜",
+        "entity": "159770.SZ",
+        "horizon": "medium,short",
+        "window_days": 5,
+        "sample_count": 2,
+        "hit_rate": 0.0,
+        "avg_return": -9.2283,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "史诗级韭菜",
+        "entity": "159770.SZ",
+        "horizon": "medium,short",
+        "window_days": 10,
+        "sample_count": 2,
+        "hit_rate": 0.0,
+        "avg_return": -3.8186,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "史诗级韭菜",
+        "entity": "159770.SZ",
+        "horizon": "medium,short",
+        "window_days": 20,
+        "sample_count": 2,
+        "hit_rate": 0.0,
+        "avg_return": -6.5235,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "旗帜鲜明",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 1,
+        "sample_count": 20,
+        "hit_rate": 0.3,
+        "avg_return": 1.488,
+        "score": 0.3,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "旗帜鲜明",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 3,
+        "sample_count": 20,
+        "hit_rate": 0.45,
+        "avg_return": -2.375,
+        "score": 0.45,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "旗帜鲜明",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 5,
+        "sample_count": 20,
+        "hit_rate": 0.6,
+        "avg_return": -2.0972,
+        "score": 0.6,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "旗帜鲜明",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 10,
+        "sample_count": 20,
+        "hit_rate": 0.6,
+        "avg_return": -7.5279,
+        "score": 0.6,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "旗帜鲜明",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 20,
+        "sample_count": 10,
+        "hit_rate": 0.8,
+        "avg_return": -13.8009,
+        "score": 0.8,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "李一恩",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 1,
+        "sample_count": 3,
+        "hit_rate": 0.0,
+        "avg_return": -1.8487,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "李一恩",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 3,
+        "sample_count": 3,
+        "hit_rate": 1.0,
+        "avg_return": 0.5882,
+        "score": 1.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "李一恩",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 5,
+        "sample_count": 3,
+        "hit_rate": 0.0,
+        "avg_return": -5.9664,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "李一恩",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 10,
+        "sample_count": 3,
+        "hit_rate": 0.0,
+        "avg_return": -9.0756,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "李一恩",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 20,
+        "sample_count": 3,
+        "hit_rate": 0.0,
+        "avg_return": -19.2437,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "柏年说",
+        "entity": "159770.SZ",
+        "horizon": "medium",
+        "window_days": 1,
+        "sample_count": 1,
+        "hit_rate": 0.0,
+        "avg_return": -3.8554,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "柏年说",
+        "entity": "159770.SZ",
+        "horizon": "medium",
+        "window_days": 3,
+        "sample_count": 1,
+        "hit_rate": 0.0,
+        "avg_return": -10.1205,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "柏年说",
+        "entity": "159770.SZ",
+        "horizon": "medium",
+        "window_days": 5,
+        "sample_count": 1,
+        "hit_rate": 0.0,
+        "avg_return": -7.7912,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "柏年说",
+        "entity": "159770.SZ",
+        "horizon": "medium",
+        "window_days": 10,
+        "sample_count": 1,
+        "hit_rate": 0.0,
+        "avg_return": -19.6787,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "柏年说",
+        "entity": "159770.SZ",
+        "horizon": "medium",
+        "window_days": 20,
+        "sample_count": 1,
+        "hit_rate": 0.0,
+        "avg_return": -20.4819,
+        "score": 0.0,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "财联社",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 1,
+        "sample_count": 3,
+        "hit_rate": 0.3333,
+        "avg_return": -1.8379,
+        "score": 0.3333,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "财联社",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 3,
+        "sample_count": 3,
+        "hit_rate": 0.3333,
+        "avg_return": -4.1771,
+        "score": 0.3333,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "财联社",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 5,
+        "sample_count": 3,
+        "hit_rate": 0.3333,
+        "avg_return": -9.9415,
+        "score": 0.3333,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "财联社",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 10,
+        "sample_count": 3,
+        "hit_rate": 0.3333,
+        "avg_return": -19.2147,
+        "score": 0.3333,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "财联社",
+        "entity": "159770.SZ",
+        "horizon": "short,unknown",
+        "window_days": 20,
+        "sample_count": 3,
+        "hit_rate": 0.3333,
+        "avg_return": -16.3743,
+        "score": 0.3333,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士直播",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 1,
+        "sample_count": 18,
+        "hit_rate": 0.7222,
+        "avg_return": -0.0919,
+        "score": 0.7222,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士直播",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 3,
+        "sample_count": 18,
+        "hit_rate": 0.8333,
+        "avg_return": -0.8786,
+        "score": 0.8333,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士直播",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 5,
+        "sample_count": 18,
+        "hit_rate": 0.5556,
+        "avg_return": -1.8823,
+        "score": 0.5556,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士直播",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 10,
+        "sample_count": 18,
+        "hit_rate": 0.3889,
+        "avg_return": -5.3252,
+        "score": 0.3889,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士直播",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 20,
+        "sample_count": 14,
+        "hit_rate": 0.4286,
+        "avg_return": -14.5106,
+        "score": 0.4286,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士短视频",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 1,
+        "sample_count": 16,
+        "hit_rate": 0.5,
+        "avg_return": -1.9089,
+        "score": 0.5,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士短视频",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 3,
+        "sample_count": 16,
+        "hit_rate": 0.4375,
+        "avg_return": -5.3758,
+        "score": 0.4375,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士短视频",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 5,
+        "sample_count": 16,
+        "hit_rate": 0.4375,
+        "avg_return": -5.2682,
+        "score": 0.4375,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士短视频",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 10,
+        "sample_count": 16,
+        "hit_rate": 0.4375,
+        "avg_return": -7.6475,
+        "score": 0.4375,
+        "updated_at": "2026-08-06T16:11:43"
+      },
+      {
+        "analyst": "钱博士短视频",
+        "entity": "159770.SZ",
+        "horizon": "intraday,medium,short,unknown",
+        "window_days": 20,
+        "sample_count": 14,
+        "hit_rate": 0.3571,
+        "avg_return": -8.1072,
+        "score": 0.3571,
+        "updated_at": "2026-08-06T16:11:43"
+      }
+    ],
+    "market_snapshot": {},
+    "user_decision_history": [],
+    "rag_evidence": [],
+    "summary": "机器人：分析卡有factors，多空对照6多6空，分析师40条历史分，近期观点0条，用户决策0条。"
+  }
+}

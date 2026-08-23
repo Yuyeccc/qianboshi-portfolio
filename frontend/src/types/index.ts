@@ -324,3 +324,113 @@ export interface McpToolItem {
   output: string;
   purpose: string;
 }
+
+export interface VaultNoteItem {
+  noteId: string;
+  filename: string;
+  title: string;
+  noteDate: string | null;
+  createdAt: string | null;
+  tags: string[];
+  source: string | null;
+  excerpt: string;
+  structuredViewCount: number | null;
+  sizeBytes: number | null;
+}
+
+export interface RelatedViewItem {
+  viewId: string;
+  analyst: string;
+  claim: string;
+  date: string | null;
+  stance: string;
+  confidence: number | null;
+  section: string | null;
+  evidence: string;
+}
+
+export interface VaultNoteDetail extends VaultNoteItem {
+  content: string;
+  relatedViews: RelatedViewItem[];
+}
+
+export interface Pagination {
+  page: number;
+  pageSize: number;
+  total: number;
+  hasMore: boolean;
+}
+
+export interface VaultSummary {
+  meta: DataMeta;
+  notesCount: number | null;
+  viewsCount: number | null;
+  chunksCount: number | null;
+  assetsCount: number | null;
+  latestNoteDate: string | null;
+  modes: string[];
+}
+
+export interface RagHitItem {
+  rank: number;
+  content: string;
+  source: string;
+  section: string | null;
+  score: number;
+  rawScore: number;
+  type: string;
+}
+
+export interface RagSuggestionItem {
+  label: string;
+  query: string;
+  assetId?: string | null;
+}
+
+export interface NotesListData {
+  data: VaultNoteItem[];
+  pagination: Pagination;
+}
+
+export interface RagData {
+  data: RagHitItem[];
+  pagination: Pagination;
+  degraded?: boolean;
+  reason?: string;
+  snapshotLimited?: boolean;
+}
+
+export interface VaultAssetIndexItem extends AssetCardItem {
+  factorCount: number;
+  bullishCount: number;
+  bearishCount: number;
+  neutralCount: number;
+  consensusDirection: string | null;
+  disagreementLevel: number | null;
+}
+
+export interface VaultAssetsIndex {
+  data: VaultAssetIndexItem[];
+  generatedAt?: string | null;
+}
+
+export interface AssetEvidencePack {
+  assetId: string;
+  assetName: string;
+  asOfDate: string | null;
+  assetCard: Record<string, unknown> | null;
+  factorStates: Record<string, unknown>[];
+  debateCard: Record<string, unknown> | null;
+  latestViews: Record<string, unknown>[];
+  analystScores: Record<string, unknown>[];
+  marketSnapshot: Record<string, unknown> | null;
+  userDecisionHistory: Record<string, unknown>[];
+  ragEvidence: Record<string, unknown>[];
+  summary: string | null;
+  [key: string]: unknown;
+}
+
+export interface AssetViewsData {
+  data: Record<string, unknown>[];
+  pagination: Pagination;
+}

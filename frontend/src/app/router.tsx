@@ -9,6 +9,8 @@ import DisciplinePage from "@/pages/DisciplinePage";
 import AboutPage from "@/pages/AboutPage";
 import BriefListPage from "@/pages/BriefListPage";
 import BriefDetailPage from "@/pages/BriefDetailPage";
+import ResearchVaultPage from "@/pages/ResearchVaultPage";
+import AssetResearchDetailPage from "@/pages/AssetResearchDetailPage";
 
 const locales = ["zh", "en"];
 
@@ -21,6 +23,8 @@ const localeRoute = (element: ReactNode) => ({
     { path: "assets", element: <DataAssetsPage /> },
     { path: "decisions", element: <DecisionDeskPage /> },
     { path: "discipline", element: <DisciplinePage /> },
+    { path: "vault", element: <ResearchVaultPage /> },
+    { path: "vault/assets/:assetId", element: <AssetResearchDetailPage /> },
     { path: "about", element: <AboutPage /> },
     { path: "briefs", element: <BriefListPage /> },
     { path: "briefs/:filename", element: <BriefDetailPage /> },
