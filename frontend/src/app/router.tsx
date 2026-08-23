@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createHashRouter, Navigate } from "react-router-dom";
 import SiteShell from "@/components/layout/SiteShell";
 import OverviewPage from "@/pages/OverviewPage";
 import ArchitecturePage from "@/pages/ArchitecturePage";
@@ -27,7 +27,7 @@ const localeRoute = (element: ReactNode) => ({
   ],
 });
 
-export const router = createBrowserRouter(
+export const router = createHashRouter(
   [
     { path: "/", element: <Navigate to="/zh" replace /> },
     localeRoute(<SiteShell />),
