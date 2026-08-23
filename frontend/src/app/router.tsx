@@ -27,10 +27,13 @@ const localeRoute = (element: ReactNode) => ({
   ],
 });
 
-export const router = createBrowserRouter([
-  { path: "/", element: <Navigate to="/zh" replace /> },
-  localeRoute(<SiteShell />),
-  { path: "*", element: <Navigate to="/zh" replace /> },
-]);
+export const router = createBrowserRouter(
+  [
+    { path: "/", element: <Navigate to="/zh" replace /> },
+    localeRoute(<SiteShell />),
+    { path: "*", element: <Navigate to="/zh" replace /> },
+  ],
+  { basename: import.meta.env.VITE_BASE_PATH || "/" },
+);
 
 export { locales };
