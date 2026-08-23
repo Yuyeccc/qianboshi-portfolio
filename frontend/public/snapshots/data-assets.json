@@ -7,7 +7,7 @@
       "rag_chunks": 11011,
       "analysts": 11,
       "asset_cards": 8,
-      "generated_at": "2026-08-23T09:00:27.067074+00:00"
+      "generated_at": "2026-08-23T10:39:40.471300+00:00"
     },
     "stance_dist": [
       {
@@ -158,7 +158,7 @@
         "updated": "2026-08-06T16:18:41"
       },
       {
-        "entity": "300502.SZ",
+        "entity": "新易盛（300502.SZ）",
         "bullish": 106,
         "bearish": 68,
         "neutral": 117,
@@ -167,7 +167,7 @@
         "updated": "2026-08-06T16:18:45"
       },
       {
-        "entity": "300308.SZ",
+        "entity": "中际旭创（300308.SZ）",
         "bullish": 106,
         "bearish": 68,
         "neutral": 117,
@@ -203,7 +203,7 @@
         "updated": "2026-08-06T01:14:39"
       },
       {
-        "entity": "159813.SZ",
+        "entity": "半导体ETF（159813.SZ）",
         "bullish": 75,
         "bearish": 56,
         "neutral": 92,
