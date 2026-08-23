@@ -171,7 +171,7 @@ export default function DisciplinePage() {
               return <article className="rounded-lg border border-line bg-surface p-6 shadow-card" key={principle.id}><Icon className="h-5 w-5 text-brand" aria-hidden="true" /><h2 className="mt-5 font-medium text-heading">{principle.title}</h2><p className="mt-2 text-sm leading-6 text-muted">{principle.description}</p></article>;
             })}
           </section>
-          <section className="mt-10 rounded-lg border border-line bg-architecture-surface p-6 text-white" aria-label={t("pages.discipline.statsLabel")}>
+          <section className="mt-10 rounded-lg border border-line bg-[#0B1117] p-6 text-white" aria-label={t("pages.discipline.statsLabel")}>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-5">
               {[
                 ["statTotal", data.stats.totalDecisions, "text-white"],
