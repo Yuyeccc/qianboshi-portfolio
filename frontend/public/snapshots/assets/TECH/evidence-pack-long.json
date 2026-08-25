@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "TECH",
     "asset_name": "TECH",
-    "as_of_date": "2026-08-23",
+    "as_of_date": "2026-08-25",
     "asset_card": {
       "asset_id": "TECH",
       "asset_name": "科技",
@@ -11,13 +11,13 @@
       "default_horizon": "medium",
       "description": "科技中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\tech.yaml",
-      "as_of_date": "2026-08-23",
+      "as_of_date": "2026-08-25",
       "factors": [
         {
           "asset_id": "TECH",
           "factor_id": "SEMI_ETF",
           "factor_name": "半导体ETF",
-          "as_of_date": "2026-08-23",
+          "as_of_date": "2026-08-25",
           "raw_value": {
             "symbol": "512480.SS",
             "close": 1.04,
@@ -36,13 +36,13 @@
           ],
           "summary": "半导体ETF近5日走弱-0.95%，对TECH构成negative影响。",
           "card_version": 1,
-          "state_id": "TECH_1_SEMI_ETF_2026-08-23"
+          "state_id": "TECH_1_SEMI_ETF_2026-08-25"
         },
         {
           "asset_id": "TECH",
           "factor_id": "LIGHT_MODULE",
           "factor_name": "光模块景气",
-          "as_of_date": "2026-08-23",
+          "as_of_date": "2026-08-25",
           "raw_value": {
             "symbol": "300502.SZ",
             "close": 442.0,
@@ -61,13 +61,13 @@
           ],
           "summary": "光模块景气近5日走强+4.77%，对TECH构成positive影响。",
           "card_version": 1,
-          "state_id": "TECH_1_LIGHT_MODULE_2026-08-23"
+          "state_id": "TECH_1_LIGHT_MODULE_2026-08-25"
         },
         {
           "asset_id": "TECH",
           "factor_id": "US_AI",
           "factor_name": "美股AI映射",
-          "as_of_date": "2026-08-23",
+          "as_of_date": "2026-08-25",
           "raw_value": {
             "symbol": "NVDA",
             "close": 214.72,
@@ -86,13 +86,13 @@
           ],
           "summary": "美股AI映射近5日走弱-3.03%，对TECH构成negative影响。",
           "card_version": 1,
-          "state_id": "TECH_1_US_AI_2026-08-23"
+          "state_id": "TECH_1_US_AI_2026-08-25"
         },
         {
           "asset_id": "TECH",
           "factor_id": "STORAGE",
           "factor_name": "存储周期",
-          "as_of_date": "2026-08-23",
+          "as_of_date": "2026-08-25",
           "raw_value": {
             "query_terms": [
               "存储",
@@ -101,8 +101,8 @@
               "HBM"
             ],
             "lookback_days": 30,
-            "current_count": 41,
-            "previous_count": 338
+            "current_count": 38,
+            "previous_count": 330
           },
           "current_state": "观点热度下降",
           "change_direction": "down",
@@ -116,13 +116,13 @@
           ],
           "summary": "存储周期观点热度下降，对TECH构成negative影响。",
           "card_version": 1,
-          "state_id": "TECH_1_STORAGE_2026-08-23"
+          "state_id": "TECH_1_STORAGE_2026-08-25"
         },
         {
           "asset_id": "TECH",
           "factor_id": "STOCK_VIEWS",
           "factor_name": "科技个股",
-          "as_of_date": "2026-08-23",
+          "as_of_date": "2026-08-25",
           "raw_value": {
             "counts": {
               "bullish": 25,
@@ -172,7 +172,7 @@
           ],
           "summary": "科技个股看多25/看空17/中性50（近30天）；中际旭创看多(钱博士直播 8.16)、新易盛看多(钱博士直播 8.16)、中芯国际中性(钱博士直播 8.16)，对TECH构成negative影响。",
           "card_version": 1,
-          "state_id": "TECH_1_STOCK_VIEWS_2026-08-23"
+          "state_id": "TECH_1_STOCK_VIEWS_2026-08-25"
         }
       ],
       "logic_chain_summary": "当前科技的正向驱动来自光模块景气，负向压力来自半导体ETF、美股AI映射、存储周期。"
@@ -263,8 +263,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-08-23T22:25:24",
-      "updated_at": "2026-08-23T22:25:24"
+      "created_at": "2026-08-25T23:01:39",
+      "updated_at": "2026-08-25T23:01:39"
     },
     "latest_views": [],
     "analyst_scores": [],

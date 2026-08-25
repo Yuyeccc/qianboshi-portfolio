@@ -8,7 +8,7 @@
         "description": "AI应用中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T22:24:43",
+        "updated_at": "2026-08-23T23:00:44",
         "factor_count": 6,
         "factor_preview": [
           {

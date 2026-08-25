@@ -2,21 +2,21 @@
   "metrics": {
     "structured_views": 9727,
     "prediction_events": 31320,
-    "notes": 987,
+    "notes": 990,
     "rag_chunks": 11011,
     "source_count": 6,
-    "generated_at": "2026-08-23T15:00:36.287407+00:00"
+    "generated_at": "2026-08-25T15:00:28.570100+00:00"
   },
   "status": {
-    "last_checked": "2026-08-22 22:39",
+    "last_checked": "2026-08-25 22:09",
     "detected_today": 8,
     "source_count": 6,
-    "pipeline_running": false
+    "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-08-22.md",
-    "generated_at": "2026-08-22T15:07:34.993390+00:00",
-    "summary": "今日总览 - 主线：科技高位板块（光模块/半导体）短线看空，低位价值（大金融/大消费）抗跌 - 最大分歧：大盘方向五五开，钱博士倾向回调但把握不高 - 最需盯盘：美元指数、黄金/铝…",
+    "filename": "2026-08-25.md",
+    "generated_at": "2026-08-25T14:20:43.723454+00:00",
+    "summary": "主线：A股中期风险释放，短线仍需确认。 最大分歧：大盘中期偏多，与科技短线偏弱并存。 最大风险：行情数据限流，价格仅能使用缓存口径。 决策台提醒：黄金、创新药偏兑现；铝未分胜负。",
     "section_count": 8
   }
 }

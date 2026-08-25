@@ -9,7 +9,7 @@
         "content": "仓位建议：直播中未给出明确的整体仓位管理建议。",
         "source": "钱博士 2026.8.16 BV15dbR6sEc6.md",
         "section": "精华总结",
-        "score": 0.7332,
+        "score": 0.6932,
         "raw_score": 0.566,
         "type": "livestream"
       },
@@ -18,7 +18,7 @@
         "content": "## 观点分析",
         "source": "钱博士 2026.8.14 BV1X6gP6oEGz.md",
         "section": "观点分析",
-        "score": 0.6761,
+        "score": 0.6361,
         "raw_score": 0.4804,
         "type": "livestream"
       },
@@ -27,7 +27,7 @@
         "content": "## 观点分析",
         "source": "钱博士 2026.8.5 BV1AoMy6pEbR.md",
         "section": "观点分析",
-        "score": 0.4961,
+        "score": 0.4561,
         "raw_score": 0.4804,
         "type": "livestream"
       },
@@ -36,21 +36,12 @@
         "content": "## 市场知识",
         "source": "钱博士 2026.7.30 BV14B346HEvG.md",
         "section": "市场知识",
-        "score": 0.3944,
+        "score": 0.3544,
         "raw_score": 0.5721,
         "type": "livestream"
       },
       {
         "rank": 5,
-        "content": "## 观点分析",
-        "source": "钱博士 2026.7.30 BV14B346HEvG.md",
-        "section": "观点分析",
-        "score": 0.3761,
-        "raw_score": 0.4804,
-        "type": "livestream"
-      },
-      {
-        "rank": 6,
         "content": "## 留下的思考\n\n复产是假的，锂价是不是该涨？还是说消息本身就是放出来砸盘的？",
         "source": "2026.7.4 枧下窝复产纯属瞎扯 短视频解读.md",
         "section": "留下的思考",
@@ -59,7 +50,7 @@
         "type": "short_video"
       },
       {
-        "rank": 7,
+        "rank": 6,
         "content": "## 精简版\n\n【核心判断】光通讯先跌了，半导体还撑着\n【关键区分】谣言恐慌→修复；机构出货→继续跌",
         "source": "2026.6.26 牛市是不是结束了 短视频解读.md",
         "section": "精简版",
@@ -68,13 +59,22 @@
         "type": "short_video"
       },
       {
-        "rank": 8,
+        "rank": 7,
         "content": "## 结论\n\n（需要结合当时具体数据判断，但核心思路是：板块极度拥挤时追高风险大）",
         "source": "2026.6.25 半导体再次进入逼空行情 短视频解读.md",
         "section": "结论",
         "score": 0.351,
         "raw_score": 0.4551,
         "type": "short_video"
+      },
+      {
+        "rank": 8,
+        "content": "## 观点分析",
+        "source": "钱博士 2026.7.30 BV14B346HEvG.md",
+        "section": "观点分析",
+        "score": 0.3361,
+        "raw_score": 0.4804,
+        "type": "livestream"
       },
       {
         "rank": 9,

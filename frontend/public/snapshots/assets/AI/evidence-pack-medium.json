@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "AI",
     "asset_name": "AI应用",
-    "as_of_date": "2026-08-23",
+    "as_of_date": "2026-08-25",
     "asset_card": {
       "asset_id": "AI",
       "asset_name": "AI应用",
@@ -11,13 +11,13 @@
       "default_horizon": "medium",
       "description": "AI应用中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\ai.yaml",
-      "as_of_date": "2026-08-23",
+      "as_of_date": "2026-08-25",
       "factors": [
         {
           "asset_id": "AI",
           "factor_id": "COMPUTE_DEMAND",
           "factor_name": "算力需求",
-          "as_of_date": "2026-08-23",
+          "as_of_date": "2026-08-25",
           "raw_value": {
             "query_terms": [
               "算力",
@@ -40,13 +40,13 @@
           ],
           "summary": "算力需求观点热度下降，对AI构成negative影响。",
           "card_version": 1,
-          "state_id": "AI_1_COMPUTE_DEMAND_2026-08-23"
+          "state_id": "AI_1_COMPUTE_DEMAND_2026-08-25"
         },
         {
           "asset_id": "AI",
           "factor_id": "APP_COMMERCIALIZATION",
           "factor_name": "应用商业化",
-          "as_of_date": "2026-08-23",
+          "as_of_date": "2026-08-25",
           "raw_value": {
             "query_terms": [
               "AI应用",
@@ -69,13 +69,13 @@
           ],
           "summary": "应用商业化观点热度下降，对AI构成negative影响。",
           "card_version": 1,
-          "state_id": "AI_1_APP_COMMERCIALIZATION_2026-08-23"
+          "state_id": "AI_1_APP_COMMERCIALIZATION_2026-08-25"
         },
         {
           "asset_id": "AI",
           "factor_id": "US_AI_MAPPING",
           "factor_name": "美股AI映射",
-          "as_of_date": "2026-08-23",
+          "as_of_date": "2026-08-25",
           "raw_value": {
             "symbol": "NVDA",
             "close": 214.72,
@@ -94,7 +94,7 @@
           ],
           "summary": "美股AI映射近5日走弱-3.03%，对AI构成negative影响。",
           "card_version": 1,
-          "state_id": "AI_1_US_AI_MAPPING_2026-08-23"
+          "state_id": "AI_1_US_AI_MAPPING_2026-08-25"
         }
       ],
       "logic_chain_summary": "当前AI应用的负向压力来自算力需求、应用商业化、美股AI映射。"
@@ -167,8 +167,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-08-23T22:24:39",
-      "updated_at": "2026-08-23T22:24:39"
+      "created_at": "2026-08-25T23:00:39",
+      "updated_at": "2026-08-25T23:00:39"
     },
     "latest_views": [
       {
@@ -215,7 +215,7 @@
         "view_id": "abbd0fb9fef49a33",
         "view_type": "risk",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.8335
       },
       {
@@ -271,7 +271,7 @@
         "view_id": "080ac2681c1736c7",
         "view_type": "sector",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.8335
       },
       {
@@ -318,7 +318,7 @@
         "view_id": "572227a446c83589",
         "view_type": "sector",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.8335
       },
       {
@@ -375,7 +375,7 @@
         "view_id": "8df30c4c93919d25",
         "view_type": "sector",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.7755
       },
       {
@@ -420,7 +420,7 @@
         "view_id": "1e67ca5d884fbce6",
         "view_type": "sector",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.7755
       },
       {
@@ -465,7 +465,7 @@
         "view_id": "5965cd0dbf195f0c",
         "view_type": "risk",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.7755
       },
       {
@@ -513,7 +513,7 @@
         "view_id": "44c798f1ff1c7421",
         "view_type": "sector",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.7755
       },
       {
@@ -563,7 +563,7 @@
         "view_id": "aac74f9988e63801",
         "view_type": "sector",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.7755
       },
       {
@@ -612,7 +612,7 @@
         "view_id": "79b9c46fdc70a850",
         "view_type": "sector",
         "entity_score": 0.0,
-        "bucket": "C",
+        "bucket": "D",
         "rank_score": 0.7175
       }
     ],
