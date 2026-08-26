@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "BAIJIU",
     "asset_name": "白酒",
-    "as_of_date": "2026-08-25",
+    "as_of_date": "2026-08-26",
     "asset_card": {
       "asset_id": "BAIJIU",
       "asset_name": "白酒",
@@ -11,13 +11,13 @@
       "default_horizon": "medium",
       "description": "白酒中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\baijiu.yaml",
-      "as_of_date": "2026-08-25",
+      "as_of_date": "2026-08-26",
       "factors": [
         {
           "asset_id": "BAIJIU",
           "factor_id": "CONSUMPTION_CYCLE",
           "factor_name": "消费景气",
-          "as_of_date": "2026-08-25",
+          "as_of_date": "2026-08-26",
           "raw_value": {
             "query_terms": [
               "白酒",
@@ -26,7 +26,7 @@
             ],
             "lookback_days": 30,
             "current_count": 34,
-            "previous_count": 241
+            "previous_count": 228
           },
           "current_state": "观点热度下降",
           "change_direction": "down",
@@ -40,13 +40,13 @@
           ],
           "summary": "消费景气观点热度下降，对BAIJIU构成negative影响。",
           "card_version": 1,
-          "state_id": "BAIJIU_1_CONSUMPTION_CYCLE_2026-08-25"
+          "state_id": "BAIJIU_1_CONSUMPTION_CYCLE_2026-08-26"
         },
         {
           "asset_id": "BAIJIU",
           "factor_id": "YOUNG_CONSUMER",
           "factor_name": "年轻人消费",
-          "as_of_date": "2026-08-25",
+          "as_of_date": "2026-08-26",
           "raw_value": {
             "query_terms": [
               "白酒",
@@ -55,7 +55,7 @@
             ],
             "lookback_days": 30,
             "current_count": 1,
-            "previous_count": 58
+            "previous_count": 51
           },
           "current_state": "观点热度下降",
           "change_direction": "down",
@@ -67,13 +67,13 @@
           ],
           "summary": "年轻人消费观点热度下降，对BAIJIU构成negative影响。",
           "card_version": 1,
-          "state_id": "BAIJIU_1_YOUNG_CONSUMER_2026-08-25"
+          "state_id": "BAIJIU_1_YOUNG_CONSUMER_2026-08-26"
         },
         {
           "asset_id": "BAIJIU",
           "factor_id": "BAIJIU_INDEX",
           "factor_name": "白酒指数",
-          "as_of_date": "2026-08-25",
+          "as_of_date": "2026-08-26",
           "raw_value": {
             "symbol": "512690.SS",
             "close": 0.42,
@@ -92,7 +92,7 @@
           ],
           "summary": "白酒指数近5日走弱-2.33%，对BAIJIU构成negative影响。",
           "card_version": 1,
-          "state_id": "BAIJIU_1_BAIJIU_INDEX_2026-08-25"
+          "state_id": "BAIJIU_1_BAIJIU_INDEX_2026-08-26"
         }
       ],
       "logic_chain_summary": "当前白酒的负向压力来自消费景气、年轻人消费、白酒指数。"
@@ -163,8 +163,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-08-25T23:01:01",
-      "updated_at": "2026-08-25T23:01:01"
+      "created_at": "2026-08-26T21:13:36",
+      "updated_at": "2026-08-26T21:13:36"
     },
     "latest_views": [],
     "analyst_scores": [],
@@ -201,6 +201,22 @@
     ],
     "rag_evidence": [
       {
+        "content": "涉及资产：白银\n影响与结果：弹性大但缺乏战略储备价值\n逻辑：白银容易被控盘，不具备黄金的战略储备属性\n依据类型：陈述观点\n(00:34:13-00:34:26) 白银特别容易被控盘，70年代的白银是被几家大财团控盘了，所以白银弹性是大，但本质上它没有战略储备的价值",
+        "source": "钱博士 BV1xc8y6LEgU.md",
+        "section": "观点分析",
+        "score": 0.8019,
+        "raw_score": 0.6093,
+        "date": "2026-08-22",
+        "type": "livestream",
+        "weights": {
+          "sim_weighted": 0.1219,
+          "freshness": 0.8667,
+          "freshness_weighted": 0.52,
+          "type_score": 0.8,
+          "type_weighted": 0.16
+        }
+      },
+      {
         "content": "## 精简版\n\n【核心判断】机器人行情很可能持续，四十多家涨停\n【催化剂】擎天柱量产提速、宇树光速IPO、陪伴机器人万单\n【资金面】半导体/光通讯撤出的资金涌入低位机器人\n【看好的方向】本体公司（宇树IPO）、核心零部件（谐波减速器、丝杠）\n【提及标的】三花、拓普、绿的谐波、恒力液压、浙江中台、恒帅、宇树科技",
         "source": "2026.7.3 机器人板块暴涨能否持续 短视频解读.md",
         "section": "精简版",
@@ -222,26 +238,10 @@
         "section": "观点分析",
         "score": 0.3454,
         "raw_score": 0.6271,
-        "date": "2026-06-01",
+        "date": "2026-01-18",
         "type": "livestream",
         "weights": {
           "sim_weighted": 0.1254,
-          "freshness": 0.1,
-          "freshness_weighted": 0.06,
-          "type_score": 0.8,
-          "type_weighted": 0.16
-        }
-      },
-      {
-        "content": "涉及资产：白银\n影响与结果：弹性大但缺乏战略储备价值\n逻辑：白银容易被控盘，不具备黄金的战略储备属性\n依据类型：陈述观点\n(00:34:13-00:34:26) 白银特别容易被控盘，70年代的白银是被几家大财团控盘了，所以白银弹性是大，但本质上它没有战略储备的价值",
-        "source": "钱博士 BV1xc8y6LEgU.md",
-        "section": "观点分析",
-        "score": 0.3419,
-        "raw_score": 0.6093,
-        "date": "2026-06-01",
-        "type": "livestream",
-        "weights": {
-          "sim_weighted": 0.1219,
           "freshness": 0.1,
           "freshness_weighted": 0.06,
           "type_score": 0.8,

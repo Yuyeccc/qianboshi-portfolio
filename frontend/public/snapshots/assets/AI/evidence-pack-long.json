@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "AI",
     "asset_name": "AI应用",
-    "as_of_date": "2026-08-25",
+    "as_of_date": "2026-08-26",
     "asset_card": {
       "asset_id": "AI",
       "asset_name": "AI应用",
@@ -11,13 +11,13 @@
       "default_horizon": "medium",
       "description": "AI应用中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\ai.yaml",
-      "as_of_date": "2026-08-25",
+      "as_of_date": "2026-08-26",
       "factors": [
         {
           "asset_id": "AI",
           "factor_id": "COMPUTE_DEMAND",
           "factor_name": "算力需求",
-          "as_of_date": "2026-08-25",
+          "as_of_date": "2026-08-26",
           "raw_value": {
             "query_terms": [
               "算力",
@@ -26,7 +26,7 @@
             ],
             "lookback_days": 30,
             "current_count": 21,
-            "previous_count": 280
+            "previous_count": 266
           },
           "current_state": "观点热度下降",
           "change_direction": "down",
@@ -40,13 +40,13 @@
           ],
           "summary": "算力需求观点热度下降，对AI构成negative影响。",
           "card_version": 1,
-          "state_id": "AI_1_COMPUTE_DEMAND_2026-08-25"
+          "state_id": "AI_1_COMPUTE_DEMAND_2026-08-26"
         },
         {
           "asset_id": "AI",
           "factor_id": "APP_COMMERCIALIZATION",
           "factor_name": "应用商业化",
-          "as_of_date": "2026-08-25",
+          "as_of_date": "2026-08-26",
           "raw_value": {
             "query_terms": [
               "AI应用",
@@ -69,13 +69,13 @@
           ],
           "summary": "应用商业化观点热度下降，对AI构成negative影响。",
           "card_version": 1,
-          "state_id": "AI_1_APP_COMMERCIALIZATION_2026-08-25"
+          "state_id": "AI_1_APP_COMMERCIALIZATION_2026-08-26"
         },
         {
           "asset_id": "AI",
           "factor_id": "US_AI_MAPPING",
           "factor_name": "美股AI映射",
-          "as_of_date": "2026-08-25",
+          "as_of_date": "2026-08-26",
           "raw_value": {
             "symbol": "NVDA",
             "close": 214.72,
@@ -94,7 +94,7 @@
           ],
           "summary": "美股AI映射近5日走弱-3.03%，对AI构成negative影响。",
           "card_version": 1,
-          "state_id": "AI_1_US_AI_MAPPING_2026-08-25"
+          "state_id": "AI_1_US_AI_MAPPING_2026-08-26"
         }
       ],
       "logic_chain_summary": "当前AI应用的负向压力来自算力需求、应用商业化、美股AI映射。"
@@ -167,8 +167,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-08-25T23:00:45",
-      "updated_at": "2026-08-25T23:00:45"
+      "created_at": "2026-08-26T21:13:23",
+      "updated_at": "2026-08-26T21:13:23"
     },
     "latest_views": [
       {
@@ -655,7 +655,7 @@
         "section": "精炼总结",
         "score": 0.3136,
         "raw_score": 0.4682,
-        "date": "2026-06-01",
+        "date": "2026-05-05",
         "type": "livestream",
         "weights": {
           "sim_weighted": 0.0936,

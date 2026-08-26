@@ -8,8 +8,8 @@
         "description": "AI应用中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T23:00:44",
-        "factor_count": 6,
+        "updated_at": "2026-08-26T21:11:53",
+        "factor_count": 12,
         "factor_preview": [
           {
             "state_id": "AI_1_COMPUTE_DEMAND_2026-08-06",
@@ -82,8 +82,8 @@
         "description": "铝中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T22:24:49",
-        "factor_count": 8,
+        "updated_at": "2026-08-26T21:12:00",
+        "factor_count": 16,
         "factor_preview": [
           {
             "state_id": "ALUMINUM_1_ZIJIN_2026-08-06",
@@ -156,8 +156,8 @@
         "description": "白酒中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T22:24:55",
-        "factor_count": 6,
+        "updated_at": "2026-08-26T21:12:06",
+        "factor_count": 12,
         "factor_preview": [
           {
             "state_id": "BAIJIU_1_CONSUMPTION_CYCLE_2026-08-06",
@@ -230,8 +230,8 @@
         "description": "黄金中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T22:25:00",
-        "factor_count": 8,
+        "updated_at": "2026-08-26T21:12:12",
+        "factor_count": 16,
         "factor_preview": [
           {
             "state_id": "GOLD_1_DXY_2026-08-06",
@@ -304,8 +304,8 @@
         "description": "创新药中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T22:25:07",
-        "factor_count": 10,
+        "updated_at": "2026-08-26T21:12:19",
+        "factor_count": 20,
         "factor_preview": [
           {
             "state_id": "INNOV_DRUG_1_INNO_INDEX_2026-08-06",
@@ -378,8 +378,8 @@
         "description": "机器人中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T22:25:12",
-        "factor_count": 6,
+        "updated_at": "2026-08-26T21:12:25",
+        "factor_count": 12,
         "factor_preview": [
           {
             "state_id": "ROBOT_1_HUMANOID_MASS_PRODUCTION_2026-08-06",
@@ -452,8 +452,8 @@
         "description": "半导体中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T22:25:18",
-        "factor_count": 8,
+        "updated_at": "2026-08-26T21:12:32",
+        "factor_count": 16,
         "factor_preview": [
           {
             "state_id": "SEMI_1_SOX_2026-08-06",
@@ -526,8 +526,8 @@
         "description": "科技中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-08-23T22:25:23",
-        "factor_count": 10,
+        "updated_at": "2026-08-26T21:12:37",
+        "factor_count": 20,
         "factor_preview": [
           {
             "state_id": "TECH_1_SEMI_ETF_2026-08-06",
