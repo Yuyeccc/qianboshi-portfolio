@@ -1,8 +1,8 @@
 {
   "market_data": {
     "meta": {
-      "generated_at": "2026-08-26T13:21:59.794419+00:00",
-      "data_as_of": "2026-08-23T12:44:22",
+      "generated_at": "2026-08-26T15:00:21.293923+00:00",
+      "data_as_of": "2026-08-26T22:28:04",
       "source": "yfinance"
     },
     "us_indices": [
@@ -10,13 +10,9 @@
         "symbol": "^DJI",
         "name": "道琼斯",
         "name_en": "Dow Jones",
-        "price": 53277.01,
-        "change_pct": 0.98,
+        "price": 53452.77,
+        "change_pct": -0.23,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 54036.93
-          },
           {
             "date": "2026-08-10",
             "price": 53954.82
@@ -32,6 +28,10 @@
           {
             "date": "2026-08-23",
             "price": 53277.01
+          },
+          {
+            "date": "2026-08-26",
+            "price": 53452.77
           }
         ]
       },
@@ -39,13 +39,9 @@
         "symbol": "^IXIC",
         "name": "纳斯达克",
         "name_en": "NASDAQ Composite",
-        "price": 26180.46,
-        "change_pct": 0.43,
+        "price": 26037.36,
+        "change_pct": -0.44,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 26690.62
-          },
           {
             "date": "2026-08-10",
             "price": 26663.68
@@ -61,6 +57,10 @@
           {
             "date": "2026-08-23",
             "price": 26180.46
+          },
+          {
+            "date": "2026-08-26",
+            "price": 26037.36
           }
         ]
       },
@@ -68,13 +68,9 @@
         "symbol": "^GSPC",
         "name": "标普500",
         "name_en": "S&P 500",
-        "price": 7674.37,
-        "change_pct": 0.43,
+        "price": 7666.76,
+        "change_pct": -0.14,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 7757.64
-          },
           {
             "date": "2026-08-10",
             "price": 7761.15
@@ -90,6 +86,10 @@
           {
             "date": "2026-08-23",
             "price": 7674.37
+          },
+          {
+            "date": "2026-08-26",
+            "price": 7666.76
           }
         ]
       }
@@ -99,13 +99,9 @@
         "symbol": "NVDA",
         "name": "英伟达",
         "name_en": "NVIDIA",
-        "price": 214.72,
-        "change_pct": -0.98,
+        "price": 210.21,
+        "change_pct": -1.33,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 223.96
-          },
           {
             "date": "2026-08-10",
             "price": 221.78
@@ -121,6 +117,10 @@
           {
             "date": "2026-08-23",
             "price": 214.72
+          },
+          {
+            "date": "2026-08-26",
+            "price": 210.21
           }
         ]
       },
@@ -128,13 +128,9 @@
         "symbol": "TSLA",
         "name": "特斯拉",
         "name_en": "Tesla",
-        "price": 362.86,
-        "change_pct": 5.14,
+        "price": 345.78,
+        "change_pct": -1.28,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 328.58
-          },
           {
             "date": "2026-08-10",
             "price": 329.92
@@ -150,6 +146,10 @@
           {
             "date": "2026-08-23",
             "price": 362.86
+          },
+          {
+            "date": "2026-08-26",
+            "price": 345.78
           }
         ]
       },
@@ -157,13 +157,9 @@
         "symbol": "AAPL",
         "name": "苹果",
         "name_en": "Apple",
-        "price": 309.35,
-        "change_pct": -0.63,
+        "price": 312.25,
+        "change_pct": 0.76,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 313.33
-          },
           {
             "date": "2026-08-10",
             "price": 306.73
@@ -179,6 +175,10 @@
           {
             "date": "2026-08-23",
             "price": 309.35
+          },
+          {
+            "date": "2026-08-26",
+            "price": 312.25
           }
         ]
       },
@@ -186,13 +186,9 @@
         "symbol": "MSFT",
         "name": "微软",
         "name_en": "Microsoft",
-        "price": 483.24,
-        "change_pct": 0.43,
+        "price": 493.28,
+        "change_pct": 0.32,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 499.99
-          },
           {
             "date": "2026-08-10",
             "price": 507.89
@@ -208,6 +204,10 @@
           {
             "date": "2026-08-23",
             "price": 483.24
+          },
+          {
+            "date": "2026-08-26",
+            "price": 493.28
           }
         ]
       },
@@ -215,13 +215,9 @@
         "symbol": "AMD",
         "name": "AMD",
         "name_en": "AMD",
-        "price": 473.25,
-        "change_pct": 0.81,
+        "price": 482.29,
+        "change_pct": 0.65,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 483.36
-          },
           {
             "date": "2026-08-10",
             "price": 476.97
@@ -237,6 +233,10 @@
           {
             "date": "2026-08-23",
             "price": 473.25
+          },
+          {
+            "date": "2026-08-26",
+            "price": 482.29
           }
         ]
       },
@@ -244,13 +244,9 @@
         "symbol": "META",
         "name": "Meta",
         "name_en": "Meta Platforms",
-        "price": 549.9,
-        "change_pct": 0.75,
+        "price": 572.34,
+        "change_pct": 0.4,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 592.1
-          },
           {
             "date": "2026-08-10",
             "price": 595.53
@@ -266,6 +262,10 @@
           {
             "date": "2026-08-23",
             "price": 549.9
+          },
+          {
+            "date": "2026-08-26",
+            "price": 572.34
           }
         ]
       },
@@ -273,13 +273,9 @@
         "symbol": "GOOGL",
         "name": "谷歌",
         "name_en": "Alphabet",
-        "price": 344.82,
-        "change_pct": 1.22,
+        "price": 342.08,
+        "change_pct": -1.41,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 354.3
-          },
           {
             "date": "2026-08-10",
             "price": 353.44
@@ -295,6 +291,10 @@
           {
             "date": "2026-08-23",
             "price": 344.82
+          },
+          {
+            "date": "2026-08-26",
+            "price": 342.08
           }
         ]
       },
@@ -302,13 +302,9 @@
         "symbol": "AVGO",
         "name": "博通",
         "name_en": "Broadcom",
-        "price": 368.45,
-        "change_pct": 1.21,
+        "price": 351.04,
+        "change_pct": -1.6,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 427.76
-          },
           {
             "date": "2026-08-10",
             "price": 429.75
@@ -324,6 +320,10 @@
           {
             "date": "2026-08-23",
             "price": 368.45
+          },
+          {
+            "date": "2026-08-26",
+            "price": 351.04
           }
         ]
       },
@@ -331,13 +331,9 @@
         "symbol": "MRVL",
         "name": "迈威尔",
         "name_en": "Marvell Technology",
-        "price": 237.04,
-        "change_pct": -5.57,
+        "price": 238.35,
+        "change_pct": -0.84,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 218.72
-          },
           {
             "date": "2026-08-10",
             "price": 219.31
@@ -353,6 +349,10 @@
           {
             "date": "2026-08-23",
             "price": 237.04
+          },
+          {
+            "date": "2026-08-26",
+            "price": 238.35
           }
         ]
       },
@@ -360,13 +360,9 @@
         "symbol": "SMCI",
         "name": "超微",
         "name_en": "Super Micro Computer",
-        "price": 37.24,
-        "change_pct": 2.03,
+        "price": 37.7,
+        "change_pct": -1.98,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 31.13
-          },
           {
             "date": "2026-08-10",
             "price": 32.87
@@ -382,6 +378,10 @@
           {
             "date": "2026-08-23",
             "price": 37.24
+          },
+          {
+            "date": "2026-08-26",
+            "price": 37.7
           }
         ]
       }
@@ -391,13 +391,9 @@
         "symbol": "000001.SS",
         "name": "上证指数",
         "name_en": "Shanghai Composite",
-        "price": 3905.2,
-        "change_pct": 0.04,
+        "price": 3912.52,
+        "change_pct": 0.59,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 3940.04
-          },
           {
             "date": "2026-08-10",
             "price": 3966.59
@@ -413,6 +409,10 @@
           {
             "date": "2026-08-23",
             "price": 3905.2
+          },
+          {
+            "date": "2026-08-26",
+            "price": 3912.52
           }
         ]
       },
@@ -420,13 +420,9 @@
         "symbol": "399001.SZ",
         "name": "深证成指",
         "name_en": "Shenzhen Component",
-        "price": 14094.17,
-        "change_pct": 0.87,
+        "price": 13841.33,
+        "change_pct": 0.69,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 14311.01
-          },
           {
             "date": "2026-08-10",
             "price": 14316.96
@@ -442,6 +438,10 @@
           {
             "date": "2026-08-23",
             "price": 14094.17
+          },
+          {
+            "date": "2026-08-26",
+            "price": 13841.33
           }
         ]
       },
@@ -449,13 +449,9 @@
         "symbol": "399006.SZ",
         "name": "创业板指",
         "name_en": "ChiNext Index",
-        "price": 3545.58,
+        "price": 3414.88,
         "change_pct": 0.0,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 3563.12
-          },
           {
             "date": "2026-08-10",
             "price": 3537.21
@@ -471,6 +467,10 @@
           {
             "date": "2026-08-23",
             "price": 3545.58
+          },
+          {
+            "date": "2026-08-26",
+            "price": 3414.88
           }
         ]
       }
@@ -480,13 +480,9 @@
         "symbol": "518880.SS",
         "name": "华安黄金ETF",
         "name_en": "Gold ETF",
-        "price": 9.39,
-        "change_pct": 1.73,
+        "price": 9.52,
+        "change_pct": 0.0,
         "trend": [
-          {
-            "date": "2026-08-06",
-            "price": 8.8
-          },
           {
             "date": "2026-08-10",
             "price": 9.01
@@ -502,26 +498,26 @@
           {
             "date": "2026-08-23",
             "price": 9.39
+          },
+          {
+            "date": "2026-08-26",
+            "price": 9.52
           }
         ],
         "linked_decision": {
           "asset": "黄金",
           "direction": "bullish",
-          "status": "open",
-          "review_date": null
+          "status": "reviewed",
+          "review_date": "2026-08-26"
         }
       },
       {
         "symbol": "159992.SZ",
         "name": "创新药ETF",
         "name_en": "Innovative Drug ETF",
-        "price": 0.89,
-        "change_pct": -5.32,
+        "price": 0.87,
+        "change_pct": 0.0,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 0.91
-          },
           {
             "date": "2026-08-10",
             "price": 0.92
@@ -537,26 +533,26 @@
           {
             "date": "2026-08-23",
             "price": 0.89
+          },
+          {
+            "date": "2026-08-26",
+            "price": 0.87
           }
         ],
         "linked_decision": {
           "asset": "创新药",
           "direction": "bullish",
-          "status": "open",
-          "review_date": null
+          "status": "reviewed",
+          "review_date": "2026-08-26"
         }
       },
       {
         "symbol": "512480.SS",
         "name": "半导体ETF",
         "name_en": "Semiconductor ETF",
-        "price": 1.04,
+        "price": 1.02,
         "change_pct": 0.0,
         "trend": [
-          {
-            "date": "2026-08-08",
-            "price": 1.08
-          },
           {
             "date": "2026-08-10",
             "price": 1.08
@@ -572,6 +568,10 @@
           {
             "date": "2026-08-23",
             "price": 1.04
+          },
+          {
+            "date": "2026-08-26",
+            "price": 1.02
           }
         ],
         "linked_decision": {

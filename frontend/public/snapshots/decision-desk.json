@@ -2,11 +2,11 @@
   "decisions_data": {
     "stats": {
       "total": 5,
-      "open": 3,
-      "reviewed": 2,
+      "open": 0,
+      "reviewed": 5,
       "hit": 0,
-      "wrong": 2,
-      "generated_at": "2026-08-26T13:21:59.788707+00:00"
+      "wrong": 3,
+      "generated_at": "2026-08-26T15:00:21.288070+00:00"
     },
     "decisions": [
       {
@@ -30,8 +30,8 @@
         "direction": "bullish",
         "conviction": 0.6,
         "thesis": "医疗板块已阴跌很久，创新药被带下来只是简单带下来，未来有涨的趋势，想买港股创新药（需进一步分析）。",
-        "status": "open",
-        "review_result": null
+        "status": "reviewed",
+        "review_result": "right"
       },
       {
         "decision_id": "dec_2026-08-06_BAIJIU_001",
@@ -54,8 +54,8 @@
         "direction": "bullish",
         "conviction": 0.65,
         "thesis": "铝有结构性逻辑：国内电解铝成本优势、无产量过剩、价格距高位已跌40-50%、神火7月回购3亿股权，关注神火。",
-        "status": "open",
-        "review_result": null
+        "status": "reviewed",
+        "review_result": "wrong"
       },
       {
         "decision_id": "dec_2026-08-06_GOLD_001",
@@ -66,8 +66,8 @@
         "direction": "bullish",
         "conviction": 0.7,
         "thesis": "黄金强相关于美元加息降息，8月已兑现9月加息趋势，该跌的已跌得差不多；预计再震荡一段时间后，9月开始往上走。",
-        "status": "open",
-        "review_result": null
+        "status": "reviewed",
+        "review_result": "right"
       }
     ],
     "asset_cards": [
@@ -281,6 +281,36 @@
       }
     ],
     "reviews": [
+      {
+        "decision_id": "dec_2026-08-06_INNOV_DRUG_001",
+        "asset_name": "创新药",
+        "direction": "bullish",
+        "review_date": "2026-08-26",
+        "result_label": "right",
+        "outcome_return": 2.3529,
+        "horizon_days": 20,
+        "new_rule_learned": null
+      },
+      {
+        "decision_id": "dec_2026-08-06_GOLD_001",
+        "asset_name": "黄金",
+        "direction": "bullish",
+        "review_date": "2026-08-26",
+        "result_label": "right",
+        "outcome_return": 8.1818,
+        "horizon_days": 20,
+        "new_rule_learned": null
+      },
+      {
+        "decision_id": "dec_2026-08-06_ALUMINUM_001",
+        "asset_name": "铝",
+        "direction": "bullish",
+        "review_date": "2026-08-26",
+        "result_label": "wrong",
+        "outcome_return": -0.087,
+        "horizon_days": 20,
+        "new_rule_learned": null
+      },
       {
         "decision_id": "dec_2026-08-06_TECH_001",
         "asset_name": "科技股",

@@ -2,21 +2,21 @@
   "metrics": {
     "structured_views": 9727,
     "prediction_events": 31320,
-    "notes": 990,
+    "notes": 993,
     "rag_chunks": 11011,
     "source_count": 6,
-    "generated_at": "2026-08-26T13:21:59.426893+00:00"
+    "generated_at": "2026-08-26T15:00:21.010355+00:00"
   },
   "status": {
-    "last_checked": "2026-08-25 22:09",
+    "last_checked": "2026-08-26 22:28",
     "detected_today": 8,
     "source_count": 6,
-    "pipeline_running": false
+    "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "2026-08-25.md",
-    "generated_at": "2026-08-25T14:20:43.723454+00:00",
-    "summary": "主线：A股中期风险释放，短线仍需确认。 最大分歧：大盘中期偏多，与科技短线偏弱并存。 最大风险：行情数据限流，价格仅能使用缓存口径。 决策台提醒：黄金、创新药偏兑现；铝未分胜负。",
+    "filename": "2026-08-26.md",
+    "generated_at": "2026-08-26T14:29:54.376405+00:00",
+    "summary": "主线：A股反弹与科技板块修复仍需确认 最大分歧：大盘中期偏多，科技短线仍偏空 最需盯盘/最大风险：美股科技回落是否传导至A股 决策台提醒：黄金偏兑现，创新药偏兑现，铝未分胜负，均待…",
     "section_count": 8
   }
 }

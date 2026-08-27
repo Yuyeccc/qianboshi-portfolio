@@ -2,6 +2,18 @@
   "notes_data": {
     "data": [
       {
+        "note_id": "6d34cea2a7a8",
+        "filename": "钱博士 BV1Ar8Q6wEum.md",
+        "title": "钱博士 BV1Ar8Q6wEum",
+        "note_date": "2026-08-29（推断，依据：主播提到\"本周基本上券商的业绩就披露差不多了\"，且提到\"28号、29号\"披露，推测为8月底）",
+        "created_at": null,
+        "tags": [],
+        "source": "未知（转录中未提供BV号）",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：市场整体表现平稳，沪指涨0.52%，科创50涨0.42%，但主播强调科技板块涨幅收窄，传统行业机会相对更多。科创50盘中一度拉升近2%，但主播认为这种单日波动不值得过度兴奋，",
+        "structured_view_count": 0,
+        "size_bytes": 15780
+      },
+      {
         "note_id": "e01f3f76e806",
         "filename": "2026-08-25 （李一恩） BV1cEh36UE4D.md",
         "title": "2026-08-25 （李一恩） BV1cEh36UE4D",
@@ -10729,6 +10741,18 @@
         "size_bytes": 5488
       },
       {
+        "note_id": "10ecb9ffebc6",
+        "filename": "钱博士 BV1618Q6tExc.md",
+        "title": "钱博士 BV1618Q6tExc",
+        "note_date": "2025-08-25",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录（BV号未知）",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：光模块板块整体横盘，跌两天反弹一下的节奏持续一个月，股价从7月30日至今基本没有变化。市场整体在等待美股纳斯达克开启新一轮行情，目前美股尚未稳定，对情绪影响较大。板块内部已出",
+        "structured_view_count": 0,
+        "size_bytes": 15205
+      },
+      {
         "note_id": "3c828b1d32ee",
         "filename": "2025-08-25 （钱博士） BV1cBe9zdEwS.md",
         "title": "2025-08-25 （钱博士） BV1cBe9zdEwS",
@@ -11905,6 +11929,18 @@
         "size_bytes": 11985
       },
       {
+        "note_id": "86ca6bf84d5c",
+        "filename": "钱博士 BV1GK8R6XEH5.md",
+        "title": "钱博士 BV1GK8R6XEH5",
+        "note_date": "2024-08-28",
+        "created_at": null,
+        "tags": [],
+        "source": "BV号未知（直播转录）",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：今日大盘反弹，但主播明确判定为“调整过程中的反弹”，而非反转。核心矛盾在于成交量不足（仅比昨日放大几百亿），且涨幅榜前列为造纸、化工、金属等防御性板块，科技硬件（半导体、CP",
+        "structured_view_count": 0,
+        "size_bytes": 24034
+      },
+      {
         "note_id": "1a891861fad1",
         "filename": "B站视频源清单.md",
         "title": "B站视频源清单",
@@ -11919,8 +11955,8 @@
     ],
     "pagination": {
       "page": 1,
-      "page_size": 990,
-      "total": 990,
+      "page_size": 993,
+      "total": 993,
       "has_more": false
     }
   }
