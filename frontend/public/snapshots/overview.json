@@ -2,21 +2,21 @@
   "metrics": {
     "structured_views": 11312,
     "prediction_events": 31320,
-    "notes": 1057,
+    "notes": 1060,
     "rag_chunks": 11011,
     "source_count": 6,
-    "generated_at": "2026-09-01T12:57:56.367573+00:00"
+    "generated_at": "2026-09-01T15:00:02.032825+00:00"
   },
   "status": {
-    "last_checked": "2026-08-31 22:06",
+    "last_checked": "2026-09-01 22:03",
     "detected_today": 8,
     "source_count": 6,
-    "pipeline_running": false
+    "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-08-31.md",
-    "generated_at": "2026-08-31T14:19:19.783973+00:00",
-    "summary": "主线：大盘修复，但反转仍待确认 最大分歧：科技中期逻辑与短线筹码压力 最需盯盘/最大风险：海外回落是否传导至A股科技 决策台提醒：决策台未注入，状态待验证",
+    "filename": "2026-09-01.md",
+    "generated_at": "2026-09-01T14:18:17.743507+00:00",
+    "summary": "今日总览",
     "section_count": 8
   }
 }

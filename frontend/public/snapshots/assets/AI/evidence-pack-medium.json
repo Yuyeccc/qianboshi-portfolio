@@ -78,26 +78,26 @@
           "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "NVDA",
-            "close": 219.04,
-            "date": "2026-08-31",
-            "pct_change_5d": -1.8638,
-            "pct_change_20d": 11.2273,
+            "close": 217.15,
+            "date": "2026-09-01",
+            "pct_change_5d": 1.1317,
+            "pct_change_20d": 6.3835,
             "source": "price_trends"
           },
-          "current_state": "近5日走弱-1.86%",
-          "change_direction": "down",
-          "impact_direction": "negative",
+          "current_state": "近5日走强+1.13%",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
             "yfinance"
           ],
-          "summary": "美股AI映射近5日走弱-1.86%，对AI构成negative影响。",
+          "summary": "美股AI映射近5日走强+1.13%，对AI构成positive影响。",
           "card_version": 1,
           "state_id": "AI_1_US_AI_MAPPING_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前AI应用的正向驱动来自应用商业化，负向压力来自算力需求、美股AI映射。",
+      "logic_chain_summary": "当前AI应用的正向驱动来自应用商业化、美股AI映射，负向压力来自算力需求。",
       "data_status": {
         "market": "available",
         "views": "available",
@@ -144,8 +144,8 @@
       {
         "factor_id": "US_AI_MAPPING",
         "factor_name": "美股AI映射",
-        "current_state": "近5日走弱-1.86%",
-        "impact_direction": "negative",
+        "current_state": "近5日走强+1.13%",
+        "impact_direction": "positive",
         "evidence_refs": [
           "yfinance"
         ]
@@ -186,8 +186,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-09-01T20:58:12",
-      "updated_at": "2026-09-01T20:58:12"
+      "created_at": "2026-09-01T23:00:11",
+      "updated_at": "2026-09-01T23:00:11"
     },
     "latest_views": [
       {
@@ -345,16 +345,16 @@
     "analyst_scores": [],
     "market_snapshot": {
       "NVDA": {
-        "price": 203.28,
-        "change_pct": 0.232,
-        "updated": "2026-07-21T21:21:17",
-        "name": ""
+        "price": 217.15,
+        "change_pct": -1.64,
+        "updated": "2026-09-01T22:03:12.097421",
+        "name": null
       },
       "159813.SZ": {
-        "price": 0.756,
-        "change_pct": 4.42,
-        "updated": "2026-08-27T23:31:25",
-        "name": ""
+        "price": 0.73,
+        "change_pct": 0,
+        "updated": "2026-09-01T22:03:10.465973",
+        "name": null
       }
     },
     "user_decision_history": [],

@@ -294,8 +294,8 @@
           "source_file": "钱博士 BV1S54o6VEvs.md"
         }
       ],
-      "created_at": "2026-09-01T20:59:19",
-      "updated_at": "2026-09-01T20:59:19"
+      "created_at": "2026-09-01T23:01:08",
+      "updated_at": "2026-09-01T23:01:08"
     },
     "latest_views": [
       {
@@ -783,14 +783,7 @@
         "updated_at": "2026-08-06T16:11:43"
       }
     ],
-    "market_snapshot": {
-      "159770.SZ": {
-        "price": 1.0,
-        "change_pct": 1.937,
-        "updated": "2026-08-27T23:31:25",
-        "name": ""
-      }
-    },
+    "market_snapshot": {},
     "user_decision_history": [],
     "rag_evidence": [],
     "summary": "机器人：分析卡有factors，多空对照0多0空，分析师40条历史分，近期观点1条，用户决策0条。"

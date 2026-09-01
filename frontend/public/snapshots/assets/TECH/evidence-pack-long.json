@@ -20,13 +20,13 @@
           "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "512480.SS",
-            "close": 1.06,
-            "date": "2026-08-31",
-            "pct_change_5d": 4.9505,
-            "pct_change_20d": 6.8548,
+            "close": 1.03,
+            "date": "2026-09-01",
+            "pct_change_5d": 2.1825,
+            "pct_change_20d": 11.835,
             "source": "price_trends"
           },
-          "current_state": "近5日走强+4.95%",
+          "current_state": "近5日走强+2.18%",
           "change_direction": "up",
           "impact_direction": "positive",
           "impact_strength": "high",
@@ -34,7 +34,7 @@
           "evidence_refs": [
             "price_trends"
           ],
-          "summary": "半导体ETF近5日走强+4.95%，对TECH构成positive影响。",
+          "summary": "半导体ETF近5日走强+2.18%，对TECH构成positive影响。",
           "card_version": 1,
           "state_id": "TECH_1_SEMI_ETF_2026-09-01"
         },
@@ -45,21 +45,21 @@
           "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "300502.SZ",
-            "close": 401.87,
-            "date": "2026-08-31",
-            "pct_change_5d": -2.4587,
-            "pct_change_20d": -5.2864,
+            "close": 402.81,
+            "date": "2026-09-01",
+            "pct_change_5d": 0.4839,
+            "pct_change_20d": -4.518,
             "source": "price_trends"
           },
-          "current_state": "近5日走弱-2.46%",
-          "change_direction": "down",
-          "impact_direction": "negative",
+          "current_state": "近5日走强+0.48%",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "high",
           "confidence": 0.8,
           "evidence_refs": [
             "price_trends"
           ],
-          "summary": "光模块景气近5日走弱-2.46%，对TECH构成negative影响。",
+          "summary": "光模块景气近5日走强+0.48%，对TECH构成positive影响。",
           "card_version": 1,
           "state_id": "TECH_1_LIGHT_MODULE_2026-09-01"
         },
@@ -70,21 +70,21 @@
           "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "NVDA",
-            "close": 219.04,
-            "date": "2026-08-31",
-            "pct_change_5d": -1.8638,
-            "pct_change_20d": 11.2273,
+            "close": 217.15,
+            "date": "2026-09-01",
+            "pct_change_5d": 1.1317,
+            "pct_change_20d": 6.3835,
             "source": "price_trends"
           },
-          "current_state": "近5日走弱-1.86%",
-          "change_direction": "down",
-          "impact_direction": "negative",
+          "current_state": "近5日走强+1.13%",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
             "price_trends"
           ],
-          "summary": "美股AI映射近5日走弱-1.86%，对TECH构成negative影响。",
+          "summary": "美股AI映射近5日走强+1.13%，对TECH构成positive影响。",
           "card_version": 1,
           "state_id": "TECH_1_US_AI_2026-09-01"
         },
@@ -175,7 +175,7 @@
           "state_id": "TECH_1_STOCK_VIEWS_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前科技的正向驱动来自半导体ETF，负向压力来自光模块景气、美股AI映射、存储周期。",
+      "logic_chain_summary": "当前科技的正向驱动来自半导体ETF、光模块景气、美股AI映射，负向压力来自存储周期、科技个股。",
       "data_status": {
         "market": "available",
         "views": "available",
@@ -200,7 +200,7 @@
       {
         "factor_id": "SEMI_ETF",
         "factor_name": "半导体ETF",
-        "current_state": "近5日走强+4.95%",
+        "current_state": "近5日走强+2.18%",
         "impact_direction": "positive",
         "evidence_refs": [
           "price_trends"
@@ -209,8 +209,8 @@
       {
         "factor_id": "LIGHT_MODULE",
         "factor_name": "光模块景气",
-        "current_state": "近5日走弱-2.46%",
-        "impact_direction": "negative",
+        "current_state": "近5日走强+0.48%",
+        "impact_direction": "positive",
         "evidence_refs": [
           "price_trends"
         ]
@@ -218,8 +218,8 @@
       {
         "factor_id": "US_AI",
         "factor_name": "美股AI映射",
-        "current_state": "近5日走弱-1.86%",
-        "impact_direction": "negative",
+        "current_state": "近5日走强+1.13%",
+        "impact_direction": "positive",
         "evidence_refs": [
           "price_trends"
         ]
@@ -282,8 +282,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-09-01T20:59:38",
-      "updated_at": "2026-09-01T20:59:38"
+      "created_at": "2026-09-01T23:01:21",
+      "updated_at": "2026-09-01T23:01:21"
     },
     "latest_views": [],
     "analyst_scores": [],

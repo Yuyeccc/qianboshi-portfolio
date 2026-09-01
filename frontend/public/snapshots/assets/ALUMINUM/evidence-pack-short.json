@@ -20,21 +20,21 @@
           "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "601899.SS",
-            "close": 33.67,
-            "date": "2026-08-31",
-            "pct_change_5d": -2.5188,
-            "pct_change_20d": -0.035,
+            "close": 33.73,
+            "date": "2026-09-01",
+            "pct_change_5d": 0.1485,
+            "pct_change_20d": -1.018,
             "source": "price_trends"
           },
-          "current_state": "近5日走弱-2.52%",
-          "change_direction": "down",
-          "impact_direction": "negative",
+          "current_state": "近5日走强+0.15%",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
             "price_trends"
           ],
-          "summary": "紫金矿业代理近5日走弱-2.52%，对ALUMINUM构成negative影响。",
+          "summary": "紫金矿业代理近5日走强+0.15%，对ALUMINUM构成positive影响。",
           "card_version": 1,
           "state_id": "ALUMINUM_1_ZIJIN_2026-09-01"
         },
@@ -137,7 +137,7 @@
           "state_id": "ALUMINUM_1_STOCK_VIEWS_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前铝的正向驱动来自氧化铝成本，负向压力来自紫金矿业代理、新能源用铝、铝个股。",
+      "logic_chain_summary": "当前铝的正向驱动来自紫金矿业代理、氧化铝成本，负向压力来自新能源用铝、铝个股。",
       "data_status": {
         "market": "available",
         "views": "available",
@@ -465,8 +465,8 @@
       {
         "factor_id": "ZIJIN",
         "factor_name": "紫金矿业代理",
-        "current_state": "近5日走弱-2.52%",
-        "impact_direction": "negative",
+        "current_state": "近5日走强+0.15%",
+        "impact_direction": "positive",
         "evidence_refs": [
           "price_trends"
         ]
@@ -540,8 +540,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-09-01T20:58:35",
-      "updated_at": "2026-09-01T20:58:35"
+      "created_at": "2026-09-01T23:00:29",
+      "updated_at": "2026-09-01T23:00:29"
     },
     "latest_views": [],
     "analyst_scores": [],

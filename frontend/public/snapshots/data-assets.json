@@ -3,11 +3,11 @@
     "metrics": {
       "structured_views": 11312,
       "prediction_events": 31320,
-      "notes": 1057,
+      "notes": 1060,
       "rag_chunks": 11011,
       "analysts": 11,
       "asset_cards": 8,
-      "generated_at": "2026-09-01T12:57:57.021400+00:00"
+      "generated_at": "2026-09-01T15:00:02.394973+00:00"
     },
     "stance_dist": [
       {

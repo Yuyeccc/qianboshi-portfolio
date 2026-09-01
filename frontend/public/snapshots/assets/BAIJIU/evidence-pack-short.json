@@ -78,26 +78,26 @@
           "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "512690.SS",
-            "close": 0.42,
-            "date": "2026-08-31",
-            "pct_change_5d": -0.2375,
-            "pct_change_20d": -7.2848,
+            "close": 0.43,
+            "date": "2026-09-01",
+            "pct_change_5d": 1.8957,
+            "pct_change_20d": -4.0179,
             "source": "price_trends"
           },
-          "current_state": "近5日走弱-0.24%",
-          "change_direction": "down",
-          "impact_direction": "negative",
+          "current_state": "近5日走强+1.90%",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
             "yfinance"
           ],
-          "summary": "白酒指数近5日走弱-0.24%，对BAIJIU构成negative影响。",
+          "summary": "白酒指数近5日走强+1.90%，对BAIJIU构成positive影响。",
           "card_version": 1,
           "state_id": "BAIJIU_1_BAIJIU_INDEX_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前白酒的负向压力来自消费景气、年轻人消费、白酒指数。",
+      "logic_chain_summary": "当前白酒的正向驱动来自白酒指数，负向压力来自消费景气、年轻人消费。",
       "data_status": {
         "market": "available",
         "views": "available",
@@ -144,8 +144,8 @@
       {
         "factor_id": "BAIJIU_INDEX",
         "factor_name": "白酒指数",
-        "current_state": "近5日走弱-0.24%",
-        "impact_direction": "negative",
+        "current_state": "近5日走强+1.90%",
+        "impact_direction": "positive",
         "evidence_refs": [
           "yfinance"
         ]
@@ -436,8 +436,8 @@
           "source_file": "钱博士 BV1xPtF6mEFH.md"
         }
       ],
-      "created_at": "2026-09-01T20:58:48",
-      "updated_at": "2026-09-01T20:58:48"
+      "created_at": "2026-09-01T23:00:43",
+      "updated_at": "2026-09-01T23:00:43"
     },
     "latest_views": [
       {
@@ -505,10 +505,10 @@
     "analyst_scores": [],
     "market_snapshot": {
       "512690.SS": {
-        "price": 0.421,
-        "change_pct": -0.473,
-        "updated": "2026-08-27T23:31:25",
-        "name": ""
+        "price": 0.43,
+        "change_pct": 0,
+        "updated": "2026-09-01T22:03:11.395701",
+        "name": null
       }
     },
     "user_decision_history": [
