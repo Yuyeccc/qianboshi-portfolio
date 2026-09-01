@@ -11,6 +11,7 @@ import BriefListPage from "@/pages/BriefListPage";
 import BriefDetailPage from "@/pages/BriefDetailPage";
 import ResearchVaultPage from "@/pages/ResearchVaultPage";
 import AssetResearchDetailPage from "@/pages/AssetResearchDetailPage";
+import CognitiveCorePage from "@/pages/CognitiveCorePage";
 
 const locales = ["zh", "en"];
 
@@ -20,6 +21,7 @@ const localeRoute = (element: ReactNode) => ({
   children: [
     { index: true, element: <OverviewPage /> },
     { path: "architecture", element: <ArchitecturePage /> },
+    { path: "cognitive", element: <CognitiveCorePage /> },
     { path: "assets", element: <DataAssetsPage /> },
     { path: "decisions", element: <DecisionDeskPage /> },
     { path: "discipline", element: <DisciplinePage /> },

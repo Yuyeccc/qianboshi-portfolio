@@ -17,6 +17,7 @@ import {
   VaultNoteDetail,
   VaultSummary,
   OverviewData,
+  CognitiveData,
 } from "@/types";
 import {
   emptyArchitecture,
@@ -40,8 +41,9 @@ import {
   mapOverviewResponse,
   mapRagResponse,
   mapVaultSummaryResponse,
+  mapCognitiveResponse,
 } from "./api-client";
-import { DataProvider } from "./provider";
+import { DataProvider, emptyCognitive } from "./provider";
 
 const emptyOverview: OverviewData = {
   metrics: {
@@ -180,6 +182,7 @@ function mapAssetViewsResponse(
 }
 
 export class SnapshotClient implements DataProvider {
+  async getCognitive(): Promise<CognitiveData> { const data = await this.read<unknown>("cognitive.json", null); return data === null ? emptyCognitive : mapCognitiveResponse(data); }
   private async read<T>(filename: string, fallback: T): Promise<T> {
     try {
       const url = filename.startsWith("/")

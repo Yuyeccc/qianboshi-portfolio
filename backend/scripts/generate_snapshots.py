@@ -24,6 +24,7 @@ from app.repositories.asset_vault_repo import (  # noqa: E402
 )
 from app.repositories.assets_repo import get_assets_data  # noqa: E402
 from app.repositories.brief_repo import get_brief, list_briefs  # noqa: E402
+from app.repositories.cognitive_repo import get_cognitive_data  # noqa: E402
 from app.repositories.decisions_repo import get_decisions_data  # noqa: E402
 from app.repositories.discipline_repo import get_discipline_data  # noqa: E402
 from app.repositories.market_repo import get_market_data  # noqa: E402
@@ -310,6 +311,9 @@ def main() -> None:
 
     # 3. data-assets.json
     dump("data-assets.json", {"assets": get_assets_data()})
+
+    # 3.5 cognitive.json（认知内核）
+    dump("cognitive.json", {"cognitive_data": get_cognitive_data()})
 
     # 4. decision-desk.json
     dump("decision-desk.json", {"decisions_data": get_decisions_data()})

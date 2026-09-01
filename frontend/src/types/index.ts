@@ -434,3 +434,13 @@ export interface AssetViewsData {
   data: Record<string, unknown>[];
   pagination: Pagination;
 }
+
+export interface CognitiveData {
+  meta: { generatedAt: string | null; source: string | null; version: string | null };
+  blueprint: { completed: number | null; total: number | null; status: string | null };
+  facts: Record<string, { value: unknown; unit?: string; source?: string }>;
+  dimensions: Record<string, unknown>;
+  conflicts: { available: boolean; exact: number; divergences: number; mappedViews: number; summary: Array<Record<string, unknown>> };
+  backtest: { available: boolean; runId: string | null; rows: Record<string, { windowDays?: number; layer?: string; total?: number; hits?: number; hitRate?: number }> };
+  decisions: { available: boolean; decisionLogs: number; reviews: number; assetCards: number; predictionEvents: number };
+}

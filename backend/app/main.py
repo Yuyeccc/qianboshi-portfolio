@@ -12,6 +12,7 @@ from app.repositories.asset_vault_repo import (
 )
 from app.repositories.assets_repo import get_assets_data
 from app.repositories.brief_repo import get_brief, list_briefs
+from app.repositories.cognitive_repo import get_cognitive_data
 from app.repositories.decisions_repo import get_decisions_data
 from app.repositories.discipline_repo import get_discipline_data
 from app.repositories.market_repo import get_market_data
@@ -114,6 +115,11 @@ def get_brief_by_filename(filename: str) -> dict:
 @api_router.get("/architecture")
 def get_architecture() -> dict:
     return {"architecture_data": get_architecture_data()}
+
+
+@api_router.get("/cognitive")
+def get_cognitive() -> dict:
+    return {"cognitive_data": get_cognitive_data()}
 
 
 @api_router.get("/discipline")

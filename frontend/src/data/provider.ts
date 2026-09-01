@@ -16,6 +16,7 @@ import {
   VaultAssetsIndex,
   VaultNoteDetail,
   VaultSummary,
+  CognitiveData,
 } from "@/types";
 import { ApiClient } from "./api-client";
 import { SnapshotClient } from "./snapshot-client";
@@ -41,6 +42,7 @@ export interface RagQueryParams {
 }
 
 export interface DataProvider {
+  getCognitive(): Promise<CognitiveData>;
   getOverview(): Promise<OverviewData>;
   getArchitecture(): Promise<ArchitectureData>;
   getAssets(): Promise<AssetsData>;
@@ -119,6 +121,7 @@ export const emptyRagData: RagData = {
     hasMore: false,
   },
 };
+export const emptyCognitive: CognitiveData = { meta:{generatedAt:null,source:null,version:null}, blueprint:{completed:null,total:null,status:null}, facts:{}, dimensions:{}, conflicts:{available:false,exact:0,divergences:0,mappedViews:0,summary:[]}, backtest:{available:false,runId:null,rows:{}}, decisions:{available:false,decisionLogs:0,reviews:0,assetCards:0,predictionEvents:0} };
 
 type UnknownRecord = Record<string, unknown>;
 
@@ -346,6 +349,7 @@ function vaultMethods(client: ApiClient | SnapshotClient): VaultClientMethods {
 }
 
 class ExtendedDataProvider implements DataProvider {
+  getCognitive() { return this.client.getCognitive(); }
   constructor(
     private readonly client: ApiClient | SnapshotClient,
     private readonly source: "api" | "snapshot",

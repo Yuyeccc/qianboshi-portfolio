@@ -1,0 +1,1412 @@
+{
+  "cognitive_data": {
+    "meta": {
+      "generated_at": "2026-09-01T09:06:11.437806+00:00",
+      "source": "dimensions_export.json 8-31 + conflicts_export.json 8-31 + qianboshi_decision.db + 73 号校验口径",
+      "version": "v1"
+    },
+    "blueprint": {
+      "completed": 19,
+      "total": 19,
+      "status": "done"
+    },
+    "facts": {
+      "transcript_segments": {
+        "value": 1364250,
+        "unit": "条",
+        "source": "evidence 库 transcript_segment（33 蓝图，2026-08-29）"
+      },
+      "view_raw": {
+        "value": 11311,
+        "unit": "条",
+        "source": "quality 库 view_raw（immutable，md5 留底）"
+      },
+      "anchored": {
+        "value": 7660,
+        "unit": "条",
+        "source": "view_provenance anchored，73 号校验 2026-09-01"
+      },
+      "annotations": {
+        "value": 7736,
+        "unit": "条",
+        "source": "view_evidence_annotation 全量标注，73 号校验（7484+252）"
+      },
+      "claims": {
+        "value": 7736,
+        "unit": "条",
+        "source": "claim 确定性回填，73 号校验（7484+252）"
+      },
+      "evidence_links": {
+        "value": 48593,
+        "unit": "条",
+        "source": "view_evidence_link 观点↔segment 下钻关联（33 蓝图）"
+      },
+      "reasoning_units": {
+        "value": 7476,
+        "unit": "条",
+        "source": "reasoning_unit 五元组全量覆盖 7476/7484（43 号执行记录）"
+      },
+      "prediction_confidence_range": {
+        "value": [
+          0.49,
+          0.65
+        ],
+        "unit": "实证查表",
+        "source": "prediction_confidence.py authority×tuple_status（67 号）"
+      },
+      "crowding_topics": {
+        "value": 463,
+        "unit": "topic",
+        "source": "export_dimensions 实测 463 topic 零打满（36 蓝图附录D）"
+      },
+      "output_gate": {
+        "value": [
+          22,
+          22
+        ],
+        "unit": "红队 22/22",
+        "source": "output_gate 红队全过（63 号）"
+      },
+      "discipline_layers": {
+        "value": 3,
+        "unit": "层",
+        "source": "主题仓位/单标的上限/回撤开关（#17v2，51 号）"
+      },
+      "fifo_realized": {
+        "value": 128.91,
+        "unit": "FIFO 精确对账一致",
+        "source": "position_ledger.py realized 对账（git 9e24412）"
+      },
+      "permutation": {
+        "value": {
+          "w3": 0.022,
+          "w5": 0.023
+        },
+        "unit": "p 值",
+        "source": "permutation_test.py 置换检验 OOS 显著（9-01）"
+      },
+      "history_fix": {
+        "value": "6984 → 9935",
+        "unit": "+42%",
+        "source": "行情补拉复跑 resolved（69 号）"
+      },
+      "placeholder_fix": {
+        "value": {
+          "fake_anchored": 1153,
+          "real_anchored": 1040,
+          "honest_downgrade": 113
+        },
+        "unit": "条",
+        "source": "占位锚点修复：假锚定→真实锚定+诚实降级（72 号）"
+      },
+      "mismatch_fix": {
+        "value": {
+          "before": "10.4%",
+          "after": "~3.3%"
+        },
+        "unit": "真错配率",
+        "source": "存量错配批量修复三轮（49 号）"
+      }
+    },
+    "dimensions": {
+      "available": true,
+      "exported_at": "2026-08-31 21:31:54",
+      "rule_version": "v6_20260831: reasoning(ru_v1五元组) + v5 evidence(原文指针: 包含段优先+拼接30段/400字符+数字一致性校验, 占位=segment_missing不猜) + crowd_v2 + conf_v2 + utags_v2",
+      "total": 7484,
+      "topics": 463,
+      "crowded_topics": 0,
+      "source_layers": {
+        "primary": 4723,
+        "secondary": 560,
+        "inferred": 2201
+      },
+      "verification": {
+        "verified": 3917,
+        "unverified": 3567
+      },
+      "supported": {
+        "supported": 4010,
+        "unsupported": 3474
+      },
+      "claim_levels": {
+        "forecast": 930,
+        "interpretation": 3022,
+        "fact": 1841,
+        "causal_claim": 1460,
+        "correlation": 86,
+        "hypothesis": 145
+      },
+      "confidence_bands": {
+        "high": 3118,
+        "medium": 788,
+        "low": 3578
+      },
+      "min_dimensions": {
+        "reasoning": 3210,
+        "evidence": 3645,
+        "forecast": 629
+      },
+      "uncertainty_tags": {
+        "stale": 6442,
+        "low_sample_topic": 1074,
+        "unsupported": 3474,
+        "inferred": 2201
+      },
+      "tuple_status": {
+        "template_only": 3757,
+        "ok": 2232,
+        "partial_anchor": 1487,
+        "unknown": 8
+      },
+      "reasoning_filled": {
+        "conclusion": 7476,
+        "mechanism": 808,
+        "premise": 1181,
+        "trigger_condition": 603,
+        "invalid_condition": 121
+      },
+      "pointers": {
+        "ok": 6221,
+        "missing": 1263,
+        "mismatch": 0
+      },
+      "match_quality_avg": 0.491
+    },
+    "conflicts": {
+      "available": true,
+      "exported_at": "2026-08-31 18:24:00",
+      "rule_version": "v1.1_20260831: 同(topic,实体交集)多空并存=冲突; 组大小>30=divergence分歧统计(不列原文), <=30=conflict精确对照; materiality high/medium=primary; 模板claim(词典正则)=折叠; 时间窗不过滤; 不回填库",
+      "exact": 465,
+      "divergences": 119,
+      "mapped_views": 5185,
+      "summary": [
+        {
+          "group_id": "cf_半导体_195b30fd",
+          "topic": "半导体",
+          "subject_entity": "护盘",
+          "level": "primary",
+          "n_bull": 7,
+          "n_bear": 4,
+          "n_template": 7,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "085645ed25e5040c",
+              "stance": "bullish",
+              "claim": "中线持股不动，短线若半导体尾盘走强可小仓位参与，明日获利了结。",
+              "date": "2026-07-08",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "e3d7ef6a3ce6975b",
+              "stance": "bullish",
+              "claim": "当前市场流动性有限，半导体（存储）走强时，低位的金融、消费、软件等板块会被压制走弱；反之，当半导体走弱时，低位板块会接力上涨，形成跷跷板格局。",
+              "date": "2026-07-08",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "ce5fcebbcc36aaad",
+              "stance": "bearish",
+              "claim": "当高位进攻板块（如半导体、电池、金属）回调，而低位防御板块（大金融、食品饮料）上涨时，通常意味着主力资金认为市场调整不是短期行为，会持续一段时间。",
+              "date": "2025-10-14",
+              "analyst": "钱博士短视频"
+            },
+            {
+              "view_id": "3c1c575059262784",
+              "stance": "bearish",
+              "claim": "分化行情中板块间存在跷跷板效应——一个板块上涨往往以另一个板块下跌为代价。若证券回调，硬科技可能接力反弹；反之亦然。这种行情下短线追涨容易亏损。",
+              "date": "2026-08-27",
+              "analyst": "钱博士直播"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_bdfcd323",
+          "topic": "半导体",
+          "subject_entity": "指数权重",
+          "level": "primary",
+          "n_bull": 7,
+          "n_bear": 4,
+          "n_template": 7,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "085645ed25e5040c",
+              "stance": "bullish",
+              "claim": "中线持股不动，短线若半导体尾盘走强可小仓位参与，明日获利了结。",
+              "date": "2026-07-08",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "e3d7ef6a3ce6975b",
+              "stance": "bullish",
+              "claim": "当前市场流动性有限，半导体（存储）走强时，低位的金融、消费、软件等板块会被压制走弱；反之，当半导体走弱时，低位板块会接力上涨，形成跷跷板格局。",
+              "date": "2026-07-08",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "ce5fcebbcc36aaad",
+              "stance": "bearish",
+              "claim": "当高位进攻板块（如半导体、电池、金属）回调，而低位防御板块（大金融、食品饮料）上涨时，通常意味着主力资金认为市场调整不是短期行为，会持续一段时间。",
+              "date": "2025-10-14",
+              "analyst": "钱博士短视频"
+            },
+            {
+              "view_id": "3c1c575059262784",
+              "stance": "bearish",
+              "claim": "分化行情中板块间存在跷跷板效应——一个板块上涨往往以另一个板块下跌为代价。若证券回调，硬科技可能接力反弹；反之亦然。这种行情下短线追涨容易亏损。",
+              "date": "2026-08-27",
+              "analyst": "钱博士直播"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_9c26558d",
+          "topic": "半导体",
+          "subject_entity": "大金融",
+          "level": "primary",
+          "n_bull": 7,
+          "n_bear": 4,
+          "n_template": 7,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "085645ed25e5040c",
+              "stance": "bullish",
+              "claim": "中线持股不动，短线若半导体尾盘走强可小仓位参与，明日获利了结。",
+              "date": "2026-07-08",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "e3d7ef6a3ce6975b",
+              "stance": "bullish",
+              "claim": "当前市场流动性有限，半导体（存储）走强时，低位的金融、消费、软件等板块会被压制走弱；反之，当半导体走弱时，低位板块会接力上涨，形成跷跷板格局。",
+              "date": "2026-07-08",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "ce5fcebbcc36aaad",
+              "stance": "bearish",
+              "claim": "当高位进攻板块（如半导体、电池、金属）回调，而低位防御板块（大金融、食品饮料）上涨时，通常意味着主力资金认为市场调整不是短期行为，会持续一段时间。",
+              "date": "2025-10-14",
+              "analyst": "钱博士短视频"
+            },
+            {
+              "view_id": "3c1c575059262784",
+              "stance": "bearish",
+              "claim": "分化行情中板块间存在跷跷板效应——一个板块上涨往往以另一个板块下跌为代价。若证券回调，硬科技可能接力反弹；反之亦然。这种行情下短线追涨容易亏损。",
+              "date": "2026-08-27",
+              "analyst": "钱博士直播"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_d598dda3",
+          "topic": "半导体",
+          "subject_entity": "低位",
+          "level": "primary",
+          "n_bull": 13,
+          "n_bear": 10,
+          "n_template": 16,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "e3d3cf2d019476ba",
+              "stance": "bullish",
+              "claim": "短线：看多 🐂📈（主播明确不参与）",
+              "date": "2026-06-29",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "ca50b6e2d3f87636",
+              "stance": "bullish",
+              "claim": "本次AI科技是康波周期级别的超级周期，类比80年代开始的IT互联网浪潮（从半导体、PC、互联网到移动互联网），有至少10年向上的趋势。AI的基础是能源→算力→智",
+              "date": "2026-07-07",
+              "analyst": "任泽平"
+            },
+            {
+              "view_id": "ce5fcebbcc36aaad",
+              "stance": "bearish",
+              "claim": "当高位进攻板块（如半导体、电池、金属）回调，而低位防御板块（大金融、食品饮料）上涨时，通常意味着主力资金认为市场调整不是短期行为，会持续一段时间。",
+              "date": "2025-10-14",
+              "analyst": "钱博士短视频"
+            },
+            {
+              "view_id": "8675ac81ec94bd3b",
+              "stance": "bearish",
+              "claim": "(00:41:01-00:41:08)所以如果特斯拉在美国的无人出租车运营的顺利。 盯准特斯拉看，；(00:41:13-00:41:17)新能源汽车有可能成为下",
+              "date": "2026-07-09",
+              "analyst": "李一恩"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_1782fefe",
+          "topic": "半导体",
+          "subject_entity": "消费电子",
+          "level": "primary",
+          "n_bull": 7,
+          "n_bear": 4,
+          "n_template": 10,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "e3d3cf2d019476ba",
+              "stance": "bullish",
+              "claim": "短线：看多 🐂📈（主播明确不参与）",
+              "date": "2026-06-29",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "1c3560d463c2b9ce",
+              "stance": "bullish",
+              "claim": "短线：看多 🐂📈",
+              "date": "2025-03-28",
+              "analyst": "笨笨的韭菜"
+            },
+            {
+              "view_id": "2cb33c7892480476",
+              "stance": "bearish",
+              "claim": "短线：中性偏空 🦀➡️",
+              "date": "2025-04-12",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "aa6b2f3c423cf36b",
+              "stance": "bearish",
+              "claim": "短线：看空🐻📉",
+              "date": "2026-07-01",
+              "analyst": "旗帜鲜明"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_d5c7cb18",
+          "topic": "半导体",
+          "subject_entity": "轮动",
+          "level": "primary",
+          "n_bull": 9,
+          "n_bear": 7,
+          "n_template": 10,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "e3d3cf2d019476ba",
+              "stance": "bullish",
+              "claim": "短线：看多 🐂📈（主播明确不参与）",
+              "date": "2026-06-29",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "ca50b6e2d3f87636",
+              "stance": "bullish",
+              "claim": "本次AI科技是康波周期级别的超级周期，类比80年代开始的IT互联网浪潮（从半导体、PC、互联网到移动互联网），有至少10年向上的趋势。AI的基础是能源→算力→智",
+              "date": "2026-07-07",
+              "analyst": "任泽平"
+            },
+            {
+              "view_id": "ce5fcebbcc36aaad",
+              "stance": "bearish",
+              "claim": "当高位进攻板块（如半导体、电池、金属）回调，而低位防御板块（大金融、食品饮料）上涨时，通常意味着主力资金认为市场调整不是短期行为，会持续一段时间。",
+              "date": "2025-10-14",
+              "analyst": "钱博士短视频"
+            },
+            {
+              "view_id": "8675ac81ec94bd3b",
+              "stance": "bearish",
+              "claim": "(00:41:01-00:41:08)所以如果特斯拉在美国的无人出租车运营的顺利。 盯准特斯拉看，；(00:41:13-00:41:17)新能源汽车有可能成为下",
+              "date": "2026-07-09",
+              "analyst": "李一恩"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_ab259502",
+          "topic": "半导体",
+          "subject_entity": "复苏",
+          "level": "primary",
+          "n_bull": 9,
+          "n_bear": 7,
+          "n_template": 10,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "e3d3cf2d019476ba",
+              "stance": "bullish",
+              "claim": "短线：看多 🐂📈（主播明确不参与）",
+              "date": "2026-06-29",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "ca50b6e2d3f87636",
+              "stance": "bullish",
+              "claim": "本次AI科技是康波周期级别的超级周期，类比80年代开始的IT互联网浪潮（从半导体、PC、互联网到移动互联网），有至少10年向上的趋势。AI的基础是能源→算力→智",
+              "date": "2026-07-07",
+              "analyst": "任泽平"
+            },
+            {
+              "view_id": "ce5fcebbcc36aaad",
+              "stance": "bearish",
+              "claim": "当高位进攻板块（如半导体、电池、金属）回调，而低位防御板块（大金融、食品饮料）上涨时，通常意味着主力资金认为市场调整不是短期行为，会持续一段时间。",
+              "date": "2025-10-14",
+              "analyst": "钱博士短视频"
+            },
+            {
+              "view_id": "8675ac81ec94bd3b",
+              "stance": "bearish",
+              "claim": "(00:41:01-00:41:08)所以如果特斯拉在美国的无人出租车运营的顺利。 盯准特斯拉看，；(00:41:13-00:41:17)新能源汽车有可能成为下",
+              "date": "2026-07-09",
+              "analyst": "李一恩"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_3bf71849",
+          "topic": "半导体",
+          "subject_entity": "大消费",
+          "level": "primary",
+          "n_bull": 9,
+          "n_bear": 7,
+          "n_template": 10,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "e3d3cf2d019476ba",
+              "stance": "bullish",
+              "claim": "短线：看多 🐂📈（主播明确不参与）",
+              "date": "2026-06-29",
+              "analyst": "旗帜鲜明"
+            },
+            {
+              "view_id": "ca50b6e2d3f87636",
+              "stance": "bullish",
+              "claim": "本次AI科技是康波周期级别的超级周期，类比80年代开始的IT互联网浪潮（从半导体、PC、互联网到移动互联网），有至少10年向上的趋势。AI的基础是能源→算力→智",
+              "date": "2026-07-07",
+              "analyst": "任泽平"
+            },
+            {
+              "view_id": "ce5fcebbcc36aaad",
+              "stance": "bearish",
+              "claim": "当高位进攻板块（如半导体、电池、金属）回调，而低位防御板块（大金融、食品饮料）上涨时，通常意味着主力资金认为市场调整不是短期行为，会持续一段时间。",
+              "date": "2025-10-14",
+              "analyst": "钱博士短视频"
+            },
+            {
+              "view_id": "8675ac81ec94bd3b",
+              "stance": "bearish",
+              "claim": "(00:41:01-00:41:08)所以如果特斯拉在美国的无人出租车运营的顺利。 盯准特斯拉看，；(00:41:13-00:41:17)新能源汽车有可能成为下",
+              "date": "2026-07-09",
+              "analyst": "李一恩"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_5c45bfcf",
+          "topic": "半导体",
+          "subject_entity": "高速板",
+          "level": "primary",
+          "n_bull": 7,
+          "n_bear": 4,
+          "n_template": 10,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "cf8f14e040c90576",
+              "stance": "bullish",
+              "claim": "短线：中性偏多，存在分化 🦀➡️",
+              "date": "2025-04-08",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "e8d2691a7da90d6d",
+              "stance": "bullish",
+              "claim": "中长线：看多 🐂📈",
+              "date": "2025-07-06",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "e28353da89e955bd",
+              "stance": "bearish",
+              "claim": "短线：看空 🐻📉",
+              "date": "2025-07-26",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "82be12ab7de3fd44",
+              "stance": "bearish",
+              "claim": "短线：看空 🐻📉",
+              "date": "2026-06-05",
+              "analyst": "钱博士短视频"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_f6e3abd4",
+          "topic": "半导体",
+          "subject_entity": "AI服务器",
+          "level": "primary",
+          "n_bull": 7,
+          "n_bear": 4,
+          "n_template": 10,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "cf8f14e040c90576",
+              "stance": "bullish",
+              "claim": "短线：中性偏多，存在分化 🦀➡️",
+              "date": "2025-04-08",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "e8d2691a7da90d6d",
+              "stance": "bullish",
+              "claim": "中长线：看多 🐂📈",
+              "date": "2025-07-06",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "e28353da89e955bd",
+              "stance": "bearish",
+              "claim": "短线：看空 🐻📉",
+              "date": "2025-07-26",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "82be12ab7de3fd44",
+              "stance": "bearish",
+              "claim": "短线：看空 🐻📉",
+              "date": "2026-06-05",
+              "analyst": "钱博士短视频"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_4a1ef591",
+          "topic": "半导体",
+          "subject_entity": "CCL",
+          "level": "primary",
+          "n_bull": 7,
+          "n_bear": 4,
+          "n_template": 10,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "cf8f14e040c90576",
+              "stance": "bullish",
+              "claim": "短线：中性偏多，存在分化 🦀➡️",
+              "date": "2025-04-08",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "e8d2691a7da90d6d",
+              "stance": "bullish",
+              "claim": "中长线：看多 🐂📈",
+              "date": "2025-07-06",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "e28353da89e955bd",
+              "stance": "bearish",
+              "claim": "短线：看空 🐻📉",
+              "date": "2025-07-26",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "82be12ab7de3fd44",
+              "stance": "bearish",
+              "claim": "短线：看空 🐻📉",
+              "date": "2026-06-05",
+              "analyst": "钱博士短视频"
+            }
+          ]
+        },
+        {
+          "group_id": "cf_半导体_5a73201e",
+          "topic": "半导体",
+          "subject_entity": "PCB",
+          "level": "primary",
+          "n_bull": 7,
+          "n_bear": 4,
+          "n_template": 10,
+          "date_min": null,
+          "date_max": null,
+          "members": [
+            {
+              "view_id": "cf8f14e040c90576",
+              "stance": "bullish",
+              "claim": "短线：中性偏多，存在分化 🦀➡️",
+              "date": "2025-04-08",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "e8d2691a7da90d6d",
+              "stance": "bullish",
+              "claim": "中长线：看多 🐂📈",
+              "date": "2025-07-06",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "e28353da89e955bd",
+              "stance": "bearish",
+              "claim": "短线：看空 🐻📉",
+              "date": "2025-07-26",
+              "analyst": "钱博士直播"
+            },
+            {
+              "view_id": "82be12ab7de3fd44",
+              "stance": "bearish",
+              "claim": "短线：看空 🐻📉",
+              "date": "2026-06-05",
+              "analyst": "钱博士短视频"
+            }
+          ]
+        }
+      ]
+    },
+    "backtest": {
+      "available": true,
+      "run_id": "20260901T012449",
+      "rows": {
+        "roll_no_ru_event_w1": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 1,
+          "total": 48,
+          "hits": 12,
+          "hit_rate": 0.25
+        },
+        "roll_no_ru_view_w1": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 1,
+          "total": 18,
+          "hits": 12,
+          "hit_rate": 0.6667
+        },
+        "test_no_ru_event_w1": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 1,
+          "total": 394,
+          "hits": 180,
+          "hit_rate": 0.4569
+        },
+        "test_no_ru_view_w1": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 1,
+          "total": 166,
+          "hits": 90,
+          "hit_rate": 0.5422
+        },
+        "roll_no_ru_event_w3": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 3,
+          "total": 48,
+          "hits": 22,
+          "hit_rate": 0.4583
+        },
+        "roll_no_ru_view_w3": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 3,
+          "total": 18,
+          "hits": 12,
+          "hit_rate": 0.6667
+        },
+        "test_no_ru_event_w3": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 3,
+          "total": 394,
+          "hits": 196,
+          "hit_rate": 0.4975
+        },
+        "test_no_ru_view_w3": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 3,
+          "total": 166,
+          "hits": 118,
+          "hit_rate": 0.7108
+        },
+        "roll_no_ru_event_w5": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 5,
+          "total": 48,
+          "hits": 30,
+          "hit_rate": 0.625
+        },
+        "roll_no_ru_view_w5": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 5,
+          "total": 18,
+          "hits": 14,
+          "hit_rate": 0.7778
+        },
+        "test_no_ru_event_w5": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 5,
+          "total": 394,
+          "hits": 206,
+          "hit_rate": 0.5228
+        },
+        "test_no_ru_view_w5": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 5,
+          "total": 166,
+          "hits": 88,
+          "hit_rate": 0.5301
+        },
+        "roll_no_ru_event_w10": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 10,
+          "total": 48,
+          "hits": 36,
+          "hit_rate": 0.75
+        },
+        "roll_no_ru_view_w10": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 10,
+          "total": 18,
+          "hits": 14,
+          "hit_rate": 0.7778
+        },
+        "test_no_ru_event_w10": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 10,
+          "total": 394,
+          "hits": 214,
+          "hit_rate": 0.5431
+        },
+        "test_no_ru_view_w10": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 10,
+          "total": 166,
+          "hits": 110,
+          "hit_rate": 0.6627
+        },
+        "roll_no_ru_event_w20": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 20,
+          "total": 48,
+          "hits": 30,
+          "hit_rate": 0.625
+        },
+        "roll_no_ru_view_w20": {
+          "segment": "roll",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 20,
+          "total": 18,
+          "hits": 14,
+          "hit_rate": 0.7778
+        },
+        "test_no_ru_event_w20": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "event",
+          "window_days": 20,
+          "total": 394,
+          "hits": 188,
+          "hit_rate": 0.4772
+        },
+        "test_no_ru_view_w20": {
+          "segment": "test",
+          "layer": "no_ru",
+          "sample_type": "view",
+          "window_days": 20,
+          "total": 166,
+          "hits": 90,
+          "hit_rate": 0.5422
+        },
+        "roll_ok_event_w1": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 1,
+          "total": 36,
+          "hits": 22,
+          "hit_rate": 0.6111
+        },
+        "roll_ok_view_w1": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 1,
+          "total": 18,
+          "hits": 12,
+          "hit_rate": 0.6667
+        },
+        "test_ok_event_w1": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 1,
+          "total": 508,
+          "hits": 282,
+          "hit_rate": 0.5551
+        },
+        "test_ok_view_w1": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 1,
+          "total": 214,
+          "hits": 134,
+          "hit_rate": 0.6262
+        },
+        "roll_ok_event_w3": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 3,
+          "total": 36,
+          "hits": 22,
+          "hit_rate": 0.6111
+        },
+        "roll_ok_view_w3": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 3,
+          "total": 18,
+          "hits": 12,
+          "hit_rate": 0.6667
+        },
+        "test_ok_event_w3": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 3,
+          "total": 508,
+          "hits": 258,
+          "hit_rate": 0.5079
+        },
+        "test_ok_view_w3": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 3,
+          "total": 214,
+          "hits": 168,
+          "hit_rate": 0.785
+        },
+        "roll_ok_event_w5": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 5,
+          "total": 36,
+          "hits": 20,
+          "hit_rate": 0.5556
+        },
+        "roll_ok_view_w5": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 5,
+          "total": 18,
+          "hits": 10,
+          "hit_rate": 0.5556
+        },
+        "test_ok_event_w5": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 5,
+          "total": 508,
+          "hits": 290,
+          "hit_rate": 0.5709
+        },
+        "test_ok_view_w5": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 5,
+          "total": 214,
+          "hits": 134,
+          "hit_rate": 0.6262
+        },
+        "roll_ok_event_w10": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 10,
+          "total": 36,
+          "hits": 18,
+          "hit_rate": 0.5
+        },
+        "roll_ok_view_w10": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 10,
+          "total": 18,
+          "hits": 10,
+          "hit_rate": 0.5556
+        },
+        "test_ok_event_w10": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 10,
+          "total": 508,
+          "hits": 244,
+          "hit_rate": 0.4803
+        },
+        "test_ok_view_w10": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 10,
+          "total": 214,
+          "hits": 134,
+          "hit_rate": 0.6262
+        },
+        "roll_ok_event_w20": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 20,
+          "total": 36,
+          "hits": 18,
+          "hit_rate": 0.5
+        },
+        "roll_ok_view_w20": {
+          "segment": "roll",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 20,
+          "total": 18,
+          "hits": 12,
+          "hit_rate": 0.6667
+        },
+        "test_ok_event_w20": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "event",
+          "window_days": 20,
+          "total": 508,
+          "hits": 224,
+          "hit_rate": 0.4409
+        },
+        "test_ok_view_w20": {
+          "segment": "test",
+          "layer": "ok",
+          "sample_type": "view",
+          "window_days": 20,
+          "total": 214,
+          "hits": 98,
+          "hit_rate": 0.4579
+        },
+        "roll_partial_anchor_event_w1": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 1,
+          "total": 18,
+          "hits": 2,
+          "hit_rate": 0.1111
+        },
+        "roll_partial_anchor_view_w1": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 1,
+          "total": 6,
+          "hits": 2,
+          "hit_rate": 0.3333
+        },
+        "test_partial_anchor_event_w1": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 1,
+          "total": 116,
+          "hits": 34,
+          "hit_rate": 0.2931
+        },
+        "test_partial_anchor_view_w1": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 1,
+          "total": 50,
+          "hits": 20,
+          "hit_rate": 0.4
+        },
+        "roll_partial_anchor_event_w3": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 3,
+          "total": 18,
+          "hits": 6,
+          "hit_rate": 0.3333
+        },
+        "roll_partial_anchor_view_w3": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 3,
+          "total": 6,
+          "hits": 4,
+          "hit_rate": 0.6667
+        },
+        "test_partial_anchor_event_w3": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 3,
+          "total": 116,
+          "hits": 54,
+          "hit_rate": 0.4655
+        },
+        "test_partial_anchor_view_w3": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 3,
+          "total": 50,
+          "hits": 30,
+          "hit_rate": 0.6
+        },
+        "roll_partial_anchor_event_w5": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 5,
+          "total": 18,
+          "hits": 10,
+          "hit_rate": 0.5556
+        },
+        "roll_partial_anchor_view_w5": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 5,
+          "total": 6,
+          "hits": 4,
+          "hit_rate": 0.6667
+        },
+        "test_partial_anchor_event_w5": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 5,
+          "total": 116,
+          "hits": 38,
+          "hit_rate": 0.3276
+        },
+        "test_partial_anchor_view_w5": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 5,
+          "total": 50,
+          "hits": 20,
+          "hit_rate": 0.4
+        },
+        "roll_partial_anchor_event_w10": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 10,
+          "total": 18,
+          "hits": 16,
+          "hit_rate": 0.8889
+        },
+        "roll_partial_anchor_view_w10": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 10,
+          "total": 6,
+          "hits": 4,
+          "hit_rate": 0.6667
+        },
+        "test_partial_anchor_event_w10": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 10,
+          "total": 116,
+          "hits": 42,
+          "hit_rate": 0.3621
+        },
+        "test_partial_anchor_view_w10": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 10,
+          "total": 50,
+          "hits": 24,
+          "hit_rate": 0.48
+        },
+        "roll_partial_anchor_event_w20": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 20,
+          "total": 18,
+          "hits": 14,
+          "hit_rate": 0.7778
+        },
+        "roll_partial_anchor_view_w20": {
+          "segment": "roll",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 20,
+          "total": 6,
+          "hits": 6,
+          "hit_rate": 1.0
+        },
+        "test_partial_anchor_event_w20": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "event",
+          "window_days": 20,
+          "total": 116,
+          "hits": 40,
+          "hit_rate": 0.3448
+        },
+        "test_partial_anchor_view_w20": {
+          "segment": "test",
+          "layer": "partial_anchor",
+          "sample_type": "view",
+          "window_days": 20,
+          "total": 50,
+          "hits": 22,
+          "hit_rate": 0.44
+        },
+        "roll_template_only_event_w1": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 1,
+          "total": 272,
+          "hits": 148,
+          "hit_rate": 0.5441
+        },
+        "roll_template_only_view_w1": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 1,
+          "total": 128,
+          "hits": 78,
+          "hit_rate": 0.6094
+        },
+        "test_template_only_event_w1": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 1,
+          "total": 1084,
+          "hits": 538,
+          "hit_rate": 0.4963
+        },
+        "test_template_only_view_w1": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 1,
+          "total": 482,
+          "hits": 264,
+          "hit_rate": 0.5477
+        },
+        "roll_template_only_event_w3": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 3,
+          "total": 272,
+          "hits": 128,
+          "hit_rate": 0.4706
+        },
+        "roll_template_only_view_w3": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 3,
+          "total": 128,
+          "hits": 76,
+          "hit_rate": 0.5938
+        },
+        "test_template_only_event_w3": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 3,
+          "total": 1084,
+          "hits": 524,
+          "hit_rate": 0.4834
+        },
+        "test_template_only_view_w3": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 3,
+          "total": 482,
+          "hits": 320,
+          "hit_rate": 0.6639
+        },
+        "roll_template_only_event_w5": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 5,
+          "total": 272,
+          "hits": 134,
+          "hit_rate": 0.4926
+        },
+        "roll_template_only_view_w5": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 5,
+          "total": 128,
+          "hits": 74,
+          "hit_rate": 0.5781
+        },
+        "test_template_only_event_w5": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 5,
+          "total": 1084,
+          "hits": 516,
+          "hit_rate": 0.476
+        },
+        "test_template_only_view_w5": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 5,
+          "total": 482,
+          "hits": 246,
+          "hit_rate": 0.5104
+        },
+        "roll_template_only_event_w10": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 10,
+          "total": 272,
+          "hits": 142,
+          "hit_rate": 0.5221
+        },
+        "roll_template_only_view_w10": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 10,
+          "total": 128,
+          "hits": 78,
+          "hit_rate": 0.6094
+        },
+        "test_template_only_event_w10": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 10,
+          "total": 1084,
+          "hits": 484,
+          "hit_rate": 0.4465
+        },
+        "test_template_only_view_w10": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 10,
+          "total": 482,
+          "hits": 262,
+          "hit_rate": 0.5436
+        },
+        "roll_template_only_event_w20": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 20,
+          "total": 272,
+          "hits": 158,
+          "hit_rate": 0.5809
+        },
+        "roll_template_only_view_w20": {
+          "segment": "roll",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 20,
+          "total": 128,
+          "hits": 106,
+          "hit_rate": 0.8281
+        },
+        "test_template_only_event_w20": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "event",
+          "window_days": 20,
+          "total": 1084,
+          "hits": 472,
+          "hit_rate": 0.4354
+        },
+        "test_template_only_view_w20": {
+          "segment": "test",
+          "layer": "template_only",
+          "sample_type": "view",
+          "window_days": 20,
+          "total": 482,
+          "hits": 242,
+          "hit_rate": 0.5021
+        }
+      },
+      "口径": "OOS test/roll 段，全方向合并，按窗口细分"
+    },
+    "decisions": {
+      "available": true,
+      "decision_logs": 5,
+      "reviews": 5,
+      "asset_cards": 8,
+      "prediction_events": 31320
+    }
+  }
+}

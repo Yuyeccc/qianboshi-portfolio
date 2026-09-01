@@ -20,8 +20,15 @@ import {
   VaultAssetsIndex,
   VaultNoteDetail,
   VaultSummary,
+  CognitiveData,
 } from "@/types";
-import { DataProvider } from "./provider";
+import { DataProvider, emptyCognitive } from "./provider";
+
+export function mapCognitiveResponse(response: unknown): CognitiveData {
+  const root = (response && typeof response === "object" ? response : {}) as any;
+  const d = root.cognitive_data ?? root.cognitiveData ?? root;
+  return { meta:{generatedAt:d.meta?.generated_at ?? d.meta?.generatedAt ?? null, source:d.meta?.source ?? null, version:d.meta?.version ?? null}, blueprint:{completed:d.blueprint?.completed ?? null,total:d.blueprint?.total ?? null,status:d.blueprint?.status ?? null}, facts:d.facts ?? {}, dimensions:d.dimensions ?? {}, conflicts:{available:!!d.conflicts?.available, exact:Number(d.conflicts?.exact??0), divergences:Number(d.conflicts?.divergences??0), mappedViews:Number(d.conflicts?.mapped_views??d.conflicts?.mappedViews??0), summary:Array.isArray(d.conflicts?.summary)?d.conflicts.summary:[]}, backtest:{available:!!d.backtest?.available, runId:d.backtest?.run_id??d.backtest?.runId??null, rows:d.backtest?.rows??{}}, decisions:{available:!!d.decisions?.available, decisionLogs:Number(d.decisions?.decision_logs??0), reviews:Number(d.decisions?.reviews??0), assetCards:Number(d.decisions?.asset_cards??0), predictionEvents:Number(d.decisions?.prediction_events??0)} };
+}
 
 const emptyOverview: OverviewData = {
   metrics: {
@@ -873,6 +880,7 @@ export function mapOverviewResponse(input: unknown): OverviewData {
 }
 
 export class ApiClient implements DataProvider {
+  async getCognitive(): Promise<CognitiveData> { const data = await this.get<unknown>("/v1/cognitive", null); return data === null ? emptyCognitive : mapCognitiveResponse(data); }
   private async get<T>(path: string, fallback: T): Promise<T> {
     try {
       const response = await fetch(`${apiBaseUrl}${path}`);

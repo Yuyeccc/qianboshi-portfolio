@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 const navigation = [
   { key: "overview", path: "" },
   { key: "architecture", path: "architecture" },
+  { key: "cognitive", path: "cognitive" },
   { key: "assets", path: "assets" },
   { key: "decisions", path: "decisions" },
   { key: "discipline", path: "discipline" },
