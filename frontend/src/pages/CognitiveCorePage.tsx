@@ -55,10 +55,41 @@ const LAYER_META: Record<string, { label: string; colorClass: string }> = {
   primary: { label: "🅰 一手", colorClass: "bg-emerald-500" },
   secondary: { label: "🅱 二手", colorClass: "bg-amber-500" },
   inferred: { label: "🅳 推断", colorClass: "bg-rose-500" },
+  unknown: { label: "🅽 待分层", colorClass: "bg-muted" },
 };
 
+/** B7：EN 模式下的 source 小字翻译映射（数据层 source 为中文透传） */
+const SOURCE_EN: Record<string, string> = {
+  "claim 确定性回填，73 号校验（7484+252）": "claim certainty backfill, verified per doc #73 (7,484+252)",
+  "evidence 库 transcript_segment（33 蓝图，2026-08-29）": "evidence DB transcript_segment (blueprint #33, 2026-08-29)",
+  "export_dimensions 实测 463 topic 零打满（36 蓝图附录D）": "export_dimensions: 463 topics, zero over-crowded (blueprint #36 App. D)",
+  "output_gate 红队全过（63 号）": "output_gate red-team all passed (doc #63)",
+  "permutation_test.py 置换检验 OOS 显著（9-01）": "permutation_test.py: OOS significance (09-01)",
+  "position_ledger.py realized 对账（git 9e24412）": "position_ledger.py realized reconciliation (git 9e24412)",
+  "prediction_confidence.py authority×tuple_status（67 号）": "prediction_confidence.py authority × tuple_status (doc #67)",
+  "quality 库 view_raw（immutable，md5 留底）": "quality DB view_raw (immutable, md5 kept)",
+  "reasoning_unit 五元组全量覆盖 7476/7484（43 号执行记录）": "reasoning_unit 5-tuple full coverage 7,476/7,484 (doc #43)",
+  "view_evidence_annotation 全量标注，73 号校验（7484+252）": "view_evidence_annotation fully annotated, verified per doc #73 (7,484+252)",
+  "view_evidence_link 观点↔segment 下钻关联（33 蓝图）": "view_evidence_link view↔segment drill-down (blueprint #33)",
+  "view_provenance anchored，73 号校验 2026-09-01": "view_provenance anchored, verified per doc #73 2026-09-01",
+  "主题仓位/单标的上限/回撤开关（#17v2，51 号）": "position caps / per-asset limits / drawdown switch (#17v2, doc #51)",
+  "占位锚点修复：假锚定→真实锚定+诚实降级（72 号）": "placeholder anchor fix: fake→real anchors + honest downgrade (doc #72)",
+  "存量错配批量修复三轮（49 号）": "legacy mismatch batch fix, 3 rounds (doc #49)",
+  "行情补拉复跑 resolved（69 号）": "market data backfill re-run resolved (doc #69)",
+  "dimensions_export.json 8-31 + conflicts_export.json 8-31 + qianboshi_decision.db + 73 号校验口径": "dimensions_export.json 8-31 + conflicts_export.json 8-31 + qianboshi_decision.db + doc #73 verified scope",
+};
+
+function translateSource(source: string | undefined, locale: string): string | undefined {
+  if (!source) return undefined;
+  if (locale.startsWith("en")) {
+    return SOURCE_EN[source] ?? source;
+  }
+  return source;
+}
+
 export default function CognitiveCorePage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.resolvedLanguage ?? i18n.language ?? "zh";
   const provider = useContext(DataContext);
   const [data, setData] = useState<CognitiveData | null>(null);
 
@@ -68,7 +99,7 @@ export default function CognitiveCorePage() {
 
   if (!data) {
     return (
-      <main className="mx-auto max-w-7xl px-6 py-16 text-muted" data-theme="architecture">
+      <main className="mx-auto max-w-7xl px-6 py-16 text-muted">
         {t("cognitive.loading")}
       </main>
     );
@@ -166,7 +197,7 @@ export default function CognitiveCorePage() {
   ];
 
   return (
-    <main className="mx-auto max-w-7xl space-y-14 px-5 py-12 sm:px-8" data-theme="architecture">
+    <main className="mx-auto max-w-7xl space-y-14 px-5 py-12 sm:px-8">
       {/* ===== Hero ===== */}
       <header>
         <p className="font-mono text-xs uppercase tracking-[0.25em] text-brand">{t("cognitive.eyebrow")}</p>
@@ -192,7 +223,7 @@ export default function CognitiveCorePage() {
           ] as Array<[string, string]>
         ).map(([key, label]) => {
           const f = fact(key);
-          return <MetricCard key={key} label={label} value={typeof f?.value === "number" ? f.value : null} hint={f?.source ?? undefined} />;
+          return <MetricCard key={key} label={label} value={typeof f?.value === "number" ? f.value : null} hint={translateSource(f?.source, locale)} />;
         })}
         {/* 预测事件来自 decisions（facts 常量不含） */}
         <MetricCard
@@ -441,7 +472,7 @@ export default function CognitiveCorePage() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {factsList.map(({ key, label, render }) => (
-            <FactCard key={key} label={label} value={render()} source={fact(key)?.source ?? undefined} />
+            <FactCard key={key} label={label} value={render()} source={translateSource(fact(key)?.source, locale)} />
           ))}
         </div>
         <div className="flex flex-wrap gap-4 rounded-lg border border-line bg-surfaceSubtle px-5 py-4 text-sm">
@@ -463,7 +494,7 @@ export default function CognitiveCorePage() {
       {/* ===== 页脚口径 ===== */}
       <footer className="border-t border-line pt-6">
         <p className="font-mono text-[11px] leading-5 text-muted">{t("cognitive.footnote")}</p>
-        <p className="mt-1 font-mono text-[11px] text-muted/70">{data.meta.source}</p>
+        <p className="mt-1 font-mono text-[11px] text-muted/70">{translateSource(data.meta.source ?? undefined, locale)}</p>
       </footer>
     </main>
   );

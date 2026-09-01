@@ -4241,8 +4241,8 @@
           "source_file": "钱博士 BV1ks4o6iEbW.md"
         }
       ],
-      "created_at": "2026-09-01T17:12:48",
-      "updated_at": "2026-09-01T17:12:48"
+      "created_at": "2026-09-01T19:10:12",
+      "updated_at": "2026-09-01T19:10:12"
     },
     "latest_views": [
       {
@@ -4907,22 +4907,6 @@
         "type": "short_video",
         "weights": {
           "sim_weighted": 0.0939,
-          "freshness": 0.1,
-          "freshness_weighted": 0.06,
-          "type_score": 1.0,
-          "type_weighted": 0.2
-        }
-      },
-      {
-        "content": "## 到底能不能追？\n\n先讲个案例：\n- 5月20号晚上发视频\"半导体还能疯多久\"\n- 5月21号半导体高开1%后收盘跌6%\n- 当时的依据是**板块拥挤度**这个指标\n\n今天半导体指数交易额5930亿，A股两市交易额3万多亿。板块拥挤度到什么程度了？",
-        "source": "2026.6.25 半导体再次进入逼空行情 短视频解读.md",
-        "section": "到底能不能追？",
-        "score": 0.35,
-        "raw_score": 0.4502,
-        "date": "2026-06-25",
-        "type": "short_video",
-        "weights": {
-          "sim_weighted": 0.09,
           "freshness": 0.1,
           "freshness_weighted": 0.06,
           "type_score": 1.0,

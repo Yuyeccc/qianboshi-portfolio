@@ -16,15 +16,29 @@ const navigation = [
 
 const themes = ["product", "architecture", "terminal"] as const;
 
+const THEME_STORAGE_KEY = "qianboshi-portfolio:theme";
+
 export default function Header() {
   const { locale = "zh" } = useParams();
   const location = useLocation();
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [themeIndex, setThemeIndex] = useState(0);
+
+  // B8 补强：主题选择持久化（localStorage），刷新/切页后保持用户选择
+  const [themeIndex, setThemeIndex] = useState<number>(() => {
+    if (typeof window === "undefined") return 0;
+    const saved = window.localStorage.getItem(THEME_STORAGE_KEY);
+    const index = saved !== null ? themes.indexOf(saved as (typeof themes)[number]) : -1;
+    return index >= 0 ? index : 0;
+  });
 
   useEffect(() => {
     document.documentElement.dataset.theme = themes[themeIndex];
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, themes[themeIndex]);
+    } catch {
+      // localStorage 不可用时静默降级（隐私模式等）
+    }
   }, [themeIndex]);
 
   const alternateLocale = locale === "en" ? "zh" : "en";

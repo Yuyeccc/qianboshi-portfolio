@@ -12,7 +12,7 @@ from app.repositories.asset_vault_repo import (
 )
 from app.repositories.assets_repo import get_assets_data
 from app.repositories.brief_repo import get_brief, list_briefs
-from app.repositories.cognitive_repo import get_cognitive_data
+from app.repositories.cognitive_repo import get_cognitive_data, get_dimensions_page
 from app.repositories.decisions_repo import get_decisions_data
 from app.repositories.discipline_repo import get_discipline_data
 from app.repositories.market_repo import get_market_data
@@ -120,6 +120,28 @@ def get_architecture() -> dict:
 @api_router.get("/cognitive")
 def get_cognitive() -> dict:
     return {"cognitive_data": get_cognitive_data()}
+
+
+@api_router.get("/cognitive/dimensions")
+def get_cognitive_dimensions(
+    page: int = Query(default=1, ge=1),
+    page_size: int = Query(default=20, ge=1, le=100),
+    topic: str | None = Query(default=None),
+    pointer: str | None = Query(default=None),
+    claim_level: str | None = Query(default=None),
+    source_layer: str | None = Query(default=None),
+) -> dict:
+    """认知维度明细分页（原文两次点击下钻数据源）"""
+    return {
+        "dimensions_page": get_dimensions_page(
+            page=page,
+            page_size=page_size,
+            topic=topic,
+            pointer=pointer,
+            claim_level=claim_level,
+            source_layer=source_layer,
+        )
+    }
 
 
 @api_router.get("/discipline")

@@ -96,6 +96,18 @@ LAYERS = [
             {"name": "MCP 工具", "role": "9 个工具暴露给 Agent 实时查询", "tech": "FastMCP"},
         ],
     },
+    {
+        "layer_id": "cognitive",
+        "layer_name": "认知处理层",
+        "layer_name_en": "Cognitive Processing Layer",
+        "description": "让每条观点回到证据、条件与结果——原文锚定、维度标注、冲突检测、分层回测（认知内核 P0/P1）",
+        "nodes": [
+            {"name": "原文锚定", "role": "观点 ↔ 转录片段（BV+时间戳），7,660 条可下钻", "tech": "view_provenance"},
+            {"name": "维度标注", "role": "权威分层/表达类型/置信三维/推理五元组，7,736 条全量标注", "tech": "export_dimensions"},
+            {"name": "冲突检测", "role": "同主题多空并存不合并，465 精确组 + 52 topic 可筛选", "tech": "conflict_detector"},
+            {"name": "分层回测", "role": "OOS 窗口 × 证据层命中率，w3 ok 层 78.5% 领先模板句", "tech": "prediction_backtest"},
+        ],
+    },
 ]
 
 VIEW_LIFECYCLE = [

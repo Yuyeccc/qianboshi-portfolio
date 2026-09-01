@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { MetricCard } from "@/components/data/MetricCard";
 import { LatestBriefCard } from "@/components/brief/LatestBriefCard";
 import { DataContext } from "@/app/providers";
-import { OverviewData } from "@/types";
+import { CognitiveData, OverviewData } from "@/types";
 
 const emptyOverview: OverviewData = {
   metrics: {
@@ -50,6 +50,7 @@ export default function OverviewPage() {
   const { locale = "zh" } = useParams();
   const provider = useContext(DataContext);
   const [overview, setOverview] = useState<OverviewData>(emptyOverview);
+  const [cognitive, setCognitive] = useState<CognitiveData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -75,6 +76,20 @@ export default function OverviewPage() {
       .finally(() => {
         if (active) {
           setLoading(false);
+        }
+      });
+
+    // P1-A：认知内核入口卡数据（失败不阻塞主流程）
+    provider
+      ?.getCognitive?.()
+      .then((data) => {
+        if (active) {
+          setCognitive(data ?? null);
+        }
+      })
+      .catch(() => {
+        if (active) {
+          setCognitive(null);
         }
       });
 
@@ -145,6 +160,80 @@ export default function OverviewPage() {
             hint={t("metrics.ragChunks.hint")}
           />
         </div>
+      </section>
+
+      {/* P1-A：认知内核入口卡 */}
+      <section className="rounded-lg border border-line bg-surface shadow-card">
+        <div className="flex flex-wrap items-start justify-between gap-4 border-b border-line px-5 py-4">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-brand">
+              {t("overview.cognitiveEntry")}
+            </p>
+            <h2 className="mt-2 text-xl font-medium text-heading">
+              {t("overview.cognitiveEntrySub")}
+            </h2>
+          </div>
+          <Link
+            to={`/${locale}/cognitive`}
+            className="inline-flex items-center gap-1 rounded-md bg-brand px-3.5 py-2 text-sm font-medium text-white transition hover:bg-brandStrong"
+          >
+            {t("overview.cognitiveEnter")}
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </Link>
+        </div>
+
+        {cognitive ? (
+          <div className="grid gap-px overflow-hidden bg-line sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                label: t("overview.cognitiveAnchored"),
+                value: cognitive.facts.anchored?.value,
+              },
+              {
+                label: t("overview.cognitiveClaims"),
+                value: cognitive.facts.annotations?.value,
+              },
+              {
+                label: t("overview.cognitiveConflicts"),
+                value: cognitive.conflicts.exact,
+              },
+              {
+                label: t("overview.cognitiveBacktest"),
+                value: (() => {
+                  // 与 CognitiveCorePage 同口径：test 集 × view 层 × w3 窗口
+                  const rows = cognitive.backtest?.rows ?? {};
+                  const row = Object.values(rows).find(
+                    (r) =>
+                      r?.segment === "test" &&
+                      r?.sample_type === "view" &&
+                      r?.layer === "ok" &&
+                      r?.window_days === 3,
+                  );
+                  return typeof row?.hit_rate === "number"
+                    ? `${(row.hit_rate * 100).toFixed(1)}%`
+                    : null;
+                })(),
+              },
+            ].map((item) => (
+              <div className="bg-surface px-5 py-4" key={item.label}>
+                <p className="text-xs text-muted">{item.label}</p>
+                <p className="mt-1.5 font-mono text-2xl font-semibold tabular-nums text-heading">
+                  {typeof item.value === "number"
+                    ? item.value.toLocaleString()
+                    : item.value ?? "—"}
+                </p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="px-5 py-4 text-sm text-muted">{t("overview.cognitiveLoading")}</p>
+        )}
+
+        {cognitive ? (
+          <p className="border-t border-line px-5 py-2.5 text-[11px] leading-4 text-muted">
+            {t("overview.cognitiveEnterHint")} · {cognitive.meta.source}
+          </p>
+        ) : null}
       </section>
 
       <section className="border-t border-line pt-6">

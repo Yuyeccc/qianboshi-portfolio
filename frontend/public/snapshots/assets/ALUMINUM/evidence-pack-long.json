@@ -268,20 +268,20 @@
         "symbol": "601899.SS",
         "as_of_date": "2026-09-01",
         "samples": {
-          "fetched": 732,
-          "valid": 732,
+          "fetched": 733,
+          "valid": 733,
           "dropped": 0,
-          "span_days": 1104,
-          "last_date": "2026-08-31",
+          "span_days": 1105,
+          "last_date": "2026-09-01",
           "error": null
         },
         "gate": {
-          "pe_samples": 732,
-          "pb_samples": 732,
-          "intersection": 732,
-          "span_days": 1104,
-          "last_date": "2026-08-31",
-          "age_days": 1,
+          "pe_samples": 733,
+          "pb_samples": 733,
+          "intersection": 733,
+          "span_days": 1105,
+          "last_date": "2026-09-01",
+          "age_days": 0,
           "passed": true
         },
         "risk_columns": [
@@ -321,11 +321,11 @@
         "note": "⚠️ 估值≠安全边际：便宜可能含价值陷阱（如 0.5x PB 假低估），须结合质量因子与资料充分度综合判断，本卡不构成买卖建议。",
         "status": "ok",
         "level": "临界",
-        "pe_rank": 8.9,
-        "pb_rank": 74.5,
-        "pe_current": 13.23,
-        "pb_current": 4.43,
-        "pe_date": "2026-08-31"
+        "pe_rank": 9.3,
+        "pb_rank": 74.9,
+        "pe_current": 13.26,
+        "pb_current": 4.44,
+        "pe_date": "2026-09-01"
       },
       "extra": {
         "data_status": {
@@ -400,20 +400,20 @@
           "symbol": "601899.SS",
           "as_of_date": "2026-09-01",
           "samples": {
-            "fetched": 732,
-            "valid": 732,
+            "fetched": 733,
+            "valid": 733,
             "dropped": 0,
-            "span_days": 1104,
-            "last_date": "2026-08-31",
+            "span_days": 1105,
+            "last_date": "2026-09-01",
             "error": null
           },
           "gate": {
-            "pe_samples": 732,
-            "pb_samples": 732,
-            "intersection": 732,
-            "span_days": 1104,
-            "last_date": "2026-08-31",
-            "age_days": 1,
+            "pe_samples": 733,
+            "pb_samples": 733,
+            "intersection": 733,
+            "span_days": 1105,
+            "last_date": "2026-09-01",
+            "age_days": 0,
             "passed": true
           },
           "risk_columns": [
@@ -453,11 +453,11 @@
           "note": "⚠️ 估值≠安全边际：便宜可能含价值陷阱（如 0.5x PB 假低估），须结合质量因子与资料充分度综合判断，本卡不构成买卖建议。",
           "status": "ok",
           "level": "临界",
-          "pe_rank": 8.9,
-          "pb_rank": 74.5,
-          "pe_current": 13.23,
-          "pb_current": 4.43,
-          "pe_date": "2026-08-31"
+          "pe_rank": 9.3,
+          "pb_rank": 74.9,
+          "pe_current": 13.26,
+          "pb_current": 4.44,
+          "pe_date": "2026-09-01"
         }
       }
     },
@@ -540,8 +540,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-09-01T17:12:08",
-      "updated_at": "2026-09-01T17:12:08"
+      "created_at": "2026-09-01T19:09:40",
+      "updated_at": "2026-09-01T19:09:40"
     },
     "latest_views": [],
     "analyst_scores": [],

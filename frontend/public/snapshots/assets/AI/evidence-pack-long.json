@@ -186,8 +186,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-09-01T17:06:30",
-      "updated_at": "2026-09-01T17:06:30"
+      "created_at": "2026-09-01T19:09:15",
+      "updated_at": "2026-09-01T19:09:15"
     },
     "latest_views": [
       {
@@ -362,22 +362,6 @@
       {
         "content": "### AI硬件/算力\n短线：看多🐂📈  \n中长线：看多🐂📈  \n逻辑：主播认为AI硬件这条线资金一直在做，市场共识越来越高；算力需求在北美出现指数级增长，而供给明显小于需求，这使得相关硬件和上游环节持续走强。",
         "source": "趋势天哥 2026.1.28 BV1Sy6EBiEYe.md",
-        "section": "观点分析",
-        "score": 0.3239,
-        "raw_score": 0.5196,
-        "date": "2026-01-28",
-        "type": "livestream",
-        "weights": {
-          "sim_weighted": 0.1039,
-          "freshness": 0.1,
-          "freshness_weighted": 0.06,
-          "type_score": 0.8,
-          "type_weighted": 0.16
-        }
-      },
-      {
-        "content": "### AI硬件/算力\n短线：看多🐂📈  \n中长线：看多🐂📈  \n逻辑：主播认为AI硬件这条线资金一直在做，市场共识越来越高；算力需求在北美出现指数级增长，而供给明显小于需求，这使得相关硬件和上游环节持续走强。",
-        "source": "2026-01-28 （趋势天哥） BV1Sy6EBiEYe.md",
         "section": "观点分析",
         "score": 0.3239,
         "raw_score": 0.5196,

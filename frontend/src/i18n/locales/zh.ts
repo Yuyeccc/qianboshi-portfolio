@@ -99,7 +99,7 @@ export default {
     complianceNote: "只做规则比对与研究成果呈现，不输出买卖/仓位建议，不承诺收益。",
     footnote: "口径说明：总量数字来自 Mac 权威库 2026-09-01 全量校验（anchored 7,660 / annotation+claim 7,736）；维度分布来自本地 8-31 导出快照（7,484 条，9-01 补标 252 条待下次导出）；回测为 #14v2 分层前瞻回测。",
   },
-  overview: { title: "钱博士 Agent", heroStatus: "系统状态", trustData: "信任数据", pipelineRunning: "Pipeline 运行中", pipelineStopped: "Pipeline 未运行", lastChecked: "最近检查", detectedToday: "今日检测 {{count}} 个新视频", latestBrief: "最新简报", loading: "加载中…" },
+  overview: { title: "钱博士 Agent", heroStatus: "系统状态", trustData: "信任数据", pipelineRunning: "Pipeline 运行中", pipelineStopped: "Pipeline 未运行", lastChecked: "最近检查", detectedToday: "今日检测 {{count}} 个新视频", latestBrief: "最新简报", loading: "加载中…", cognitiveEntry: "认知内核", cognitiveEntrySub: "每个观点都能回到证据、条件与结果——证据链保真 · 维度增补 · 认知闭环", cognitiveAnchored: "锚定观点", cognitiveClaims: "标注观点", cognitiveConflicts: "精确冲突", cognitiveBacktest: "回测 w3 ok 层", cognitiveEnter: "进入认知内核", cognitiveEnterHint: "查看完整四模块分析", cognitiveLoading: "认知数据加载中…" },
   pages: {
     phaseOne: "Phase 1 实现",
     about: {
@@ -112,7 +112,7 @@ export default {
       limits: { title: "项目边界", roadmapTitle: "后续方向", items: ["整理观点与数据，不构成投资建议", "命中率依赖事件定义与时间窗口口径", "目前覆盖有限的资产类别与内容来源"], roadmap: ["更严格的事件标签标准", "来源可信度动态评分", "多模态图表识别", "成本与延迟监控", "组合级风险评估"] },
       contact: { title: "联系与合作", subtitle: "项目持续迭代中，欢迎交流 AI 应用工程、RAG 系统与投研数据化相关话题。", architectureLink: "查看系统架构", group: "交流群", groupBadge: "筹备中", groupPending: "交流群正在筹备中，创建后开放加入", privacyNote: "// 出于防爬虫考虑，本页不公开邮箱与电话，请通过 GitHub 联系" }
     },
-    architecture: { title: "系统架构", subtitle: "从内容采集到决策复盘的自动化投研流水线", loading: "加载中…", unavailable: "实时数据暂不可用", live: "流水线实时状态", scheduler: "调度器", schedulerDetail: "流水线运行状态", lastChecked: "最近检查", queue: "队列", activity: "活动量", activityDetail: "今日检测 / 累计处理", pipelineTitle: "七层流水线", empty: "暂无架构数据", lifecycleTitle: "单条观点的生命周期", lifecycleSubtitle: "一条观点如何从视频变成可复盘的决策证据", mcpTitle: "MCP 工具", mcpSubtitle: "把投研资产暴露给 Agent，9 个工具实时查询" },
+    architecture: { title: "系统架构", subtitle: "从内容采集到决策复盘的自动化投研流水线", loading: "加载中…", unavailable: "实时数据暂不可用", live: "流水线实时状态", scheduler: "调度器", schedulerDetail: "流水线运行状态", lastChecked: "最近检查", queue: "队列", activity: "活动量", activityDetail: "今日检测 / 累计处理", pipelineTitle: "八层流水线", empty: "暂无架构数据", lifecycleTitle: "单条观点的生命周期", lifecycleSubtitle: "一条观点如何从视频变成可复盘的决策证据", mcpTitle: "MCP 工具", mcpSubtitle: "把投研资产暴露给 Agent，9 个工具实时查询" },
     discipline: { title: "实盘纪律", subtitle: "记录观点，不追逐结果；到期复盘，不修改历史", loading: "加载中…", error: "实盘纪律数据暂时不可用。", empty: "暂无实盘纪律数据", principlesLabel: "纪律原则", statsLabel: "复盘统计", statTotal: "总决策", statOpen: "待到期", statReviewed: "已复盘", statHit: "命中", statWrong: "未命中", coverage: "复盘覆盖率 {{value}}%", dataSource: "数据口径：user_decision_logs + decision_reviews", frameworkTitle: "实盘纪律框架", frameworkSubtitle: "情绪定方向 · 纪律定仓位 · 止损定退出", active: "生效中", logsTitle: "决策日志", logsSubtitle: "保留当时的判断，不展示事后结论；持仓与金额已脱敏", timelineTitle: "纪律时间线", conviction: "置信度", review: "复盘", return: "区间收益", window: "{{count}}天窗口", statusOpen: "待到期", statusReviewed: "已复盘", resultHit: "命中", resultWrong: "未命中", noThesis: "暂无核心逻辑", directionBullish: "看多", directionBearish: "看空", directionNeutral: "中性", horizonShort: "短期", horizonMedium: "中期", horizonLong: "长期" }
   },
   briefs: { title: "简报", description: "由内容采集、GPU 转写、结构化分析与 RAG 流程持续生成的每日盘前投研产物。", empty: "暂无简报", notFound: "未找到该简报", back: "返回", backToList: "返回简报列表", all: "全部简报", date: "日期", size: "大小", generatedAt: "生成时间", statTotal: "累计简报", statLatest: "最近更新", statCoverage: "覆盖时间", pieces: "篇", generated: "已生成", realOutput: "真实运行产出", sections: "章节", copyLink: "复制链接", copied: "已复制", prev: "上一篇", next: "下一篇", toc: "本页目录", preview: "内容预览" },
@@ -216,6 +216,7 @@ export default {
     evidenceChain: "证据链",
     analystHistory: "分析师历史",
     entity: "标的",
+    windowDays: "窗口",
     sampleCount: "样本量",
     hitRate: "命中率",
     insufficientSample: "样本不足",
@@ -242,5 +243,5 @@ export default {
   },
   metrics: { structuredViews: { label: "结构化观点", hint: "结构化观点库 JSONL 行数" }, predictionEvents: { label: "回测预测事件", hint: "SQLite prediction_events 表，到期自动复盘" }, notes: { label: "研究笔记", hint: "Obsidian 笔记库" }, ragChunks: { label: "知识库规模", hint: "ChromaDB RAG 向量库 chunks" } },
   footer: { copyright: "AI 金融投研系统作品集", dataFreshness: "数据时效：待接入", github: "GitHub 项目地址" },
-  dataAssets: { title: "数据资产", description: "观点库、分析师命中率与来源分布的结构化快照。", noData: "暂无数据", metricsLabel: "核心指标", metricsStructured: "结构化观点", metricsStructuredHint: "结构化观点库 JSONL 行数", metricsEvents: "回测预测事件", metricsEventsHint: "SQLite prediction_events 表，到期自动复盘", metricsNotes: "研究笔记", metricsNotesHint: "Obsidian 笔记库", metricsChunks: "知识库规模", metricsChunksHint: "ChromaDB RAG 向量库 chunks", metricsAnalysts: "分析师", metricsAnalystsHint: "观点来源分析师数量", metricsCards: "资产卡", metricsCardsHint: "SQLite asset_cards 表", stanceTitle: "观点方向分布", horizonTitle: "观点周期分布", sourceTitle: "来源贡献", rankTitle: "分析师命中率", debateTitle: "多空对照", samplesTitle: "样本数", hitRate: "命中率", samples: "样本", methodologyNote: "命中率口径：以 prediction_events 到期结果为基准，按分析师聚合；样本数少于 3 的显示为 —。", updatedAt: "数据更新于", debateCols: { entity: "主题", bullish: "看多", bearish: "看空", neutral: "中性", consensus: "共识", disagreement: "分歧度" } }
+  dataAssets: { title: "数据资产", description: "观点库、分析师命中率与来源分布的结构化快照。", noData: "暂无数据", metricsLabel: "核心指标", metricsStructured: "结构化观点", metricsStructuredHint: "结构化观点库 JSONL 行数", metricsEvents: "回测预测事件", metricsEventsHint: "SQLite prediction_events 表，到期自动复盘", metricsNotes: "研究笔记", metricsNotesHint: "Obsidian 笔记库", metricsChunks: "知识库规模", metricsChunksHint: "ChromaDB RAG 向量库 chunks", metricsAnalysts: "分析师", metricsAnalystsHint: "观点来源分析师数量", metricsCards: "资产卡", metricsCardsHint: "SQLite asset_cards 表", stanceTitle: "观点方向分布", horizonTitle: "观点周期分布", sourceTitle: "来源贡献", rankTitle: "分析师命中率", debateTitle: "多空对照", samplesTitle: "样本数", hitRate: "命中率", samples: "样本", methodologyNote: "命中率口径：以 prediction_events 到期结果为基准，按分析师聚合；样本数少于 3 的显示为 —。", debateNote: "多空对照来自 debate_cards 表；同名/相近主题存在多条历史窗口记录，前端保留总数最大的一条，数字相同属上游聚合口径，如实展示。", updatedAt: "数据更新于", debateCols: { entity: "主题", bullish: "看多", bearish: "看空", neutral: "中性", consensus: "共识", disagreement: "分歧度" } }
 };

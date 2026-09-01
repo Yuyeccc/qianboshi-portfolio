@@ -441,6 +441,6 @@ export interface CognitiveData {
   facts: Record<string, { value: unknown; unit?: string; source?: string }>;
   dimensions: Record<string, unknown>;
   conflicts: { available: boolean; exact: number; divergences: number; mappedViews: number; summary: Array<Record<string, unknown>> };
-  backtest: { available: boolean; runId: string | null; rows: Record<string, { windowDays?: number; layer?: string; total?: number; hits?: number; hitRate?: number }> };
+  backtest: { available: boolean; runId: string | null; rows: Record<string, { segment?: string; sample_type?: string; window_days?: number; layer?: string; total?: number; hits?: number; hit_rate?: number }> };
   decisions: { available: boolean; decisionLogs: number; reviews: number; assetCards: number; predictionEvents: number };
 }

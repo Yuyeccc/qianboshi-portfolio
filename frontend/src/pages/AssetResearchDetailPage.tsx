@@ -45,8 +45,13 @@ const directionStyles: Record<string, string> = {
 
 function valueOf(item: AnyRecord, ...keys: string[]) {
   for (const key of keys) {
-    if (item?.[key] !== undefined && item?.[key] !== null) {
-      return item[key];
+    // 支持点路径：counts.bullish / metrics.consensus_direction
+    const value = key.split(".").reduce<unknown>(
+      (acc, part) => (acc && typeof acc === "object" ? (acc as AnyRecord)[part] : undefined),
+      item,
+    );
+    if (value !== undefined && value !== null) {
+      return value;
     }
   }
   return null;
@@ -398,14 +403,14 @@ export default function AssetResearchDetailPage() {
             </div>
             <div className="mt-5 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
               {[
-                ["bullishCount", "bullish", "market-positive"],
-                ["bearishCount", "bearish", "market-negative"],
-                ["neutralCount", "neutral", "muted"],
-              ].map(([countKey, labelKey, color], index) => (
-                <div className="bg-surface px-5 py-5" key={countKey}>
+                ["bullishCount", "counts.bullish", "bullish", "market-positive"],
+                ["bearishCount", "counts.bearish", "bearish", "market-negative"],
+                ["neutralCount", "counts.neutral", "neutral", "muted"],
+              ].map(([countKey, countPath, labelKey, color], index) => (
+                <div className="bg-surface px-5 py-5" key={String(countKey)}>
                   <p className="text-xs text-muted">{t(`vault.${labelKey}`)}</p>
                   <p className={`mt-2 text-3xl font-medium tabular-nums text-${color}`}>
-                    {formatValue(valueOf(debateCard, countKey))}
+                    {formatValue(valueOf(debateCard, String(countKey), String(countPath)))}
                   </p>
                   {index === 2 ? null : <p className="mt-1 text-xs text-muted">{t("vault.views")}</p>}
                 </div>
@@ -414,13 +419,13 @@ export default function AssetResearchDetailPage() {
             <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-text">
               <span>
                 {t("vault.consensus")}:{" "}
-                <strong className={directionClass(valueOf(debateCard, "consensusDirection", "consensus_direction"))}>
-                  {directionLabel(valueOf(debateCard, "consensusDirection", "consensus_direction"), t)}
+                <strong className={directionClass(valueOf(debateCard, "metrics.consensus_direction", "consensusDirection", "consensus_direction"))}>
+                  {directionLabel(valueOf(debateCard, "metrics.consensus_direction", "consensusDirection", "consensus_direction"), t)}
                 </strong>
               </span>
               <span>
                 {t("vault.disagreement")}:{" "}
-                {formatValue(valueOf(debateCard, "disagreementLevel", "disagreement_level"))}
+                {formatValue(valueOf(debateCard, "metrics.disagreement_level", "disagreementLevel", "disagreement_level"))}
               </span>
             </div>
           </section>
@@ -496,6 +501,7 @@ export default function AssetResearchDetailPage() {
                     <tr>
                       <th className="px-4 py-3 font-medium">{t("vault.analyst")}</th>
                       <th className="px-4 py-3 font-medium">{t("vault.entity")}</th>
+                      <th className="px-4 py-3 font-medium">{t("vault.windowDays")}</th>
                       <th className="px-4 py-3 font-medium">{t("vault.sampleCount")}</th>
                       <th className="px-4 py-3 font-medium">{t("vault.hitRate")}</th>
                     </tr>
@@ -508,6 +514,14 @@ export default function AssetResearchDetailPage() {
                         <tr className="border-b border-line last:border-0" key={`${valueOf(score, "analyst")}-${index}`}>
                           <td className="px-4 py-4 font-medium text-heading">{formatValue(valueOf(score, "analyst"))}</td>
                           <td className="px-4 py-4 text-text">{formatValue(valueOf(score, "entity"))}</td>
+                          <td className="px-4 py-4 font-mono text-xs text-muted">
+                            {(() => {
+                              const days = valueOf(score, "windowDays", "window_days");
+                              return days === null || days === undefined || days === ""
+                                ? "—"
+                                : `${days}d`;
+                            })()}
+                          </td>
                           <td className="px-4 py-4 tabular-nums text-text">{formatValue(samples)}</td>
                           <td className="px-4 py-4 tabular-nums text-text">
                             {enoughSamples ? formatPercent(valueOf(score, "hitRate", "hit_rate")) : t("vault.insufficientSample")}

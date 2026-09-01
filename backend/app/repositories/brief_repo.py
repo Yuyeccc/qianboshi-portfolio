@@ -22,6 +22,10 @@ def list_briefs() -> list[dict[str, Any]]:
                 if not path.is_file():
                     continue
 
+                # 设计样张不入列表（多空卡样张.md 等）
+                if "样张" in path.name or "样卡" in path.name:
+                    continue
+
                 stat = path.stat()
                 date_match = _DATE_PATTERN.search(path.name)
                 date = (
@@ -44,11 +48,29 @@ def list_briefs() -> list[dict[str, Any]]:
             except Exception:
                 continue
 
-        briefs.sort(key=lambda item: item["_mtime"], reverse=True)
+        # 同日期去重：优先保留"日报_"前缀文件（agent 正式产出），
+        # 其余同日期文件（旧体系/重复生成）丢弃，只留最新一个
+        by_date: dict[str, dict[str, Any]] = {}
         for brief in briefs:
+            key = brief["date"]
+            existing = by_date.get(key)
+            if existing is None:
+                by_date[key] = brief
+                continue
+            existing_pref = existing["filename"].startswith("日报_")
+            new_pref = brief["filename"].startswith("日报_")
+            if existing_pref and not new_pref:
+                continue  # 保留已有日报_文件
+            if new_pref and not existing_pref:
+                by_date[key] = brief  # 新文件是日报_，替换
+            elif brief["_mtime"] > existing["_mtime"]:
+                by_date[key] = brief  # 同为日报_或同为旧体系，取最新
+
+        result = sorted(by_date.values(), key=lambda item: item["_mtime"], reverse=True)
+        for brief in result:
             brief.pop("_mtime", None)
 
-        return briefs
+        return result
     except Exception:
         return []
 

@@ -84,9 +84,18 @@ def _trend(source: Any, symbol: str) -> list[dict[str, Any]]:
     if isinstance(value, dict):
         points: list[dict[str, Any]] = []
         for date, item in value.items():
-            price = _number(item.get("price") if isinstance(item, dict) else item)
+            if not isinstance(item, dict):
+                price = _number(item)
+                if price is not None:
+                    points.append({"date": str(date), "price": price})
+                continue
+            price = _number(item.get("price"))
             if price is not None:
-                points.append({"date": str(date), "price": price})
+                point: dict[str, Any] = {"date": str(date), "price": price}
+                change = _number(item.get("change_pct"))
+                if change is not None:
+                    point["change_pct"] = change
+                points.append(point)
         points.sort(key=lambda point: point["date"])
         return points[-5:]
     if not isinstance(value, (list, tuple)):
@@ -99,7 +108,11 @@ def _trend(source: Any, symbol: str) -> list[dict[str, Any]]:
         date = item.get("date")
         price = _number(item.get("price"))
         if date is not None and price is not None:
-            points.append({"date": str(date), "price": price})
+            point: dict[str, Any] = {"date": str(date), "price": price}
+            change = _number(item.get("change_pct"))
+            if change is not None:
+                point["change_pct"] = change
+            points.append(point)
     points.sort(key=lambda point: point["date"])
     return points[-5:]
 
@@ -169,13 +182,29 @@ def _quote(
     item = _record(cache, symbol)
     if not item:
         return None
+
+    # B5 修复：cache updated 停更（如 ^DJI 停在 7-21）时，price/change_pct
+    # 优先取 trend 最新点（price_trends.json 是更新的真实数据源），
+    # 避免页面展示"两个月前"的过期价格与时间戳
+    trend_points = _trend(trends, symbol)
+    trend_latest = trend_points[-1] if trend_points else None
+    price = _number(item.get("price"))
+    change_pct = _number(item.get("change_pct"))
+    if trend_latest is not None:
+        trend_price = _number(trend_latest.get("price"))
+        if trend_price is not None:
+            price = trend_price
+        trend_change = _number(trend_latest.get("change_pct"))
+        if trend_change is not None:
+            change_pct = trend_change
+
     return {
         "symbol": symbol,
         "name": name,
         "name_en": name_en,
-        "price": _number(item.get("price")),
-        "change_pct": _number(item.get("change_pct")),
-        "trend": _trend(trends, symbol),
+        "price": price,
+        "change_pct": change_pct,
+        "trend": trend_points,
     }
 
 
@@ -193,7 +222,15 @@ def get_market_data() -> dict[str, Any]:
         trends = _read_json(TRENDS_PATH)
         cache_values = cache.get("quotes", cache) if isinstance(cache, dict) else {}
         updated = _record(cache_values, "^DJI").get("updated")
-        data_as_of = str(updated).split(".", 1)[0] if updated else None
+
+        # B5 修复：data_as_of 优先取 trend 最新日期（trend 数据比 cache updated 新时，
+        # 以实际数据为准，避免展示"两个月前"的过期时间戳）
+        trend_points = _trend(trends, "^DJI")
+        trend_latest = trend_points[-1].get("date") if trend_points else None
+        if trend_latest:
+            data_as_of = str(trend_latest)
+        else:
+            data_as_of = str(updated).split(".", 1)[0] if updated else None
 
         result = {
             "meta": {

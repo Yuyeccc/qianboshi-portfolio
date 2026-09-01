@@ -174,6 +174,90 @@ def _aggregate_dimensions() -> dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------
+# 1b. 维度明细分页（P1-B：原文两次点击下钻数据源）
+# ---------------------------------------------------------------------------
+def get_dimensions_page(
+    page: int = 1,
+    page_size: int = 20,
+    topic: str | None = None,
+    pointer: str | None = None,
+    claim_level: str | None = None,
+    source_layer: str | None = None,
+) -> dict[str, Any]:
+    """返回维度明细分页，每条含 evidence 原文（quote_text/ts_display/BV/时间戳），
+    供前端「观点下钻」第一次点击展开证据卡、第二次点击跳 B 站原文。
+
+    筛选：topic（精确）、pointer（ok/missing/mismatch）、claim_level、source_layer。
+    """
+    data = _load_json(DIMENSIONS_FILE)
+    if not data or not isinstance(data, dict) or not data.get("dimensions"):
+        return {"available": False, "note": "dimensions_export.json 缺失或为空", "items": [], "total": 0}
+
+    dims = data["dimensions"]
+    items: list[dict[str, Any]] = []
+    for claim_id, rec in dims.items():
+        if not isinstance(rec, dict):
+            continue
+        if topic and rec.get("topic") != topic:
+            continue
+        ev = rec.get("evidence") if isinstance(rec.get("evidence"), dict) else {}
+        pointer_status = (
+            "ok" if ev.get("quote_text") else "missing"
+        )
+        if pointer and pointer_status != pointer:
+            continue
+        if claim_level and rec.get("claim_level") != claim_level:
+            continue
+        if source_layer and rec.get("source_layer") != source_layer:
+            continue
+        items.append(
+            {
+                "claim_id": claim_id,
+                "claim": rec.get("claim"),
+                "subject_entity": rec.get("subject_entity"),
+                "topic": rec.get("topic"),
+                "claim_level": rec.get("claim_level"),
+                "source_layer": rec.get("source_layer"),
+                "verification_status": rec.get("verification_status"),
+                "date": rec.get("date"),
+                "stance": rec.get("stance"),
+                "horizon": rec.get("horizon"),
+                "match_quality": rec.get("match_quality"),
+                "pointer": pointer_status,
+                "evidence": {
+                    "bv_id": ev.get("bv_id"),
+                    "segment_id": ev.get("segment_id"),
+                    "anchor_start_ms": ev.get("anchor_start_ms"),
+                    "anchor_end_ms": ev.get("anchor_end_ms"),
+                    "ts_display": ev.get("ts_display"),
+                    "quote_text": ev.get("quote_text"),
+                },
+                "reasoning": rec.get("reasoning"),
+            }
+        )
+
+    items.sort(key=lambda item: (item["date"] or ""), reverse=True)
+    total = len(items)
+    start = (max(1, page) - 1) * max(1, page_size)
+    page_items = items[start : start + max(1, page_size)]
+
+    # topic 候选（筛选器用）
+    topic_counts: dict[str, int] = {}
+    for item in items:
+        topic_counts[item["topic"]] = topic_counts.get(item["topic"], 0) + 1
+
+    return {
+        "available": True,
+        "exported_at": data.get("exported_at"),
+        "total": total,
+        "page": max(1, page),
+        "page_size": max(1, page_size),
+        "topics": [{"topic": t, "count": c} for t, c in sorted(topic_counts.items(), key=lambda kv: -kv[1])],
+        "items": page_items,
+    }
+
+
+# ---------------------------------------------------------------------------
 # 2. 冲突中心（conflicts_export.json）
 # ---------------------------------------------------------------------------
 def _aggregate_conflicts() -> dict[str, Any]:
@@ -185,9 +269,9 @@ def _aggregate_conflicts() -> dict[str, Any]:
     divergences = data.get("divergences") or []
     view_map = data.get("view_conflict_map") or {}
 
-    # 冲突组摘要（取前 12 组，含多空分布）
+    # 冲突组摘要（P1-C：全量透出，含成员完整列表；前端筛选器按 topic/level 过滤）
     conflict_summary: list[dict[str, Any]] = []
-    for group in conflicts[:12]:
+    for group in conflicts:
         conflict_summary.append(
             {
                 "group_id": group.get("conflict_group_id"),
@@ -203,11 +287,11 @@ def _aggregate_conflicts() -> dict[str, Any]:
                     {
                         "view_id": m.get("view_id"),
                         "stance": m.get("stance"),
-                        "claim": (m.get("claim") or "")[:80],
+                        "claim": m.get("claim"),
                         "date": m.get("date"),
                         "analyst": m.get("analyst"),
                     }
-                    for m in (group.get("bull_members") or [])[:2] + (group.get("bear_members") or [])[:2]
+                    for m in (group.get("bull_members") or [])[:4] + (group.get("bear_members") or [])[:4]
                 ],
             }
         )

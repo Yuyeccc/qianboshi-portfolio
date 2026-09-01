@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sqlite3
 import sys
 from collections import Counter
@@ -265,9 +266,28 @@ def get_asset_evidence_pack(
         from evidence_pack_builder import build_evidence_pack
 
         result = build_evidence_pack(safe_asset_id, safe_horizon)
-        if isinstance(result, dict):
-            return result
-        return {"error": "evidence pack returned an invalid structure"}
+        if not isinstance(result, dict):
+            return {"error": "evidence pack returned an invalid structure"}
+
+        # B2 修复：rag_evidence 按笔记 BV id 去重（同一笔记重命名前后两种文件名会被
+        # 向量库重复索引，网页层去重，不动主项目向量库）
+        rag = result.get("rag_evidence")
+        if isinstance(rag, list):
+            seen: set[str] = set()
+            deduped: list[dict[str, Any]] = []
+            for item in rag:
+                if not isinstance(item, dict):
+                    continue
+                source = str(item.get("source") or "")
+                match = re.search(r"BV[0-9A-Za-z]{10}", source)
+                key = match.group(0) if match else source
+                if key in seen:
+                    continue
+                seen.add(key)
+                deduped.append(item)
+            result["rag_evidence"] = deduped
+
+        return result
     except Exception as error:
         return {
             "error": str(error),

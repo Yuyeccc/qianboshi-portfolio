@@ -630,6 +630,9 @@ export default function DataAssetsPage() {
                 <EmptyState label={emptyLabel} />
               </div>
             )}
+            <p className="border-t border-line px-5 py-3 text-[11px] leading-4 text-muted">
+              {t("dataAssets.debateNote")}
+            </p>
           </section>
 
           <section className="mt-6 rounded-lg border border-line bg-surface shadow-card">
