@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "ALUMINUM",
     "asset_name": "ALUMINUM",
-    "as_of_date": "2026-08-26",
+    "as_of_date": "2026-09-01",
     "asset_card": {
       "asset_id": "ALUMINUM",
       "asset_name": "铝",
@@ -11,38 +11,38 @@
       "default_horizon": "medium",
       "description": "铝中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\aluminum.yaml",
-      "as_of_date": "2026-08-26",
+      "as_of_date": "2026-09-01",
       "factors": [
         {
           "asset_id": "ALUMINUM",
           "factor_id": "ZIJIN",
           "factor_name": "紫金矿业代理",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "601899.SS",
-            "close": 34.74,
-            "date": "2026-08-23",
-            "pct_change_5d": 0.6957,
-            "pct_change_20d": 18.7692,
+            "close": 33.67,
+            "date": "2026-08-31",
+            "pct_change_5d": -2.5188,
+            "pct_change_20d": -0.035,
             "source": "price_trends"
           },
-          "current_state": "近5日走强+0.70%",
-          "change_direction": "up",
-          "impact_direction": "positive",
+          "current_state": "近5日走弱-2.52%",
+          "change_direction": "down",
+          "impact_direction": "negative",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
             "price_trends"
           ],
-          "summary": "紫金矿业代理近5日走强+0.70%，对ALUMINUM构成positive影响。",
+          "summary": "紫金矿业代理近5日走弱-2.52%，对ALUMINUM构成negative影响。",
           "card_version": 1,
-          "state_id": "ALUMINUM_1_ZIJIN_2026-08-26"
+          "state_id": "ALUMINUM_1_ZIJIN_2026-09-01"
         },
         {
           "asset_id": "ALUMINUM",
           "factor_id": "ALUMINA",
           "factor_name": "氧化铝成本",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "氧化铝",
@@ -51,12 +51,12 @@
               "产能"
             ],
             "lookback_days": 30,
-            "current_count": 9,
-            "previous_count": 29
+            "current_count": 49,
+            "previous_count": 18
           },
-          "current_state": "观点热度下降",
-          "change_direction": "down",
-          "impact_direction": "negative",
+          "current_state": "观点热度上升",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "high",
           "confidence": 0.8,
           "evidence_refs": [
@@ -64,15 +64,15 @@
             "3718000213dbed40",
             "b6d9b04687e7fb58"
           ],
-          "summary": "氧化铝成本观点热度下降，对ALUMINUM构成negative影响。",
+          "summary": "氧化铝成本观点热度上升，对ALUMINUM构成positive影响。",
           "card_version": 1,
-          "state_id": "ALUMINUM_1_ALUMINA_2026-08-26"
+          "state_id": "ALUMINUM_1_ALUMINA_2026-09-01"
         },
         {
           "asset_id": "ALUMINUM",
           "factor_id": "NEW_ENERGY",
           "factor_name": "新能源用铝",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "新能源",
@@ -81,8 +81,8 @@
               "铝"
             ],
             "lookback_days": 30,
-            "current_count": 2,
-            "previous_count": 31
+            "current_count": 9,
+            "previous_count": 22
           },
           "current_state": "观点热度下降",
           "change_direction": "down",
@@ -90,23 +90,24 @@
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
-            "d84964275e8eca71",
-            "57f1b0a6a745b9c8"
+            "09ae698d1fae1f4e",
+            "270fbdaac0e3d634",
+            "4a72f7efc16a4b6e"
           ],
           "summary": "新能源用铝观点热度下降，对ALUMINUM构成negative影响。",
           "card_version": 1,
-          "state_id": "ALUMINUM_1_NEW_ENERGY_2026-08-26"
+          "state_id": "ALUMINUM_1_NEW_ENERGY_2026-09-01"
         },
         {
           "asset_id": "ALUMINUM",
           "factor_id": "STOCK_VIEWS",
           "factor_name": "铝个股",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "counts": {
-              "bullish": 7,
-              "bearish": 4,
-              "neutral": 12
+              "bullish": 28,
+              "bearish": 16,
+              "neutral": 68
             },
             "top_stocks": [
               {
@@ -114,36 +115,358 @@
                 "name": "紫金矿业",
                 "stance": "中性",
                 "analyst": "钱博士直播",
-                "date": "2026-08-16",
-                "claim": "中长线：中性 🦀➡️",
-                "view_count": 23
+                "date": "2026-08-28",
+                "claim": "涉及资产：铜、铝等有色金属",
+                "view_count": 112
               }
             ],
             "lookback_days": 30
           },
-          "current_state": "看多7/看空4/中性12（近30天）；紫金矿业中性(钱博士直播 8.16)",
-          "change_direction": "down",
+          "current_state": "看多28/看空16/中性68（近30天）；紫金矿业中性(钱博士直播 8.28)",
+          "change_direction": "up",
           "impact_direction": "negative",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
             "71176203ef655501",
-            "ea3afb8cf99ec2ac",
-            "a6d40bc5ebf9fd6e"
+            "6dd8320a237da30d",
+            "aae3687249a8360b"
           ],
-          "summary": "铝个股看多7/看空4/中性12（近30天）；紫金矿业中性(钱博士直播 8.16)，对ALUMINUM构成negative影响。",
+          "summary": "铝个股看多28/看空16/中性68（近30天）；紫金矿业中性(钱博士直播 8.28)，对ALUMINUM构成negative影响。",
           "card_version": 1,
-          "state_id": "ALUMINUM_1_STOCK_VIEWS_2026-08-26"
+          "state_id": "ALUMINUM_1_STOCK_VIEWS_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前铝的正向驱动来自紫金矿业代理，负向压力来自氧化铝成本、新能源用铝、铝个股。"
+      "logic_chain_summary": "当前铝的正向驱动来自氧化铝成本，负向压力来自紫金矿业代理、新能源用铝、铝个股。",
+      "data_status": {
+        "market": "available",
+        "views": "available",
+        "fundamentals": "available",
+        "valuation": "available"
+      },
+      "quality_factors": [
+        {
+          "factor_id": "LEVERAGE",
+          "factor_name": "杠杆（资产负债率）",
+          "category": "debt",
+          "value": 49.6,
+          "unit": "%",
+          "judgement": "正常",
+          "period": "2026Q2",
+          "source": "baostock",
+          "status": "available",
+          "note": "口径：资产负债率+负债同比；免费接口无有息负债科目，非净债务"
+        },
+        {
+          "factor_id": "INTEREST_COVERAGE",
+          "factor_name": "利息覆盖",
+          "category": "debt",
+          "value": 129.45,
+          "unit": "倍",
+          "judgement": "充裕",
+          "period": "2026Q2",
+          "source": "baostock",
+          "status": "available",
+          "note": "口径：EBIT/利息费用（baostock 衍生指标）"
+        },
+        {
+          "factor_id": "CASHFLOW_QUALITY",
+          "factor_name": "盈利质量",
+          "category": "quality",
+          "value": 1.11,
+          "unit": "倍",
+          "judgement": "含金量高",
+          "period": "2026Q2",
+          "source": "baostock",
+          "status": "available",
+          "note": "口径：经营现金流/净利润"
+        },
+        {
+          "factor_id": "ASSET_STRUCTURE",
+          "factor_name": "资产结构",
+          "category": "quality",
+          "value": 66.8,
+          "unit": "%",
+          "judgement": "正常",
+          "period": "2026Q2",
+          "source": "baostock",
+          "status": "available",
+          "note": "口径：有形资产/非流动资产占比（矿业重资产属性）"
+        },
+        {
+          "factor_id": "IMPAIRMENT_EXPOSURE",
+          "factor_name": "减值暴露",
+          "category": "impairment",
+          "value": null,
+          "unit": "-",
+          "judgement": "待补（免费接口无减值科目）",
+          "period": "2026Q2",
+          "source": "baostock",
+          "status": "pending",
+          "note": "baostock 免费接口无商誉/应收/存货科目 → 待补不猜"
+        }
+      ],
+      "analysis_framework": [
+        {
+          "question_id": "Q1",
+          "question": "经营现金流趋势（经营CF/营收 近2期）？",
+          "dimension": "现金流",
+          "answer": "改善（28.6% vs 上期 28.3%）",
+          "status": "available"
+        },
+        {
+          "question_id": "Q2",
+          "question": "利息覆盖（EBIT/利息费用）？",
+          "dimension": "现金流",
+          "answer": "能覆盖（129.45 倍）",
+          "status": "available"
+        },
+        {
+          "question_id": "Q3",
+          "question": "杠杆水平与方向（资产负债率+负债同比）？",
+          "dimension": "债务",
+          "answer": "中（资产负债率 49.6%，负债同比 +0.1%）",
+          "status": "available"
+        },
+        {
+          "question_id": "Q4",
+          "question": "短期偿债（流动比率/现金比率）？",
+          "dimension": "债务",
+          "answer": "正常（流动比率 1.33，现金比率 0.78）",
+          "status": "available"
+        },
+        {
+          "question_id": "Q5",
+          "question": "盈利含金量（经营CF/净利）？",
+          "dimension": "现金流",
+          "answer": "含金量高（经营CF/净利 1.11）",
+          "status": "available"
+        },
+        {
+          "question_id": "Q6",
+          "question": "利润率水平（净利率/毛利率）？",
+          "dimension": "质量",
+          "answer": "净利率 25.7%，毛利率 37.7%",
+          "status": "available"
+        },
+        {
+          "question_id": "Q7",
+          "question": "资产结构（非流动资产/有形资产占比）？",
+          "dimension": "质量",
+          "answer": "非流动资产占比 66.8%，有形资产占比 20.3%",
+          "status": "available"
+        },
+        {
+          "question_id": "Q8",
+          "question": "减值暴露/计提（商誉/应收/存货）？",
+          "dimension": "减值",
+          "answer": "—",
+          "status": "pending"
+        }
+      ],
+      "valuation": {
+        "symbol": "601899.SS",
+        "as_of_date": "2026-09-01",
+        "samples": {
+          "fetched": 732,
+          "valid": 732,
+          "dropped": 0,
+          "span_days": 1104,
+          "last_date": "2026-08-31",
+          "error": null
+        },
+        "gate": {
+          "pe_samples": 732,
+          "pb_samples": 732,
+          "intersection": 732,
+          "span_days": 1104,
+          "last_date": "2026-08-31",
+          "age_days": 1,
+          "passed": true
+        },
+        "risk_columns": [
+          {
+            "name": "杠杆（资产负债率）",
+            "value": 49.6,
+            "judgement": "正常",
+            "period": "2026Q2",
+            "source": "baostock",
+            "unit": "%"
+          },
+          {
+            "name": "资产结构（非流动资产占比）",
+            "value": 66.8,
+            "judgement": "正常",
+            "period": "2026Q2",
+            "source": "baostock",
+            "unit": "%"
+          },
+          {
+            "name": "盈利质量（经营CF/净利）",
+            "value": 1.11,
+            "judgement": "含金量高",
+            "period": "2026Q2",
+            "source": "baostock",
+            "unit": "倍"
+          },
+          {
+            "name": "减值暴露（商誉/应收/存货）",
+            "value": null,
+            "judgement": "待补",
+            "period": "2026Q2",
+            "source": "baostock 免费接口无减值科目",
+            "unit": "-"
+          }
+        ],
+        "note": "⚠️ 估值≠安全边际：便宜可能含价值陷阱（如 0.5x PB 假低估），须结合质量因子与资料充分度综合判断，本卡不构成买卖建议。",
+        "status": "ok",
+        "level": "临界",
+        "pe_rank": 8.9,
+        "pb_rank": 74.5,
+        "pe_current": 13.23,
+        "pb_current": 4.43,
+        "pe_date": "2026-08-31"
+      },
+      "extra": {
+        "data_status": {
+          "market": "available",
+          "views": "available",
+          "fundamentals": "available",
+          "valuation": "available"
+        },
+        "quality_factors": [
+          {
+            "factor_id": "LEVERAGE",
+            "factor_name": "杠杆（资产负债率）",
+            "category": "debt",
+            "value": 49.6,
+            "unit": "%",
+            "judgement": "正常",
+            "period": "2026Q2",
+            "source": "baostock",
+            "status": "available",
+            "note": "口径：资产负债率+负债同比；免费接口无有息负债科目，非净债务"
+          },
+          {
+            "factor_id": "INTEREST_COVERAGE",
+            "factor_name": "利息覆盖",
+            "category": "debt",
+            "value": 129.45,
+            "unit": "倍",
+            "judgement": "充裕",
+            "period": "2026Q2",
+            "source": "baostock",
+            "status": "available",
+            "note": "口径：EBIT/利息费用（baostock 衍生指标）"
+          },
+          {
+            "factor_id": "CASHFLOW_QUALITY",
+            "factor_name": "盈利质量",
+            "category": "quality",
+            "value": 1.11,
+            "unit": "倍",
+            "judgement": "含金量高",
+            "period": "2026Q2",
+            "source": "baostock",
+            "status": "available",
+            "note": "口径：经营现金流/净利润"
+          },
+          {
+            "factor_id": "ASSET_STRUCTURE",
+            "factor_name": "资产结构",
+            "category": "quality",
+            "value": 66.8,
+            "unit": "%",
+            "judgement": "正常",
+            "period": "2026Q2",
+            "source": "baostock",
+            "status": "available",
+            "note": "口径：有形资产/非流动资产占比（矿业重资产属性）"
+          },
+          {
+            "factor_id": "IMPAIRMENT_EXPOSURE",
+            "factor_name": "减值暴露",
+            "category": "impairment",
+            "value": null,
+            "unit": "-",
+            "judgement": "待补（免费接口无减值科目）",
+            "period": "2026Q2",
+            "source": "baostock",
+            "status": "pending",
+            "note": "baostock 免费接口无商誉/应收/存货科目 → 待补不猜"
+          }
+        ],
+        "valuation": {
+          "symbol": "601899.SS",
+          "as_of_date": "2026-09-01",
+          "samples": {
+            "fetched": 732,
+            "valid": 732,
+            "dropped": 0,
+            "span_days": 1104,
+            "last_date": "2026-08-31",
+            "error": null
+          },
+          "gate": {
+            "pe_samples": 732,
+            "pb_samples": 732,
+            "intersection": 732,
+            "span_days": 1104,
+            "last_date": "2026-08-31",
+            "age_days": 1,
+            "passed": true
+          },
+          "risk_columns": [
+            {
+              "name": "杠杆（资产负债率）",
+              "value": 49.6,
+              "judgement": "正常",
+              "period": "2026Q2",
+              "source": "baostock",
+              "unit": "%"
+            },
+            {
+              "name": "资产结构（非流动资产占比）",
+              "value": 66.8,
+              "judgement": "正常",
+              "period": "2026Q2",
+              "source": "baostock",
+              "unit": "%"
+            },
+            {
+              "name": "盈利质量（经营CF/净利）",
+              "value": 1.11,
+              "judgement": "含金量高",
+              "period": "2026Q2",
+              "source": "baostock",
+              "unit": "倍"
+            },
+            {
+              "name": "减值暴露（商誉/应收/存货）",
+              "value": null,
+              "judgement": "待补",
+              "period": "2026Q2",
+              "source": "baostock 免费接口无减值科目",
+              "unit": "-"
+            }
+          ],
+          "note": "⚠️ 估值≠安全边际：便宜可能含价值陷阱（如 0.5x PB 假低估），须结合质量因子与资料充分度综合判断，本卡不构成买卖建议。",
+          "status": "ok",
+          "level": "临界",
+          "pe_rank": 8.9,
+          "pb_rank": 74.5,
+          "pe_current": 13.23,
+          "pb_current": 4.43,
+          "pe_date": "2026-08-31"
+        }
+      }
     },
     "factor_states": [
       {
         "factor_id": "ZIJIN",
         "factor_name": "紫金矿业代理",
-        "current_state": "近5日走强+0.70%",
-        "impact_direction": "positive",
+        "current_state": "近5日走弱-2.52%",
+        "impact_direction": "negative",
         "evidence_refs": [
           "price_trends"
         ]
@@ -151,8 +474,8 @@
       {
         "factor_id": "ALUMINA",
         "factor_name": "氧化铝成本",
-        "current_state": "观点热度下降",
-        "impact_direction": "negative",
+        "current_state": "观点热度上升",
+        "impact_direction": "positive",
         "evidence_refs": [
           "ac76a8e19a7120db",
           "3718000213dbed40",
@@ -165,31 +488,32 @@
         "current_state": "观点热度下降",
         "impact_direction": "negative",
         "evidence_refs": [
-          "d84964275e8eca71",
-          "57f1b0a6a745b9c8"
+          "09ae698d1fae1f4e",
+          "270fbdaac0e3d634",
+          "4a72f7efc16a4b6e"
         ]
       },
       {
         "factor_id": "STOCK_VIEWS",
         "factor_name": "铝个股",
-        "current_state": "看多7/看空4/中性12（近30天）；紫金矿业中性(钱博士直播 8.16)",
+        "current_state": "看多28/看空16/中性68（近30天）；紫金矿业中性(钱博士直播 8.28)",
         "impact_direction": "negative",
         "evidence_refs": [
           "71176203ef655501",
-          "ea3afb8cf99ec2ac",
-          "a6d40bc5ebf9fd6e"
+          "6dd8320a237da30d",
+          "aae3687249a8360b"
         ]
       }
     ],
     "debate_card": {
-      "card_id": "debate_ALUMINUM_long_2026-06-18_2026-08-16",
+      "card_id": "debate_ALUMINUM_long_2026-07-01_2026-08-29",
       "entity_id": "ALUMINUM",
       "entity_name": "ALUMINUM",
       "entity_type": "theme",
       "horizon": "long",
       "window": {
-        "start": "2026-06-18",
-        "end": "2026-08-16"
+        "start": "2026-07-01",
+        "end": "2026-08-29"
       },
       "highlights": [],
       "counts": {
@@ -216,8 +540,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-08-26T21:22:18",
-      "updated_at": "2026-08-26T21:22:18"
+      "created_at": "2026-09-01T13:54:57",
+      "updated_at": "2026-09-01T13:54:57"
     },
     "latest_views": [],
     "analyst_scores": [],
@@ -240,9 +564,10 @@
         "asset_card_version": null,
         "debate_card_id": null,
         "market_snapshot": "{}",
-        "status": "open",
+        "status": "reviewed",
         "created_at": "2026-08-06T00:49:22",
-        "updated_at": "2026-08-06T00:49:22"
+        "updated_at": "2026-08-27T17:14:27",
+        "premise": null
       }
     ],
     "rag_evidence": [],

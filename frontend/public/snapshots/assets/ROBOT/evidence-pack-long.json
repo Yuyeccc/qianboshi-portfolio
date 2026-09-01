@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "ROBOT",
     "asset_name": "机器人",
-    "as_of_date": "2026-08-26",
+    "as_of_date": "2026-09-01",
     "asset_card": {
       "asset_id": "ROBOT",
       "asset_name": "机器人",
@@ -11,13 +11,13 @@
       "default_horizon": "medium",
       "description": "机器人中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\robot.yaml",
-      "as_of_date": "2026-08-26",
+      "as_of_date": "2026-09-01",
       "factors": [
         {
           "asset_id": "ROBOT",
           "factor_id": "HUMANOID_MASS_PRODUCTION",
           "factor_name": "人形机器人量产",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "人形机器人",
@@ -25,27 +25,28 @@
               "特斯拉optimus"
             ],
             "lookback_days": 30,
-            "current_count": 2,
-            "previous_count": 28
+            "current_count": 10,
+            "previous_count": 3
           },
-          "current_state": "观点热度下降",
-          "change_direction": "down",
-          "impact_direction": "negative",
+          "current_state": "观点热度上升",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "high",
           "confidence": 0.8,
           "evidence_refs": [
             "b3cc7e873c159045",
-            "aac74f9988e63801"
+            "aac74f9988e63801",
+            "da860f8d6c863cd0"
           ],
-          "summary": "人形机器人量产观点热度下降，对ROBOT构成negative影响。",
+          "summary": "人形机器人量产观点热度上升，对ROBOT构成positive影响。",
           "card_version": 1,
-          "state_id": "ROBOT_1_HUMANOID_MASS_PRODUCTION_2026-08-26"
+          "state_id": "ROBOT_1_HUMANOID_MASS_PRODUCTION_2026-09-01"
         },
         {
           "asset_id": "ROBOT",
           "factor_id": "POLICY_SUPPORT",
           "factor_name": "政策支持",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "机器人",
@@ -53,99 +54,119 @@
               "补贴"
             ],
             "lookback_days": 30,
-            "current_count": 15,
-            "previous_count": 142
+            "current_count": 89,
+            "previous_count": 74
           },
-          "current_state": "观点热度下降",
-          "change_direction": "down",
-          "impact_direction": "negative",
-          "impact_strength": "medium",
-          "confidence": 0.8,
-          "evidence_refs": [
-            "0dbecb19a0ea109f",
-            "f514d237164b13a4",
-            "2263f317bd5862df"
-          ],
-          "summary": "政策支持观点热度下降，对ROBOT构成negative影响。",
-          "card_version": 1,
-          "state_id": "ROBOT_1_POLICY_SUPPORT_2026-08-26"
-        },
-        {
-          "asset_id": "ROBOT",
-          "factor_id": "ROBOT_ETF",
-          "factor_name": "机器人ETF",
-          "as_of_date": "2026-08-26",
-          "raw_value": {
-            "symbol": "159770.SZ",
-            "close": 1.05,
-            "date": "2026-08-06",
-            "pct_change_5d": 12.2995,
-            "pct_change_20d": -8.4568,
-            "source": "price_trends"
-          },
-          "current_state": "近5日走强+12.30%",
+          "current_state": "观点热度上升",
           "change_direction": "up",
           "impact_direction": "positive",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
+            "0dbecb19a0ea109f",
+            "f514d237164b13a4",
+            "5ba86c7a68129890"
+          ],
+          "summary": "政策支持观点热度上升，对ROBOT构成positive影响。",
+          "card_version": 1,
+          "state_id": "ROBOT_1_POLICY_SUPPORT_2026-09-01"
+        },
+        {
+          "asset_id": "ROBOT",
+          "factor_id": "ROBOT_ETF",
+          "factor_name": "机器人ETF",
+          "as_of_date": "2026-09-01",
+          "raw_value": {
+            "symbol": "159770.SZ",
+            "close": 0.9900000095367432,
+            "date": "2026-08-28",
+            "pct_change_5d": -0.4024,
+            "pct_change_20d": 0.0,
+            "source": "price_trends"
+          },
+          "current_state": "近5日走弱-0.40%",
+          "change_direction": "down",
+          "impact_direction": "negative",
+          "impact_strength": "medium",
+          "confidence": 0.8,
+          "evidence_refs": [
             "yfinance"
           ],
-          "summary": "机器人ETF近5日走强+12.30%，对ROBOT构成positive影响。",
+          "summary": "机器人ETF近5日走弱-0.40%，对ROBOT构成negative影响。",
           "card_version": 1,
-          "state_id": "ROBOT_1_ROBOT_ETF_2026-08-26"
+          "state_id": "ROBOT_1_ROBOT_ETF_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前机器人的正向驱动来自机器人ETF，负向压力来自人形机器人量产、政策支持。"
+      "logic_chain_summary": "当前机器人的正向驱动来自人形机器人量产、政策支持，负向压力来自机器人ETF。",
+      "data_status": {
+        "market": "available",
+        "views": "available",
+        "fundamentals": "na",
+        "valuation": "na"
+      },
+      "quality_factors": [],
+      "analysis_framework": [],
+      "valuation": null,
+      "extra": {
+        "data_status": {
+          "market": "available",
+          "views": "available",
+          "fundamentals": "na",
+          "valuation": "na"
+        },
+        "quality_factors": [],
+        "valuation": null
+      }
     },
     "factor_states": [
       {
         "factor_id": "HUMANOID_MASS_PRODUCTION",
         "factor_name": "人形机器人量产",
-        "current_state": "观点热度下降",
-        "impact_direction": "negative",
+        "current_state": "观点热度上升",
+        "impact_direction": "positive",
         "evidence_refs": [
           "b3cc7e873c159045",
-          "aac74f9988e63801"
+          "aac74f9988e63801",
+          "da860f8d6c863cd0"
         ]
       },
       {
         "factor_id": "POLICY_SUPPORT",
         "factor_name": "政策支持",
-        "current_state": "观点热度下降",
-        "impact_direction": "negative",
+        "current_state": "观点热度上升",
+        "impact_direction": "positive",
         "evidence_refs": [
           "0dbecb19a0ea109f",
           "f514d237164b13a4",
-          "2263f317bd5862df"
+          "5ba86c7a68129890"
         ]
       },
       {
         "factor_id": "ROBOT_ETF",
         "factor_name": "机器人ETF",
-        "current_state": "近5日走强+12.30%",
-        "impact_direction": "positive",
+        "current_state": "近5日走弱-0.40%",
+        "impact_direction": "negative",
         "evidence_refs": [
           "yfinance"
         ]
       }
     ],
     "debate_card": {
-      "card_id": "debate_机器人_long_2026-06-18_2026-08-16",
+      "card_id": "debate_机器人_long_2026-07-01_2026-08-29",
       "entity_id": "机器人",
       "entity_name": "机器人",
       "entity_type": "sector",
       "horizon": "long",
       "window": {
-        "start": "2026-06-18",
-        "end": "2026-08-16"
+        "start": "2026-07-01",
+        "end": "2026-08-29"
       },
       "highlights": [],
       "counts": {
         "bullish": 0,
         "bearish": 0,
         "risk": 0,
-        "neutral": 3,
+        "neutral": 2,
         "watch": 1
       },
       "metrics": {
@@ -155,7 +176,7 @@
         "novelty_level": 0.0,
         "net_stance_score": 0.0
       },
-      "summary": "机器人：多头0条，空头0条，风险0条，中性3条，共识方向=neutral，分歧度=0.00。",
+      "summary": "机器人：多头0条，空头0条，风险0条，中性2条，共识方向=neutral，分歧度=0.00。",
       "bullish": [],
       "bearish": [],
       "risk": [],
@@ -180,31 +201,12 @@
           }
         },
         {
-          "view_id": "8f942191607c82ef",
+          "view_id": "09f4d1ab64f3ce75",
           "analyst": "钱博士直播",
-          "claim": "涉及资产：教育、农业、房地产、机器人",
-          "logic": "行业敏感、难以形成持续强势。",
-          "confidence": 0.75,
-          "evidence": "涉及资产：教育、农业、房地产、机器人 影响与结果：被归类为不适合长期持有的方向。 逻辑：行业敏感、难以形成持续强势。 依据类型：陈述观点 / 逻辑推演 (00:27:14-00:27:38) “都不能长期持有” (00:26:30-00:26:40) “永远不碰房地产就行了”",
-          "analyst_score": {
-            "analyst": "钱博士直播",
-            "entity": "159770.SZ",
-            "horizon": "intraday,medium,short,unknown",
-            "window_days": 5,
-            "sample_count": 18,
-            "hit_rate": 0.5556,
-            "avg_return": -1.8823,
-            "score": 0.5556,
-            "updated_at": "2026-08-06T16:11:43"
-          }
-        },
-        {
-          "view_id": "0e581d382fa9ca16",
-          "analyst": "钱博士直播",
-          "claim": "主讲人用比喻描述宁德时代和阳光电源持有体验：业绩好但股价不涨，像公务员男友，只有发工资时开心；电池板块缺乏想象空间，不像机器人等概念",
+          "claim": "AI与通缩的长期逻辑——AI导致劳动力需求减少，财富分配问题将凸显，各国抢矿为未来做准备。",
           "logic": "",
           "confidence": 0.67,
-          "evidence": "内容：主讲人用比喻描述宁德时代和阳光电源持有体验：业绩好但股价不涨，像公务员男友，只有发工资时开心；电池板块缺乏想象空间，不像机器人等概念 (01:08:05-01:08:18)宁王业绩应该是不错。 嗯， 宁王业绩应该是不错， 但是电池就是不涨。 就是这个这个宁王跟阳光这两个公司啊。 他的持有体验就很差。 (01:08:58-01:09:16)这两个公司你跟他长期相处， 你得到的体验就是这样。 就是他时不时的对你好一下， 让你感激的这个。 让你感激涕零， 觉得我当初没看错， 但是在大多数时间， 他对你是不理不睬。 (01:09:20-01:09:36)所以这个它的最大的特点就是突然一下拉走， 猛涨一天。 然后在那儿趴个一个星期， 两个星期， 说实话， 这两个星期就一次好用， 这体验感也太差。",
+          "evidence": "内容：AI与通缩的长期逻辑——AI导致劳动力需求减少，财富分配问题将凸显，各国抢矿为未来做准备。 (00:69:00-00:69:30) \"就变成了这个世界上需要的劳动力越来越少了，只有极少数的人你还能够有工作，但是他挣到的是大部分的钱，大多数人是没有工作的\" (00:69:30-00:70:00) \"没有工作怎么办呢，那就是需要财富再分配，让人工智能让机器人生产出来的东西来为你服务\" (00:70:00-00:70:30) \"大多数都是造粪机，就是除了吃就是拉，对这个社会没有任何价值，那这种情况会形成通缩\"",
           "analyst_score": {
             "analyst": "钱博士直播",
             "entity": "159770.SZ",
@@ -242,26 +244,10 @@
       "disagreements": [],
       "consensus": [
         "涉及资产：机器人",
-        "涉及资产：教育、农业、房地产、机器人",
-        "主讲人用比喻描述宁德时代和阳光电源持有体验：业绩好但股价不涨，像公务员男友，只有发工资时开心；电池板块缺乏想象空间，不像机器人等概念"
+        "AI与通缩的长期逻辑——AI导致劳动力需求减少，财富分配问题将凸显，各国抢矿为未来做准备。"
       ],
       "new_changes": [],
       "items": [
-        {
-          "view_id": "8f942191607c82ef",
-          "stance": "neutral",
-          "analyst": "钱博士直播",
-          "date": "2026-06-24",
-          "claim": "涉及资产：教育、农业、房地产、机器人",
-          "logic": "行业敏感、难以形成持续强势。",
-          "risk": "",
-          "evidence": "涉及资产：教育、农业、房地产、机器人 影响与结果：被归类为不适合长期持有的方向。 逻辑：行业敏感、难以形成持续强势。 依据类型：陈述观点 / 逻辑推演 (00:27:14-00:27:38) “都不能长期持有” (00:26:30-00:26:40) “永远不碰房地产就行了”",
-          "confidence": 0.75,
-          "cluster_id": "",
-          "cluster_label": "",
-          "analyst_score_snapshot": 0.5556,
-          "source_file": "钱博士直播复盘 2026.06.24 BV1tCjX6rEiS.md"
-        },
         {
           "view_id": "8d563f7782814bb3",
           "stance": "neutral",
@@ -293,25 +279,68 @@
           "source_file": "财联社直播总结 2026.07.06.md"
         },
         {
-          "view_id": "0e581d382fa9ca16",
+          "view_id": "09f4d1ab64f3ce75",
           "stance": "neutral",
           "analyst": "钱博士直播",
-          "date": "2026-06-30",
-          "claim": "主讲人用比喻描述宁德时代和阳光电源持有体验：业绩好但股价不涨，像公务员男友，只有发工资时开心；电池板块缺乏想象空间，不像机器人等概念",
+          "date": "2026-08-27",
+          "claim": "AI与通缩的长期逻辑——AI导致劳动力需求减少，财富分配问题将凸显，各国抢矿为未来做准备。",
           "logic": "",
           "risk": "",
-          "evidence": "内容：主讲人用比喻描述宁德时代和阳光电源持有体验：业绩好但股价不涨，像公务员男友，只有发工资时开心；电池板块缺乏想象空间，不像机器人等概念 (01:08:05-01:08:18)宁王业绩应该是不错。 嗯， 宁王业绩应该是不错， 但是电池就是不涨。 就是这个这个宁王跟阳光这两个公司啊。 他的持有体验就很差。 (01:08:58-01:09:16)这两个公司你跟他长期相处， 你得到的体验就是这样。 就是他时不时的对你好一下， 让你感激的这个。 让你感激涕零， 觉得我当初没看错， 但是在大多数时间， 他对你是不理不睬。 (01:09:20-01:09:36)所以这个它的最大的特点就是突然一下拉走， 猛涨一天。 然后在那儿趴个一个星期， 两个星期， 说实话， 这两个星期就一次好用， 这体验感也太差。",
+          "evidence": "内容：AI与通缩的长期逻辑——AI导致劳动力需求减少，财富分配问题将凸显，各国抢矿为未来做准备。 (00:69:00-00:69:30) \"就变成了这个世界上需要的劳动力越来越少了，只有极少数的人你还能够有工作，但是他挣到的是大部分的钱，大多数人是没有工作的\" (00:69:30-00:70:00) \"没有工作怎么办呢，那就是需要财富再分配，让人工智能让机器人生产出来的东西来为你服务\" (00:70:00-00:70:30) \"大多数都是造粪机，就是除了吃就是拉，对这个社会没有任何价值，那这种情况会形成通缩\"",
           "confidence": 0.67,
           "cluster_id": "",
           "cluster_label": "",
           "analyst_score_snapshot": 0.5556,
-          "source_file": "钱博士直播总结 2026.06.30.md"
+          "source_file": "钱博士 BV1S54o6VEvs.md"
         }
       ],
-      "created_at": "2026-08-26T21:22:40",
-      "updated_at": "2026-08-26T21:22:40"
+      "created_at": "2026-09-01T13:55:21",
+      "updated_at": "2026-09-01T13:55:21"
     },
-    "latest_views": [],
+    "latest_views": [
+      {
+        "analyst": "钱博士直播",
+        "claim": "涉及资产：宇树机器人相关标的",
+        "confidence": 0.75,
+        "date": "2026-08-29",
+        "entities": {
+          "etfs": [
+            "159770.SZ"
+          ],
+          "sectors": [
+            "机器人"
+          ],
+          "themes": [
+            "产业趋势",
+            "特斯拉",
+            "自动化"
+          ]
+        },
+        "evidence": "涉及资产：宇树机器人相关标的 影响与结果：粉丝将彩礼钱投入被套 逻辑：机器人产业方向看好，但短期难以产生大的营收，需要等待产业落地 依据类型：陈述观点 (00:84:40-00:85:00) \"你说这个机器人进入家庭，短期内进不了，这个不用想，人家王星星也说了，短则两三年长则五到十年\"",
+        "horizon": "short",
+        "logic": "机器人产业方向看好，但短期难以产生大的营收，需要等待产业落地",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_horizon"
+        ],
+        "risk": "",
+        "section": "宇树机器人（个股案例）",
+        "source_bv": "BV1Ar8Q6wEum",
+        "source_file": "钱博士 BV1Ar8Q6wEum.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 BV1Ar8Q6wEum.md",
+        "source_type": "livestream",
+        "stance": "neutral",
+        "timestamp": "00:84:40-00:85:00",
+        "version": 1,
+        "view_id": "16df189543e8c767",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.7175
+      }
+    ],
     "analyst_scores": [
       {
         "analyst": "任泽平",
@@ -754,9 +783,16 @@
         "updated_at": "2026-08-06T16:11:43"
       }
     ],
-    "market_snapshot": {},
+    "market_snapshot": {
+      "159770.SZ": {
+        "price": 1.0,
+        "change_pct": 1.937,
+        "updated": "2026-08-27T23:31:25",
+        "name": ""
+      }
+    },
     "user_decision_history": [],
     "rag_evidence": [],
-    "summary": "机器人：分析卡有factors，多空对照0多0空，分析师40条历史分，近期观点0条，用户决策0条。"
+    "summary": "机器人：分析卡有factors，多空对照0多0空，分析师40条历史分，近期观点1条，用户决策0条。"
   }
 }

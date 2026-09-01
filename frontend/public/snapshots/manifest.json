@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-26T13:21:59.828379+00:00",
+  "generated_at": "2026-09-01T05:54:21.070533+00:00",
   "counts": {
-    "notes": 990,
-    "note_details": 990,
+    "notes": 1057,
+    "note_details": 1057,
     "assets": 8,
     "evidence_packs": 24,
     "rag_presets": 8
@@ -12,7 +12,7 @@
     "search",
     "assets"
   ],
-  "note_count": 990,
+  "note_count": 1057,
   "preset_ids": [
     "gold-dollar",
     "semiconductor-pullback",
@@ -23,5 +23,5 @@
     "innovative-drugs",
     "baijiu"
   ],
-  "total_bytes": 12507557
+  "total_bytes": 13911558
 }

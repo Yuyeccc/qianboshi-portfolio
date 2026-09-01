@@ -5,8 +5,8 @@
       "open": 0,
       "reviewed": 5,
       "hit": 0,
-      "wrong": 3,
-      "generated_at": "2026-08-26T15:00:21.288070+00:00"
+      "wrong": 2,
+      "generated_at": "2026-09-01T05:54:21.025838+00:00"
     },
     "decisions": [
       {
@@ -55,7 +55,7 @@
         "conviction": 0.65,
         "thesis": "铝有结构性逻辑：国内电解铝成本优势、无产量过剩、价格距高位已跌40-50%、神火7月回购3亿股权，关注神火。",
         "status": "reviewed",
-        "review_result": "wrong"
+        "review_result": "mixed"
       },
       {
         "decision_id": "dec_2026-08-06_GOLD_001",
@@ -79,8 +79,8 @@
         "factors": [
           {
             "factor_name": "应用商业化",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
@@ -91,7 +91,7 @@
           },
           {
             "factor_name": "美股AI映射",
-            "current_state": "近5日走弱-3.03%",
+            "current_state": "近5日走弱-1.86%",
             "impact_direction": "negative",
             "impact_strength": "medium"
           }
@@ -105,20 +105,20 @@
         "factors": [
           {
             "factor_name": "BD出海",
-            "current_state": "观点热度持平",
-            "impact_direction": "neutral",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
             "factor_name": "创新药个股",
-            "current_state": "看多0/看空1/中性0（近30天）；药明康德看空(钱博士直播 8.14)",
+            "current_state": "看多5/看空4/中性6（近30天）；药明康德中性(李一恩 8.26)",
             "impact_direction": "negative",
             "impact_strength": "medium"
           },
           {
             "factor_name": "创新药指数",
-            "current_state": "近5日走强+4.71%",
-            "impact_direction": "positive",
+            "current_state": "近5日持平+0.00%",
+            "impact_direction": "neutral",
             "impact_strength": "high"
           }
         ]
@@ -137,8 +137,8 @@
           },
           {
             "factor_name": "国产替代",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
@@ -157,20 +157,20 @@
         "factors": [
           {
             "factor_name": "人形机器人量产",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
             "factor_name": "政策支持",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "medium"
           },
           {
             "factor_name": "机器人ETF",
-            "current_state": "近5日走强+12.30%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-0.40%",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           }
         ]
@@ -195,7 +195,7 @@
           },
           {
             "factor_name": "白酒指数",
-            "current_state": "近5日走弱-2.33%",
+            "current_state": "近5日走弱-0.24%",
             "impact_direction": "negative",
             "impact_strength": "medium"
           }
@@ -209,14 +209,14 @@
         "factors": [
           {
             "factor_name": "光模块景气",
-            "current_state": "近5日走强+4.77%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-2.46%",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "半导体ETF",
-            "current_state": "近5日走弱-0.95%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+4.95%",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
@@ -241,14 +241,14 @@
           },
           {
             "factor_name": "氧化铝成本",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
             "factor_name": "紫金矿业代理",
-            "current_state": "近5日走强+0.70%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-2.52%",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           }
         ]
@@ -261,8 +261,8 @@
         "factors": [
           {
             "factor_name": "地缘风险",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           },
           {
@@ -306,8 +306,8 @@
         "asset_name": "铝",
         "direction": "bullish",
         "review_date": "2026-08-26",
-        "result_label": "wrong",
-        "outcome_return": -0.087,
+        "result_label": "mixed",
+        "outcome_return": 0.6074,
         "horizon_days": 20,
         "new_rule_learned": null
       },

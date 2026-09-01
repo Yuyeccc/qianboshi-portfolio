@@ -1,72 +1,72 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 9727,
+      "structured_views": 11312,
       "prediction_events": 31320,
-      "notes": 993,
+      "notes": 1057,
       "rag_chunks": 11011,
       "analysts": 11,
       "asset_cards": 8,
-      "generated_at": "2026-08-26T15:00:21.285414+00:00"
+      "generated_at": "2026-09-01T05:54:21.023255+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 2465
+        "value": 2787
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 1793
+        "value": 2037
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 4791
+        "value": 5713
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 303
+        "value": 345
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 375
+        "value": 430
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 1756
+        "value": 2033
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2308
+        "value": 2590
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1319
+        "value": 1466
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 246
+        "value": 279
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 4098
+        "value": 4944
       }
     ],
     "source_contrib": [
       {
         "name": "钱博士直播",
-        "views": 4441
+        "views": 5564
       },
       {
         "name": "钱博士短视频",
@@ -74,31 +74,31 @@
       },
       {
         "name": "笨笨的韭菜",
-        "views": 752
+        "views": 757
       },
       {
         "name": "史诗级韭菜",
-        "views": 737
-      },
-      {
-        "name": "趋势天哥",
-        "views": 655
+        "views": 746
       },
       {
         "name": "旗帜鲜明",
-        "views": 572
+        "views": 711
+      },
+      {
+        "name": "趋势天哥",
+        "views": 663
       },
       {
         "name": "李一恩",
-        "views": 469
+        "views": 597
       },
       {
         "name": "投机大拿",
-        "views": 322
+        "views": 466
       },
       {
         "name": "柏年说",
-        "views": 274
+        "views": 303
       },
       {
         "name": "任泽平",
@@ -149,6 +149,24 @@
     ],
     "debate_cards": [
       {
+        "entity": "半导体",
+        "bullish": 178,
+        "bearish": 124,
+        "neutral": 341,
+        "consensus": "neutral",
+        "disagreement": 0.3658,
+        "updated": "2026-08-29T15:08:00"
+      },
+      {
+        "entity": "大盘",
+        "bullish": 111,
+        "bearish": 103,
+        "neutral": 205,
+        "consensus": "neutral",
+        "disagreement": 0.4703,
+        "updated": "2026-09-01T13:32:49"
+      },
+      {
         "entity": "国产替代",
         "bullish": 98,
         "bearish": 76,
@@ -174,24 +192,6 @@
         "consensus": "neutral",
         "disagreement": 0.4503,
         "updated": "2026-08-06T16:18:44"
-      },
-      {
-        "entity": "大盘",
-        "bullish": 84,
-        "bearish": 60,
-        "neutral": 140,
-        "consensus": "neutral",
-        "disagreement": 0.4054,
-        "updated": "2026-08-05T20:55:39"
-      },
-      {
-        "entity": "半导体",
-        "bullish": 78,
-        "bearish": 58,
-        "neutral": 126,
-        "consensus": "neutral",
-        "disagreement": 0.4158,
-        "updated": "2026-08-06T01:14:38"
       },
       {
         "entity": "光模块",
@@ -224,33 +224,33 @@
     "sample_views": [
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-16",
-        "stance": "neutral",
-        "claim": "CPU（共封装光学）技术路径——CPU不用EML激光器和DSP（确定性不用），用CW激光器（功率从70毫瓦提升到300毫瓦），需要保偏光纤和保偏FAU，普通FA"
+        "date": "2026-08-27",
+        "stance": "risk",
+        "claim": "政策风险对出口型企业的规避逻辑——欧美核心设备自主化行政命令接连出台，对出口为主的企业构成持续政策风险，需要规避。"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-16",
+        "date": "2026-08-27",
         "stance": "neutral",
-        "claim": "核电产业链的时间节奏——设备端现在是好时候，原料端27年开始是好时候，发电端30年以后才是好时候。"
+        "claim": "国产供应链切入海外大厂的时间节点判断——英伟达上一代产品国产液冷公司未打入供应链，但新一代产品量产后陆续收到订单，说明新产品迭代是国产供应链切入的窗口期。"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-16",
+        "date": "2026-08-27",
         "stance": "neutral",
-        "claim": "情绪与基本面的关系——知道基本面会涨但不知道情绪什么时候起来；情绪起来可能三倍五倍，没有情绪可能只有3%5%。"
+        "claim": "英伟达业绩指引的参考价值——本次财报首次提前一年给出业绩指引，且指引增速受限于上游供电产能而非需求不足，说明AI算力需求依然旺盛，供给瓶颈在上游电力而非下游需求"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-16",
-        "stance": "neutral",
-        "claim": "板块内\"二哥比大哥好\"的规律——任何板块里边都是二哥比大哥好（弹性更大）。"
+        "date": "2026-08-27",
+        "stance": "watch",
+        "claim": "涉及资产：国内光模块公司"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-16",
+        "date": "2026-08-27",
         "stance": "neutral",
-        "claim": "黄金与美债利率的反向关系——黄金是零利率资产，美债利率越低，黄金相对吸引力越高。"
+        "claim": "短线：中性 🦀➡️"
       }
     ]
   }

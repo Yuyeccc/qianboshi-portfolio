@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "INNOV_DRUG",
     "asset_name": "INNOV_DRUG",
-    "as_of_date": "2026-08-26",
+    "as_of_date": "2026-09-01",
     "asset_card": {
       "asset_id": "INNOV_DRUG",
       "asset_name": "创新药",
@@ -11,63 +11,63 @@
       "default_horizon": "medium",
       "description": "创新药中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\innov_drug.yaml",
-      "as_of_date": "2026-08-26",
+      "as_of_date": "2026-09-01",
       "factors": [
         {
           "asset_id": "INNOV_DRUG",
           "factor_id": "INNO_INDEX",
           "factor_name": "创新药指数",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "159992.SZ",
-            "close": 0.89,
-            "date": "2026-08-23",
-            "pct_change_5d": 4.7059,
-            "pct_change_20d": -2.0902,
+            "close": 0.85,
+            "date": "2026-08-31",
+            "pct_change_5d": 0.0,
+            "pct_change_20d": -1.8476,
             "source": "price_trends"
           },
-          "current_state": "近5日走强+4.71%",
-          "change_direction": "up",
-          "impact_direction": "positive",
+          "current_state": "近5日持平+0.00%",
+          "change_direction": "flat",
+          "impact_direction": "neutral",
           "impact_strength": "high",
           "confidence": 0.8,
           "evidence_refs": [
             "price_trends"
           ],
-          "summary": "创新药指数近5日走强+4.71%，对INNOV_DRUG构成positive影响。",
+          "summary": "创新药指数近5日持平+0.00%，对INNOV_DRUG构成neutral影响。",
           "card_version": 1,
-          "state_id": "INNOV_DRUG_1_INNO_INDEX_2026-08-26"
+          "state_id": "INNOV_DRUG_1_INNO_INDEX_2026-09-01"
         },
         {
           "asset_id": "INNOV_DRUG",
           "factor_id": "HK_INNO",
           "factor_name": "港股创新药",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "3069.HK",
-            "close": 15.54,
-            "date": "2026-08-12",
-            "pct_change_5d": 7.6177,
-            "pct_change_20d": 5.4274,
+            "close": 15.68,
+            "date": "2026-08-31",
+            "pct_change_5d": -0.3812,
+            "pct_change_20d": 12.8058,
             "source": "price_trends"
           },
-          "current_state": "近5日走强+7.62%",
-          "change_direction": "up",
-          "impact_direction": "positive",
+          "current_state": "近5日走弱-0.38%",
+          "change_direction": "down",
+          "impact_direction": "negative",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
             "price_trends"
           ],
-          "summary": "港股创新药近5日走强+7.62%，对INNOV_DRUG构成positive影响。",
+          "summary": "港股创新药近5日走弱-0.38%，对INNOV_DRUG构成negative影响。",
           "card_version": 1,
-          "state_id": "INNOV_DRUG_1_HK_INNO_2026-08-26"
+          "state_id": "INNOV_DRUG_1_HK_INNO_2026-09-01"
         },
         {
           "asset_id": "INNOV_DRUG",
           "factor_id": "BD_DEALS",
           "factor_name": "BD出海",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "BD",
@@ -77,28 +77,28 @@
               "海外权益"
             ],
             "lookback_days": 30,
-            "current_count": 4,
-            "previous_count": 4
+            "current_count": 7,
+            "previous_count": 5
           },
-          "current_state": "观点热度持平",
-          "change_direction": "flat",
-          "impact_direction": "neutral",
+          "current_state": "观点热度上升",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "high",
           "confidence": 0.8,
           "evidence_refs": [
-            "d84964275e8eca71",
-            "57f1b0a6a745b9c8",
-            "d4bb99e138c8f237"
+            "d4bb99e138c8f237",
+            "1d318e978fb21506",
+            "288b55f1dfc4da6a"
           ],
-          "summary": "BD出海观点热度持平，对INNOV_DRUG构成neutral影响。",
+          "summary": "BD出海观点热度上升，对INNOV_DRUG构成positive影响。",
           "card_version": 1,
-          "state_id": "INNOV_DRUG_1_BD_DEALS_2026-08-26"
+          "state_id": "INNOV_DRUG_1_BD_DEALS_2026-09-01"
         },
         {
           "asset_id": "INNOV_DRUG",
           "factor_id": "POLICY",
           "factor_name": "医保政策",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "医保",
@@ -107,66 +107,89 @@
               "创新药政策"
             ],
             "lookback_days": 30,
-            "current_count": 1,
-            "previous_count": 6
+            "current_count": 8,
+            "previous_count": 4
           },
-          "current_state": "观点热度下降",
-          "change_direction": "down",
-          "impact_direction": "negative",
+          "current_state": "观点热度上升",
+          "change_direction": "up",
+          "impact_direction": "positive",
           "impact_strength": "high",
           "confidence": 0.8,
           "evidence_refs": [
-            "61a2fc92b492345d"
+            "61a2fc92b492345d",
+            "0964c8efa6af65c6",
+            "7e130c454360ed1b"
           ],
-          "summary": "医保政策观点热度下降，对INNOV_DRUG构成negative影响。",
+          "summary": "医保政策观点热度上升，对INNOV_DRUG构成positive影响。",
           "card_version": 1,
-          "state_id": "INNOV_DRUG_1_POLICY_2026-08-26"
+          "state_id": "INNOV_DRUG_1_POLICY_2026-09-01"
         },
         {
           "asset_id": "INNOV_DRUG",
           "factor_id": "STOCK_VIEWS",
           "factor_name": "创新药个股",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "counts": {
-              "bullish": 0,
-              "bearish": 1,
-              "neutral": 0
+              "bullish": 5,
+              "bearish": 4,
+              "neutral": 6
             },
             "top_stocks": [
               {
                 "code": "603259.SS",
                 "name": "药明康德",
-                "stance": "看空",
-                "analyst": "钱博士直播",
-                "date": "2026-08-14",
-                "claim": "光模块的超额收益本质上来源于国内资金出不去，把它当英伟达/美股来炒。长期走势对标",
-                "view_count": 1
+                "stance": "中性",
+                "analyst": "李一恩",
+                "date": "2026-08-26",
+                "claim": "涉及资产：药明康德",
+                "view_count": 15
               }
             ],
             "lookback_days": 30
           },
-          "current_state": "看多0/看空1/中性0（近30天）；药明康德看空(钱博士直播 8.14)",
-          "change_direction": "flat",
+          "current_state": "看多5/看空4/中性6（近30天）；药明康德中性(李一恩 8.26)",
+          "change_direction": "up",
           "impact_direction": "negative",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
-            "8ab41c96e9f19fb8"
+            "8ab41c96e9f19fb8",
+            "3febe3f4701d7818",
+            "f4472a86c54b271e"
           ],
-          "summary": "创新药个股看多0/看空1/中性0（近30天）；药明康德看空(钱博士直播 8.14)，对INNOV_DRUG构成negative影响。",
+          "summary": "创新药个股看多5/看空4/中性6（近30天）；药明康德中性(李一恩 8.26)，对INNOV_DRUG构成negative影响。",
           "card_version": 1,
-          "state_id": "INNOV_DRUG_1_STOCK_VIEWS_2026-08-26"
+          "state_id": "INNOV_DRUG_1_STOCK_VIEWS_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前创新药的正向驱动来自创新药指数、港股创新药，负向压力来自医保政策、创新药个股。"
+      "logic_chain_summary": "当前创新药的正向驱动来自BD出海、医保政策，负向压力来自港股创新药、创新药个股。",
+      "data_status": {
+        "market": "available",
+        "views": "available",
+        "fundamentals": "na",
+        "valuation": "na"
+      },
+      "quality_factors": [],
+      "analysis_framework": [],
+      "valuation": null,
+      "extra": {
+        "data_status": {
+          "market": "available",
+          "views": "available",
+          "fundamentals": "na",
+          "valuation": "na"
+        },
+        "quality_factors": [],
+        "valuation": null
+      }
     },
     "factor_states": [
       {
         "factor_id": "INNO_INDEX",
         "factor_name": "创新药指数",
-        "current_state": "近5日走强+4.71%",
-        "impact_direction": "positive",
+        "current_state": "近5日持平+0.00%",
+        "impact_direction": "neutral",
         "evidence_refs": [
           "price_trends"
         ]
@@ -174,8 +197,8 @@
       {
         "factor_id": "HK_INNO",
         "factor_name": "港股创新药",
-        "current_state": "近5日走强+7.62%",
-        "impact_direction": "positive",
+        "current_state": "近5日走弱-0.38%",
+        "impact_direction": "negative",
         "evidence_refs": [
           "price_trends"
         ]
@@ -183,42 +206,46 @@
       {
         "factor_id": "BD_DEALS",
         "factor_name": "BD出海",
-        "current_state": "观点热度持平",
-        "impact_direction": "neutral",
+        "current_state": "观点热度上升",
+        "impact_direction": "positive",
         "evidence_refs": [
-          "d84964275e8eca71",
-          "57f1b0a6a745b9c8",
-          "d4bb99e138c8f237"
+          "d4bb99e138c8f237",
+          "1d318e978fb21506",
+          "288b55f1dfc4da6a"
         ]
       },
       {
         "factor_id": "POLICY",
         "factor_name": "医保政策",
-        "current_state": "观点热度下降",
-        "impact_direction": "negative",
+        "current_state": "观点热度上升",
+        "impact_direction": "positive",
         "evidence_refs": [
-          "61a2fc92b492345d"
+          "61a2fc92b492345d",
+          "0964c8efa6af65c6",
+          "7e130c454360ed1b"
         ]
       },
       {
         "factor_id": "STOCK_VIEWS",
         "factor_name": "创新药个股",
-        "current_state": "看多0/看空1/中性0（近30天）；药明康德看空(钱博士直播 8.14)",
+        "current_state": "看多5/看空4/中性6（近30天）；药明康德中性(李一恩 8.26)",
         "impact_direction": "negative",
         "evidence_refs": [
-          "8ab41c96e9f19fb8"
+          "8ab41c96e9f19fb8",
+          "3febe3f4701d7818",
+          "f4472a86c54b271e"
         ]
       }
     ],
     "debate_card": {
-      "card_id": "debate_INNOV_DRUG_long_2026-06-18_2026-08-16",
+      "card_id": "debate_INNOV_DRUG_long_2026-07-01_2026-08-29",
       "entity_id": "INNOV_DRUG",
       "entity_name": "INNOV_DRUG",
       "entity_type": "theme",
       "horizon": "long",
       "window": {
-        "start": "2026-06-18",
-        "end": "2026-08-16"
+        "start": "2026-07-01",
+        "end": "2026-08-29"
       },
       "highlights": [],
       "counts": {
@@ -245,8 +272,8 @@
       "consensus": [],
       "new_changes": [],
       "items": [],
-      "created_at": "2026-08-26T21:22:35",
-      "updated_at": "2026-08-26T21:22:35"
+      "created_at": "2026-09-01T13:55:15",
+      "updated_at": "2026-09-01T13:55:15"
     },
     "latest_views": [],
     "analyst_scores": [],
@@ -269,9 +296,10 @@
         "asset_card_version": null,
         "debate_card_id": null,
         "market_snapshot": "{}",
-        "status": "open",
+        "status": "reviewed",
         "created_at": "2026-08-06T00:49:22",
-        "updated_at": "2026-08-06T00:49:22"
+        "updated_at": "2026-08-26T22:30:20",
+        "premise": null
       }
     ],
     "rag_evidence": [],

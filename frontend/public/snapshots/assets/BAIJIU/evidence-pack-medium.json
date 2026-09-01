@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "BAIJIU",
     "asset_name": "白酒",
-    "as_of_date": "2026-08-26",
+    "as_of_date": "2026-09-01",
     "asset_card": {
       "asset_id": "BAIJIU",
       "asset_name": "白酒",
@@ -11,13 +11,13 @@
       "default_horizon": "medium",
       "description": "白酒中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\baijiu.yaml",
-      "as_of_date": "2026-08-26",
+      "as_of_date": "2026-09-01",
       "factors": [
         {
           "asset_id": "BAIJIU",
           "factor_id": "CONSUMPTION_CYCLE",
           "factor_name": "消费景气",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "白酒",
@@ -25,8 +25,8 @@
               "动销"
             ],
             "lookback_days": 30,
-            "current_count": 34,
-            "previous_count": 228
+            "current_count": 136,
+            "previous_count": 169
           },
           "current_state": "观点热度下降",
           "change_direction": "down",
@@ -40,13 +40,13 @@
           ],
           "summary": "消费景气观点热度下降，对BAIJIU构成negative影响。",
           "card_version": 1,
-          "state_id": "BAIJIU_1_CONSUMPTION_CYCLE_2026-08-26"
+          "state_id": "BAIJIU_1_CONSUMPTION_CYCLE_2026-09-01"
         },
         {
           "asset_id": "BAIJIU",
           "factor_id": "YOUNG_CONSUMER",
           "factor_name": "年轻人消费",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "白酒",
@@ -54,8 +54,8 @@
               "消费习惯"
             ],
             "lookback_days": 30,
-            "current_count": 1,
-            "previous_count": 51
+            "current_count": 19,
+            "previous_count": 37
           },
           "current_state": "观点热度下降",
           "change_direction": "down",
@@ -63,26 +63,28 @@
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
-            "eb9eca662f70fa53"
+            "eb9eca662f70fa53",
+            "28282435994e0938",
+            "59975d7bbbf77830"
           ],
           "summary": "年轻人消费观点热度下降，对BAIJIU构成negative影响。",
           "card_version": 1,
-          "state_id": "BAIJIU_1_YOUNG_CONSUMER_2026-08-26"
+          "state_id": "BAIJIU_1_YOUNG_CONSUMER_2026-09-01"
         },
         {
           "asset_id": "BAIJIU",
           "factor_id": "BAIJIU_INDEX",
           "factor_name": "白酒指数",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "512690.SS",
             "close": 0.42,
-            "date": "2026-08-23",
-            "pct_change_5d": -2.3256,
-            "pct_change_20d": null,
+            "date": "2026-08-31",
+            "pct_change_5d": -0.2375,
+            "pct_change_20d": -7.2848,
             "source": "price_trends"
           },
-          "current_state": "近5日走弱-2.33%",
+          "current_state": "近5日走弱-0.24%",
           "change_direction": "down",
           "impact_direction": "negative",
           "impact_strength": "medium",
@@ -90,12 +92,31 @@
           "evidence_refs": [
             "yfinance"
           ],
-          "summary": "白酒指数近5日走弱-2.33%，对BAIJIU构成negative影响。",
+          "summary": "白酒指数近5日走弱-0.24%，对BAIJIU构成negative影响。",
           "card_version": 1,
-          "state_id": "BAIJIU_1_BAIJIU_INDEX_2026-08-26"
+          "state_id": "BAIJIU_1_BAIJIU_INDEX_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前白酒的负向压力来自消费景气、年轻人消费、白酒指数。"
+      "logic_chain_summary": "当前白酒的负向压力来自消费景气、年轻人消费、白酒指数。",
+      "data_status": {
+        "market": "available",
+        "views": "available",
+        "fundamentals": "na",
+        "valuation": "na"
+      },
+      "quality_factors": [],
+      "analysis_framework": [],
+      "valuation": null,
+      "extra": {
+        "data_status": {
+          "market": "available",
+          "views": "available",
+          "fundamentals": "na",
+          "valuation": "na"
+        },
+        "quality_factors": [],
+        "valuation": null
+      }
     },
     "factor_states": [
       {
@@ -115,13 +136,15 @@
         "current_state": "观点热度下降",
         "impact_direction": "negative",
         "evidence_refs": [
-          "eb9eca662f70fa53"
+          "eb9eca662f70fa53",
+          "28282435994e0938",
+          "59975d7bbbf77830"
         ]
       },
       {
         "factor_id": "BAIJIU_INDEX",
         "factor_name": "白酒指数",
-        "current_state": "近5日走弱-2.33%",
+        "current_state": "近5日走弱-0.24%",
         "impact_direction": "negative",
         "evidence_refs": [
           "yfinance"
@@ -129,33 +152,33 @@
       }
     ],
     "debate_card": {
-      "card_id": "debate_白酒_medium_2026-06-18_2026-08-16",
+      "card_id": "debate_白酒_medium_2026-07-01_2026-08-29",
       "entity_id": "白酒",
       "entity_name": "白酒",
       "entity_type": "theme",
       "horizon": "medium",
       "window": {
-        "start": "2026-06-18",
-        "end": "2026-08-16"
+        "start": "2026-07-01",
+        "end": "2026-08-29"
       },
       "highlights": [
         "高置信"
       ],
       "counts": {
-        "bullish": 5,
+        "bullish": 4,
         "bearish": 1,
         "risk": 0,
-        "neutral": 1,
+        "neutral": 2,
         "watch": 0
       },
       "metrics": {
         "consensus_direction": "bullish",
         "disagreement_level": 0.2857,
-        "confidence_level": 0.5714,
+        "confidence_level": 0.7143,
         "novelty_level": 0.0,
-        "net_stance_score": 0.5714
+        "net_stance_score": 0.4286
       },
-      "summary": "白酒：多头5条，空头1条，风险0条，中性1条，共识方向=bullish，分歧度=0.29。",
+      "summary": "白酒：多头4条，空头1条，风险0条，中性2条，共识方向=bullish，分歧度=0.29。",
       "bullish": [
         {
           "view_id": "ed4dc8c2868ed9ee",
@@ -192,15 +215,6 @@
           "confidence": 0.83,
           "evidence": "中长线：中性🦀➡️，对白酒B股偏多🐂📈 逻辑：他更偏向极低估值、破净、现金多的白酒B股，而不是普通A股白酒龙头；茅台虽不是特别差，但不算他的理想买点。 (00:27:02-00:29:52) “鼓勤公币……连精神都跌破了……我想再怎么便宜 这也太便宜了一点” (00:29:52-00:30:31) “我们自己所谓的工资哪个估值超过十的……都是七倍啊八倍九倍……现金放在那里” 涉及资产：古井贡酒B股（主播口述“鼓勤公币”）、茅台、海天味业 影响与结果：白酒B股被认为是真破净、现金充足；茅台和海天味业仍偏贵。",
           "analyst_score": null
-        },
-        {
-          "view_id": "0684237719ea0c47",
-          "analyst": "任泽平",
-          "claim": "用白酒、餐饮零售等老灯行业利润全负反衬电子行业暴利。",
-          "logic": "",
-          "confidence": 0.75,
-          "evidence": "内容：用白酒、餐饮零售等老灯行业利润全负反衬电子行业暴利。 (00:56:05-00:56:19)消费啊， 白酒啊， 这个居所， 餐饮零售这些老灯行业的利润全是负的。 全都是负的。 (00:05:22-00:05:24)，(00:05:28-00:05:31)，(00:14:05-00:14:47)，(00:14:49-00:14:59)，(00:15:01-00:15:08)，(00:15:27-00:15:37)，(00:15:46-00:24:56)，(00:25:52-00:25:59)，(00:25:60-00:26:00)，(00:55:15-00:55:20)，(00:55:32-00:55:35)，(00:56:29-00:56:34)，(00:57:01-00:57:05)，(01:03:25-01:03:26)，(02:47:01-02:47:05)，(02:47:09-02:47:13) 中长线：看多 🐂📈",
-          "analyst_score": null
         }
       ],
       "bearish": [
@@ -216,6 +230,15 @@
       ],
       "risk": [],
       "neutral": [
+        {
+          "view_id": "30ac500501a54eac",
+          "analyst": "投机大拿",
+          "claim": "中长线：中性 🦀➡️",
+          "logic": "传统行业是基本盘，经济整体增长靠基本盘；科技是增长主线，传统行业并不能完全被科技替代，但自身难有大的产业增长，更多是基于估值的交易性机会。",
+          "confidence": 0.75,
+          "evidence": "中长线：中性 🦀➡️ 逻辑：传统行业是基本盘，经济整体增长靠基本盘；科技是增长主线，传统行业并不能完全被科技替代，但自身难有大的产业增长，更多是基于估值的交易性机会。 (00:39:03-00:39:16) 传统行业是基本盘，科技是增长主线，靠基本盘经济整体增长就相对比较来，科技完全又取代不了基本盘的这种规模 (00:40:06-00:40:18) 所以这个时候我们看传统行业，看的是不是它被来产业上有多大的用变化，而是从跟上来看，就资金或者就交易性问题，而带来的这种机会",
+          "analyst_score": null
+        },
         {
           "view_id": "4fb6ecff5caec356",
           "analyst": "钱博士直播",
@@ -338,32 +361,94 @@
           "source_file": "钱博士直播复盘 2026.07.14 BV1TqN96LEcw.md"
         },
         {
-          "view_id": "0684237719ea0c47",
-          "stance": "bullish",
-          "analyst": "任泽平",
-          "date": "2026-06-27",
-          "claim": "用白酒、餐饮零售等老灯行业利润全负反衬电子行业暴利。",
-          "logic": "",
+          "view_id": "30ac500501a54eac",
+          "stance": "neutral",
+          "analyst": "投机大拿",
+          "date": "2026-08-04",
+          "claim": "中长线：中性 🦀➡️",
+          "logic": "传统行业是基本盘，经济整体增长靠基本盘；科技是增长主线，传统行业并不能完全被科技替代，但自身难有大的产业增长，更多是基于估值的交易性机会。",
           "risk": "",
-          "evidence": "内容：用白酒、餐饮零售等老灯行业利润全负反衬电子行业暴利。 (00:56:05-00:56:19)消费啊， 白酒啊， 这个居所， 餐饮零售这些老灯行业的利润全是负的。 全都是负的。 (00:05:22-00:05:24)，(00:05:28-00:05:31)，(00:14:05-00:14:47)，(00:14:49-00:14:59)，(00:15:01-00:15:08)，(00:15:27-00:15:37)，(00:15:46-00:24:56)，(00:25:52-00:25:59)，(00:25:60-00:26:00)，(00:55:15-00:55:20)，(00:55:32-00:55:35)，(00:56:29-00:56:34)，(00:57:01-00:57:05)，(01:03:25-01:03:26)，(02:47:01-02:47:05)，(02:47:09-02:47:13) 中长线：看多 🐂📈",
+          "evidence": "中长线：中性 🦀➡️ 逻辑：传统行业是基本盘，经济整体增长靠基本盘；科技是增长主线，传统行业并不能完全被科技替代，但自身难有大的产业增长，更多是基于估值的交易性机会。 (00:39:03-00:39:16) 传统行业是基本盘，科技是增长主线，靠基本盘经济整体增长就相对比较来，科技完全又取代不了基本盘的这种规模 (00:40:06-00:40:18) 所以这个时候我们看传统行业，看的是不是它被来产业上有多大的用变化，而是从跟上来看，就资金或者就交易性问题，而带来的这种机会",
           "confidence": 0.75,
           "cluster_id": "",
           "cluster_label": "",
           "analyst_score_snapshot": null,
-          "source_file": "任泽平直播总结 2026.06.27.md"
+          "source_file": "2026-08-04 （投机大拿） BV1BLuA6wEdw.md"
         }
       ],
-      "created_at": "2026-08-26T21:22:19",
-      "updated_at": "2026-08-26T21:22:19"
+      "created_at": "2026-09-01T13:54:59",
+      "updated_at": "2026-09-01T13:54:59"
     },
-    "latest_views": [],
+    "latest_views": [
+      {
+        "analyst": "钱博士直播",
+        "claim": "短线：看空 🐻📉（不建议短线参与）",
+        "confidence": 0.91,
+        "date": "2026-08-28",
+        "entities": {
+          "etfs": [
+            "159992.SZ"
+          ],
+          "sectors": [
+            "创新药",
+            "大消费",
+            "大金融",
+            "黄金有色"
+          ],
+          "stocks": [
+            "601899.SS"
+          ],
+          "themes": [
+            "MNC",
+            "专利悬崖",
+            "估值修复",
+            "低位",
+            "出海",
+            "周期",
+            "复苏",
+            "护盘",
+            "指数权重",
+            "政策",
+            "美元",
+            "资源品",
+            "轮动",
+            "通胀"
+          ]
+        },
+        "evidence": "短线：看空 🐻📉（不建议短线参与） 逻辑：银行、保险、券商、白酒、家电、食品、创新药、有色金属等都不适合做短线，没有共识、没有热钱、没有故事，缺乏持续赚钱效应和爆发力。做短线的应该趁着反弹卖出。 (00:1089:12-00:1121:08) 就是如果你要做短线的 趁着反弹你就把证券卖了 无论是证券保险银行还是消费 这些东西记住我说的话 你如果你是做短线的 不管是券商银行保险 金什么白酒家电食品 还是创新药 还是这个有色金属 就这些东西 如果你是做短线的 其实他们最近都表现还行 但是你要把它卖掉 他们不能做短线 他们不能做短线 记住我说的话就行了 (00:1122:12-00:1132:28) 第一个做短线 他没有共识 市场资金没有热钱 他没有故事 这些东西就适合比较内在价值估值 去衡量他现在内在价值跟价格之间的关系的 (00:1187:16-00:1200:16) 所以说牛顺以短线思维 不要参与他们 他们不是做短线的东西 做短线的东西哪能买大金融大消费 对不对 什么时候买大金融大消费 组绅行情来之后再说吧",
+        "horizon": "short",
+        "logic": "银行、保险、券商、白酒、家电、食品、创新药、有色金属等都不适合做短线，没有共识、没有热钱、没有故事，缺乏持续赚钱效应和爆发力。做短线的应该趁着反弹卖出。",
+        "quality_flags": [
+          "has_date",
+          "has_evidence",
+          "has_logic",
+          "has_stance",
+          "has_horizon",
+          "has_risk"
+        ],
+        "risk": "短线：看空 🐻📉（不建议短线参与） 逻辑：银行、保险、券商、白酒、家电、食品、创新药、有色金属等都不适合做短线，没有共识、没有热钱、没有故事，缺乏持续赚钱效应和爆发力。做短线的应该趁着反弹卖出。 (00:1089:12-00:1121:08) 就是如果你要做短线的 趁着反弹你就把证券卖了 无论是证券保险银行还是消费 这些东西记住我说的话 你如果你是做短线的 不管是券商银行保险 金什么白酒家电食品 还是创新药 还是这个有色金属 就这些东西",
+        "section": "大金融大消费（整体）",
+        "source_bv": "BV1xPtF6mEFH",
+        "source_file": "钱博士 BV1xPtF6mEFH.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 BV1xPtF6mEFH.md",
+        "source_type": "livestream",
+        "stance": "bearish",
+        "timestamp": "00:1089:12-00:1121:08",
+        "version": 1,
+        "view_id": "155ca9eb3a97c5ea",
+        "view_type": "sector",
+        "entity_score": 0.0,
+        "bucket": "C",
+        "rank_score": 0.8335
+      }
+    ],
     "analyst_scores": [],
     "market_snapshot": {
       "512690.SS": {
-        "price": 0.42,
-        "change_pct": -2.33,
-        "updated": "2026-08-23T12:44:21.126283",
-        "name": null
+        "price": 0.421,
+        "change_pct": -0.473,
+        "updated": "2026-08-27T23:31:25",
+        "name": ""
       }
     },
     "user_decision_history": [
@@ -386,7 +471,8 @@
         "market_snapshot": "{}",
         "status": "reviewed",
         "created_at": "2026-08-06T00:49:22",
-        "updated_at": "2026-08-11T22:30:53"
+        "updated_at": "2026-08-11T22:30:53",
+        "premise": null
       }
     ],
     "rag_evidence": [
@@ -394,14 +480,30 @@
         "content": "涉及资产：白银\n影响与结果：弹性大但缺乏战略储备价值\n逻辑：白银容易被控盘，不具备黄金的战略储备属性\n依据类型：陈述观点\n(00:34:13-00:34:26) 白银特别容易被控盘，70年代的白银是被几家大财团控盘了，所以白银弹性是大，但本质上它没有战略储备的价值",
         "source": "钱博士 BV1xc8y6LEgU.md",
         "section": "观点分析",
-        "score": 0.8019,
+        "score": 0.6819,
         "raw_score": 0.6093,
         "date": "2026-08-22",
         "type": "livestream",
         "weights": {
           "sim_weighted": 0.1219,
-          "freshness": 0.8667,
-          "freshness_weighted": 0.52,
+          "freshness": 0.6667,
+          "freshness_weighted": 0.4,
+          "type_score": 0.8,
+          "type_weighted": 0.16
+        }
+      },
+      {
+        "content": "涉及资产：白银\n影响与结果：弹性大但缺乏战略储备价值\n逻辑：白银容易被控盘，不具备黄金的战略储备属性\n依据类型：陈述观点\n(00:34:13-00:34:26) 白银特别容易被控盘，70年代的白银是被几家大财团控盘了，所以白银弹性是大，但本质上它没有战略储备的价值",
+        "source": "2026-08-22 （柏年说） BV1xc8y6LEgU.md",
+        "section": "观点分析",
+        "score": 0.6819,
+        "raw_score": 0.6093,
+        "date": "2026-08-22",
+        "type": "livestream",
+        "weights": {
+          "sim_weighted": 0.1219,
+          "freshness": 0.6667,
+          "freshness_weighted": 0.4,
           "type_score": 0.8,
           "type_weighted": 0.16
         }
@@ -421,24 +523,8 @@
           "type_score": 1.0,
           "type_weighted": 0.2
         }
-      },
-      {
-        "content": "涉及资产：白银\n影响与结果：逼仓行情持续，价格易涨难跌\n逻辑：实物白银库存远低于期货交割需求，空头无法交割可能引发违约。\n依据类型：逻辑推演 / 事实数据\n(00:00:00-00:00:00) 上海现在好像只有800多顿的白银...你就根本就弥补不了他的一万顿的不过单",
-        "source": "钱博士直播 BV1s1k4BRE7h.md",
-        "section": "观点分析",
-        "score": 0.3454,
-        "raw_score": 0.6271,
-        "date": "2026-01-18",
-        "type": "livestream",
-        "weights": {
-          "sim_weighted": 0.1254,
-          "freshness": 0.1,
-          "freshness_weighted": 0.06,
-          "type_score": 0.8,
-          "type_weighted": 0.16
-        }
       }
     ],
-    "summary": "白酒：分析卡有factors，多空对照5多1空，分析师0条历史分，近期观点0条，用户决策1条。"
+    "summary": "白酒：分析卡有factors，多空对照4多1空，分析师0条历史分，近期观点1条，用户决策1条。"
   }
 }

@@ -1,7 +1,7 @@
 {
   "discipline_data": {
     "meta": {
-      "generated_at": "2026-08-26T15:00:21.292388+00:00",
+      "generated_at": "2026-09-01T05:54:21.030559+00:00",
       "source": "live"
     },
     "principles": [
@@ -26,9 +26,9 @@
       "open": 0,
       "reviewed": 5,
       "hit": 0,
-      "wrong": 3,
+      "wrong": 2,
       "review_coverage_pct": 100,
-      "generated_at": "2026-08-26T15:00:21.292388+00:00"
+      "generated_at": "2026-09-01T05:54:21.030559+00:00"
     },
     "framework": [
       {
@@ -92,8 +92,8 @@
         "status": "reviewed",
         "review": {
           "review_date": "2026-08-26",
-          "result_label": "wrong",
-          "outcome_return": -0.087,
+          "result_label": "mixed",
+          "outcome_return": 0.6074,
           "horizon_days": 20
         }
       },

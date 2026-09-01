@@ -2,7 +2,7 @@
   "evidence_pack": {
     "asset_id": "GOLD",
     "asset_name": "黄金",
-    "as_of_date": "2026-08-26",
+    "as_of_date": "2026-09-01",
     "asset_card": {
       "asset_id": "GOLD",
       "asset_name": "黄金",
@@ -11,13 +11,13 @@
       "default_horizon": "medium",
       "description": "黄金中期趋势分析框架",
       "config_path": "E:\\qianboshi-agent\\configs\\asset_cards\\gold.yaml",
-      "as_of_date": "2026-08-26",
+      "as_of_date": "2026-09-01",
       "factors": [
         {
           "asset_id": "GOLD",
           "factor_id": "DXY",
           "factor_name": "美元指数",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "DX-Y.NYB",
             "close": 99.724,
@@ -36,13 +36,13 @@
           ],
           "summary": "美元指数近5日走弱-1.07%，对GOLD构成positive影响。",
           "card_version": 1,
-          "state_id": "GOLD_1_DXY_2026-08-26"
+          "state_id": "GOLD_1_DXY_2026-09-01"
         },
         {
           "asset_id": "GOLD",
           "factor_id": "US_REAL_YIELD",
           "factor_name": "美债实际利率",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "symbol": "^TNX",
             "close": 4.637,
@@ -61,13 +61,13 @@
           ],
           "summary": "美债实际利率近5日走强+0.32%，对GOLD构成negative影响。",
           "card_version": 1,
-          "state_id": "GOLD_1_US_REAL_YIELD_2026-08-26"
+          "state_id": "GOLD_1_US_REAL_YIELD_2026-09-01"
         },
         {
           "asset_id": "GOLD",
           "factor_id": "GEOPOLITICAL_RISK",
           "factor_name": "地缘风险",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "地缘",
@@ -78,26 +78,26 @@
             ],
             "lookback_days": 14,
             "current_count": 2,
-            "previous_count": 0
+            "previous_count": 8
           },
-          "current_state": "观点热度上升",
-          "change_direction": "up",
-          "impact_direction": "positive",
+          "current_state": "观点热度下降",
+          "change_direction": "down",
+          "impact_direction": "negative",
           "impact_strength": "medium",
           "confidence": 0.8,
           "evidence_refs": [
-            "9378d85ddf24f3db",
-            "76ec3b9dd262e61c"
+            "bdd9f1127cca501f",
+            "f9edfad88fd32572"
           ],
-          "summary": "地缘风险观点热度上升，对GOLD构成positive影响。",
+          "summary": "地缘风险观点热度下降，对GOLD构成negative影响。",
           "card_version": 1,
-          "state_id": "GOLD_1_GEOPOLITICAL_RISK_2026-08-26"
+          "state_id": "GOLD_1_GEOPOLITICAL_RISK_2026-09-01"
         },
         {
           "asset_id": "GOLD",
           "factor_id": "CENTRAL_BANK_BUYING",
           "factor_name": "央行购金",
-          "as_of_date": "2026-08-26",
+          "as_of_date": "2026-09-01",
           "raw_value": {
             "query_terms": [
               "央行购金",
@@ -105,21 +105,90 @@
               "去美元化"
             ],
             "lookback_days": 60,
-            "current_count": 0,
-            "previous_count": 4
+            "current_count": 1,
+            "previous_count": 3
           },
           "current_state": "观点热度下降",
           "change_direction": "down",
           "impact_direction": "negative",
           "impact_strength": "high",
           "confidence": 0.8,
-          "evidence_refs": [],
+          "evidence_refs": [
+            "bdd9f1127cca501f"
+          ],
           "summary": "央行购金观点热度下降，对GOLD构成negative影响。",
           "card_version": 1,
-          "state_id": "GOLD_1_CENTRAL_BANK_BUYING_2026-08-26"
+          "state_id": "GOLD_1_CENTRAL_BANK_BUYING_2026-09-01"
+        },
+        {
+          "asset_id": "GOLD",
+          "factor_id": "TREASURY_TERM_PREMIUM",
+          "factor_name": "美债期限溢价",
+          "as_of_date": "2026-09-01",
+          "raw_value": "待更新",
+          "current_state": "待更新",
+          "change_direction": "unknown",
+          "impact_direction": "unknown",
+          "impact_strength": "high",
+          "confidence": null,
+          "evidence_refs": [],
+          "summary": "美债期限溢价待更新，对GOLD影响待定（数据待补）。",
+          "card_version": 1,
+          "state_id": "GOLD_1_TREASURY_TERM_PREMIUM_2026-09-01"
+        },
+        {
+          "asset_id": "GOLD",
+          "factor_id": "FISCAL_DEFICIT",
+          "factor_name": "财政赤字压力",
+          "as_of_date": "2026-09-01",
+          "raw_value": "待更新",
+          "current_state": "待更新",
+          "change_direction": "unknown",
+          "impact_direction": "unknown",
+          "impact_strength": "medium",
+          "confidence": null,
+          "evidence_refs": [],
+          "summary": "财政赤字压力待更新，对GOLD影响待定（数据待补）。",
+          "card_version": 1,
+          "state_id": "GOLD_1_FISCAL_DEFICIT_2026-09-01"
+        },
+        {
+          "asset_id": "GOLD",
+          "factor_id": "LONG_TERM_BOND_SUPPLY",
+          "factor_name": "长债供给",
+          "as_of_date": "2026-09-01",
+          "raw_value": "待更新",
+          "current_state": "待更新",
+          "change_direction": "unknown",
+          "impact_direction": "unknown",
+          "impact_strength": "medium",
+          "confidence": null,
+          "evidence_refs": [],
+          "summary": "长债供给待更新，对GOLD影响待定（数据待补）。",
+          "card_version": 1,
+          "state_id": "GOLD_1_LONG_TERM_BOND_SUPPLY_2026-09-01"
         }
       ],
-      "logic_chain_summary": "当前黄金的正向驱动来自美元指数、地缘风险，负向压力来自美债实际利率、央行购金。"
+      "logic_chain_summary": "当前黄金的正向驱动来自美元指数，负向压力来自美债实际利率、地缘风险、央行购金。",
+      "data_status": {
+        "market": "available",
+        "views": "available",
+        "fundamentals": "na",
+        "valuation": "na"
+      },
+      "quality_factors": [],
+      "analysis_framework": [],
+      "valuation": null,
+      "extra": {
+        "data_status": {
+          "market": "available",
+          "views": "available",
+          "fundamentals": "na",
+          "valuation": "na"
+        },
+        "quality_factors": [],
+        "valuation": null
+      }
     },
     "factor_states": [
       {
@@ -143,11 +212,11 @@
       {
         "factor_id": "GEOPOLITICAL_RISK",
         "factor_name": "地缘风险",
-        "current_state": "观点热度上升",
-        "impact_direction": "positive",
+        "current_state": "观点热度下降",
+        "impact_direction": "negative",
         "evidence_refs": [
-          "9378d85ddf24f3db",
-          "76ec3b9dd262e61c"
+          "bdd9f1127cca501f",
+          "f9edfad88fd32572"
         ]
       },
       {
@@ -155,18 +224,41 @@
         "factor_name": "央行购金",
         "current_state": "观点热度下降",
         "impact_direction": "negative",
+        "evidence_refs": [
+          "bdd9f1127cca501f"
+        ]
+      },
+      {
+        "factor_id": "TREASURY_TERM_PREMIUM",
+        "factor_name": "美债期限溢价",
+        "current_state": "待更新",
+        "impact_direction": "unknown",
+        "evidence_refs": []
+      },
+      {
+        "factor_id": "FISCAL_DEFICIT",
+        "factor_name": "财政赤字压力",
+        "current_state": "待更新",
+        "impact_direction": "unknown",
+        "evidence_refs": []
+      },
+      {
+        "factor_id": "LONG_TERM_BOND_SUPPLY",
+        "factor_name": "长债供给",
+        "current_state": "待更新",
+        "impact_direction": "unknown",
         "evidence_refs": []
       }
     ],
     "debate_card": {
-      "card_id": "debate_黄金_long_2026-06-18_2026-08-16",
+      "card_id": "debate_黄金_long_2026-07-01_2026-08-29",
       "entity_id": "黄金",
       "entity_name": "黄金",
       "entity_type": "macro",
       "horizon": "long",
       "window": {
-        "start": "2026-06-18",
-        "end": "2026-08-16"
+        "start": "2026-07-01",
+        "end": "2026-08-29"
       },
       "highlights": [],
       "counts": {
@@ -231,33 +323,48 @@
           "source_file": "柏年说直播总结 2026.07.04.md"
         }
       ],
-      "created_at": "2026-08-26T21:22:28",
-      "updated_at": "2026-08-26T21:22:28"
+      "created_at": "2026-09-01T13:55:08",
+      "updated_at": "2026-09-01T13:55:08"
     },
     "latest_views": [
       {
         "analyst": "钱博士直播",
-        "claim": "短线：看多（回调中）🐂📈",
+        "claim": "短线：看空 🐻📉（不建议短线参与）",
         "confidence": 0.91,
-        "date": "2026-08-16",
+        "date": "2026-08-28",
         "entities": {
           "etfs": [
             "159992.SZ"
           ],
           "sectors": [
-            "创新药"
+            "创新药",
+            "大消费",
+            "大金融",
+            "黄金有色"
+          ],
+          "stocks": [
+            "601899.SS"
           ],
           "themes": [
             "MNC",
             "专利悬崖",
             "估值修复",
+            "低位",
             "出海",
-            "政策"
+            "周期",
+            "复苏",
+            "护盘",
+            "指数权重",
+            "政策",
+            "美元",
+            "资源品",
+            "轮动",
+            "通胀"
           ]
         },
-        "evidence": "短线：看多（回调中）🐂📈 逻辑：港股医药在回调，上周五回调稍多，但港股医药还不错，有些公司蛮好的。 (00:00:00-00:00:00) 医药不错，最近在回调呢，现在医药在回调呢，尤其是港股的医药，我觉得香港的医药还是不错的 (00:00:00-00:00:00) 但是上周五好像回调的稍微多了点，香港医药还不错，有一些公司其实蛮好的",
+        "evidence": "短线：看空 🐻📉（不建议短线参与） 逻辑：银行、保险、券商、白酒、家电、食品、创新药、有色金属等都不适合做短线，没有共识、没有热钱、没有故事，缺乏持续赚钱效应和爆发力。做短线的应该趁着反弹卖出。 (00:1089:12-00:1121:08) 就是如果你要做短线的 趁着反弹你就把证券卖了 无论是证券保险银行还是消费 这些东西记住我说的话 你如果你是做短线的 不管是券商银行保险 金什么白酒家电食品 还是创新药 还是这个有色金属 就这些东西 如果你是做短线的 其实他们最近都表现还行 但是你要把它卖掉 他们不能做短线 他们不能做短线 记住我说的话就行了 (00:1122:12-00:1132:28) 第一个做短线 他没有共识 市场资金没有热钱 他没有故事 这些东西就适合比较内在价值估值 去衡量他现在内在价值跟价格之间的关系的 (00:1187:16-00:1200:16) 所以说牛顺以短线思维 不要参与他们 他们不是做短线的东西 做短线的东西哪能买大金融大消费 对不对 什么时候买大金融大消费 组绅行情来之后再说吧",
         "horizon": "short",
-        "logic": "港股医药在回调，上周五回调稍多，但港股医药还不错，有些公司蛮好的。",
+        "logic": "银行、保险、券商、白酒、家电、食品、创新药、有色金属等都不适合做短线，没有共识、没有热钱、没有故事，缺乏持续赚钱效应和爆发力。做短线的应该趁着反弹卖出。",
         "quality_flags": [
           "has_date",
           "has_evidence",
@@ -266,220 +373,20 @@
           "has_horizon",
           "has_risk"
         ],
-        "risk": "短线：看多（回调中）🐂📈 逻辑：港股医药在回调，上周五回调稍多，但港股医药还不错，有些公司蛮好的。 (00:00:00-00:00:00) 医药不错，最近在回调呢，现在医药在回调呢，尤其是港股的医药，我觉得香港的医药还是不错的 (00:00:00-00:00:00) 但是上周五好像回调的稍微多了点，香港医药还不错，有一些公司其实蛮好的",
-        "section": "医药（港股）",
-        "source_bv": "BV15dbR6sEc6",
-        "source_file": "钱博士 2026.8.16 BV15dbR6sEc6.md",
-        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV15dbR6sEc6.md",
-        "source_type": "livestream",
-        "stance": "bullish",
-        "timestamp": "00:00:00-00:00:00",
-        "version": 1,
-        "view_id": "c1dbadbffdc24d66",
-        "view_type": "sector",
-        "entity_score": 0.0,
-        "bucket": "D",
-        "rank_score": 0.8335
-      },
-      {
-        "analyst": "钱博士直播",
-        "claim": "短线：中性偏多 🦀➡️🐂📈",
-        "confidence": 0.91,
-        "date": "2026-08-16",
-        "entities": {
-          "indexes": [
-            "000001.SS",
-            "399001.SZ",
-            "399006.SZ"
-          ],
-          "sectors": [
-            "大盘",
-            "黄金有色"
-          ],
-          "stocks": [
-            "601899.SS"
-          ],
-          "themes": [
-            "周期",
-            "美元",
-            "资源品",
-            "通胀"
-          ]
-        },
-        "evidence": "短线：中性偏多 🦀➡️🐂📈 逻辑：黄金盯加息、降息、美元指数。黄金股涨得有点过分了，黄金回调的话有一个心理位置，不跌破那个位置就可以。 (00:00:00-00:00:00) 黄金的话就是加息讲息美元指数盯着就行了 (00:00:00-00:00:00) 黄金我一直等着回掉，黄金股涨的有点过分了 (00:00:00-00:00:00) 反正我心里有一个位置，到那个位置我觉得就可以了，不跌破那个位置就可以了",
-        "horizon": "short",
-        "logic": "黄金盯加息、降息、美元指数。黄金股涨得有点过分了，黄金回调的话有一个心理位置，不跌破那个位置就可以。",
-        "quality_flags": [
-          "has_date",
-          "has_evidence",
-          "has_logic",
-          "has_stance",
-          "has_horizon",
-          "has_risk"
-        ],
-        "risk": "短线：中性偏多 🦀➡️🐂📈 逻辑：黄金盯加息、降息、美元指数。黄金股涨得有点过分了，黄金回调的话有一个心理位置，不跌破那个位置就可以。 (00:00:00-00:00:00) 黄金的话就是加息讲息美元指数盯着就行了 (00:00:00-00:00:00) 黄金我一直等着回掉，黄金股涨的有点过分了 (00:00:00-00:00:00) 反正我心里有一个位置，到那个位置我觉得就可以了，不跌破那个位置就可以了",
-        "section": "黄金",
-        "source_bv": "BV15dbR6sEc6",
-        "source_file": "钱博士 2026.8.16 BV15dbR6sEc6.md",
-        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV15dbR6sEc6.md",
-        "source_type": "livestream",
-        "stance": "bullish",
-        "timestamp": "00:00:00-00:00:00",
-        "version": 1,
-        "view_id": "155e630bdcd5d10f",
-        "view_type": "market",
-        "entity_score": 0.0,
-        "bucket": "D",
-        "rank_score": 0.8335
-      },
-      {
-        "analyst": "钱博士直播",
-        "claim": "中长线：看空 🐻📉",
-        "confidence": 0.83,
-        "date": "2026-08-16",
-        "entities": {
-          "sectors": [
-            "黄金有色"
-          ],
-          "stocks": [
-            "601899.SS"
-          ],
-          "themes": [
-            "周期",
-            "美元",
-            "资源品",
-            "通胀"
-          ]
-        },
-        "evidence": "中长线：看空 🐻📉 逻辑：美债利率高企意味着美联储不可能加息，必须降息。10年期美债是全球资产定价之锚，利率上涨对整个资本市场价值是压制。 (00:00:00-00:00:00) 所以要解决这个问题，绝不可能是加息，他这个东西肯定就是得降息 (00:00:00-00:00:00) 10年期美债叫做全球资产定价之毛就是这个意思，他是靠这东西来定价的 涉及资产：黄金 影响与结果：美债利率上升对黄金是反向的",
-        "horizon": "medium",
-        "logic": "美债利率高企意味着美联储不可能加息，必须降息。10年期美债是全球资产定价之锚，利率上涨对整个资本市场价值是压制。",
-        "quality_flags": [
-          "has_date",
-          "has_evidence",
-          "has_logic",
-          "has_stance",
-          "has_horizon"
-        ],
-        "risk": "",
-        "section": "美债/美股",
-        "source_bv": "BV15dbR6sEc6",
-        "source_file": "钱博士 2026.8.16 BV15dbR6sEc6.md",
-        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV15dbR6sEc6.md",
+        "risk": "短线：看空 🐻📉（不建议短线参与） 逻辑：银行、保险、券商、白酒、家电、食品、创新药、有色金属等都不适合做短线，没有共识、没有热钱、没有故事，缺乏持续赚钱效应和爆发力。做短线的应该趁着反弹卖出。 (00:1089:12-00:1121:08) 就是如果你要做短线的 趁着反弹你就把证券卖了 无论是证券保险银行还是消费 这些东西记住我说的话 你如果你是做短线的 不管是券商银行保险 金什么白酒家电食品 还是创新药 还是这个有色金属 就这些东西",
+        "section": "大金融大消费（整体）",
+        "source_bv": "BV1xPtF6mEFH",
+        "source_file": "钱博士 BV1xPtF6mEFH.md",
+        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 BV1xPtF6mEFH.md",
         "source_type": "livestream",
         "stance": "bearish",
-        "timestamp": "00:00:00-00:00:00",
+        "timestamp": "00:1089:12-00:1121:08",
         "version": 1,
-        "view_id": "62a3323129c7da7f",
+        "view_id": "155ca9eb3a97c5ea",
         "view_type": "sector",
         "entity_score": 0.0,
-        "bucket": "D",
-        "rank_score": 0.7755
-      },
-      {
-        "analyst": "钱博士直播",
-        "claim": "短线：看多 🐂📈",
-        "confidence": 0.83,
-        "date": "2026-08-16",
-        "entities": {
-          "sectors": [
-            "PCB",
-            "算力",
-            "黄金有色"
-          ],
-          "stocks": [
-            "300308.SZ",
-            "300502.SZ",
-            "601899.SS"
-          ],
-          "themes": [
-            "AI服务器",
-            "CCL",
-            "周期",
-            "美元",
-            "资源品",
-            "通胀",
-            "高速板"
-          ],
-          "us_mapping": [
-            "AMD",
-            "AVGO",
-            "MRVL",
-            "NVDA"
-          ]
-        },
-        "evidence": "短线：看多 🐂📈 逻辑：PCB产业链往上意愿强于往下意愿。周五液冷、覆铜板等基本面偏好的板块已经\"憋不住\"开始表现。 (00:00:00-00:00:00) 但是在PCB产业量里边，往上的意愿强于往下的意愿 (00:00:00-00:00:00) 像周五的时候你看像夜冷啊像覆铜板啊这些基本面偏好的这种，就有点憋不住了",
-        "horizon": "short",
-        "logic": "PCB产业链往上意愿强于往下意愿。周五液冷、覆铜板等基本面偏好的板块已经\"憋不住\"开始表现。",
-        "quality_flags": [
-          "has_date",
-          "has_evidence",
-          "has_logic",
-          "has_stance",
-          "has_horizon"
-        ],
-        "risk": "",
-        "section": "PCB产业链",
-        "source_bv": "BV15dbR6sEc6",
-        "source_file": "钱博士 2026.8.16 BV15dbR6sEc6.md",
-        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV15dbR6sEc6.md",
-        "source_type": "livestream",
-        "stance": "bullish",
-        "timestamp": "00:00:00-00:00:00",
-        "version": 1,
-        "view_id": "8df30c4c93919d25",
-        "view_type": "sector",
-        "entity_score": 0.0,
-        "bucket": "D",
-        "rank_score": 0.7755
-      },
-      {
-        "analyst": "钱博士直播",
-        "claim": "短线：看多 🐂📈",
-        "confidence": 0.83,
-        "date": "2026-08-16",
-        "entities": {
-          "sectors": [
-            "PCB",
-            "黄金有色"
-          ],
-          "stocks": [
-            "601899.SS"
-          ],
-          "themes": [
-            "AI服务器",
-            "CCL",
-            "周期",
-            "美元",
-            "资源品",
-            "通胀",
-            "高速板"
-          ]
-        },
-        "evidence": "短线：看多 🐂📈 逻辑：向上意愿强于向下意愿，基本面偏好。 (00:23:61-00:23:66) 但是在pcb产业量里边，往上的意愿强于往下的意愿 (00:22:43-00:22:48) 像周五的时候，你看像夜冷啊像覆铜板啊这些基本面偏好的这种，就有点憋不住了",
-        "horizon": "short",
-        "logic": "向上意愿强于向下意愿，基本面偏好。",
-        "quality_flags": [
-          "has_date",
-          "has_evidence",
-          "has_logic",
-          "has_stance",
-          "has_horizon"
-        ],
-        "risk": "",
-        "section": "PCB产业链",
-        "source_bv": "BV1n2bR6hEV4",
-        "source_file": "钱博士 2026.8.16 BV1n2bR6hEV4.md",
-        "source_path": "E:\\obsidian-vault\\学习\\钱博士\\钱博士 2026.8.16 BV1n2bR6hEV4.md",
-        "source_type": "livestream",
-        "stance": "bullish",
-        "timestamp": "00:23:61-00:23:66",
-        "version": 1,
-        "view_id": "44c798f1ff1c7421",
-        "view_type": "sector",
-        "entity_score": 0.0,
-        "bucket": "D",
-        "rank_score": 0.7755
+        "bucket": "C",
+        "rank_score": 0.8335
       }
     ],
     "analyst_scores": [
@@ -871,16 +778,10 @@
     ],
     "market_snapshot": {
       "159992.SZ": {
-        "price": 0.89,
-        "change_pct": -5.32,
-        "updated": "2026-08-23T12:44:20.462479",
-        "name": null
-      },
-      "GOLD": {
-        "price": 46.21,
-        "change_pct": 1.2,
-        "updated": "2026-08-23T12:44:21.902450",
-        "name": null
+        "price": 0.875,
+        "change_pct": 0.806,
+        "updated": "2026-08-27T23:31:25",
+        "name": ""
       }
     },
     "user_decision_history": [
@@ -901,38 +802,39 @@
         "asset_card_version": null,
         "debate_card_id": null,
         "market_snapshot": "{}",
-        "status": "open",
+        "status": "reviewed",
         "created_at": "2026-08-06T00:48:17",
-        "updated_at": "2026-08-06T00:49:22"
+        "updated_at": "2026-08-26T22:30:20",
+        "premise": null
       }
     ],
     "rag_evidence": [
       {
-        "content": "涉及资产：科技板块\n影响与结果：资金大量滞留科技股，压制其他板块反弹力度\n逻辑：科技股资金未流出，其他板块缺乏增量资金支撑\n依据类型：逻辑推演\n(00:287:38-00:298:74) 但是目前来看的话整个这种大批量的资金在科技里面又没有出来，所以你其他的板块反弹起来总感觉是差那么点意思",
-        "source": "钱博士 BV1D78w6eE8q.md",
-        "section": "观点分析",
-        "score": 0.7418,
-        "raw_score": 0.5089,
-        "date": "2026-08-20",
+        "content": "内容：黄金与美元负相关，所有以美元计价金属均如此\n(1618.64s-1647.40s) 黃金它的一個價格 從短期來的時候 短中期來的時候 它是跟著美元是完全互相關 就是美金跌1% 其實黃金就會漲1% 所有的金屬都一樣 以美金計價的金屬其實都是一樣的 就是美金漲多少 那麼貴金屬 或者說這些所有的這個週期賽道 它就會跌多少 所以最近呢 大家也得去拆一下 就是說這個金屬漲的好 有多少是因為美元貶值導致的 還有多少是因為自主的一個上漲導致的\n\n内容：黄金长期年化收益率与标普对比\n(1242.12s-1268.12s) 黃金 從過去100年到今天 它的年化收益率差不多4.5% 標普 過去100年到現在的年化收益差不多6% 看起來差一點點 差1.5% 但事實上 黃金的每一次的漲了周期差不多10年 就漲周期10年 有10年下跌甚至是不動 所以現在我們處在一個黃金上漲 可能已經漲了5年了 就是從21年到現在 可能已經漲了5年了 那我們現在處在一個中間的過程中",
+        "source": "钱博士 BV1Drtw6cE2e.md",
+        "section": "市场知识",
+        "score": 0.777,
+        "raw_score": 0.485,
+        "date": "2026-08-28",
         "type": "livestream",
         "weights": {
-          "sim_weighted": 0.1018,
-          "freshness": 0.8,
-          "freshness_weighted": 0.48,
+          "sim_weighted": 0.097,
+          "freshness": 0.8667,
+          "freshness_weighted": 0.52,
           "type_score": 0.8,
           "type_weighted": 0.16
         }
       },
       {
-        "content": "### 贵金属\n短线：中性 🦀➡️\n逻辑：贵金属短期完全跟随金价波动，金价涨它就涨，金价跌它就跌，今天早盘回调较多。\n(00:35:12-00:35:24) 今天回调比较多的还是贵金属，早盘回调比较多贵金属，贵金属就是这么抽象的，短期金价涨它就涨，短期金价跌它就跌，它就这么抽象的。",
-        "source": "钱博士 2026.8.14 BV1VtgF6nE8x.md",
+        "content": "涉及资产：科技板块\n影响与结果：资金大量滞留科技股，压制其他板块反弹力度\n逻辑：科技股资金未流出，其他板块缺乏增量资金支撑\n依据类型：逻辑推演\n(00:287:38-00:298:74) 但是目前来看的话整个这种大批量的资金在科技里面又没有出来，所以你其他的板块反弹起来总感觉是差那么点意思",
+        "source": "钱博士 BV1D78w6eE8q.md",
         "section": "观点分析",
-        "score": 0.6172,
-        "raw_score": 0.4858,
-        "date": "2026-08-14",
+        "score": 0.6218,
+        "raw_score": 0.5089,
+        "date": "2026-08-20",
         "type": "livestream",
         "weights": {
-          "sim_weighted": 0.0972,
+          "sim_weighted": 0.1018,
           "freshness": 0.6,
           "freshness_weighted": 0.36,
           "type_score": 0.8,
@@ -940,22 +842,22 @@
         }
       },
       {
-        "content": "### 黄金\n中长线：看多 🐂📈\n逻辑：美元指数下跌，人民币升值压力大。地缘冲突暴露美国虚弱，长期利好黄金。主播个人看到2027年8000（元/克）的目标价。\n(00:00:00-00:00:00) 金价是受到压制你看现在的美元指数一又跌到一百以下了 然后咱们的连人币的汇率又6.8几了\n(00:00:00-00:00:00) 黄金我这看到27年看到8000 黄金不用担心 就是这战争结束的时候大家看到劳美的虚落\n\n---",
-        "source": "钱博士直播 2026.04.06 BV1y2DcBqESt.md",
+        "content": "涉及资产：科技板块\n影响与结果：资金大量滞留科技股，压制其他板块反弹力度\n逻辑：科技股资金未流出，其他板块缺乏增量资金支撑\n依据类型：逻辑推演\n(00:287:38-00:298:74) 但是目前来看的话整个这种大批量的资金在科技里面又没有出来，所以你其他的板块反弹起来总感觉是差那么点意思",
+        "source": "2026-08-20 （钱博士） BV1D78w6eE8q.md",
         "section": "观点分析",
-        "score": 0.3182,
-        "raw_score": 0.491,
-        "date": "2026-04-06",
+        "score": 0.6218,
+        "raw_score": 0.5089,
+        "date": "2026-08-20",
         "type": "livestream",
         "weights": {
-          "sim_weighted": 0.0982,
-          "freshness": 0.1,
-          "freshness_weighted": 0.06,
+          "sim_weighted": 0.1018,
+          "freshness": 0.6,
+          "freshness_weighted": 0.36,
           "type_score": 0.8,
           "type_weighted": 0.16
         }
       }
     ],
-    "summary": "黄金：分析卡有factors，多空对照0多0空，分析师35条历史分，近期观点5条，用户决策1条。"
+    "summary": "黄金：分析卡有factors，多空对照0多0空，分析师35条历史分，近期观点1条，用户决策1条。"
   }
 }
