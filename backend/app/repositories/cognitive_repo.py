@@ -12,6 +12,7 @@
 
 from __future__ import annotations
 
+import functools
 import json
 import sqlite3
 from datetime import datetime, timezone
@@ -22,6 +23,7 @@ DATA_DIR = Path(r"E:\qianboshi-agent\data")
 VIEWS_DIR = DATA_DIR / "views"
 DIMENSIONS_FILE = VIEWS_DIR / "dimensions_export.json"
 CONFLICTS_FILE = VIEWS_DIR / "conflicts_export.json"
+STRUCTURED_VIEWS_FILE = VIEWS_DIR / "structured_views.jsonl"
 DECISION_DB = DATA_DIR / "qianboshi_decision.db"
 
 # ---------------------------------------------------------------------------
@@ -260,6 +262,35 @@ def get_dimensions_page(
 # ---------------------------------------------------------------------------
 # 2. 冲突中心（conflicts_export.json）
 # ---------------------------------------------------------------------------
+@functools.lru_cache(maxsize=1)
+def _load_view_anchor_map() -> dict[str, dict[str, str]]:
+    """view_id → {bv_id, ts_display} 锚点映射（structured_views.jsonl，供冲突成员下钻跳 B 站）。
+
+    view_id 与 conflicts 成员同源；匹配不上的成员（约 10%）保持无锚点，
+    前端显示「无锚点」而非伪造链接。
+    """
+    anchor_map: dict[str, dict[str, str]] = {}
+    if not STRUCTURED_VIEWS_FILE.exists():
+        return anchor_map
+    with open(STRUCTURED_VIEWS_FILE, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            vid = rec.get("view_id")
+            bv = rec.get("source_bv")
+            if vid and bv:
+                anchor_map[vid] = {
+                    "bv_id": bv,
+                    "ts_display": rec.get("timestamp"),
+                }
+    return anchor_map
+
+
 def _aggregate_conflicts() -> dict[str, Any]:
     data = _load_json(CONFLICTS_FILE)
     if not data or not isinstance(data, dict):
@@ -268,10 +299,26 @@ def _aggregate_conflicts() -> dict[str, Any]:
     conflicts = data.get("conflicts") or []
     divergences = data.get("divergences") or []
     view_map = data.get("view_conflict_map") or {}
+    anchor_map = _load_view_anchor_map()
 
     # 冲突组摘要（P1-C：全量透出，含成员完整列表；前端筛选器按 topic/level 过滤）
     conflict_summary: list[dict[str, Any]] = []
     for group in conflicts:
+        members: list[dict[str, Any]] = []
+        for m in (group.get("bull_members") or [])[:4] + (group.get("bear_members") or [])[:4]:
+            anchor = anchor_map.get(m.get("view_id") or "")
+            members.append(
+                {
+                    "view_id": m.get("view_id"),
+                    "stance": m.get("stance"),
+                    "claim": m.get("claim"),
+                    "date": m.get("date"),
+                    "analyst": m.get("analyst"),
+                    "materiality": m.get("materiality"),
+                    "bv_id": (anchor or {}).get("bv_id"),
+                    "ts_display": (anchor or {}).get("ts_display"),
+                }
+            )
         conflict_summary.append(
             {
                 "group_id": group.get("conflict_group_id"),
@@ -283,16 +330,7 @@ def _aggregate_conflicts() -> dict[str, Any]:
                 "n_template": group.get("n_template"),
                 "date_min": group.get("date_min"),
                 "date_max": group.get("date_max"),
-                "members": [
-                    {
-                        "view_id": m.get("view_id"),
-                        "stance": m.get("stance"),
-                        "claim": m.get("claim"),
-                        "date": m.get("date"),
-                        "analyst": m.get("analyst"),
-                    }
-                    for m in (group.get("bull_members") or [])[:4] + (group.get("bear_members") or [])[:4]
-                ],
+                "members": members,
             }
         )
 

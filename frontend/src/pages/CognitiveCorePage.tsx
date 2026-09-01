@@ -92,6 +92,9 @@ export default function CognitiveCorePage() {
   const locale = i18n.resolvedLanguage ?? i18n.language ?? "zh";
   const provider = useContext(DataContext);
   const [data, setData] = useState<CognitiveData | null>(null);
+  // P1-C：冲突中心 topic 筛选器 + 成员下钻（展开原文证据卡 → 跳 B 站）
+  const [conflictTopic, setConflictTopic] = useState<string>("all");
+  const [expandedView, setExpandedView] = useState<string | null>(null);
 
   useEffect(() => {
     provider?.getCognitive().then((d) => setData(d ?? null));
@@ -151,13 +154,50 @@ export default function CognitiveCorePage() {
 
   const conflicts = data.conflicts;
   const conflictSummary = (conflicts.summary ?? []) as Array<{
+    group_id?: string;
     topic?: string;
     subject_entity?: string;
+    level?: string;
     n_bull?: number;
     n_bear?: number;
     n_template?: number;
-    members?: Array<{ stance?: string; claim?: string; date?: string; analyst?: string }>;
+    date_min?: string;
+    date_max?: string;
+    members?: Array<{
+      view_id?: string;
+      stance?: string;
+      claim?: string;
+      date?: string;
+      analyst?: string;
+      materiality?: string;
+      bv_id?: string;
+      ts_display?: string;
+    }>;
   }>;
+
+  // P1-C：冲突中心 topic 筛选器 + 成员下钻（展开原文证据卡 → 跳 B 站）
+  const topicOptions = Array.from(
+    new Set(conflictSummary.map((g) => g.topic).filter((t): t is string => !!t)),
+  ).sort((a, b) => a.localeCompare(b, "zh-CN"));
+  const filteredConflicts =
+    conflictTopic === "all"
+      ? conflictSummary
+      : conflictSummary.filter((g) => g.topic === conflictTopic);
+
+  const biliUrl = (bv: string | undefined, ts: string | undefined): string | null => {
+    if (!bv) return null;
+    // ts_display 两种格式：① "01:16:50-01:17:05"（HH:MM:SS 区间）② "789.62s-791.42s"（纯秒）
+    // 统一取起点换算秒数跳转
+    let sec = 0;
+    const hms = /^(\d{1,2}):(\d{1,2}):(\d{1,2})/.exec(ts ?? "");
+    if (hms) {
+      sec = Number(hms[1]) * 3600 + Number(hms[2]) * 60 + Number(hms[3]);
+    } else {
+      const secMatch = /^(\d+(?:\.\d+)?)s?/.exec(ts ?? "");
+      if (secMatch) sec = Math.floor(Number(secMatch[1]));
+    }
+    return `https://www.bilibili.com/video/${bv}?t=${sec}`;
+  };
 
   const factsList: Array<{ key: string; label: string; render: () => string }> = [
     {
@@ -263,8 +303,10 @@ export default function CognitiveCorePage() {
           </ChartFrame>
         </div>
 
-        {/* 冲突中心 */}
-        <ChartFrame title={t("cognitive.conflicts")}>
+        {/* 冲突中心（P1-C：topic 筛选 + 成员下钻 → 展开原文证据卡 → 跳 B 站） */}
+        <ChartFrame
+          title={`${t("cognitive.conflicts")} · ${nf(filteredConflicts.length)}/${nf(conflictSummary.length)}`}
+        >
           <div className="grid gap-4 md:grid-cols-[auto_1fr]">
             <div className="grid grid-cols-3 gap-3 self-start text-center">
               {(
@@ -280,22 +322,117 @@ export default function CognitiveCorePage() {
                 </div>
               ))}
             </div>
-            <div className="space-y-2">
-              {conflictSummary.slice(0, 4).map((g, idx) => (
-                <div key={`${g.topic}-${idx}`} className="rounded-lg border border-line bg-surface p-3">
-                  <div className="flex flex-wrap items-center gap-2 text-xs">
-                    <span className="rounded bg-warning/10 px-2 py-0.5 font-mono text-warning">{g.topic ?? "—"}</span>
-                    <span className="text-muted">{g.subject_entity ?? ""}</span>
-                    <span className="ml-auto font-mono text-muted">bull {nf(g.n_bull)} / bear {nf(g.n_bear)}</span>
-                  </div>
-                  {(g.members ?? []).slice(0, 2).map((m, i) => (
-                    <p key={i} className="mt-1.5 truncate text-xs leading-5 text-muted" title={m.claim}>
-                      {m.stance === "bullish" ? "🟢" : m.stance === "bearish" ? "🔴" : "⚪"} {m.claim ?? "—"}
-                      {m.analyst || m.date ? <span className="ml-1 font-mono text-muted/70">({m.analyst ?? ""} {m.date ?? ""})</span> : null}
-                    </p>
+            <div className="min-w-0 space-y-2">
+              {/* topic 筛选器 */}
+              {topicOptions.length > 1 ? (
+                <div className="flex flex-wrap gap-1.5">
+                  <button
+                    type="button"
+                    onClick={() => setConflictTopic("all")}
+                    className={`rounded-full px-2.5 py-1 text-[11px] transition ${
+                      conflictTopic === "all"
+                        ? "bg-brand text-white"
+                        : "border border-line bg-surfaceSubtle text-muted hover:border-brand/50 hover:text-heading"
+                    }`}
+                  >
+                    {t("cognitive.conflictFilterAll")}
+                  </button>
+                  {topicOptions.map((topic) => (
+                    <button
+                      type="button"
+                      key={topic}
+                      onClick={() => setConflictTopic(topic)}
+                      className={`rounded-full px-2.5 py-1 text-[11px] transition ${
+                        conflictTopic === topic
+                          ? "bg-brand text-white"
+                          : "border border-line bg-surfaceSubtle text-muted hover:border-brand/50 hover:text-heading"
+                      }`}
+                    >
+                      {topic}
+                    </button>
                   ))}
                 </div>
-              ))}
+              ) : null}
+
+              {filteredConflicts.length === 0 ? (
+                <p className="rounded-lg border border-line bg-surface p-3 text-sm text-muted">
+                  {t("cognitive.noData")}
+                </p>
+              ) : (
+                filteredConflicts.map((g, idx) => (
+                  <div key={g.group_id ?? `${g.topic}-${idx}`} className="rounded-lg border border-line bg-surface p-3">
+                    <div className="flex flex-wrap items-center gap-2 text-xs">
+                      <span className="rounded bg-warning/10 px-2 py-0.5 font-mono text-warning">{g.topic ?? "—"}</span>
+                      <span className="text-muted">{g.subject_entity ?? ""}</span>
+                      {g.date_min || g.date_max ? (
+                        <span className="font-mono text-muted/70">
+                          {g.date_min ?? ""} ~ {g.date_max ?? ""}
+                        </span>
+                      ) : null}
+                      <span className="ml-auto font-mono text-muted">
+                        bull {nf(g.n_bull)} / bear {nf(g.n_bear)}
+                        {typeof g.n_template === "number" && g.n_template > 0 ? ` / tpl ${nf(g.n_template)}` : ""}
+                      </span>
+                    </div>
+                    {(g.members ?? []).map((m) => {
+                      const expanded = expandedView === m.view_id;
+                      const url = biliUrl(m.bv_id, m.ts_display);
+                      return (
+                        <div key={m.view_id ?? `${g.group_id}-${m.claim}`} className="mt-1.5">
+                          <button
+                            type="button"
+                            onClick={() => setExpandedView(expanded ? null : (m.view_id ?? null))}
+                            className="flex w-full items-start gap-2 rounded-md px-1 py-1 text-left text-xs leading-5 text-muted transition hover:bg-surfaceSubtle hover:text-heading"
+                            title={t("cognitive.conflictExpandHint")}
+                          >
+                            <span className="mt-0.5 shrink-0">
+                              {m.stance === "bullish" ? "🟢" : m.stance === "bearish" ? "🔴" : "⚪"}
+                            </span>
+                            <span className="min-w-0 flex-1">
+                              <span className="line-clamp-2">{m.claim ?? "—"}</span>
+                              <span className="font-mono text-muted/70">
+                                {m.analyst ?? ""}
+                                {m.date ? ` · ${m.date}` : ""}
+                                {m.materiality ? ` · ${m.materiality}` : ""}
+                              </span>
+                            </span>
+                            <span className="mt-0.5 shrink-0 text-muted/60">
+                              {expanded ? t("cognitive.conflictCollapse") : t("cognitive.conflictExpand")}
+                            </span>
+                          </button>
+                          {/* 下钻证据卡：第二次点击跳 B 站原文 */}
+                          {expanded ? (
+                            <div className="ml-6 mt-1 rounded-md border border-line bg-surfaceSubtle px-3 py-2">
+                              <p className="whitespace-pre-wrap text-xs leading-5 text-heading">{m.claim ?? "—"}</p>
+                              <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[11px] text-muted">
+                                <span>view {m.view_id ?? "—"}</span>
+                                {m.ts_display ? <span>{m.ts_display}</span> : null}
+                                {m.bv_id ? <span>{m.bv_id}</span> : null}
+                              </div>
+                              <div className="mt-2 flex flex-wrap gap-2">
+                                {url ? (
+                                  <a
+                                    href={url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center gap-1 rounded-md bg-brand px-2.5 py-1 text-[11px] font-medium text-white transition hover:bg-brandStrong"
+                                  >
+                                    {t("cognitive.conflictGoSource")} ↗
+                                  </a>
+                                ) : (
+                                  <span className="inline-flex items-center rounded-md border border-line px-2.5 py-1 text-[11px] text-muted">
+                                    {t("cognitive.conflictNoAnchor")}
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          ) : null}
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))
+              )}
               <p className="text-xs leading-5 text-muted">{t("cognitive.conflictNote")}</p>
             </div>
           </div>
