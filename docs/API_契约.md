@@ -31,8 +31,11 @@
 | GET | /api/v1/decisions | `{decisions_data: {...}}` | decisions_repo | ✅ |
 | GET | /api/v1/briefs | `{briefs: [...]}` | brief_repo | ✅ |
 | GET | /api/v1/briefs/{filename} | `{brief: {...}}` 或 404 | brief_repo（路径穿越已防） | ✅ |
+| GET | /api/v1/cognitive | `{cognitive_data: {blueprint, facts, dimensions, conflicts, backtest, decisions}}` | cognitive_repo | ✅ 2026-09-01 |
 
 **未实现（Phase 2e+）**：/api/v1/architecture、/api/v1/discipline、/api/v1/about（前端 api-client 已有对应空骨架方法，后端加了端点后只需在 api-client 补映射）。
+
+> cognitive 字段映射注意：`dimensions` 与 `backtest.rows` 为 **snake_case 原样透传**（mapCognitiveResponse 只映射顶层），前端读 `source_layers/window_days/hit_rate` 等 snake_case；顶层 `decision_logs→decisionLogs` 等已映射。快照 `snapshots/cognitive.json` 结构与 API 一致（外层包 cognitive_data）。
 
 ## 3. 端点返回结构 + 字段映射（snake_case → camelCase）
 

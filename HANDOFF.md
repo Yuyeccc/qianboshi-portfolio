@@ -18,6 +18,7 @@
 | 3 | 研究档案库（Obsidian笔记浏览/RAG检索/资产证据包，按需加载+快照分片） | ✅ 开发中 |
 | 2h | 关于页（项目概述/工作范围/技术栈地图/工程取舍/边界+路线图/联系区，反爬：无邮箱电话） | ✅ 2026-08-23 |
 | 3b | 笔记库 990 篇全量修复：重命名 `YYYY-MM-DD （博主） BV号.md` + date/source 标准化（B站 API 补爬 492 个 BV pubdate 到 bv_pubdates.json） | ✅ 2026-08-26 |
+| 2i | 认知内核页（`/#/cognitive`）：19/19 蓝图成果四模块（证据链保真/维度增补/预测约束/认知闭环），cognitive_repo+`/api/v1/cognitive`+cognitive.json 快照，zh/en 双语 | ✅ 2026-09-01 |
 
 **6 页完成 + 简报行情增强 + Phase 5 部署完成**。剩余：P0 管线升级（见待办 3）。
 
@@ -52,9 +53,10 @@
 
 ## 三、待办（按序）
 
-1. **Phase 5**：`backend/scripts/generate_snapshots.py`（调 repo 层生成 public/snapshots/*.json，含 market.json）+ snapshot-client 对接 + GitHub Actions 部署 Pages + 404 页 + SEO
-2. **关于页 2h**：AboutPage 还是占位（求职向：技术栈/亮点/GitHub/联系方式）
-3. **P0 管线升级（gpt 融合方案）**：行情快照接入 agent.py 日报（非交易时段显示最近收盘价而非 N/A）+ report_schema + 分章 Checkpoint——方案见 `webpage_design\16_refs_fusion_plan.md`（gpt-5.6-sol 评判 Turtle/OpenJury 的融合落地方案）
+1. **认知内核 P1（2026-09-01 待办）**：现有页增强（Overview 认知内核入口 + Architecture 嵌入认知处理层 + DataAssets 资产卡三维 + DecisionDesk 前提/失效条件 + About 取舍）+ 观点原文两次点击下钻 + 冲突中心筛选器；252 条补标注后从 Mac 重跑 export_dimensions 更新维度快照（当前 8-31 7484 条口径）
+2. **Phase 5**：`backend/scripts/generate_snapshots.py`（调 repo 层生成 public/snapshots/*.json，含 market.json）+ snapshot-client 对接 + GitHub Actions 部署 Pages + 404 页 + SEO —— ✅ 已部署（2026-08-23），cron `dfd0263d3595` 每日 23:00 自动更新
+3. **关于页 2h**：AboutPage 还是占位（求职向：技术栈/亮点/GitHub/联系方式）—— ✅ 2026-08-23 完成
+4. **P0 管线升级（gpt 融合方案）**：行情快照接入 agent.py 日报（非交易时段显示最近收盘价而非 N/A）+ report_schema + 分章 Checkpoint——方案见 `webpage_design\\16_refs_fusion_plan.md`（gpt-5.6-sol 评判 Turtle/OpenJury 的融合落地方案）
 
 ## 四、关键文件索引
 
