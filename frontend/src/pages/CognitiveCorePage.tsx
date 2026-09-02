@@ -20,7 +20,7 @@ function pct(value: unknown, total: number): string {
 function FactCard({ label, value, source }: { label: string; value: string; source?: string }) {
   return (
     <div className="rounded-lg border border-line bg-surface p-4">
-      <p className="font-mono text-[11px] uppercase tracking-wider text-brand">{label}</p>
+      <p className="font-mono text-[12px] font-medium text-brand">{label}</p>
       <p className="mt-2 text-xl font-semibold text-heading">{value}</p>
       {source ? <p className="mt-1 text-[11px] leading-4 text-muted">{source}</p> : null}
     </div>
@@ -303,9 +303,12 @@ export default function CognitiveCorePage() {
           </ChartFrame>
         </div>
 
-        {/* 冲突中心（P1-C：topic 筛选 + 成员下钻 → 展开原文证据卡 → 跳 B 站） */}
+        {/* 冲突中心（P1-C：topic 筛选 + 成员下钻 → 展开原文证据卡 → 跳 B 站）
+            bodyClassName 传 min-w-0，覆盖 ChartFrame 默认 h-64，避免 465 组全量列表
+            溢出盒子、被下方模块遮盖；冲突列表用单独限高滚动容器包裹。 */}
         <ChartFrame
           title={`${t("cognitive.conflicts")} · ${nf(filteredConflicts.length)}/${nf(conflictSummary.length)}`}
+          bodyClassName="min-w-0"
         >
           <div className="grid gap-4 md:grid-cols-[auto_1fr]">
             <div className="grid grid-cols-3 gap-3 self-start text-center">
@@ -354,11 +357,12 @@ export default function CognitiveCorePage() {
                 </div>
               ) : null}
 
-              {filteredConflicts.length === 0 ? (
-                <p className="rounded-lg border border-line bg-surface p-3 text-sm text-muted">
-                  {t("cognitive.noData")}
-                </p>
-              ) : (
+              <div className="max-h-[70vh] overflow-y-auto pr-1">
+                {filteredConflicts.length === 0 ? (
+                  <p className="rounded-lg border border-line bg-surface p-3 text-sm text-muted">
+                    {t("cognitive.noData")}
+                  </p>
+                ) : (
                 filteredConflicts.map((g, idx) => (
                   <div key={g.group_id ?? `${g.topic}-${idx}`} className="rounded-lg border border-line bg-surface p-3">
                     <div className="flex flex-wrap items-center gap-2 text-xs">
@@ -433,6 +437,7 @@ export default function CognitiveCorePage() {
                   </div>
                 ))
               )}
+              </div>
               <p className="text-xs leading-5 text-muted">{t("cognitive.conflictNote")}</p>
             </div>
           </div>

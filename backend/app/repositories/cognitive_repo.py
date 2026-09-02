@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import functools
 import json
+import re
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
@@ -291,6 +292,41 @@ def _load_view_anchor_map() -> dict[str, dict[str, str]]:
     return anchor_map
 
 
+# 发布日期权威来源：source_file 文件名里的 YYYY.MM.DD / YYYY-MM-DD
+# （标注管线 auto 抽取的 date 字段年份不可靠——2026 视频被抽成 2025/2024 甚至 2016，
+#   冲突中心实测可校验成员 27.3% 日期错误。文件名日期是 note 收录的发布日期，作为权威。
+#   仅当文件名含日期才覆盖；否则保留原始 date 字段，不猜。）
+_DATE_RE = re.compile(r"(?<!\d)(\d{4})[.\-](\d{2})[.\-](\d{2})(?!\d)")
+
+
+def _load_authoritative_date_map() -> dict[str, str]:
+    """view_id → 权威发布时间（从 source_file 文件名解析，兼容 YYYY.MM.DD 与 YYYY-MM-DD）。
+
+    与 _load_view_anchor_map 同源（structured_views.jsonl）。文件名无日期的成员
+    不在此映射，调用方回退到原始 date 字段。
+    """
+    date_map: dict[str, str] = {}
+    if not STRUCTURED_VIEWS_FILE.exists():
+        return date_map
+    with open(STRUCTURED_VIEWS_FILE, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            vid = rec.get("view_id")
+            sf = rec.get("source_file") or ""
+            if not vid or not sf:
+                continue
+            m = _DATE_RE.search(sf)
+            if m:
+                date_map[vid] = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    return date_map
+
+
 def _aggregate_conflicts() -> dict[str, Any]:
     data = _load_json(CONFLICTS_FILE)
     if not data or not isinstance(data, dict):
@@ -300,6 +336,7 @@ def _aggregate_conflicts() -> dict[str, Any]:
     divergences = data.get("divergences") or []
     view_map = data.get("view_conflict_map") or {}
     anchor_map = _load_view_anchor_map()
+    date_map = _load_authoritative_date_map()
 
     # 冲突组摘要（P1-C：全量透出，含成员完整列表；前端筛选器按 topic/level 过滤）
     conflict_summary: list[dict[str, Any]] = []
@@ -307,12 +344,16 @@ def _aggregate_conflicts() -> dict[str, Any]:
         members: list[dict[str, Any]] = []
         for m in (group.get("bull_members") or [])[:4] + (group.get("bear_members") or [])[:4]:
             anchor = anchor_map.get(m.get("view_id") or "")
+            vid = m.get("view_id") or ""
+            # 日期修复：标注抽取的 date 年份不可靠，优先用 source_file 文件名里的权威日期
+            raw_date = m.get("date")
+            auth_date = date_map.get(vid)
             members.append(
                 {
-                    "view_id": m.get("view_id"),
+                    "view_id": vid,
                     "stance": m.get("stance"),
                     "claim": m.get("claim"),
-                    "date": m.get("date"),
+                    "date": auth_date or raw_date,
                     "analyst": m.get("analyst"),
                     "materiality": m.get("materiality"),
                     "bv_id": (anchor or {}).get("bv_id"),

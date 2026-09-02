@@ -5,6 +5,8 @@ interface ChartFrameProps {
   subtitle?: string;
   children: ReactNode;
   className?: string;
+  /** 覆盖内容容器默认的固定高度（默认 h-64）。列表类内容请传入可自适应/可滚动的高度类，避免固定 256px 溢出。 */
+  bodyClassName?: string;
 }
 
 export default function ChartFrame({
@@ -12,6 +14,7 @@ export default function ChartFrame({
   subtitle,
   children,
   className = "",
+  bodyClassName,
 }: ChartFrameProps) {
   return (
     <section
@@ -23,7 +26,7 @@ export default function ChartFrame({
           <p className="mt-1 text-xs leading-5 text-muted">{subtitle}</p>
         ) : null}
       </header>
-      <div className="h-64 min-w-0">{children}</div>
+      <div className={`min-w-0 ${bodyClassName ?? "h-64"}`}>{children}</div>
     </section>
   );
 }
