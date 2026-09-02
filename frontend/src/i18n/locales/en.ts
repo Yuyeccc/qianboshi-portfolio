@@ -14,6 +14,10 @@ export default {
     running: "Researching…",
     cancel: "Cancel",
     demoMode: "Demo mode: screening is real; the research flow and report are sample data (P0).",
+    liveBadge: "Live Research Report",
+    liveRunning: "Research job submitted to the backend agent: sourcing material, retrieving views and assembling the evidence-backed report (≈2-6 min).",
+    failedTitle: "Research task failed",
+    failedRetry: "Retry",
     categoriesTitle: "You can ask",
     categoriesSub: "Pick a category to start — templates are editable",
     cat: {

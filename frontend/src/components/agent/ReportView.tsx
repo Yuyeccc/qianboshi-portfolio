@@ -47,10 +47,12 @@ function SectionTitle({
 }
 
 interface Props {
-  report: DemoReport;
+  report: Omit<DemoReport, "matchKeywords">;
+  /** live=true 为后端实时研究报告（badge 文案区分演示/实时） */
+  live?: boolean;
 }
 
-export default function ReportView({ report }: Props) {
+export default function ReportView({ report, live = false }: Props) {
   const { t } = useTranslation();
   const [evidenceOpen, setEvidenceOpen] = useState(false);
 
@@ -60,7 +62,7 @@ export default function ReportView({ report }: Props) {
       <header className="flex flex-wrap items-center gap-2 border-b border-line px-5 py-3">
         <span className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary">
           <FileText size={11} />
-          {t("agent.demoReport.badge")}
+          {live ? t("agent.liveBadge") : t("agent.demoReport.badge")}
         </span>
         <span className="text-xs text-muted">
           {t("agent.demoReport.goal")}：{report.goal}

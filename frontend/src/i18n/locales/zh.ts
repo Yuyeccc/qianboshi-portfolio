@@ -14,6 +14,10 @@ export default {
     running: "研究中…",
     cancel: "取消",
     demoMode: "当前为演示模式：安检真实生效，研究流程与报告为演示数据（P0）。",
+    liveBadge: "实时研究报告",
+    liveRunning: "研究任务已提交后端 Agent：正在采集素材、检索观点并生成带证据链的报告（约 2-6 分钟）。",
+    failedTitle: "研究任务失败",
+    failedRetry: "重新研究",
     categoriesTitle: "你可以这样问",
     categoriesSub: "选择一类问题开始，模板可编辑",
     cat: {

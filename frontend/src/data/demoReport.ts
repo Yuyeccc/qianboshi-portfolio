@@ -56,7 +56,7 @@ export interface DemoReport {
     downsideVars: string[];
   };
   scenarios: ReportScenario[];
-  watchlist: string[];
+  watchlist: { text: string; trigger: string }[];
   evidence: ReportEvidence[];
 }
 
