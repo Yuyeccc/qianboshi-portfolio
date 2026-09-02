@@ -1,7 +1,7 @@
 {
   "cognitive_data": {
     "meta": {
-      "generated_at": "2026-09-02T11:15:16.251484+00:00",
+      "generated_at": "2026-09-02T11:29:08.831064+00:00",
       "source": "dimensions_export.json 8-31 + conflicts_export.json 8-31 + qianboshi_decision.db + 73 号校验口径",
       "version": "v1"
     },
@@ -30461,11 +30461,11 @@
           "count": 10
         },
         {
-          "topic": "股市",
+          "topic": "半導體",
           "count": 10
         },
         {
-          "topic": "半導體",
+          "topic": "股市",
           "count": 10
         },
         {
@@ -30473,11 +30473,11 @@
           "count": 10
         },
         {
-          "topic": "航空",
+          "topic": "有色金属",
           "count": 10
         },
         {
-          "topic": "有色金属",
+          "topic": "航空",
           "count": 10
         },
         {
@@ -30529,7 +30529,7 @@
           "count": 6
         },
         {
-          "topic": "光伏",
+          "topic": "高股息",
           "count": 6
         },
         {
@@ -30537,11 +30537,11 @@
           "count": 6
         },
         {
-          "topic": "自动驾驶",
+          "topic": "光伏",
           "count": 6
         },
         {
-          "topic": "高股息",
+          "topic": "自动驾驶",
           "count": 6
         },
         {
@@ -30557,11 +30557,11 @@
           "count": 5
         },
         {
-          "topic": "韩国股市",
+          "topic": "银行股",
           "count": 5
         },
         {
-          "topic": "电力",
+          "topic": "韩国股市",
           "count": 5
         },
         {
@@ -30569,11 +30569,11 @@
           "count": 5
         },
         {
-          "topic": "覆铜板",
+          "topic": "电力",
           "count": 5
         },
         {
-          "topic": "银行股",
+          "topic": "覆铜板",
           "count": 5
         },
         {
@@ -30705,6 +30705,10 @@
           "count": 3
         },
         {
+          "topic": "债券",
+          "count": 3
+        },
+        {
           "topic": "通信设备",
           "count": 3
         },
@@ -30713,7 +30717,19 @@
           "count": 3
         },
         {
+          "topic": "小米",
+          "count": 3
+        },
+        {
           "topic": "市场情绪",
+          "count": 3
+        },
+        {
+          "topic": "电网设备",
+          "count": 3
+        },
+        {
+          "topic": "红利低波",
           "count": 3
         },
         {
@@ -30722,6 +30738,10 @@
         },
         {
           "topic": "基金",
+          "count": 3
+        },
+        {
+          "topic": "宽基ETF",
           "count": 3
         },
         {
@@ -30745,10 +30765,6 @@
           "count": 3
         },
         {
-          "topic": "债券",
-          "count": 3
-        },
-        {
           "topic": "金属",
           "count": 3
         },
@@ -30761,15 +30777,7 @@
           "count": 3
         },
         {
-          "topic": "红利低波",
-          "count": 3
-        },
-        {
           "topic": "铜铝",
-          "count": 3
-        },
-        {
-          "topic": "电网设备",
           "count": 3
         },
         {
@@ -30777,11 +30785,15 @@
           "count": 3
         },
         {
-          "topic": "消费股",
+          "topic": "CCL",
           "count": 3
         },
         {
-          "topic": "宽基ETF",
+          "topic": "激光雷达",
+          "count": 3
+        },
+        {
+          "topic": "消费股",
           "count": 3
         },
         {
@@ -30790,6 +30802,10 @@
         },
         {
           "topic": "电商",
+          "count": 3
+        },
+        {
+          "topic": "储能",
           "count": 3
         },
         {
@@ -30805,11 +30821,7 @@
           "count": 3
         },
         {
-          "topic": "CCL",
-          "count": 3
-        },
-        {
-          "topic": "小米",
+          "topic": "钴",
           "count": 3
         },
         {
@@ -30821,19 +30833,7 @@
           "count": 3
         },
         {
-          "topic": "钴",
-          "count": 3
-        },
-        {
-          "topic": "激光雷达",
-          "count": 3
-        },
-        {
           "topic": "技术分析",
-          "count": 3
-        },
-        {
-          "topic": "储能",
           "count": 3
         },
         {
@@ -30897,6 +30897,10 @@
           "count": 2
         },
         {
+          "topic": "上证指数",
+          "count": 2
+        },
+        {
           "topic": "产业链",
           "count": 2
         },
@@ -30913,7 +30917,15 @@
           "count": 2
         },
         {
+          "topic": "车企",
+          "count": 2
+        },
+        {
           "topic": "ç®å",
+          "count": 2
+        },
+        {
+          "topic": "食品饮料",
           "count": 2
         },
         {
@@ -31021,7 +31033,7 @@
           "count": 2
         },
         {
-          "topic": "食品饮料",
+          "topic": "代工",
           "count": 2
         },
         {
@@ -31045,10 +31057,6 @@
           "count": 2
         },
         {
-          "topic": "上证指数",
-          "count": 2
-        },
-        {
           "topic": "期货",
           "count": 2
         },
@@ -31061,19 +31069,11 @@
           "count": 2
         },
         {
-          "topic": "餐饮",
-          "count": 2
-        },
-        {
-          "topic": "车企",
-          "count": 2
-        },
-        {
           "topic": "价格战",
           "count": 2
         },
         {
-          "topic": "代工",
+          "topic": "餐饮",
           "count": 2
         },
         {
@@ -31213,6 +31213,14 @@
           "count": 1
         },
         {
+          "topic": "券商保险",
+          "count": 1
+        },
+        {
+          "topic": "宏观",
+          "count": 1
+        },
+        {
           "topic": "沪深300",
           "count": 1
         },
@@ -31233,11 +31241,59 @@
           "count": 1
         },
         {
+          "topic": "韩国",
+          "count": 1
+        },
+        {
           "topic": "技术",
           "count": 1
         },
         {
           "topic": "技术形态",
+          "count": 1
+        },
+        {
+          "topic": "航天板块",
+          "count": 1
+        },
+        {
+          "topic": "融资盘",
+          "count": 1
+        },
+        {
+          "topic": "网格交易",
+          "count": 1
+        },
+        {
+          "topic": "ç§å50",
+          "count": 1
+        },
+        {
+          "topic": "影视传媒",
+          "count": 1
+        },
+        {
+          "topic": "地缘风险",
+          "count": 1
+        },
+        {
+          "topic": "地缘政治",
+          "count": 1
+        },
+        {
+          "topic": "期权",
+          "count": 1
+        },
+        {
+          "topic": "铜钴",
+          "count": 1
+        },
+        {
+          "topic": "高速公路",
+          "count": 1
+        },
+        {
+          "topic": "技术革命",
           "count": 1
         },
         {
@@ -31261,6 +31317,10 @@
           "count": 1
         },
         {
+          "topic": "大盘ETF",
+          "count": 1
+        },
+        {
           "topic": "股息率",
           "count": 1
         },
@@ -31270,6 +31330,10 @@
         },
         {
           "topic": "光模块/PCB",
+          "count": 1
+        },
+        {
+          "topic": "风格切换",
           "count": 1
         },
         {
@@ -31305,6 +31369,10 @@
           "count": 1
         },
         {
+          "topic": "钢铁",
+          "count": 1
+        },
+        {
           "topic": "美伊战争",
           "count": 1
         },
@@ -31334,6 +31402,14 @@
         },
         {
           "topic": "直播行业",
+          "count": 1
+        },
+        {
+          "topic": "半导体/设备",
+          "count": 1
+        },
+        {
+          "topic": "就业",
           "count": 1
         },
         {
@@ -31437,7 +31513,7 @@
           "count": 1
         },
         {
-          "topic": "就业",
+          "topic": "美股科技",
           "count": 1
         },
         {
@@ -31450,6 +31526,10 @@
         },
         {
           "topic": "玻纤布",
+          "count": 1
+        },
+        {
+          "topic": "金融危机",
           "count": 1
         },
         {
@@ -31474,6 +31554,10 @@
         },
         {
           "topic": "贸易战",
+          "count": 1
+        },
+        {
+          "topic": "貴金屬",
           "count": 1
         },
         {
@@ -31529,6 +31613,10 @@
           "count": 1
         },
         {
+          "topic": "比亚迪",
+          "count": 1
+        },
+        {
           "topic": "先进制程",
           "count": 1
         },
@@ -31538,6 +31626,14 @@
         },
         {
           "topic": "保险行业",
+          "count": 1
+        },
+        {
+          "topic": "油金",
+          "count": 1
+        },
+        {
+          "topic": "功率半导体",
           "count": 1
         },
         {
@@ -31557,6 +31653,10 @@
           "count": 1
         },
         {
+          "topic": "市场轮动",
+          "count": 1
+        },
+        {
           "topic": "电子树脂",
           "count": 1
         },
@@ -31566,6 +31666,14 @@
         },
         {
           "topic": "åå·¥",
+          "count": 1
+        },
+        {
+          "topic": "价值股",
+          "count": 1
+        },
+        {
+          "topic": "ST摘帽",
           "count": 1
         },
         {
@@ -31601,6 +31709,14 @@
           "count": 1
         },
         {
+          "topic": "选股",
+          "count": 1
+        },
+        {
+          "topic": "智能驾驶",
+          "count": 1
+        },
+        {
           "topic": "市场宽度",
           "count": 1
         },
@@ -31613,7 +31729,31 @@
           "count": 1
         },
         {
+          "topic": "物理AI",
+          "count": 1
+        },
+        {
+          "topic": "股指",
+          "count": 1
+        },
+        {
+          "topic": "算力/半导体",
+          "count": 1
+        },
+        {
+          "topic": "荐股",
+          "count": 1
+        },
+        {
+          "topic": "监管",
+          "count": 1
+        },
+        {
           "topic": "消费税",
+          "count": 1
+        },
+        {
+          "topic": "市场底部",
           "count": 1
         },
         {
@@ -31633,6 +31773,10 @@
           "count": 1
         },
         {
+          "topic": "豆包产业链",
+          "count": 1
+        },
+        {
           "topic": "æ¨¡å",
           "count": 1
         },
@@ -31649,6 +31793,22 @@
           "count": 1
         },
         {
+          "topic": "防御股",
+          "count": 1
+        },
+        {
+          "topic": "低位",
+          "count": 1
+        },
+        {
+          "topic": "猪周期",
+          "count": 1
+        },
+        {
+          "topic": "生猪",
+          "count": 1
+        },
+        {
           "topic": "资金轮动",
           "count": 1
         },
@@ -31658,6 +31818,10 @@
         },
         {
           "topic": "风电",
+          "count": 1
+        },
+        {
+          "topic": "IPO审核",
           "count": 1
         },
         {
@@ -31674,6 +31838,14 @@
         },
         {
           "topic": "石油美元",
+          "count": 1
+        },
+        {
+          "topic": "新能源",
+          "count": 1
+        },
+        {
+          "topic": "衰退",
           "count": 1
         },
         {
@@ -31729,6 +31901,10 @@
           "count": 1
         },
         {
+          "topic": "影视",
+          "count": 1
+        },
+        {
           "topic": "上证50",
           "count": 1
         },
@@ -31746,6 +31922,14 @@
         },
         {
           "topic": "业绩线",
+          "count": 1
+        },
+        {
+          "topic": "卫星",
+          "count": 1
+        },
+        {
+          "topic": "小票",
           "count": 1
         },
         {
@@ -31773,7 +31957,23 @@
           "count": 1
         },
         {
+          "topic": "A500",
+          "count": 1
+        },
+        {
+          "topic": "风机",
+          "count": 1
+        },
+        {
           "topic": "商业火箭",
+          "count": 1
+        },
+        {
+          "topic": "價格戰",
+          "count": 1
+        },
+        {
+          "topic": "消费品",
           "count": 1
         },
         {
@@ -31793,6 +31993,18 @@
           "count": 1
         },
         {
+          "topic": "名义GDP",
+          "count": 1
+        },
+        {
+          "topic": "通胀/资产配置",
+          "count": 1
+        },
+        {
+          "topic": "婚恋相亲",
+          "count": 1
+        },
+        {
           "topic": "关税",
           "count": 1
         },
@@ -31806,282 +32018,6 @@
         },
         {
           "topic": "CXO/政策",
-          "count": 1
-        },
-        {
-          "topic": "潮玩",
-          "count": 1
-        },
-        {
-          "topic": "全球股市",
-          "count": 1
-        },
-        {
-          "topic": "资金切换",
-          "count": 1
-        },
-        {
-          "topic": "政策博弈",
-          "count": 1
-        },
-        {
-          "topic": "先进制造",
-          "count": 1
-        },
-        {
-          "topic": "传统电商",
-          "count": 1
-        },
-        {
-          "topic": "指南针",
-          "count": 1
-        },
-        {
-          "topic": "市场分化",
-          "count": 1
-        },
-        {
-          "topic": "银行贷款",
-          "count": 1
-        },
-        {
-          "topic": "国产替代/机器人",
-          "count": 1
-        },
-        {
-          "topic": "航天板块",
-          "count": 1
-        },
-        {
-          "topic": "融资盘",
-          "count": 1
-        },
-        {
-          "topic": "网格交易",
-          "count": 1
-        },
-        {
-          "topic": "券商保险",
-          "count": 1
-        },
-        {
-          "topic": "宏观",
-          "count": 1
-        },
-        {
-          "topic": "韩国",
-          "count": 1
-        },
-        {
-          "topic": "去产能",
-          "count": 1
-        },
-        {
-          "topic": "铜钴",
-          "count": 1
-        },
-        {
-          "topic": "ç§å50",
-          "count": 1
-        },
-        {
-          "topic": "影视传媒",
-          "count": 1
-        },
-        {
-          "topic": "地缘风险",
-          "count": 1
-        },
-        {
-          "topic": "地缘政治",
-          "count": 1
-        },
-        {
-          "topic": "期权",
-          "count": 1
-        },
-        {
-          "topic": "高速公路",
-          "count": 1
-        },
-        {
-          "topic": "股东",
-          "count": 1
-        },
-        {
-          "topic": "补贴政策",
-          "count": 1
-        },
-        {
-          "topic": "大盘ETF",
-          "count": 1
-        },
-        {
-          "topic": "坏账",
-          "count": 1
-        },
-        {
-          "topic": "风格切换",
-          "count": 1
-        },
-        {
-          "topic": "美股科技",
-          "count": 1
-        },
-        {
-          "topic": "比亚迪",
-          "count": 1
-        },
-        {
-          "topic": "半导体/设备",
-          "count": 1
-        },
-        {
-          "topic": "虚拟资产",
-          "count": 1
-        },
-        {
-          "topic": "油金",
-          "count": 1
-        },
-        {
-          "topic": "æ¸¯è¡",
-          "count": 1
-        },
-        {
-          "topic": "监管",
-          "count": 1
-        },
-        {
-          "topic": "荐股",
-          "count": 1
-        },
-        {
-          "topic": "军工出口",
-          "count": 1
-        },
-        {
-          "topic": "茶饮",
-          "count": 1
-        },
-        {
-          "topic": "消费连锁",
-          "count": 1
-        },
-        {
-          "topic": "选股",
-          "count": 1
-        },
-        {
-          "topic": "物理AI",
-          "count": 1
-        },
-        {
-          "topic": "豆包产业链",
-          "count": 1
-        },
-        {
-          "topic": "算力/半导体",
-          "count": 1
-        },
-        {
-          "topic": "金融白酒",
-          "count": 1
-        },
-        {
-          "topic": "防御股",
-          "count": 1
-        },
-        {
-          "topic": "低位",
-          "count": 1
-        },
-        {
-          "topic": "猪周期",
-          "count": 1
-        },
-        {
-          "topic": "生猪",
-          "count": 1
-        },
-        {
-          "topic": "市场底部",
-          "count": 1
-        },
-        {
-          "topic": "量化基金",
-          "count": 1
-        },
-        {
-          "topic": "减肥药",
-          "count": 1
-        },
-        {
-          "topic": "股指",
-          "count": 1
-        },
-        {
-          "topic": "新能源",
-          "count": 1
-        },
-        {
-          "topic": "衰退",
-          "count": 1
-        },
-        {
-          "topic": "IPO审核",
-          "count": 1
-        },
-        {
-          "topic": "名义GDP",
-          "count": 1
-        },
-        {
-          "topic": "通胀/资产配置",
-          "count": 1
-        },
-        {
-          "topic": "婚恋相亲",
-          "count": 1
-        },
-        {
-          "topic": "卫星",
-          "count": 1
-        },
-        {
-          "topic": "小票",
-          "count": 1
-        },
-        {
-          "topic": "设备",
-          "count": 1
-        },
-        {
-          "topic": "平台",
-          "count": 1
-        },
-        {
-          "topic": "影视",
-          "count": 1
-        },
-        {
-          "topic": "技术革命",
-          "count": 1
-        },
-        {
-          "topic": "A500",
-          "count": 1
-        },
-        {
-          "topic": "风机",
-          "count": 1
-        },
-        {
-          "topic": "價格戰",
-          "count": 1
-        },
-        {
-          "topic": "消费品",
           "count": 1
         },
         {
@@ -32113,11 +32049,43 @@
           "count": 1
         },
         {
+          "topic": "潮玩",
+          "count": 1
+        },
+        {
+          "topic": "全球股市",
+          "count": 1
+        },
+        {
+          "topic": "资金切换",
+          "count": 1
+        },
+        {
+          "topic": "政策博弈",
+          "count": 1
+        },
+        {
+          "topic": "金融白酒",
+          "count": 1
+        },
+        {
+          "topic": "先进制造",
+          "count": 1
+        },
+        {
+          "topic": "设备",
+          "count": 1
+        },
+        {
+          "topic": "平台",
+          "count": 1
+        },
+        {
           "topic": "机构抱团",
           "count": 1
         },
         {
-          "topic": "科技公司",
+          "topic": "传统电商",
           "count": 1
         },
         {
@@ -32125,35 +32093,67 @@
           "count": 1
         },
         {
-          "topic": "钢铁",
+          "topic": "科技公司",
           "count": 1
         },
         {
-          "topic": "金融危机",
+          "topic": "指南针",
           "count": 1
         },
         {
-          "topic": "市场轮动",
+          "topic": "市场分化",
           "count": 1
         },
         {
-          "topic": "功率半导体",
+          "topic": "银行贷款",
           "count": 1
         },
         {
-          "topic": "价值股",
+          "topic": "国产替代/机器人",
           "count": 1
         },
         {
-          "topic": "ST摘帽",
+          "topic": "去产能",
           "count": 1
         },
         {
-          "topic": "智能驾驶",
+          "topic": "股东",
           "count": 1
         },
         {
-          "topic": "貴金屬",
+          "topic": "坏账",
+          "count": 1
+        },
+        {
+          "topic": "补贴政策",
+          "count": 1
+        },
+        {
+          "topic": "虚拟资产",
+          "count": 1
+        },
+        {
+          "topic": "æ¸¯è¡",
+          "count": 1
+        },
+        {
+          "topic": "军工出口",
+          "count": 1
+        },
+        {
+          "topic": "茶饮",
+          "count": 1
+        },
+        {
+          "topic": "消费连锁",
+          "count": 1
+        },
+        {
+          "topic": "量化基金",
+          "count": 1
+        },
+        {
+          "topic": "减肥药",
           "count": 1
         }
       ],
