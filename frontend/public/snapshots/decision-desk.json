@@ -6,7 +6,7 @@
       "reviewed": 5,
       "hit": 0,
       "wrong": 2,
-      "generated_at": "2026-09-02T10:21:26.376350+00:00"
+      "generated_at": "2026-09-02T10:36:48.455539+00:00"
     },
     "decisions": [
       {
@@ -19,6 +19,11 @@
         "conviction": 0.6,
         "thesis": "科技股周二周三已大涨，位置偏高不敢进，预计回调：光模块相对还好，其他半导体周四可能下跌套人。",
         "status": "reviewed",
+        "premise": null,
+        "invalidation_conditions": [
+          "科技股继续放量上涨突破",
+          "半导体回调后快速修复"
+        ],
         "review_result": "wrong"
       },
       {
@@ -31,6 +36,11 @@
         "conviction": 0.6,
         "thesis": "医疗板块已阴跌很久，创新药被带下来只是简单带下来，未来有涨的趋势，想买港股创新药（需进一步分析）。",
         "status": "reviewed",
+        "premise": null,
+        "invalidation_conditions": [
+          "医疗板块继续创新低",
+          "港股创新药基本面恶化"
+        ],
         "review_result": "right"
       },
       {
@@ -43,6 +53,11 @@
         "conviction": 0.7,
         "thesis": "白酒消费颓势明显，年轻人不爱喝白酒，短期之内很难缓过来。",
         "status": "reviewed",
+        "premise": null,
+        "invalidation_conditions": [
+          "白酒销量数据明显回暖",
+          "消费刺激政策超预期"
+        ],
         "review_result": "wrong"
       },
       {
@@ -55,6 +70,12 @@
         "conviction": 0.65,
         "thesis": "铝有结构性逻辑：国内电解铝成本优势、无产量过剩、价格距高位已跌40-50%、神火7月回购3亿股权，关注神火。",
         "status": "reviewed",
+        "premise": null,
+        "invalidation_conditions": [
+          "铝价继续大幅下跌",
+          "电解铝供给大幅增加",
+          "神火回购后股价仍走弱"
+        ],
         "review_result": "mixed"
       },
       {
@@ -67,6 +88,12 @@
         "conviction": 0.7,
         "thesis": "黄金强相关于美元加息降息，8月已兑现9月加息趋势，该跌的已跌得差不多；预计再震荡一段时间后，9月开始往上走。",
         "status": "reviewed",
+        "premise": null,
+        "invalidation_conditions": [
+          "9月未如期上涨反而继续下跌",
+          "美元重新走强/加息超预期",
+          "黄金跌破关键支撑位"
+        ],
         "review_result": "right"
       }
     ],
