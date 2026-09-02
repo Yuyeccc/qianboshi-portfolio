@@ -11,6 +11,7 @@ const navigation = [
   { key: "decisions", path: "decisions" },
   { key: "discipline", path: "discipline" },
   { key: "vault", path: "vault" },
+  { key: "agent", path: "agent" },
   { key: "about", path: "about" },
 ] as const;
 

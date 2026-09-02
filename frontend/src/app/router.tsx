@@ -12,6 +12,7 @@ import BriefDetailPage from "@/pages/BriefDetailPage";
 import ResearchVaultPage from "@/pages/ResearchVaultPage";
 import AssetResearchDetailPage from "@/pages/AssetResearchDetailPage";
 import CognitiveCorePage from "@/pages/CognitiveCorePage";
+import AgentResearchPage from "@/pages/AgentResearchPage";
 
 const locales = ["zh", "en"];
 
@@ -30,6 +31,8 @@ const localeRoute = (element: ReactNode) => ({
     { path: "about", element: <AboutPage /> },
     { path: "briefs", element: <BriefListPage /> },
     { path: "briefs/:filename", element: <BriefDetailPage /> },
+    { path: "dsh", element: <AgentResearchPage /> },
+    { path: "agent", element: <AgentResearchPage /> },
   ],
 });
 
