@@ -6,7 +6,7 @@
       "reviewed": 5,
       "hit": 0,
       "wrong": 2,
-      "generated_at": "2026-09-01T15:00:02.986523+00:00"
+      "generated_at": "2026-09-02T10:21:26.376350+00:00"
     },
     "decisions": [
       {
@@ -91,8 +91,8 @@
           },
           {
             "factor_name": "美股AI映射",
-            "current_state": "近5日走弱-1.86%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+1.13%",
+            "impact_direction": "positive",
             "impact_strength": "medium"
           }
         ]
@@ -117,8 +117,8 @@
           },
           {
             "factor_name": "创新药指数",
-            "current_state": "近5日持平+0.00%",
-            "impact_direction": "neutral",
+            "current_state": "近5日走弱-2.07%",
+            "impact_direction": "negative",
             "impact_strength": "high"
           }
         ]
@@ -195,8 +195,8 @@
           },
           {
             "factor_name": "白酒指数",
-            "current_state": "近5日走弱-0.24%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+1.90%",
+            "impact_direction": "positive",
             "impact_strength": "medium"
           }
         ]
@@ -209,13 +209,13 @@
         "factors": [
           {
             "factor_name": "光模块景气",
-            "current_state": "近5日走弱-2.46%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+0.48%",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
             "factor_name": "半导体ETF",
-            "current_state": "近5日走强+4.95%",
+            "current_state": "近5日走强+2.18%",
             "impact_direction": "positive",
             "impact_strength": "high"
           },
@@ -247,8 +247,8 @@
           },
           {
             "factor_name": "紫金矿业代理",
-            "current_state": "近5日走弱-2.52%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+0.15%",
+            "impact_direction": "positive",
             "impact_strength": "medium"
           }
         ]

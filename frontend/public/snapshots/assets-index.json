@@ -8,7 +8,7 @@
         "description": "AI应用中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T20:58:19",
+        "updated_at": "2026-09-01T23:00:16",
         "factor_count": 30,
         "factor_preview": [
           {
@@ -82,7 +82,7 @@
         "description": "铝中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T20:58:42",
+        "updated_at": "2026-09-01T23:00:38",
         "factor_count": 24,
         "factor_preview": [
           {
@@ -156,7 +156,7 @@
         "description": "白酒中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T20:58:50",
+        "updated_at": "2026-09-01T23:00:45",
         "factor_count": 18,
         "factor_preview": [
           {
@@ -230,7 +230,7 @@
         "description": "黄金中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T20:59:00",
+        "updated_at": "2026-09-01T23:00:53",
         "factor_count": 34,
         "factor_preview": [
           {
@@ -304,7 +304,7 @@
         "description": "创新药中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T20:59:10",
+        "updated_at": "2026-09-01T23:01:00",
         "factor_count": 30,
         "factor_preview": [
           {
@@ -378,7 +378,7 @@
         "description": "机器人中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T20:59:18",
+        "updated_at": "2026-09-01T23:01:08",
         "factor_count": 18,
         "factor_preview": [
           {
@@ -452,7 +452,7 @@
         "description": "半导体中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T20:59:29",
+        "updated_at": "2026-09-01T23:01:15",
         "factor_count": 24,
         "factor_preview": [
           {
@@ -526,7 +526,7 @@
         "description": "科技中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T20:59:37",
+        "updated_at": "2026-09-01T23:01:21",
         "factor_count": 30,
         "factor_preview": [
           {
