@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sqlite3
 from datetime import datetime, timezone
 from typing import Any
@@ -27,6 +28,22 @@ def _nullable_text(value: Any) -> str | None:
     return value or None
 
 
+def _parse_invalidation(value: Any) -> list[str]:
+    """把 DB 里的失效条件（JSON 数组字符串）解析为字符串数组；容错返回空数组。"""
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return [item for item in value if isinstance(item, str) and item.strip()]
+    if isinstance(value, str) and value.strip():
+        try:
+            parsed = json.loads(value)
+            if isinstance(parsed, list):
+                return [item for item in parsed if isinstance(item, str) and item.strip()]
+        except (json.JSONDecodeError, TypeError):
+            return []
+    return []
+
+
 def _get_decisions() -> list[dict[str, Any]]:
     try:
         with sqlite3.connect(_database_uri(), uri=True) as connection:
@@ -41,7 +58,9 @@ def _get_decisions() -> list[dict[str, Any]]:
                     direction,
                     conviction,
                     thesis,
-                    status
+                    status,
+                    premise,
+                    invalidation_conditions
                 FROM user_decision_logs
                 ORDER BY decision_date DESC, created_at DESC, decision_id DESC
                 """
@@ -58,6 +77,8 @@ def _get_decisions() -> list[dict[str, Any]]:
                 "conviction": float(row[6]) if row[6] is not None else None,
                 "thesis": _text(row[7])[:120],
                 "status": _text(row[8]),
+                "premise": _nullable_text(row[9]),
+                "invalidation_conditions": _parse_invalidation(row[10]),
                 "review_result": None,
             }
             for row in rows

@@ -207,6 +207,25 @@ function recordArray(value: unknown): JsonRecord[] {
   return Array.isArray(value) ? value.filter(isRecord) : [];
 }
 
+function stringArrayOrEmpty(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.filter((item): item is string => typeof item === "string" && item.length > 0);
+  }
+  if (typeof value === "string" && value.length > 0) {
+    try {
+      const parsed: unknown = JSON.parse(value);
+      if (Array.isArray(parsed)) {
+        return parsed.filter(
+          (item): item is string => typeof item === "string" && item.length > 0,
+        );
+      }
+    } catch {
+      return [];
+    }
+  }
+  return [];
+}
+
 export function mapArchitectureResponse(input: unknown): ArchitectureData {
   if (!isRecord(input)) return emptyArchitecture;
 
@@ -400,6 +419,10 @@ export function mapDecisionsResponse(input: unknown): DecisionSummary {
       status: stringOrEmpty(item.status),
       reviewResult: nullableString(
         readField(item, "review_result", "reviewResult"),
+      ),
+      premise: nullableString(readField(item, "premise", "premise")),
+      invalidationConditions: stringArrayOrEmpty(
+        readField(item, "invalidation_conditions", "invalidationConditions"),
       ),
     })),
     assetCards: recordArray(

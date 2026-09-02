@@ -103,6 +103,40 @@ export default function DecisionCard({ decision }: DecisionCardProps) {
           style={{ width: `${Math.max(0, Math.min(1, conviction)) * 100}%` }}
         />
       </div>
+
+      {(decision.premise || decision.invalidationConditions.length > 0) ? (
+        <div className="mt-4 space-y-3 pl-2">
+          {decision.premise ? (
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-wide text-muted">
+                {t("decisions.premise")}
+              </p>
+              <p className="mt-1 text-xs leading-5 text-text">{decision.premise}</p>
+            </div>
+          ) : null}
+          {decision.invalidationConditions.length > 0 ? (
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-wide text-muted">
+                {t("decisions.invalidation")}
+              </p>
+              <ul className="mt-1 space-y-1">
+                {decision.invalidationConditions.map((condition) => (
+                  <li
+                    key={condition}
+                    className="flex items-start gap-1.5 text-xs leading-5 text-text"
+                  >
+                    <span
+                      className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-muted"
+                      aria-hidden="true"
+                    />
+                    {condition}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
     </article>
   );
 }

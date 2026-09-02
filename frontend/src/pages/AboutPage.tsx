@@ -33,7 +33,7 @@ export default function AboutPage() {
     items: t(`pages.about.stack.${key}.items`, { returnObjects: true }) as string[],
   }));
 
-  const tradeoffKeys = ["whisper", "sqlite", "chromadb", "review"] as const;
+  const tradeoffKeys = ["whisper", "sqlite", "chromadb", "review", "snapshot"] as const;
 
   const limits = t("pages.about.limits.items", { returnObjects: true }) as string[];
   const roadmap = t("pages.about.limits.roadmap", { returnObjects: true }) as string[];

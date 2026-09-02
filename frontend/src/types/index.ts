@@ -163,6 +163,8 @@ export interface DecisionItem {
   thesis: string;
   status: string;
   reviewResult: string | null;
+  premise: string | null;
+  invalidationConditions: string[];
 }
 
 export interface AssetCardFactor {
