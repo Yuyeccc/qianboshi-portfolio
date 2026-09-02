@@ -44,6 +44,13 @@ type McpToolItem = {
   purpose: string;
 };
 
+type ArchitectureModule = {
+  name: string;
+  role: string;
+  status: string;
+  path: string;
+};
+
 type ArchitectureData = {
   meta?: {
     generatedAt: string | null;
@@ -54,6 +61,7 @@ type ArchitectureData = {
   layers: ArchitectureLayer[];
   viewLifecycle: LifecycleStep[];
   mcpTools: McpToolItem[];
+  modules: ArchitectureModule[];
 };
 
 type OverviewMetrics = {
@@ -84,6 +92,7 @@ const emptyArchitecture: ArchitectureData = {
   layers: [],
   viewLifecycle: [],
   mcpTools: [],
+  modules: [],
 };
 
 const emptyMetrics: OverviewMetrics = {
@@ -106,6 +115,19 @@ function formatCheckedAt(value: string | null) {
 
   const date = new Date(value);
   return Number.isNaN(date.getTime()) ? value : date.toLocaleString();
+}
+
+function moduleStatusText(status: string): string {
+  switch (status) {
+    case "P0":
+    case "DONE":
+      return "text-market-negative";
+    case "P1":
+    case "WIP":
+      return "text-brand";
+    default:
+      return "text-muted";
+  }
 }
 
 function Metric({
@@ -173,7 +195,8 @@ export default function ArchitecturePage() {
     };
   }, [provider]);
 
-  const { pipelineStatus, layers, viewLifecycle, mcpTools } = architecture;
+  const { pipelineStatus, layers, viewLifecycle, mcpTools, modules } =
+    architecture;
   const hasData = layers.length > 0 || mcpTools.length > 0;
 
   return (
@@ -194,7 +217,7 @@ export default function ArchitecturePage() {
               <p className="mt-3 max-w-2xl text-base text-muted sm:text-lg">
                 {t(
                   "pages.architecture.subtitle",
-                  "从内容采集到决策复盘的自动化投研流水线",
+                  "研究型财经 Agent：从研究目标到带证据链的概率化报告",
                 )}
               </p>
             </div>
@@ -267,7 +290,7 @@ export default function ArchitecturePage() {
                 01 — Pipeline
               </p>
               <h2 className="mt-2 text-2xl font-semibold text-heading">
-                {t("pages.architecture.pipelineTitle", "七层流水线")}
+                {t("pages.architecture.pipelineTitle", "六层架构")}
               </h2>
             </div>
             <span className="font-mono text-xs text-muted">
@@ -360,12 +383,12 @@ export default function ArchitecturePage() {
             02 — Traceability
           </p>
           <h2 className="mt-2 text-2xl font-semibold text-heading">
-            {t("pages.architecture.lifecycleTitle", "单条观点的生命周期")}
+            {t("pages.architecture.lifecycleTitle", "一次研究任务的旅程")}
           </h2>
           <p className="mt-2 text-sm text-muted">
             {t(
               "pages.architecture.lifecycleSubtitle",
-              "一条观点如何从视频变成可复盘的决策证据",
+              "从提交研究目标到报告落库：安检分诊、素材采集、三桶组装、校验合规，全程留痕",
             )}
           </p>
 
@@ -409,29 +432,32 @@ export default function ArchitecturePage() {
 
           <div className="mt-6 border border-line bg-surface p-5 font-mono text-xs leading-7 text-muted sm:p-6">
             <p>
-              <span className="text-brand">Asset</span>: Gold
+              <span className="text-brand">Job</span>: 地产板块政策情景研究
             </p>
             <p>
-              <span className="text-brand">Direction</span>: Bullish
+              <span className="text-brand">Entities</span>: 房地产 / 政策 / 销售
             </p>
             <p>
-              <span className="text-brand">Horizon</span>: 1-3 months
+              <span className="text-brand">Core conflict</span>: 政策托底 vs
+              基本面下行
             </p>
             <p>
-              <span className="text-brand">Source</span>: 钱博士直播
+              <span className="text-brand">Scenarios</span>: 乐观 25% / 中性
+              50% / 谨慎 25%（含触发条件）
             </p>
             <p>
-              <span className="text-brand">Published</span>: 2026-08-22
+              <span className="text-brand">Evidence</span>: 新闻事实 + B站线索·待核
             </p>
             <p>
-              <span className="text-brand">Outcome</span>: Pending
+              <span className="text-brand">Status</span>: schema 校验通过，
+              已落库
             </p>
           </div>
         </section>
 
         <section className="border-t border-line pt-10">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-brand">
-            03 — Agent Interface
+            03 — Developer Interface
           </p>
           <h2 className="mt-2 text-2xl font-semibold text-heading">
             {t("pages.architecture.mcpTitle", "MCP 工具")}
@@ -439,7 +465,7 @@ export default function ArchitecturePage() {
           <p className="mt-2 text-sm text-muted">
             {t(
               "pages.architecture.mcpSubtitle",
-              "把投研资产暴露给 Agent，9 个工具实时查询",
+              "把研究资产暴露给开发者工具（DSH / MCP），13 个工具实时查询——产品入口是 /agent 研究工单台",
             )}
           </p>
 
@@ -462,6 +488,58 @@ export default function ArchitecturePage() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="border-t border-line pt-10">
+          <div className="mb-6 flex items-end justify-between gap-4">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.16em] text-brand">
+                04 — Module Status
+              </p>
+              <h2 className="mt-2 text-2xl font-semibold text-heading">
+                {t("pages.architecture.modulesTitle", "模块落地状态")}
+              </h2>
+            </div>
+            <span className="font-mono text-xs text-muted">
+              {modules.length ? `${modules.length} modules` : "—"}
+            </span>
+          </div>
+          <p className="mt-2 text-sm text-muted">
+            {t(
+              "pages.architecture.modulesSubtitle",
+              "P0 已落地 · P1 施工中 · P2 蓝图 · 状态以当前代码为准",
+            )}
+          </p>
+
+          {modules.length ? (
+            <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              {modules.map((mod) => (
+                <article
+                  key={mod.name}
+                  className="border border-line bg-surface p-4 transition-colors duration-200 hover:border-brand"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-mono text-sm font-medium text-heading">
+                      {mod.name}
+                    </h3>
+                    <span
+                      className={`shrink-0 border border-line bg-surfaceSubtle px-1.5 py-0.5 font-mono text-[10px] ${moduleStatusText(mod.status)}`}
+                    >
+                      {mod.status}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-xs leading-5 text-muted">{mod.role}</p>
+                  <p className="mt-3 break-all border-t border-line pt-2 font-mono text-[10px] leading-4 text-muted">
+                    {mod.path}
+                  </p>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="mt-6 border border-line bg-surface p-8 text-sm text-muted">
+              {t("pages.architecture.empty", "暂无架构数据")}
+            </p>
+          )}
         </section>
 
         <section className="mt-12 border-t border-line bg-surface px-5 py-8 sm:px-7">

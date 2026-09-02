@@ -307,6 +307,14 @@ export function mapArchitectureResponse(input: unknown): ArchitectureData {
       output: stringOrEmpty(tool.output),
       purpose: stringOrEmpty(tool.purpose),
     })),
+    modules: recordArray(readField(payload, "modules", "modules")).map(
+      (moduleItem) => ({
+        name: stringOrEmpty(moduleItem.name),
+        role: stringOrEmpty(moduleItem.role),
+        status: stringOrEmpty(moduleItem.status),
+        path: stringOrEmpty(moduleItem.path),
+      }),
+    ),
   };
 }
 

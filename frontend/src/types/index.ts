@@ -77,6 +77,13 @@ export interface ArchitectureLayer {
   nodes: ArchitectureNode[];
 }
 
+export interface ArchitectureModule {
+  name: string;
+  role: string;
+  status: string;
+  path: string;
+}
+
 export interface PipelineStatus {
   scheduler: string;
   lastChecked: string | null;
@@ -98,6 +105,7 @@ export interface ArchitectureData {
   layers: ArchitectureLayer[];
   viewLifecycle: LifecycleStep[];
   mcpTools: McpToolItem[];
+  modules: ArchitectureModule[];
 }
 
 export interface DistItem {
