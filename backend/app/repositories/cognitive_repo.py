@@ -24,6 +24,7 @@ DATA_DIR = Path(r"E:\qianboshi-agent\data")
 VIEWS_DIR = DATA_DIR / "views"
 DIMENSIONS_FILE = VIEWS_DIR / "dimensions_export.json"
 CONFLICTS_FILE = VIEWS_DIR / "conflicts_export.json"
+BV_PUBDATES_FILE = DATA_DIR / "bv_pubdates.json"
 STRUCTURED_VIEWS_FILE = VIEWS_DIR / "structured_views.jsonl"
 DECISION_DB = DATA_DIR / "qianboshi_decision.db"
 
@@ -292,22 +293,51 @@ def _load_view_anchor_map() -> dict[str, dict[str, str]]:
     return anchor_map
 
 
-# 发布日期权威来源：source_file 文件名里的 YYYY.MM.DD / YYYY-MM-DD
-# （标注管线 auto 抽取的 date 字段年份不可靠——2026 视频被抽成 2025/2024 甚至 2016，
-#   冲突中心实测可校验成员 27.3% 日期错误。文件名日期是 note 收录的发布日期，作为权威。
-#   仅当文件名含日期才覆盖；否则保留原始 date 字段，不猜。）
+# 发布日期权威来源，优先级：
+#   1) source_file 文件名里的 YYYY.MM.DD / YYYY-MM-DD（note 收录日期，最高可信）
+#   2) bv_pubdates.json 的 B站真实验发布日期（UTC+8 中国日期），仅当文件名无日期时兜底
+# 背景：标注管线 auto 抽取的 date 字段年份不可靠——2026 视频被抽成 2025/2024 甚至 2016，
+#   冲突中心实测可校验成员 27.3% 日期错误；文件名日期 + BV pubdate 覆盖了绝大多数（仅 5 个真不可补）。
+#   两者都无则不覆盖，保留原始 date 字段，不猜。
 _DATE_RE = re.compile(r"(?<!\d)(\d{4})[.\-](\d{2})[.\-](\d{2})(?!\d)")
 
 
-def _load_authoritative_date_map() -> dict[str, str]:
-    """view_id → 权威发布时间（从 source_file 文件名解析，兼容 YYYY.MM.DD 与 YYYY-MM-DD）。
+def _load_bv_pubdates() -> dict[str, str]:
+    """bv_id → YYYY-MM-DD（B站真实发布日期，中国时区 UTC+8）。文件缺失/解析失败返回空。"""
+    result: dict[str, str] = {}
+    if not BV_PUBDATES_FILE.exists():
+        return result
+    try:
+        with open(BV_PUBDATES_FILE, encoding="utf-8") as fh:
+            raw = json.load(fh)
+    except (json.JSONDecodeError, OSError):
+        return result
+    if not isinstance(raw, dict):
+        return result
+    for bv, val in raw.items():
+        ts = None
+        if isinstance(val, dict):
+            if isinstance(val.get("pubdate"), (int, float)):
+                ts = val["pubdate"]
+        elif isinstance(val, (int, float)):
+            ts = val
+        if ts is None:
+            continue
+        # 中国时区 = UTC+8（中国无夏令时），加 8h 再取 UTC 日期，无需 tzdata 依赖
+        result[bv] = datetime.fromtimestamp(ts + 8 * 3600, tz=timezone.utc).strftime("%Y-%m-%d")
+    return result
 
-    与 _load_view_anchor_map 同源（structured_views.jsonl）。文件名无日期的成员
-    不在此映射，调用方回退到原始 date 字段。
+
+def _load_authoritative_date_map() -> dict[str, str]:
+    """view_id → 权威发布时间。优先级 source_file 文件名日期 > bv_pubdates 发布日期。
+
+    与 _load_view_anchor_map 同源（structured_views.jsonl）。两者都无的 view 不在此映射，
+    调用方回退到原始 date 字段。
     """
     date_map: dict[str, str] = {}
     if not STRUCTURED_VIEWS_FILE.exists():
         return date_map
+    bv_dates = _load_bv_pubdates()
     with open(STRUCTURED_VIEWS_FILE, encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -319,11 +349,16 @@ def _load_authoritative_date_map() -> dict[str, str]:
                 continue
             vid = rec.get("view_id")
             sf = rec.get("source_file") or ""
-            if not vid or not sf:
+            if not vid:
                 continue
             m = _DATE_RE.search(sf)
             if m:
                 date_map[vid] = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+                continue
+            # 文件名无日期 → 用 B站真实发布日期兜底
+            bv = rec.get("source_bv") or ""
+            if bv and bv in bv_dates:
+                date_map[vid] = bv_dates[bv]
     return date_map
 
 
