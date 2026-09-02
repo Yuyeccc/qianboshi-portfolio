@@ -28,12 +28,18 @@ from app.repositories.vault_repo import (
     list_notes,
     open_note_local,
 )
+from app.research_service import gate_question, get_job, list_jobs, submit_job
 
 
 class MetaResponse(BaseModel):
     data_mode: str
     phase: str
     status: str
+
+
+class ResearchJobRequest(BaseModel):
+    goal: str = Field(min_length=1, max_length=500)
+    category: str | None = Field(default=None, max_length=50)
 
 
 class RagQueryRequest(BaseModel):
@@ -260,6 +266,45 @@ def query_rag(request: RagQueryRequest) -> dict[str, Any]:
 @api_router.get("/rag/suggestions")
 def get_rag_suggestions() -> dict:
     return {"suggestions": rag_suggestions()}
+
+
+# ---------- 研究任务 API（P1-C，2026-09-03） ----------
+
+
+@api_router.post("/research/jobs", status_code=202)
+def create_research_job(request: ResearchJobRequest) -> dict:
+    """提交研究任务：intent_gate fail-closed 拒收 block/clarify，放行则排队执行。
+
+    - verdict=pass   -> 202 {job}（queued，后台线程跑 research_agent）
+    - block/clarify  -> 422 {error: intent_blocked, gate: {...}}（与前端第二道闸同规则）
+    """
+    gate = gate_question(request.goal)
+    if gate.get("verdict") != "pass":
+        raise HTTPException(
+            status_code=422,
+            detail={"error": "intent_blocked", "gate": gate},
+        )
+    job = submit_job(
+        request.goal,
+        category=gate.get("suggested_category") or request.category,
+        gate=gate,
+    )
+    return {"job": job}
+
+
+@api_router.get("/research/jobs/{job_id}")
+def get_research_job(job_id: str) -> dict:
+    job = get_job(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail={"error": "research job not found"})
+    return {"job": job}
+
+
+@api_router.get("/research/jobs")
+def list_research_jobs(
+    limit: int = Query(default=20, ge=1, le=100),
+) -> dict:
+    return {"jobs": list_jobs(limit=limit)}
 
 
 app.include_router(api_router)
