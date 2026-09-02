@@ -12,9 +12,8 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from app.repositories.schema_registry import DATABASE_PATH, DATA_ROOT
+from app.config import DATABASE_PATH, DATA_ROOT, NOTES_DIR as NOTE_DIR
 
-NOTE_DIR = Path(r"E:\obsidian-vault\学习\钱博士")
 VIEWS_PATH = DATA_ROOT / "views" / "structured_views.jsonl"
 
 _DATE_PREFIX_PATTERN = re.compile(r"^(\d{4})\.(\d{1,2})\.(\d{1,2})(?:\s+|$)")

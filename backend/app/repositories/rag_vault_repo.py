@@ -110,7 +110,9 @@ def rag_query(
     try:
         import sys
 
-        scripts_path = r"E:\qianboshi-agent\scripts"
+        from app.config import SCRIPTS_PATH
+
+        scripts_path = str(SCRIPTS_PATH)
         if scripts_path not in sys.path:
             sys.path.insert(0, scripts_path)
 

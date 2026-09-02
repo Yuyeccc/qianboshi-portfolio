@@ -1,3 +1,3 @@
-fastapi
-uvicorn[standard]
-chromadb
+fastapi==0.128.0
+uvicorn[standard]==0.40.0
+chromadb==1.5.9

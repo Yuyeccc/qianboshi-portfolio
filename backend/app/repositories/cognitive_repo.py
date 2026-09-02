@@ -20,13 +20,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-DATA_DIR = Path(r"E:\qianboshi-agent\data")
+from app.config import DATABASE_PATH as DECISION_DB
+from app.config import DATA_DIR
+
 VIEWS_DIR = DATA_DIR / "views"
 DIMENSIONS_FILE = VIEWS_DIR / "dimensions_export.json"
 CONFLICTS_FILE = VIEWS_DIR / "conflicts_export.json"
 BV_PUBDATES_FILE = DATA_DIR / "bv_pubdates.json"
 STRUCTURED_VIEWS_FILE = VIEWS_DIR / "structured_views.jsonl"
-DECISION_DB = DATA_DIR / "qianboshi_decision.db"
 
 # ---------------------------------------------------------------------------
 # 校验事实常量（数据源：73 号交接文档 2026-09-01 全量校验 / 各执行记录）

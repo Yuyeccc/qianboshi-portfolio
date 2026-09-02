@@ -2,10 +2,9 @@ from __future__ import annotations
 
 import re
 from datetime import datetime
-from pathlib import Path
 from typing import Any
 
-BRIEFS_DIR = Path(r"E:\qianboshi-agent\data\briefs")
+from app.config import BRIEFS_DIR
 
 _FILENAME_PATTERN = re.compile(r"^[\w\u4e00-\u9fa5\-.]+\.md$")
 _DATE_PATTERN = re.compile(r"(?<!\d)(\d{4}-\d{2}-\d{2})(?!\d)")

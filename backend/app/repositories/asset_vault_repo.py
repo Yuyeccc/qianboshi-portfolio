@@ -7,10 +7,9 @@ import sys
 from collections import Counter
 from typing import Any
 
-from app.repositories.schema_registry import DATABASE_PATH, DATA_ROOT
+from app.config import DATA_ROOT, DATABASE_PATH, SCRIPTS_PATH
 
 STRUCTURED_VIEWS_PATH = DATA_ROOT / "views" / "structured_views.jsonl"
-SCRIPTS_PATH = r"E:\qianboshi-agent\scripts"
 
 ASSET_ALIASES: dict[str, tuple[str, ...]] = {
     "GOLD": ("GOLD", "黄金", "贵金属", "黄金ETF", "518880.SS"),

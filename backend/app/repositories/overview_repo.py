@@ -7,13 +7,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-DATA_DIR = Path(r"E:\qianboshi-agent\data")
+from app.config import (
+    BRIEFS_DIR,
+    DATABASE_PATH,
+    DATA_DIR,
+    NOTES_DIR,
+    VECTOR_DB_PATH,
+)
+
 STRUCTURED_VIEWS_PATH = DATA_DIR / "views" / "structured_views.jsonl"
-DATABASE_PATH = DATA_DIR / "qianboshi_decision.db"
 MONITOR_STATE_PATH = DATA_DIR / "monitor_state.json"
-BRIEFS_DIR = DATA_DIR / "briefs"
-VECTOR_DB_PATH = DATA_DIR / "vector_db"
-NOTES_DIR = Path(r"E:\obsidian-vault\学习\钱博士")
 
 
 def _read_monitor_state() -> dict[str, Any] | None:
