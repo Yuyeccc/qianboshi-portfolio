@@ -15,6 +15,14 @@ import type { DemoReport } from "./demoReport";
 
 export type ResearchJobStatus = "queued" | "running" | "done" | "failed";
 
+export type AgentType = "analyst" | "portfolio_risk" | "decision_review";
+
+export const AGENT_TYPE_LABELS: Record<AgentType, string> = {
+  analyst: "综合研究",
+  portfolio_risk: "持仓风险",
+  decision_review: "决策复盘",
+};
+
 export interface ResearchGate {
   verdict: string;
   reason: string;
@@ -26,6 +34,7 @@ export interface ResearchGate {
 export interface ResearchJob {
   job_id: string;
   status: ResearchJobStatus;
+  agent_type?: AgentType | string | null;
   goal: string;
   category?: string | null;
   gate?: ResearchGate | null;
@@ -34,7 +43,7 @@ export interface ResearchJob {
   finished_at?: string | null;
   report_path?: string | null;
   error?: string | null;
-  report?: DemoReport | null;
+  report?: unknown;
 }
 
 export type SubmitResearchResult =
@@ -146,12 +155,15 @@ function readJob(payload: unknown): ResearchJob | null {
   return job as ResearchJob;
 }
 
-export async function submitResearch(goal: string): Promise<SubmitResearchResult> {
+export async function submitResearch(
+  goal: string,
+  agentType?: AgentType | null,
+): Promise<SubmitResearchResult> {
   try {
     const res = await fetch(`${apiBaseUrl}/v1/research/jobs`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ goal }),
+      body: JSON.stringify({ goal, agent_type: agentType ?? undefined }),
     });
     if (res.status === 202) {
       const job = readJob(await res.json());
@@ -179,4 +191,95 @@ export async function fetchResearchJob(jobId: string): Promise<ResearchJob> {
   const job = readJob(await res.json());
   if (!job) throw new Error("empty job payload");
   return job;
+}
+
+export interface ResearchJobSummary {
+  job_id: string;
+  status: ResearchJobStatus;
+  agent_type: string;
+  goal: string;
+  category?: string | null;
+  created_at?: string | null;
+  finished_at?: string | null;
+  report_path?: string | null;
+  error?: string | null;
+}
+
+export async function listResearchJobs(limit = 10): Promise<ResearchJobSummary[]> {
+  const res = await fetch(`${apiBaseUrl}/v1/research/jobs?limit=${limit}`);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const payload = (await res.json()) as { jobs?: unknown };
+  const jobs = Array.isArray(payload.jobs) ? payload.jobs : [];
+  return jobs.filter((j): j is ResearchJobSummary => !!j && typeof j === "object");
+}
+
+/* ---------- 分型：产物协议判别（analyst v2 三桶 / 31_risk / 32_review） ---------- */
+
+export interface RiskHolding {
+  code?: string | null;
+  name?: string | null;
+  marketCode?: string | null;
+  relation?: string | null;
+  shares?: number | null;
+  avgCost?: number | null;
+  price?: number | null;
+  value?: number | null;
+  valueNote?: string | null;
+  weightPct?: number | null;
+}
+
+export interface RiskReport {
+  goal?: string;
+  entity?: string | null;
+  generatedAt?: string | null;
+  summary?: string | null;
+  holdingsExposure?: {
+    total?: number | null;
+    exposed?: RiskHolding[];
+    portfolio?: {
+      totalAssets?: number | null;
+      onMarketValue?: number | null;
+      cashAvailable?: number | null;
+      positionPct?: number | null;
+      asOf?: string | null;
+    } | null;
+  } | null;
+  riskPoints?: Array<{
+    risk?: string;
+    severity?: "high" | "medium" | "low" | string;
+    rationale?: string;
+    watch?: string | null;
+  }>;
+  analysisNote?: string | null;
+  watchlist?: Array<{ text?: string; trigger?: string | null }>;
+  compliance?: { passed?: boolean; note?: string | null } | null;
+  _meta?: Record<string, unknown>;
+}
+
+/** 判别：31_risk 产物（持仓风险 agent） */
+export function isRiskReport(input: unknown): input is RiskReport {
+  if (!input || typeof input !== "object") return false;
+  const r = input as Record<string, unknown>;
+  return "holdingsExposure" in r || "riskPoints" in r || "compliance" in r;
+}
+
+/** 判别：32_review 产物（决策复盘 agent） */
+export function isReviewReport(input: unknown): boolean {
+  if (!input || typeof input !== "object") return false;
+  const r = input as Record<string, unknown>;
+  return "reviewStatus" in r || "decisionId" in r || "lessons" in r;
+}
+
+/** 报告协议分型 → 渲染组件选择（供页面/历史列表共用） */
+export function reportKind(
+  input: unknown,
+  agentType?: string | null,
+): "analyst" | "risk" | "review" | "unknown" {
+  if (isReviewReport(input)) return "review";
+  if (isRiskReport(input)) return "risk";
+  if (agentType === "portfolio_risk" || agentType === "decision_review") {
+    // job 类型标记但产物非标准协议（LLM 降级/异常）→ 按标记渲染，组件内兜底
+    return agentType === "portfolio_risk" ? "risk" : "review";
+  }
+  return "analyst";
 }

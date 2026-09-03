@@ -28,7 +28,13 @@ from app.repositories.vault_repo import (
     list_notes,
     open_note_local,
 )
-from app.research_service import gate_question, get_job, list_jobs, submit_job
+from app.research_service import (
+    AGENT_SCRIPTS,
+    gate_question,
+    get_job,
+    list_jobs,
+    submit_job,
+)
 
 
 class MetaResponse(BaseModel):
@@ -40,6 +46,7 @@ class MetaResponse(BaseModel):
 class ResearchJobRequest(BaseModel):
     goal: str = Field(min_length=1, max_length=500)
     category: str | None = Field(default=None, max_length=50)
+    agent_type: str | None = Field(default=None, max_length=32)
 
 
 class RagQueryRequest(BaseModel):
@@ -284,10 +291,21 @@ def create_research_job(request: ResearchJobRequest) -> dict:
             status_code=422,
             detail={"error": "intent_blocked", "gate": gate},
         )
+    agent_type = request.agent_type
+    if agent_type is not None and agent_type not in AGENT_SCRIPTS:
+        raise HTTPException(
+            status_code=422,
+            detail={
+                "error": "unknown_agent_type",
+                "agent_type": agent_type,
+                "allowed": sorted(AGENT_SCRIPTS),
+            },
+        )
     job = submit_job(
         request.goal,
         category=gate.get("suggested_category") or request.category,
         gate=gate,
+        agent_type=agent_type,
     )
     return {"job": job}
 

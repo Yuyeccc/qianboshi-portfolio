@@ -41,6 +41,25 @@ STATUS_RUNNING = "running"
 STATUS_DONE = "done"
 STATUS_FAILED = "failed"
 
+# agent 执行器注册表（P2-D：与 agent 仓 orchestrator.AGENT_SCRIPTS 同构，本地独立维护）
+# 说明：orchestrator.py 是 CLI 入口（顶层 load_config 有副作用），backend 不宜 import；
+# 注册表保持与 agent 仓一致，新增 agent 时两处同步（契约：goal + --job-id + 产物带 _meta.job_id）
+DEFAULT_AGENT_TYPE = "analyst"
+AGENT_SCRIPTS: dict[str, Path] = {
+    "analyst": SCRIPTS_PATH / "research_agent.py",
+    "portfolio_risk": SCRIPTS_PATH / "portfolio_risk_agent.py",
+    "decision_review": SCRIPTS_PATH / "decision_review_agent.py",
+}
+
+
+def resolve_agent_script(agent_type: str | None) -> Path | None:
+    """agent_type → 执行脚本路径（分派纯函数，不执行）。
+
+    - agent_type 缺省 → DEFAULT_AGENT_TYPE（老 job 向后兼容）
+    - 注册表未知类型 → None（fail-closed：不静默当 analyst 跑）
+    """
+    return AGENT_SCRIPTS.get(agent_type or DEFAULT_AGENT_TYPE)
+
 
 def _now() -> str:
     return datetime.now().isoformat(timespec="seconds")
@@ -119,12 +138,23 @@ def gate_question(goal: str) -> dict:
         return {"verdict": "block", "reason": f"intent_gate_unavailable: {exc}", "rule_version": "n/a"}
 
 
-def submit_job(goal: str, category: str | None = None, gate: dict | None = None) -> dict:
-    """建 queued job 并起 daemon 线程执行；立即返回 job 状态（调用方勿阻塞）。"""
+def submit_job(
+    goal: str,
+    category: str | None = None,
+    gate: dict | None = None,
+    agent_type: str | None = None,
+) -> dict:
+    """建 queued job 并起 daemon 线程执行；立即返回 job 状态（调用方勿阻塞）。
+
+    agent_type 缺省 → analyst（老 job 向后兼容）；非法值同样入队后 fail-closed
+    （_run_job 分派失败置 failed，见 resolve_agent_script）。
+    """
+    agent_type = agent_type or DEFAULT_AGENT_TYPE
     job_id = uuid.uuid4().hex
     job = {
         "job_id": job_id,
         "status": STATUS_QUEUED,
+        "agent_type": agent_type,
         "goal": goal,
         "category": category,
         "gate": gate or {},
@@ -135,17 +165,35 @@ def submit_job(goal: str, category: str | None = None, gate: dict | None = None)
         "error": None,
     }
     _write_job(job)
-    threading.Thread(target=_run_job, args=(job_id, goal), daemon=True).start()
+    threading.Thread(target=_run_job, args=(job_id, goal, agent_type), daemon=True).start()
     return job
 
 
-def _run_job(job_id: str, goal: str) -> None:
+def _run_job(job_id: str, goal: str, agent_type: str) -> None:
     _update_job(job_id, status=STATUS_RUNNING, started_at=_now())
+
+    script = resolve_agent_script(agent_type)
+    if script is None:
+        _update_job(
+            job_id,
+            status=STATUS_FAILED,
+            finished_at=_now(),
+            error=f"未知 agent_type={agent_type!r}（可用: {list(AGENT_SCRIPTS)}）",
+        )
+        return
+    if not script.exists():
+        _update_job(
+            job_id,
+            status=STATUS_FAILED,
+            finished_at=_now(),
+            error=f"agent_type={agent_type} 执行脚本缺失: {script.name}",
+        )
+        return
 
     py = _pick_python()
     env = os.environ.copy()
-    env.pop("PYTHONPATH", None)  # research_agent 跑批环境要求干净 PYTHONPATH
-    cmd = [py, str(SCRIPTS_PATH / "research_agent.py"), goal, "--job-id", job_id]
+    env.pop("PYTHONPATH", None)  # 跑批环境要求干净 PYTHONPATH
+    cmd = [py, str(script), goal, "--job-id", job_id]
 
     try:
         proc = subprocess.run(
@@ -230,11 +278,13 @@ def list_jobs(limit: int = 20) -> list[dict]:
             {
                 "job_id": data.get("job_id"),
                 "status": data.get("status"),
+                "agent_type": data.get("agent_type") or DEFAULT_AGENT_TYPE,  # 老 job 归 analyst
                 "goal": data.get("goal"),
                 "category": data.get("category"),
                 "created_at": data.get("created_at"),
                 "finished_at": data.get("finished_at"),
                 "report_path": data.get("report_path"),
+                "error": data.get("error"),
             }
         )
     jobs.sort(key=lambda j: j.get("created_at") or "", reverse=True)
