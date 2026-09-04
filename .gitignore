@@ -6,3 +6,7 @@ dist/
 __pycache__/
 *.pyc
 .venv/
+
+# 部署脚本(含内网IP, 本地保留) + 本地验证截图(大图)
+deploy/
+docs/*.png

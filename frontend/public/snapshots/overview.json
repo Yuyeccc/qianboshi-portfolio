@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 11312,
+    "structured_views": 11319,
     "prediction_events": 31320,
-    "notes": 1060,
+    "notes": 1068,
     "rag_chunks": 11011,
     "source_count": 6,
-    "generated_at": "2026-09-02T11:29:07.650724+00:00"
+    "generated_at": "2026-09-04T14:12:20.248334+00:00"
   },
   "status": {
-    "last_checked": "2026-09-01 22:03",
+    "last_checked": "2026-09-04 22:07",
     "detected_today": 8,
     "source_count": 6,
-    "pipeline_running": false
+    "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "2026-09-01.md",
-    "generated_at": "2026-09-01T14:18:17.743507+00:00",
-    "summary": "今日总览",
+    "filename": "2026-09-03.md",
+    "generated_at": "2026-09-03T14:23:39.893697+00:00",
+    "summary": "主线：美股科技偏强，A股等待量价确认 最大分歧：AI硬件基本面偏多，短线估值与趋势分歧 最需盯盘/最大风险：英伟达产业链；若美股转弱或A股量能不足，修复承压 决策台提醒：决策明细未…",
     "section_count": 8
   }
 }

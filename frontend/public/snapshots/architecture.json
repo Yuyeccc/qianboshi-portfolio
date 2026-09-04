@@ -1,8 +1,8 @@
 {
   "architecture_data": {
     "meta": {
-      "generated_at": "2026-09-02T19:53:53.430006+00:00",
-      "source": "snapshot"
+      "generated_at": "2026-09-04T14:12:20.258410+00:00",
+      "source": "live"
     },
     "summary_tags": [
       "Research Agent",
@@ -14,45 +14,45 @@
     ],
     "pipeline_status": {
       "scheduler": "active",
-      "last_checked": "2026-09-02 22:03",
+      "last_checked": "2026-09-04 22:07",
       "detected_today": 8,
-      "processed_total": 213,
-      "queue_pending": 23,
+      "processed_total": 217,
+      "queue_pending": 86,
       "channels": [
         {
           "name": "史诗级韭菜",
           "uid": "322005137",
-          "last_check": "2026-09-02 22:02",
+          "last_check": "2026-09-04 22:05",
           "total_videos": 50
         },
         {
           "name": "深研一点",
           "uid": "179666921",
-          "last_check": "2026-09-02 22:02",
+          "last_check": "2026-09-04 22:05",
           "total_videos": 50
         },
         {
           "name": "钱博士直播",
           "uid": "480741488",
-          "last_check": "2026-09-02 22:02",
+          "last_check": "2026-09-04 22:05",
           "total_videos": 50
         },
         {
           "name": "钱博士短视频",
           "uid": "1129838925",
-          "last_check": "2026-09-02 22:02",
+          "last_check": "2026-09-04 22:05",
           "total_videos": 50
         },
         {
           "name": "笨笨的韭菜",
           "uid": "11473291",
-          "last_check": "2026-09-02 22:02",
+          "last_check": "2026-09-04 22:05",
           "total_videos": 50
         },
         {
           "name": "趋势天哥",
           "uid": "1372241958",
-          "last_check": "2026-09-02 22:02",
+          "last_check": "2026-09-04 22:05",
           "total_videos": 50
         }
       ]

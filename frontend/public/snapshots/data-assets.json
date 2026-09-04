@@ -1,29 +1,29 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 11312,
+      "structured_views": 11319,
       "prediction_events": 31320,
-      "notes": 1060,
+      "notes": 1068,
       "rag_chunks": 11011,
       "analysts": 11,
       "asset_cards": 8,
-      "generated_at": "2026-09-02T11:29:08.070378+00:00"
+      "generated_at": "2026-09-04T14:12:20.735394+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 2787
+        "value": 2790
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2037
+        "value": 2039
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 5713
+        "value": 5715
       },
       {
         "name": "watch",
@@ -40,7 +40,7 @@
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2033
+        "value": 2038
       },
       {
         "name": "short",
@@ -50,7 +50,7 @@
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1466
+        "value": 1467
       },
       {
         "name": "long",
@@ -60,13 +60,13 @@
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 4944
+        "value": 4945
       }
     ],
     "source_contrib": [
       {
         "name": "钱博士直播",
-        "views": 5564
+        "views": 5571
       },
       {
         "name": "钱博士短视频",
@@ -224,33 +224,33 @@
     "sample_views": [
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-27",
-        "stance": "risk",
-        "claim": "政策风险对出口型企业的规避逻辑——欧美核心设备自主化行政命令接连出台，对出口为主的企业构成持续政策风险，需要规避。"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-08-27",
+        "date": "2026-09-03",
         "stance": "neutral",
-        "claim": "国产供应链切入海外大厂的时间节点判断——英伟达上一代产品国产液冷公司未打入供应链，但新一代产品量产后陆续收到订单，说明新产品迭代是国产供应链切入的窗口期。"
+        "claim": "主播分享了“两枪制”的建仓纪律和趋势交易的核心逻辑。"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-27",
-        "stance": "neutral",
-        "claim": "英伟达业绩指引的参考价值——本次财报首次提前一年给出业绩指引，且指引增速受限于上游供电产能而非需求不足，说明AI算力需求依然旺盛，供给瓶颈在上游电力而非下游需求"
+        "date": "2026-09-03",
+        "stance": "bearish",
+        "claim": "涉及资产：A股大盘"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-27",
-        "stance": "watch",
-        "claim": "涉及资产：国内光模块公司"
+        "date": "2026-09-03",
+        "stance": "bullish",
+        "claim": "中长线：看多 🐂📈（但强调是最后一波）"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-27",
+        "date": "2026-09-03",
         "stance": "neutral",
         "claim": "短线：中性 🦀➡️"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-09-03",
+        "stance": "bearish",
+        "claim": "涉及资产：光模块、AI算力"
       }
     ]
   }
