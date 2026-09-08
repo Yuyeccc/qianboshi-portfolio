@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 11319,
+    "structured_views": 11332,
     "prediction_events": 31320,
-    "notes": 1073,
+    "notes": 1076,
     "rag_chunks": 11011,
     "source_count": 6,
-    "generated_at": "2026-09-07T15:00:12.065060+00:00"
+    "generated_at": "2026-09-08T15:00:26.359921+00:00"
   },
   "status": {
-    "last_checked": "2026-09-07 22:03",
+    "last_checked": "2026-09-08 22:03",
     "detected_today": 8,
     "source_count": 6,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "2026-09-04.md",
-    "generated_at": "2026-09-04T14:19:03.403512+00:00",
-    "summary": "主线：A股等待9月7日前后变盘 最大分歧：指数偏稳，科技板块仍弱 最需盯盘/最大风险：科技反弹能否放量确认 决策台提醒：暂无进行中的用户决策",
+    "filename": "日报_2026-09-08.md",
+    "generated_at": "2026-09-08T14:13:01.381668+00:00",
+    "summary": "主线：大盘与光模块修复预期 最大分歧：科技反弹与高位套牢盘压力 最需盯盘/最大风险：光模块能否放量修复，避免无量反弹 决策台提醒：黄金、创新药判断已复盘；铝部分正确；白酒、科技判断…",
     "section_count": 8
   }
 }

@@ -14,6 +14,18 @@
         "size_bytes": 1618
       },
       {
+        "note_id": "58a1b60de51c",
+        "filename": "钱博士 BV1GwbG6aE1d.md",
+        "title": "钱博士 BV1GwbG6aE1d",
+        "note_date": "2026-09-XX",
+        "created_at": null,
+        "tags": [],
+        "source": "BV号未知",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：市场整体呈现存量博弈、缩量震荡格局。科技、大金融、大消费均表现平淡，资金集中在农业板块进行短期炒作。主播认为当前市场处于调整末期的\"磨人\"阶段，各主要指数（大盘、沪深300、",
+        "structured_view_count": 0,
+        "size_bytes": 22198
+      },
+      {
         "note_id": "6d34cea2a7a8",
         "filename": "钱博士 BV1Ar8Q6wEum.md",
         "title": "钱博士 BV1Ar8Q6wEum",
@@ -10959,6 +10971,18 @@
         "size_bytes": 4817
       },
       {
+        "note_id": "c25207db691f",
+        "filename": "钱博士 BV15qbG6qEox.md",
+        "title": "钱博士 BV15qbG6qEox",
+        "note_date": "2025-09-08（推断，主播提到\"9月7号附近是个变盘点\"，\"昨天基本上市场兑现了\"，故推断直播日期为9月8日）",
+        "created_at": null,
+        "tags": [],
+        "source": "未知（转录未提供BV号）",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：主播认为市场正处于新一轮行情的起点。昨日科技大涨，今日科技继续上涨，市场连续两日有3000-4000只个股上涨，光模块板块持续走强，市场呈现震荡上行的态势。主播的核心观点是：",
+        "structured_view_count": 0,
+        "size_bytes": 18445
+      },
+      {
         "note_id": "4cee37f437c5",
         "filename": "2025-09-07 （钱博士） BV1RBYjzTEKh.md",
         "title": "2025-09-07 （钱博士） BV1RBYjzTEKh",
@@ -12507,6 +12531,18 @@
         "size_bytes": 27097
       },
       {
+        "note_id": "0e2094eb3081",
+        "filename": "钱博士 BV1MXbG64EcJ.md",
+        "title": "钱博士 BV1MXbG64EcJ",
+        "note_date": "2025-01-08",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录（BV号未知）",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：市场整体表现强势，主播提到“今天将近4000个公司上涨，所有的板块都在涨”，但仍有观众在亏损，主播对此表达了强烈不满。市场核心矛盾在于AI硬件（光模块）板块持续上涨，而部分投",
+        "structured_view_count": 0,
+        "size_bytes": 6238
+      },
+      {
         "note_id": "b195d3ea25de",
         "filename": "钱博士 BV1vqtb6mEmd.md",
         "title": "钱博士 BV1vqtb6mEmd",
@@ -12647,7 +12683,7 @@
         "tags": [],
         "source": null,
         "excerpt": "```markdown --- date: 2026-09-07 source: 直播转录（BV号未知） --- > 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：主播认为市场在经历上周的\"最后一跌\"后，已于今日（约9月7日",
-        "structured_view_count": 0,
+        "structured_view_count": 13,
         "size_bytes": 11762
       },
       {
@@ -12929,8 +12965,8 @@
     ],
     "pagination": {
       "page": 1,
-      "page_size": 1073,
-      "total": 1073,
+      "page_size": 1076,
+      "total": 1076,
       "has_more": false
     }
   }

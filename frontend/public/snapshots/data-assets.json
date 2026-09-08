@@ -1,34 +1,34 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 11319,
+      "structured_views": 11332,
       "prediction_events": 31320,
-      "notes": 1073,
+      "notes": 1076,
       "rag_chunks": 11011,
       "analysts": 11,
       "asset_cards": 8,
-      "generated_at": "2026-09-07T15:00:12.455700+00:00"
+      "generated_at": "2026-09-08T15:00:26.740068+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 2790
+        "value": 2796
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2039
+        "value": 2040
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 5715
+        "value": 5720
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 345
+        "value": 346
       },
       {
         "name": "risk",
@@ -40,33 +40,33 @@
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2038
+        "value": 2042
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2590
+        "value": 2592
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1467
+        "value": 1468
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 279
+        "value": 280
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 4945
+        "value": 4950
       }
     ],
     "source_contrib": [
       {
         "name": "钱博士直播",
-        "views": 5571
+        "views": 5584
       },
       {
         "name": "钱博士短视频",
@@ -224,33 +224,33 @@
     "sample_views": [
       {
         "analyst": "钱博士直播",
-        "date": "2026-09-03",
+        "date": "2026-09-07",
+        "stance": "watch",
+        "claim": "当前市场操纵痕迹较重，投资者不必纠结于上涨的推导过程，因为市场没有明确的推导逻辑，只需要关注结果——即指数能否到达目标位。"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-09-07",
         "stance": "neutral",
-        "claim": "主播分享了“两枪制”的建仓纪律和趋势交易的核心逻辑。"
+        "claim": "投资者亏损的根本原因往往不是市场太差，而是\"太爱赌\"。即使在美股市场，爱赌的人同样会亏钱。要改善投资结果，必须从价值观层面改变自己的投资行为和投资逻辑。"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-09-03",
-        "stance": "bearish",
-        "claim": "涉及资产：A股大盘"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-09-03",
-        "stance": "bullish",
-        "claim": "中长线：看多 🐂📈（但强调是最后一波）"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-09-03",
+        "date": "2026-09-07",
         "stance": "neutral",
-        "claim": "短线：中性 🦀➡️"
+        "claim": "大国经济存在\"先蓄力30年，再爆发30年\"的康波周期规律。中国在80年代前经历了长期蓄力，之后通过市场化改革和加入WTO实现了30年高速增长。美国从80-90年"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-09-03",
+        "date": "2026-09-07",
         "stance": "bearish",
-        "claim": "涉及资产：光模块、AI算力"
+        "claim": "当一只股票或一个板块在下跌趋势中，无论好消息还是坏消息都跌，说明市场情绪极度悲观。但当出现坏消息股价不再下跌甚至开始上涨时，说明利空已经出尽，市场情绪开始反转，"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-09-07",
+        "stance": "neutral",
+        "claim": "AI与互联网有本质区别——互联网只是信息交流的加速器，而AI更像\"电\"，是一种底层生产力工具。电刚发明时只有照明一个用途，但后来衍生出电冰箱、收音机、空调等无数"
       }
     ]
   }

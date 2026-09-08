@@ -63,17 +63,17 @@
             "created_at": "2026-08-06T01:06:08"
           }
         ],
-        "views_count": 2552,
+        "views_count": 2559,
         "stance_counts": {
-          "bullish": 866,
-          "neutral": 1171,
+          "bullish": 870,
+          "neutral": 1174,
           "bearish": 418,
           "watch": 59,
           "risk": 38
         },
-        "bullish_count": 866,
+        "bullish_count": 870,
         "bearish_count": 418,
-        "neutral_count": 1171
+        "neutral_count": 1174
       },
       {
         "asset_id": "ALUMINUM",
@@ -581,16 +581,16 @@
             "created_at": "2026-08-06T12:13:18"
           }
         ],
-        "views_count": 1757,
+        "views_count": 1759,
         "stance_counts": {
-          "bullish": 566,
+          "bullish": 567,
           "neutral": 738,
-          "bearish": 357,
+          "bearish": 358,
           "watch": 44,
           "risk": 52
         },
-        "bullish_count": 566,
-        "bearish_count": 357,
+        "bullish_count": 567,
+        "bearish_count": 358,
         "neutral_count": 738
       }
     ],
