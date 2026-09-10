@@ -2,21 +2,21 @@
   "metrics": {
     "structured_views": 11332,
     "prediction_events": 31320,
-    "notes": 1076,
+    "notes": 1082,
     "rag_chunks": 11011,
     "source_count": 6,
-    "generated_at": "2026-09-08T15:00:26.359921+00:00"
+    "generated_at": "2026-09-10T15:00:07.178292+00:00"
   },
   "status": {
-    "last_checked": "2026-09-08 22:03",
+    "last_checked": "2026-09-10 22:02",
     "detected_today": 8,
     "source_count": 6,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-09-08.md",
-    "generated_at": "2026-09-08T14:13:01.381668+00:00",
-    "summary": "主线：大盘与光模块修复预期 最大分歧：科技反弹与高位套牢盘压力 最需盯盘/最大风险：光模块能否放量修复，避免无量反弹 决策台提醒：黄金、创新药判断已复盘；铝部分正确；白酒、科技判断…",
+    "filename": "日报_2026-09-10.md",
+    "generated_at": "2026-09-10T14:14:47.594322+00:00",
+    "summary": "- 主线：科技（光模块/半导体）修复预期 vs 低位价值抗跌 - 最大分歧：高位科技短线看空（旗帜鲜明）vs 钱博士中长线看多 - 最需盯盘/最大风险：光模块能否站稳，跌破前低则修…",
     "section_count": 8
   }
 }
