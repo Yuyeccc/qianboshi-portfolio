@@ -5,13 +5,13 @@
     "notes": 1088,
     "rag_chunks": 11011,
     "source_count": 6,
-    "generated_at": "2026-09-11T15:00:32.950944+00:00"
+    "generated_at": "2026-09-12T15:01:03.068126+00:00"
   },
   "status": {
     "last_checked": "2026-09-11 22:02",
     "detected_today": 8,
     "source_count": 6,
-    "pipeline_running": true
+    "pipeline_running": false
   },
   "latest_brief": {
     "filename": "2026-09-11.md",
