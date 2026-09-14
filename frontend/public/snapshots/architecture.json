@@ -1,7 +1,7 @@
 {
   "architecture_data": {
     "meta": {
-      "generated_at": "2026-09-12T15:01:03.088069+00:00",
+      "generated_at": "2026-09-14T15:00:21.056850+00:00",
       "source": "live"
     },
     "summary_tags": [
@@ -14,7 +14,7 @@
     ],
     "pipeline_status": {
       "scheduler": "active",
-      "last_checked": "2026-09-11 22:02",
+      "last_checked": "2026-09-14 22:15",
       "detected_today": 8,
       "processed_total": 237,
       "queue_pending": 115,
