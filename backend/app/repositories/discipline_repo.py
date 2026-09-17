@@ -286,11 +286,17 @@ def get_discipline_data() -> dict[str, Any]:
         total = len(logs)
         open_count = sum(1 for log in logs if log["status"] == "open")
         reviewed_count = sum(1 for log in logs if log["status"] == "reviewed")
+        # 术语对齐：result_label 实际为 right/wrong/mixed（2026-09-17 修）
         hit_count = sum(
-            1 for review in reviews.values() if review["result_label"] == "hit"
+            1
+            for review in reviews.values()
+            if review["result_label"] in ("right", "hit")
         )
         wrong_count = sum(
             1 for review in reviews.values() if review["result_label"] == "wrong"
+        )
+        mixed_count = sum(
+            1 for review in reviews.values() if review["result_label"] == "mixed"
         )
         coverage = round(reviewed_count / total * 100) if total else 0
 
@@ -300,6 +306,7 @@ def get_discipline_data() -> dict[str, Any]:
             "reviewed": reviewed_count,
             "hit": hit_count,
             "wrong": wrong_count,
+            "mixed": mixed_count,
             "review_coverage_pct": coverage,
             "generated_at": generated_at,
         }

@@ -223,8 +223,13 @@ def get_decisions_data() -> dict[str, Any]:
     reviewed_count = sum(
         1 for decision in decisions if decision["status"] == "reviewed"
     )
-    hit_count = sum(1 for review in reviews if review["result_label"] == "hit")
+    # 术语对齐：decision_reviews.result_label 实际取值为 right/wrong/mixed，
+    # 旧代码按 "hit" 统计导致命中恒为 0（2026-09-17 修，兼容历史 hit 标签）
+    hit_count = sum(
+        1 for review in reviews if review["result_label"] in ("right", "hit")
+    )
     wrong_count = sum(1 for review in reviews if review["result_label"] == "wrong")
+    mixed_count = sum(1 for review in reviews if review["result_label"] == "mixed")
 
     return {
         "stats": {
@@ -233,6 +238,7 @@ def get_decisions_data() -> dict[str, Any]:
             "reviewed": reviewed_count,
             "hit": hit_count,
             "wrong": wrong_count,
+            "mixed": mixed_count,
             "generated_at": generated_at,
         },
         "decisions": decisions,

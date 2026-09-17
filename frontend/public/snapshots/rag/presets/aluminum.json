@@ -9,7 +9,7 @@
         "content": "## 观点分析",
         "source": "钱博士 BV1964R6mEAa.md",
         "section": "观点分析",
-        "score": 0.4561,
+        "score": 0.4361,
         "raw_score": 0.4804,
         "type": "livestream"
       },
@@ -42,42 +42,6 @@
       },
       {
         "rank": 5,
-        "content": "## 观点分析",
-        "source": "钱博士 BV1qb8z6DEzT.md",
-        "section": "观点分析",
-        "score": 0.3361,
-        "raw_score": 0.4804,
-        "type": "livestream"
-      },
-      {
-        "rank": 6,
-        "content": "## 观点分析",
-        "source": "钱博士 BV1BK8K6tEhS.md",
-        "section": "观点分析",
-        "score": 0.3361,
-        "raw_score": 0.4804,
-        "type": "livestream"
-      },
-      {
-        "rank": 7,
-        "content": "## 观点分析",
-        "source": "2026-08-21 （投机大拿） BV1qb8z6DEzT.md",
-        "section": "观点分析",
-        "score": 0.3361,
-        "raw_score": 0.4804,
-        "type": "livestream"
-      },
-      {
-        "rank": 8,
-        "content": "## 观点分析",
-        "source": "2026-08-21 （旗帜鲜明） BV1BK8K6tEhS.md",
-        "section": "观点分析",
-        "score": 0.3361,
-        "raw_score": 0.4804,
-        "type": "livestream"
-      },
-      {
-        "rank": 9,
         "content": "## 市场知识",
         "source": "投机大拿 2026.06.23 BV1MjjS6YEZP.md",
         "section": "市场知识",
@@ -86,9 +50,45 @@
         "type": "livestream"
       },
       {
-        "rank": 10,
+        "rank": 6,
         "content": "## 市场知识",
         "source": "旗帜鲜明 2026.06.25 BV1xv786kEX8.md",
+        "section": "市场知识",
+        "score": 0.3344,
+        "raw_score": 0.5721,
+        "type": "livestream"
+      },
+      {
+        "rank": 7,
+        "content": "## 市场知识",
+        "source": "笨笨的韭菜 2026.04.06 BV1pASfBFESv.md",
+        "section": "市场知识",
+        "score": 0.3344,
+        "raw_score": 0.5721,
+        "type": "livestream"
+      },
+      {
+        "rank": 8,
+        "content": "## 市场知识",
+        "source": "笨笨的韭菜 2026.4.23 BV1T2oMBVEH3.md",
+        "section": "市场知识",
+        "score": 0.3344,
+        "raw_score": 0.5721,
+        "type": "livestream"
+      },
+      {
+        "rank": 9,
+        "content": "## 市场知识",
+        "source": "趋势天哥 2026.04.30 BV1s49aBYE6U.md",
+        "section": "市场知识",
+        "score": 0.3344,
+        "raw_score": 0.5721,
+        "type": "livestream"
+      },
+      {
+        "rank": 10,
+        "content": "## 市场知识",
+        "source": "趋势天哥 BV1tDQwBmEEr.md",
         "section": "市场知识",
         "score": 0.3344,
         "raw_score": 0.5721,

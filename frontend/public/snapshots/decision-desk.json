@@ -4,9 +4,10 @@
       "total": 5,
       "open": 0,
       "reviewed": 5,
-      "hit": 0,
+      "hit": 2,
       "wrong": 2,
-      "generated_at": "2026-09-16T15:00:43.938523+00:00"
+      "mixed": 1,
+      "generated_at": "2026-09-17T05:38:56.752245+00:00"
     },
     "decisions": [
       {
