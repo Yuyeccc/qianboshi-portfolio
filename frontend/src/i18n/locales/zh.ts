@@ -282,7 +282,7 @@ export default {
     complianceNote: "只做规则比对与研究成果呈现，不输出买卖/仓位建议，不承诺收益。",
     footnote: "口径说明：总量数字来自 Mac 权威库 2026-09-01 全量校验（anchored 7,660 / annotation+claim 7,736）；维度分布来自本地 8-31 导出快照（7,484 条，9-01 补标 252 条待下次导出）；回测为 #14v2 分层前瞻回测。",
   },
-  overview: { title: "钱博士 Agent", heroStatus: "系统状态", trustData: "信任数据", pipelineRunning: "Pipeline 运行中", pipelineStopped: "Pipeline 未运行", lastChecked: "最近检查", detectedToday: "今日检测 {{count}} 个新视频", latestBrief: "最新简报", loading: "加载中…", cognitiveEntry: "认知内核", cognitiveEntrySub: "每个观点都能回到证据、条件与结果——证据链保真 · 维度增补 · 认知闭环", cognitiveAnchored: "锚定观点", cognitiveClaims: "标注观点", cognitiveConflicts: "精确冲突", cognitiveBacktest: "回测 w3 ok 层", cognitiveEnter: "进入认知内核", cognitiveEnterHint: "查看完整四模块分析", cognitiveLoading: "认知数据加载中…" },
+  overview: { title: "钱博士 Agent", heroStatus: "系统状态", trustData: "信任数据", pipelineRunning: "Pipeline 运行中", pipelineStopped: "巡检空闲（无进行中任务）", lastChecked: "最近检查", detectedToday: "今日检测 {{count}} 个新视频", latestBrief: "最新简报", loading: "加载中…", cognitiveEntry: "认知内核", cognitiveEntrySub: "每个观点都能回到证据、条件与结果——证据链保真 · 维度增补 · 认知闭环", cognitiveAnchored: "锚定观点", cognitiveClaims: "标注观点", cognitiveConflicts: "精确冲突", cognitiveBacktest: "回测 w3 ok 层", cognitiveEnter: "进入认知内核", cognitiveEnterHint: "查看完整四模块分析", cognitiveLoading: "认知数据加载中…" },
   pages: {
     phaseOne: "Phase 1 实现",
     about: {
