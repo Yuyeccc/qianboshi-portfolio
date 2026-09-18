@@ -10887,6 +10887,18 @@
         "size_bytes": 3783
       },
       {
+        "note_id": "aa5685ad12f6",
+        "filename": "钱博士 BV1tGe36YE9f.md",
+        "title": "钱博士 BV1tGe36YE9f",
+        "note_date": "2025-09-18",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 **今日市场：** 美联储加息落地，12比0全票通过，超出主播此前预期的7比5或8比4。加息定价从9月11日数据发布后开始，周一周二市场已提前演绎，今日属于\"卖现实\"阶段，加息事件对市",
+        "structured_view_count": 0,
+        "size_bytes": 33127
+      },
+      {
         "note_id": "14bbee296ec2",
         "filename": "钱博士 BV1i5eg6VE18.md",
         "title": "钱博士 BV1i5eg6VE18",
@@ -11931,6 +11943,18 @@
         "size_bytes": 19049
       },
       {
+        "note_id": "69fdf1a03546",
+        "filename": "钱博士 BV1aKe16vEjT.md",
+        "title": "钱博士 BV1aKe16vEjT",
+        "note_date": "2025-08-01",
+        "created_at": null,
+        "tags": [],
+        "source": "BV号未提供",
+        "excerpt": "",
+        "structured_view_count": 0,
+        "size_bytes": 8345
+      },
+      {
         "note_id": "40da204a567e",
         "filename": "2025-08-01 （钱博士） BV1RWhEzqEve.md",
         "title": "2025-08-01 （钱博士） BV1RWhEzqEve",
@@ -12951,6 +12975,18 @@
         "size_bytes": 0
       },
       {
+        "note_id": "e17e669c19d0",
+        "filename": "钱博士 BV1Evem6WEx7.md",
+        "title": "钱博士 BV1Evem6WEx7",
+        "note_date": null,
+        "created_at": null,
+        "tags": [],
+        "source": null,
+        "excerpt": "以下是根据直播转录整理的结构化笔记。转录中未明确提及具体日期与BV号，故相应字段留空待补。 ```markdown --- date: source: --- > 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：下午房地产板块",
+        "structured_view_count": 0,
+        "size_bytes": 7843
+      },
+      {
         "note_id": "611060017e73",
         "filename": "钱博士 BV1EdtX6XEch.md",
         "title": "钱博士 BV1EdtX6XEch",
@@ -13217,8 +13253,8 @@
     ],
     "pagination": {
       "page": 1,
-      "page_size": 1097,
-      "total": 1097,
+      "page_size": 1100,
+      "total": 1100,
       "has_more": false
     }
   }
