@@ -6,21 +6,21 @@
     "data": [
       {
         "rank": 1,
-        "content": "## 观点分析",
-        "source": "钱博士 BV1964R6mEAa.md",
-        "section": "观点分析",
-        "score": 0.391,
-        "raw_score": 0.455,
-        "type": "livestream"
-      },
-      {
-        "rank": 2,
         "content": "## 市场前景\n\nAI服务器、高压电网设备的高端MLCC，重稀土需求跟随增长。",
         "source": "2026.6.16 MLCC火了 重稀土为啥也跟着火 短视频解读.md",
         "section": "市场前景",
         "score": 0.3763,
         "raw_score": 0.5817,
         "type": "short_video"
+      },
+      {
+        "rank": 2,
+        "content": "## 观点分析",
+        "source": "钱博士 BV1964R6mEAa.md",
+        "section": "观点分析",
+        "score": 0.371,
+        "raw_score": 0.455,
+        "type": "livestream"
       },
       {
         "rank": 3,
