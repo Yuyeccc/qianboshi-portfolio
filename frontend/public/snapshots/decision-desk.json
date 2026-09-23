@@ -7,7 +7,7 @@
       "hit": 2,
       "wrong": 2,
       "mixed": 1,
-      "generated_at": "2026-09-20T15:00:36.452756+00:00"
+      "generated_at": "2026-09-23T09:50:56.512730+00:00"
     },
     "decisions": [
       {
@@ -126,6 +126,32 @@
         ]
       },
       {
+        "asset_id": "CHINA_CONSTRUCTION",
+        "asset_name": "中国建筑",
+        "asset_type": "stock",
+        "description": "中国建筑（601668，基建/中字头）中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "中国建筑股价",
+            "current_state": "近5日走弱-1.61%",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "地产链",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "medium"
+          },
+          {
+            "factor_name": "基建投资",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          }
+        ]
+      },
+      {
         "asset_id": "INNOV_DRUG",
         "asset_name": "创新药",
         "asset_type": "sector",
@@ -204,6 +230,32 @@
         ]
       },
       {
+        "asset_id": "BATTERY",
+        "asset_name": "电池主题",
+        "asset_type": "sector",
+        "description": "电池主题（新能源/锂电，场内512460）中期趋势分析框架",
+        "factors": [
+          {
+            "factor_name": "储能",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "medium"
+          },
+          {
+            "factor_name": "新能源车",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
+            "impact_strength": "high"
+          },
+          {
+            "factor_name": "电池ETF",
+            "current_state": "近5日走强+0.64%",
+            "impact_direction": "positive",
+            "impact_strength": "high"
+          }
+        ]
+      },
+      {
         "asset_id": "BAIJIU",
         "asset_name": "白酒",
         "asset_type": "sector",
@@ -269,14 +321,14 @@
           },
           {
             "factor_name": "氧化铝成本",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "紫金矿业代理",
-            "current_state": "近5日走强+0.15%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-2.11%",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           }
         ]

@@ -63,17 +63,17 @@
             "created_at": "2026-08-06T01:06:08"
           }
         ],
-        "views_count": 2559,
+        "views_count": 2581,
         "stance_counts": {
-          "bullish": 870,
-          "neutral": 1174,
-          "bearish": 418,
+          "bullish": 877,
+          "neutral": 1184,
+          "bearish": 422,
           "watch": 59,
-          "risk": 38
+          "risk": 39
         },
-        "bullish_count": 870,
-        "bearish_count": 418,
-        "neutral_count": 1174
+        "bullish_count": 877,
+        "bearish_count": 422,
+        "neutral_count": 1184
       },
       {
         "asset_id": "ALUMINUM",
@@ -82,8 +82,8 @@
         "description": "铝中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-09-01T23:00:38",
-        "factor_count": 24,
+        "updated_at": "2026-09-23T13:45:44",
+        "factor_count": 28,
         "factor_preview": [
           {
             "state_id": "ALUMINUM_1_ZIJIN_2026-08-06",
@@ -211,17 +211,153 @@
             "created_at": "2026-08-06T01:10:54"
           }
         ],
-        "views_count": 1196,
+        "views_count": 1203,
         "stance_counts": {
-          "bearish": 301,
-          "neutral": 522,
+          "bearish": 302,
+          "neutral": 527,
           "bullish": 317,
           "watch": 29,
-          "risk": 27
+          "risk": 28
         },
         "bullish_count": 317,
-        "bearish_count": 301,
-        "neutral_count": 522
+        "bearish_count": 302,
+        "neutral_count": 527
+      },
+      {
+        "asset_id": "BATTERY",
+        "asset_name": "电池主题",
+        "asset_type": "sector",
+        "description": "电池主题（新能源/锂电，场内512460）中期趋势分析框架",
+        "version": null,
+        "default_horizon": "medium",
+        "updated_at": "2026-09-23T14:10:27",
+        "factor_count": 4,
+        "factor_preview": [
+          {
+            "state_id": "BATTERY_1_BATTERY_ETF_2026-09-23",
+            "asset_id": "BATTERY",
+            "card_version": 1,
+            "factor_id": "BATTERY_ETF",
+            "factor_name": "电池ETF",
+            "as_of_date": "2026-09-23",
+            "raw_value": "{\"symbol\": \"512460.SS\", \"close\": 0.785, \"date\": \"2026-09-23\", \"pct_change_5d\": 0.641, \"pct_change_20d\": -8.5082, \"source\": \"price_trends\"}",
+            "current_state": "近5日走强+0.64%",
+            "change_direction": "up",
+            "impact_direction": "positive",
+            "impact_strength": "high",
+            "confidence": 0.8,
+            "evidence_refs": "[\"price_trends\"]",
+            "summary": "电池ETF近5日走强+0.64%，对BATTERY构成positive影响。",
+            "created_at": "2026-09-23T14:10:26"
+          },
+          {
+            "state_id": "BATTERY_1_LITHIUM_2026-09-23",
+            "asset_id": "BATTERY",
+            "card_version": 1,
+            "factor_id": "LITHIUM",
+            "factor_name": "锂电材料",
+            "as_of_date": "2026-09-23",
+            "raw_value": "{\"query_terms\": [\"锂电\", \"碳酸锂\", \"动力电池\", \"宁德时代\"], \"lookback_days\": 30, \"current_count\": 0, \"previous_count\": 10}",
+            "current_state": "观点热度下降",
+            "change_direction": "down",
+            "impact_direction": "negative",
+            "impact_strength": "high",
+            "confidence": 0.8,
+            "evidence_refs": "[]",
+            "summary": "锂电材料观点热度下降，对BATTERY构成negative影响。",
+            "created_at": "2026-09-23T14:10:26"
+          },
+          {
+            "state_id": "BATTERY_1_NEW_ENERGY_VEHICLE_2026-09-23",
+            "asset_id": "BATTERY",
+            "card_version": 1,
+            "factor_id": "NEW_ENERGY_VEHICLE",
+            "factor_name": "新能源车",
+            "as_of_date": "2026-09-23",
+            "raw_value": "{\"query_terms\": [\"新能源车\", \"电动车\", \"渗透率\", \"销量\"], \"lookback_days\": 30, \"current_count\": 0, \"previous_count\": 5}",
+            "current_state": "观点热度下降",
+            "change_direction": "down",
+            "impact_direction": "negative",
+            "impact_strength": "high",
+            "confidence": 0.8,
+            "evidence_refs": "[]",
+            "summary": "新能源车观点热度下降，对BATTERY构成negative影响。",
+            "created_at": "2026-09-23T14:10:27"
+          }
+        ],
+        "views_count": 0,
+        "stance_counts": {},
+        "bullish_count": 0,
+        "bearish_count": 0,
+        "neutral_count": 0
+      },
+      {
+        "asset_id": "CHINA_CONSTRUCTION",
+        "asset_name": "中国建筑",
+        "asset_type": "stock",
+        "description": "中国建筑（601668，基建/中字头）中期趋势分析框架",
+        "version": null,
+        "default_horizon": "medium",
+        "updated_at": "2026-09-23T14:10:26",
+        "factor_count": 4,
+        "factor_preview": [
+          {
+            "state_id": "CHINA_CONSTRUCTION_1_CSCEC_PRICE_2026-09-23",
+            "asset_id": "CHINA_CONSTRUCTION",
+            "card_version": 1,
+            "factor_id": "CSCEC_PRICE",
+            "factor_name": "中国建筑股价",
+            "as_of_date": "2026-09-23",
+            "raw_value": "{\"symbol\": \"601668.SS\", \"close\": 4.28, \"date\": \"2026-09-18\", \"pct_change_5d\": -1.6092, \"pct_change_20d\": null, \"source\": \"price_trends\"}",
+            "current_state": "近5日走弱-1.61%",
+            "change_direction": "down",
+            "impact_direction": "negative",
+            "impact_strength": "high",
+            "confidence": 0.8,
+            "evidence_refs": "[\"price_trends\"]",
+            "summary": "中国建筑股价近5日走弱-1.61%，对CHINA_CONSTRUCTION构成negative影响。",
+            "created_at": "2026-09-23T14:10:22"
+          },
+          {
+            "state_id": "CHINA_CONSTRUCTION_1_INFRA_INVEST_2026-09-23",
+            "asset_id": "CHINA_CONSTRUCTION",
+            "card_version": 1,
+            "factor_id": "INFRA_INVEST",
+            "factor_name": "基建投资",
+            "as_of_date": "2026-09-23",
+            "raw_value": "{\"query_terms\": [\"基建\", \"专项债\", \"新基建\", \"建筑\"], \"lookback_days\": 30, \"current_count\": 0, \"previous_count\": 8}",
+            "current_state": "观点热度下降",
+            "change_direction": "down",
+            "impact_direction": "negative",
+            "impact_strength": "high",
+            "confidence": 0.8,
+            "evidence_refs": "[]",
+            "summary": "基建投资观点热度下降，对CHINA_CONSTRUCTION构成negative影响。",
+            "created_at": "2026-09-23T14:10:23"
+          },
+          {
+            "state_id": "CHINA_CONSTRUCTION_1_REAL_ESTATE_CHAIN_2026-09-23",
+            "asset_id": "CHINA_CONSTRUCTION",
+            "card_version": 1,
+            "factor_id": "REAL_ESTATE_CHAIN",
+            "factor_name": "地产链",
+            "as_of_date": "2026-09-23",
+            "raw_value": "{\"query_terms\": [\"地产\", \"房地产\", \"保交楼\", \"开工\"], \"lookback_days\": 30, \"current_count\": 0, \"previous_count\": 17}",
+            "current_state": "观点热度下降",
+            "change_direction": "down",
+            "impact_direction": "negative",
+            "impact_strength": "medium",
+            "confidence": 0.8,
+            "evidence_refs": "[]",
+            "summary": "地产链观点热度下降，对CHINA_CONSTRUCTION构成negative影响。",
+            "created_at": "2026-09-23T14:10:23"
+          }
+        ],
+        "views_count": 0,
+        "stance_counts": {},
+        "bullish_count": 0,
+        "bearish_count": 0,
+        "neutral_count": 0
       },
       {
         "asset_id": "GOLD",
@@ -359,17 +495,17 @@
             "created_at": "2026-08-06T12:13:16"
           }
         ],
-        "views_count": 488,
+        "views_count": 492,
         "stance_counts": {
           "bullish": 171,
-          "neutral": 184,
-          "bearish": 91,
+          "neutral": 187,
+          "bearish": 92,
           "risk": 26,
           "watch": 16
         },
         "bullish_count": 171,
-        "bearish_count": 91,
-        "neutral_count": 184
+        "bearish_count": 92,
+        "neutral_count": 187
       },
       {
         "asset_id": "ROBOT",
@@ -433,16 +569,16 @@
             "created_at": "2026-08-06T01:10:53"
           }
         ],
-        "views_count": 357,
+        "views_count": 359,
         "stance_counts": {
           "bullish": 99,
           "neutral": 175,
-          "bearish": 63,
+          "bearish": 65,
           "risk": 5,
           "watch": 15
         },
         "bullish_count": 99,
-        "bearish_count": 63,
+        "bearish_count": 65,
         "neutral_count": 175
       },
       {
@@ -507,17 +643,17 @@
             "created_at": "2026-08-06T00:34:59"
           }
         ],
-        "views_count": 2023,
+        "views_count": 2040,
         "stance_counts": {
-          "bullish": 630,
-          "neutral": 940,
+          "bullish": 636,
+          "neutral": 945,
           "watch": 47,
-          "bearish": 372,
+          "bearish": 378,
           "risk": 34
         },
-        "bullish_count": 630,
-        "bearish_count": 372,
-        "neutral_count": 940
+        "bullish_count": 636,
+        "bearish_count": 378,
+        "neutral_count": 945
       },
       {
         "asset_id": "TECH",
@@ -581,19 +717,19 @@
             "created_at": "2026-08-06T12:13:18"
           }
         ],
-        "views_count": 1759,
+        "views_count": 1779,
         "stance_counts": {
-          "bullish": 567,
-          "neutral": 738,
-          "bearish": 358,
+          "bullish": 572,
+          "neutral": 746,
+          "bearish": 363,
           "watch": 44,
-          "risk": 52
+          "risk": 54
         },
-        "bullish_count": 567,
-        "bearish_count": 358,
-        "neutral_count": 738
+        "bullish_count": 572,
+        "bearish_count": 363,
+        "neutral_count": 746
       }
     ],
-    "total": 8
+    "total": 10
   }
 }

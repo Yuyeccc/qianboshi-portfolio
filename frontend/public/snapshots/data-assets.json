@@ -1,29 +1,29 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 11332,
+      "structured_views": 11419,
       "prediction_events": 31320,
-      "notes": 1100,
+      "notes": 1205,
       "rag_chunks": 11011,
       "analysts": 11,
-      "asset_cards": 8,
-      "generated_at": "2026-09-20T15:00:35.621717+00:00"
+      "asset_cards": 10,
+      "generated_at": "2026-09-23T09:50:55.531529+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 2796
+        "value": 2814
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2040
+        "value": 2063
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 5720
+        "value": 5760
       },
       {
         "name": "watch",
@@ -33,40 +33,40 @@
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 430
+        "value": 436
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2042
+        "value": 2062
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2592
+        "value": 2606
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1468
+        "value": 1477
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 280
+        "value": 284
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 4950
+        "value": 4990
       }
     ],
     "source_contrib": [
       {
         "name": "钱博士直播",
-        "views": 5584
+        "views": 5662
       },
       {
         "name": "钱博士短视频",
@@ -82,7 +82,7 @@
       },
       {
         "name": "旗帜鲜明",
-        "views": 711
+        "views": 720
       },
       {
         "name": "趋势天哥",
@@ -224,33 +224,33 @@
     "sample_views": [
       {
         "analyst": "钱博士直播",
-        "date": "2026-09-07",
-        "stance": "watch",
-        "claim": "当前市场操纵痕迹较重，投资者不必纠结于上涨的推导过程，因为市场没有明确的推导逻辑，只需要关注结果——即指数能否到达目标位。"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-09-07",
+        "date": "2026-09-10",
         "stance": "neutral",
-        "claim": "投资者亏损的根本原因往往不是市场太差，而是\"太爱赌\"。即使在美股市场，爱赌的人同样会亏钱。要改善投资结果，必须从价值观层面改变自己的投资行为和投资逻辑。"
+        "claim": "成交量与行情峰值对比可衡量市场活跃度变化——通过将当前成交量与本轮行情峰值成交量对比，可以判断市场降温程度。当前成交量较峰值3.76万亿萎缩超50%，属于比较夸"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-09-07",
+        "date": "2026-09-10",
         "stance": "neutral",
-        "claim": "大国经济存在\"先蓄力30年，再爆发30年\"的康波周期规律。中国在80年代前经历了长期蓄力，之后通过市场化改革和加入WTO实现了30年高速增长。美国从80-90年"
+        "claim": "极致缩量通常对应变盘——当市场成交量萎缩到极致水平时，往往意味着市场即将选择方向（变盘），但变盘方向不确定。"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-09-07",
-        "stance": "bearish",
-        "claim": "当一只股票或一个板块在下跌趋势中，无论好消息还是坏消息都跌，说明市场情绪极度悲观。但当出现坏消息股价不再下跌甚至开始上涨时，说明利空已经出尽，市场情绪开始反转，"
+        "date": "2026-09-10",
+        "stance": "risk",
+        "claim": "涉及资产：韩国综合指数、台湾加权指数、日经指数"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-09-07",
+        "date": "2026-09-10",
         "stance": "neutral",
-        "claim": "AI与互联网有本质区别——互联网只是信息交流的加速器，而AI更像\"电\"，是一种底层生产力工具。电刚发明时只有照明一个用途，但后来衍生出电冰箱、收音机、空调等无数"
+        "claim": "涉及资产：SK海力士、Lumental、Coherent等"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-09-10",
+        "stance": "bullish",
+        "claim": "中长线：看多 🐂📈"
       }
     ]
   }

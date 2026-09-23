@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 11332,
+    "structured_views": 11419,
     "prediction_events": 31320,
-    "notes": 1100,
+    "notes": 1205,
     "rag_chunks": 11011,
-    "source_count": 6,
-    "generated_at": "2026-09-20T15:00:35.279594+00:00"
+    "source_count": 7,
+    "generated_at": "2026-09-23T09:50:55.214188+00:00"
   },
   "status": {
-    "last_checked": "2026-09-18 22:06",
+    "last_checked": "2026-09-23 15:14",
     "detected_today": 8,
-    "source_count": 6,
-    "pipeline_running": false
+    "source_count": 7,
+    "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-09-18.md",
-    "generated_at": "2026-09-18T14:14:46.601938+00:00",
-    "summary": "主线：A股指数上涨，科技板块分歧仍大 最大分歧：大盘中期偏多，硬科技短中期偏空 最需盯盘/最大风险：美股、利率、美元与黄金联动 决策台提醒：2条判断正确，1条混合；均已到期复盘",
+    "filename": "2026-09-23.md",
+    "generated_at": "2026-09-23T08:10:30.021658+00:00",
+    "summary": "- 主线：旗帜鲜明看多大盘中长线，协调性已修复 - 最大分歧：创新药短线中性（旗帜鲜明）vs 决策台多头 29 条 - 盯盘：美元指数 100.77、人民币 6.7069、黄金 4…",
     "section_count": 8
   }
 }
