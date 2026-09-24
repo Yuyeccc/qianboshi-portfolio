@@ -63,17 +63,17 @@
             "created_at": "2026-08-06T01:06:08"
           }
         ],
-        "views_count": 2581,
+        "views_count": 3032,
         "stance_counts": {
-          "bullish": 877,
-          "neutral": 1184,
-          "bearish": 422,
-          "watch": 59,
-          "risk": 39
+          "bullish": 1022,
+          "neutral": 1420,
+          "bearish": 483,
+          "watch": 63,
+          "risk": 44
         },
-        "bullish_count": 877,
-        "bearish_count": 422,
-        "neutral_count": 1184
+        "bullish_count": 1022,
+        "bearish_count": 483,
+        "neutral_count": 1420
       },
       {
         "asset_id": "ALUMINUM",
@@ -137,17 +137,17 @@
             "created_at": "2026-08-06T12:13:14"
           }
         ],
-        "views_count": 218,
+        "views_count": 251,
         "stance_counts": {
-          "bullish": 80,
-          "neutral": 70,
-          "bearish": 56,
+          "bullish": 90,
+          "neutral": 85,
+          "bearish": 63,
           "risk": 9,
-          "watch": 3
+          "watch": 4
         },
-        "bullish_count": 80,
-        "bearish_count": 56,
-        "neutral_count": 70
+        "bullish_count": 90,
+        "bearish_count": 63,
+        "neutral_count": 85
       },
       {
         "asset_id": "BAIJIU",
@@ -211,17 +211,17 @@
             "created_at": "2026-08-06T01:10:54"
           }
         ],
-        "views_count": 1203,
+        "views_count": 1398,
         "stance_counts": {
-          "bearish": 302,
-          "neutral": 527,
-          "bullish": 317,
-          "watch": 29,
-          "risk": 28
+          "bearish": 341,
+          "neutral": 632,
+          "bullish": 362,
+          "watch": 31,
+          "risk": 32
         },
-        "bullish_count": 317,
-        "bearish_count": 302,
-        "neutral_count": 527
+        "bullish_count": 362,
+        "bearish_count": 341,
+        "neutral_count": 632
       },
       {
         "asset_id": "BATTERY",
@@ -421,17 +421,17 @@
             "created_at": "2026-08-06T00:34:58"
           }
         ],
-        "views_count": 887,
+        "views_count": 1091,
         "stance_counts": {
-          "bullish": 317,
-          "neutral": 309,
-          "watch": 28,
-          "bearish": 196,
-          "risk": 37
+          "bullish": 365,
+          "neutral": 410,
+          "watch": 30,
+          "bearish": 247,
+          "risk": 39
         },
-        "bullish_count": 317,
-        "bearish_count": 196,
-        "neutral_count": 309
+        "bullish_count": 365,
+        "bearish_count": 247,
+        "neutral_count": 410
       },
       {
         "asset_id": "INNOV_DRUG",
@@ -495,17 +495,17 @@
             "created_at": "2026-08-06T12:13:16"
           }
         ],
-        "views_count": 492,
+        "views_count": 576,
         "stance_counts": {
-          "bullish": 171,
-          "neutral": 187,
-          "bearish": 92,
-          "risk": 26,
-          "watch": 16
+          "bullish": 197,
+          "neutral": 222,
+          "bearish": 109,
+          "risk": 29,
+          "watch": 19
         },
-        "bullish_count": 171,
-        "bearish_count": 92,
-        "neutral_count": 187
+        "bullish_count": 197,
+        "bearish_count": 109,
+        "neutral_count": 222
       },
       {
         "asset_id": "ROBOT",
@@ -569,17 +569,17 @@
             "created_at": "2026-08-06T01:10:53"
           }
         ],
-        "views_count": 359,
+        "views_count": 387,
         "stance_counts": {
-          "bullish": 99,
-          "neutral": 175,
-          "bearish": 65,
-          "risk": 5,
-          "watch": 15
+          "bullish": 101,
+          "neutral": 196,
+          "bearish": 68,
+          "risk": 6,
+          "watch": 16
         },
-        "bullish_count": 99,
-        "bearish_count": 65,
-        "neutral_count": 175
+        "bullish_count": 101,
+        "bearish_count": 68,
+        "neutral_count": 196
       },
       {
         "asset_id": "SEMI",
@@ -643,17 +643,17 @@
             "created_at": "2026-08-06T00:34:59"
           }
         ],
-        "views_count": 2040,
+        "views_count": 2275,
         "stance_counts": {
-          "bullish": 636,
-          "neutral": 945,
-          "watch": 47,
-          "bearish": 378,
-          "risk": 34
+          "bullish": 693,
+          "neutral": 1066,
+          "watch": 51,
+          "bearish": 424,
+          "risk": 41
         },
-        "bullish_count": 636,
-        "bearish_count": 378,
-        "neutral_count": 945
+        "bullish_count": 693,
+        "bearish_count": 424,
+        "neutral_count": 1066
       },
       {
         "asset_id": "TECH",
@@ -717,17 +717,17 @@
             "created_at": "2026-08-06T12:13:18"
           }
         ],
-        "views_count": 1779,
+        "views_count": 2108,
         "stance_counts": {
-          "bullish": 572,
-          "neutral": 746,
-          "bearish": 363,
-          "watch": 44,
-          "risk": 54
+          "bullish": 675,
+          "neutral": 893,
+          "bearish": 421,
+          "watch": 52,
+          "risk": 67
         },
-        "bullish_count": 572,
-        "bearish_count": 363,
-        "neutral_count": 746
+        "bullish_count": 675,
+        "bearish_count": 421,
+        "neutral_count": 893
       }
     ],
     "total": 10

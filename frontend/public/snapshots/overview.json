@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 11419,
+    "structured_views": 13610,
     "prediction_events": 31320,
-    "notes": 1205,
+    "notes": 1211,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-09-23T09:50:55.214188+00:00"
+    "generated_at": "2026-09-24T03:46:52.429661+00:00"
   },
   "status": {
-    "last_checked": "2026-09-23 15:14",
+    "last_checked": "2026-09-24 11:00",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "2026-09-23.md",
-    "generated_at": "2026-09-23T08:10:30.021658+00:00",
-    "summary": "- 主线：旗帜鲜明看多大盘中长线，协调性已修复 - 最大分歧：创新药短线中性（旗帜鲜明）vs 决策台多头 29 条 - 盯盘：美元指数 100.77、人民币 6.7069、黄金 4…",
+    "filename": "2026-09-24.md",
+    "generated_at": "2026-09-24T03:29:51.449373+00:00",
+    "summary": "- A股午盘处于调整状态：上证指数3906.16点，-0.77%；深证成指13427.40点，-1.53%；创业板指涨跌幅暂不可计算。海外方面，道指-1.03%、纳指-0.69%、…",
     "section_count": 8
   }
 }

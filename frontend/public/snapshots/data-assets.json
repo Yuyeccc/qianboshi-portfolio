@@ -1,104 +1,104 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 11419,
+      "structured_views": 13610,
       "prediction_events": 31320,
-      "notes": 1205,
+      "notes": 1211,
       "rag_chunks": 11011,
-      "analysts": 11,
+      "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-09-23T09:50:55.531529+00:00"
+      "generated_at": "2026-09-24T03:46:52.941313+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 2814
+        "value": 3275
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2063
+        "value": 2402
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 5760
+        "value": 7016
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 346
+        "value": 394
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 436
+        "value": 523
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2062
+        "value": 2477
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2606
+        "value": 2926
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1477
+        "value": 1666
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 284
+        "value": 335
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 4990
+        "value": 6206
       }
     ],
     "source_contrib": [
       {
         "name": "钱博士直播",
-        "views": 5662
+        "views": 7373
       },
       {
         "name": "钱博士短视频",
-        "views": 1180
-      },
-      {
-        "name": "笨笨的韭菜",
-        "views": 757
+        "views": 1193
       },
       {
         "name": "史诗级韭菜",
-        "views": 746
+        "views": 883
+      },
+      {
+        "name": "笨笨的韭菜",
+        "views": 796
       },
       {
         "name": "旗帜鲜明",
-        "views": 720
+        "views": 770
       },
       {
         "name": "趋势天哥",
-        "views": 663
+        "views": 703
       },
       {
         "name": "李一恩",
-        "views": 597
+        "views": 632
       },
       {
         "name": "投机大拿",
-        "views": 466
+        "views": 536
       },
       {
         "name": "柏年说",
-        "views": 303
+        "views": 313
       },
       {
         "name": "任泽平",
@@ -223,34 +223,34 @@
     ],
     "sample_views": [
       {
+        "analyst": "钱博士短视频",
+        "date": "2026-08-24",
+        "stance": "bearish",
+        "claim": "短线：看空 🐻📉（确定性较高，主播称“改变不了趋势”）"
+      },
+      {
         "analyst": "钱博士直播",
-        "date": "2026-09-10",
+        "date": "2026-08-23",
         "stance": "neutral",
-        "claim": "成交量与行情峰值对比可衡量市场活跃度变化——通过将当前成交量与本轮行情峰值成交量对比，可以判断市场降温程度。当前成交量较峰值3.76万亿萎缩超50%，属于比较夸"
+        "claim": "涉及资产：黄金、人民币国际化"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-09-10",
-        "stance": "neutral",
-        "claim": "极致缩量通常对应变盘——当市场成交量萎缩到极致水平时，往往意味着市场即将选择方向（变盘），但变盘方向不确定。"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-09-10",
-        "stance": "risk",
-        "claim": "涉及资产：韩国综合指数、台湾加权指数、日经指数"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-09-10",
-        "stance": "neutral",
-        "claim": "涉及资产：SK海力士、Lumental、Coherent等"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-09-10",
+        "date": "2026-08-23",
         "stance": "bullish",
-        "claim": "中长线：看多 🐂📈"
+        "claim": "中长线：看多黄金 🐂📈"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-08-23",
+        "stance": "bearish",
+        "claim": "涉及资产：美元指数、金属"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-08-23",
+        "stance": "neutral",
+        "claim": "涉及资产：消费板块、泡泡玛特"
       }
     ]
   }
