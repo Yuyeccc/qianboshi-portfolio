@@ -7,7 +7,7 @@
       "hit": 2,
       "wrong": 2,
       "mixed": 1,
-      "generated_at": "2026-09-27T10:36:33.244655+00:00"
+      "generated_at": "2026-09-28T09:51:01.405645+00:00"
     },
     "decisions": [
       {
@@ -107,8 +107,8 @@
         "factors": [
           {
             "factor_name": "应用商业化",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
@@ -119,8 +119,8 @@
           },
           {
             "factor_name": "美股AI映射",
-            "current_state": "近5日走强+1.13%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-1.02%",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           }
         ]
@@ -133,14 +133,14 @@
         "factors": [
           {
             "factor_name": "中国建筑股价",
-            "current_state": "近5日走弱-1.61%",
+            "current_state": "近5日走弱-0.23%",
             "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "地产链",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "medium"
           },
           {
@@ -159,20 +159,20 @@
         "factors": [
           {
             "factor_name": "BD出海",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "创新药个股",
-            "current_state": "看多5/看空4/中性6（近30天）；药明康德中性(李一恩 8.26)",
-            "impact_direction": "negative",
+            "current_state": "近30天无个股观点",
+            "impact_direction": "unknown",
             "impact_strength": "medium"
           },
           {
             "factor_name": "创新药指数",
-            "current_state": "近5日走弱-2.07%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+0.60%",
+            "impact_direction": "positive",
             "impact_strength": "high"
           }
         ]
@@ -191,8 +191,8 @@
           },
           {
             "factor_name": "国产替代",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
@@ -211,20 +211,20 @@
         "factors": [
           {
             "factor_name": "人形机器人量产",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "政策支持",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           },
           {
             "factor_name": "机器人ETF",
-            "current_state": "近5日走弱-0.40%",
-            "impact_direction": "negative",
+            "current_state": "近5日持平+0.00%",
+            "impact_direction": "neutral",
             "impact_strength": "medium"
           }
         ]
@@ -243,14 +243,14 @@
           },
           {
             "factor_name": "新能源车",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度持平",
+            "impact_direction": "neutral",
             "impact_strength": "high"
           },
           {
             "factor_name": "电池ETF",
-            "current_state": "近5日走强+0.64%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-0.90%",
+            "impact_direction": "negative",
             "impact_strength": "high"
           }
         ]
@@ -275,8 +275,8 @@
           },
           {
             "factor_name": "白酒指数",
-            "current_state": "近5日走强+1.90%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-0.24%",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           }
         ]
@@ -289,14 +289,14 @@
         "factors": [
           {
             "factor_name": "光模块景气",
-            "current_state": "近5日走强+0.48%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-7.65%",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "半导体ETF",
-            "current_state": "近5日走强+2.18%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-4.90%",
+            "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
@@ -315,8 +315,8 @@
         "factors": [
           {
             "factor_name": "新能源用铝",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "medium"
           },
           {
@@ -327,7 +327,7 @@
           },
           {
             "factor_name": "紫金矿业代理",
-            "current_state": "近5日走弱-2.11%",
+            "current_state": "近5日走弱-6.46%",
             "impact_direction": "negative",
             "impact_strength": "medium"
           }
@@ -347,13 +347,13 @@
           },
           {
             "factor_name": "央行购金",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
             "factor_name": "美债实际利率",
-            "current_state": "近5日走强+0.32%",
+            "current_state": "近5日走强+3.72%",
             "impact_direction": "negative",
             "impact_strength": "high"
           }

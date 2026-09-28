@@ -1,72 +1,72 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 13610,
-      "prediction_events": 31320,
-      "notes": 1211,
+      "structured_views": 13685,
+      "prediction_events": 38400,
+      "notes": 1221,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-09-27T10:36:32.409288+00:00"
+      "generated_at": "2026-09-28T09:50:56.843396+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3275
+        "value": 3285
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2402
+        "value": 2421
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7016
+        "value": 7055
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 394
+        "value": 398
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 523
+        "value": 526
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2477
+        "value": 2482
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2926
+        "value": 2944
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1666
+        "value": 1673
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 335
+        "value": 337
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6206
+        "value": 6249
       }
     ],
     "source_contrib": [
       {
         "name": "钱博士直播",
-        "views": 7373
+        "views": 7405
       },
       {
         "name": "钱博士短视频",
@@ -74,7 +74,7 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 883
+        "views": 895
       },
       {
         "name": "笨笨的韭菜",
@@ -94,7 +94,7 @@
       },
       {
         "name": "投机大拿",
-        "views": 536
+        "views": 551
       },
       {
         "name": "柏年说",
@@ -107,44 +107,44 @@
     ],
     "analyst_rank": [
       {
+        "name": "马安强",
+        "hit_rate": 1.0,
+        "samples": 2
+      },
+      {
+        "name": "财联社",
+        "hit_rate": 0.8571,
+        "samples": 7
+      },
+      {
         "name": "任泽平",
         "hit_rate": 0.7941,
         "samples": 34
       },
       {
-        "name": "笨笨的韭菜",
-        "hit_rate": 0.6667,
-        "samples": 18
-      },
-      {
-        "name": "财联社",
-        "hit_rate": 0.6667,
-        "samples": 3
-      },
-      {
         "name": "旗帜鲜明",
-        "hit_rate": 0.6,
-        "samples": 55
-      },
-      {
-        "name": "史诗级韭菜",
-        "hit_rate": 0.6,
-        "samples": 10
+        "hit_rate": 0.5821,
+        "samples": 67
       },
       {
         "name": "李一恩",
-        "hit_rate": 0.584,
-        "samples": 125
+        "hit_rate": 0.561,
+        "samples": 164
       },
       {
-        "name": "柏年说",
-        "hit_rate": 0.5,
-        "samples": 10
+        "name": "笨笨的韭菜",
+        "hit_rate": 0.5588,
+        "samples": 34
       },
       {
-        "name": "钱博士直播",
-        "hit_rate": 0.4884,
-        "samples": 86
+        "name": "史诗级韭菜",
+        "hit_rate": 0.4615,
+        "samples": 13
+      },
+      {
+        "name": "投机大拿",
+        "hit_rate": 0.4595,
+        "samples": 37
       }
     ],
     "debate_cards": [
@@ -159,12 +159,21 @@
       },
       {
         "entity": "大盘",
-        "bullish": 111,
-        "bearish": 103,
-        "neutral": 205,
+        "bullish": 169,
+        "bearish": 117,
+        "neutral": 248,
         "consensus": "neutral",
-        "disagreement": 0.4703,
-        "updated": "2026-09-01T13:32:49"
+        "disagreement": 0.4201,
+        "updated": "2026-09-28T16:51:43"
+      },
+      {
+        "entity": "低位",
+        "bullish": 97,
+        "bearish": 62,
+        "neutral": 169,
+        "consensus": "neutral",
+        "disagreement": 0.3573,
+        "updated": "2026-09-28T16:51:44"
       },
       {
         "entity": "国产替代",
@@ -210,47 +219,38 @@
         "consensus": "neutral",
         "disagreement": 0.487,
         "updated": "2026-08-06T16:18:43"
-      },
-      {
-        "entity": "先进制程",
-        "bullish": 75,
-        "bearish": 56,
-        "neutral": 92,
-        "consensus": "neutral",
-        "disagreement": 0.487,
-        "updated": "2026-08-06T16:18:43"
       }
     ],
     "sample_views": [
       {
-        "analyst": "钱博士短视频",
-        "date": "2026-08-24",
-        "stance": "bearish",
-        "claim": "短线：看空 🐻📉（确定性较高，主播称“改变不了趋势”）"
-      },
-      {
         "analyst": "钱博士直播",
-        "date": "2026-08-23",
+        "date": "2026-09-27",
         "stance": "neutral",
-        "claim": "涉及资产：黄金、人民币国际化"
+        "claim": "涉及资产：美股 / 全球市场"
       },
       {
         "analyst": "钱博士直播",
-        "date": "2026-08-23",
-        "stance": "bullish",
-        "claim": "中长线：看多黄金 🐂📈"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-08-23",
-        "stance": "bearish",
-        "claim": "涉及资产：美元指数、金属"
-      },
-      {
-        "analyst": "钱博士直播",
-        "date": "2026-08-23",
+        "date": "2026-09-27",
         "stance": "neutral",
-        "claim": "涉及资产：消费板块、泡泡玛特"
+        "claim": "涉及资产：中美贸易"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-09-27",
+        "stance": "bearish",
+        "claim": "涉及资产：头部风电设备公司（含航天概念）"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-09-27",
+        "stance": "neutral",
+        "claim": "涉及资产：玻璃基板"
+      },
+      {
+        "analyst": "钱博士直播",
+        "date": "2026-09-27",
+        "stance": "neutral",
+        "claim": "涉及资产：存储芯片 / HBM"
       }
     ]
   }

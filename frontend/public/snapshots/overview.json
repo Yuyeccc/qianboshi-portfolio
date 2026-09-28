@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 13610,
-    "prediction_events": 31320,
-    "notes": 1211,
+    "structured_views": 13685,
+    "prediction_events": 38400,
+    "notes": 1221,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-09-27T10:36:32.100850+00:00"
+    "generated_at": "2026-09-28T09:50:55.069477+00:00"
   },
   "status": {
-    "last_checked": "2026-09-24 11:00",
+    "last_checked": "2026-09-28 10:36",
     "detected_today": 8,
     "source_count": 7,
-    "pipeline_running": false
+    "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "2026-09-24.md",
-    "generated_at": "2026-09-24T03:29:51.449373+00:00",
-    "summary": "- A股午盘处于调整状态：上证指数3906.16点，-0.77%；深证成指13427.40点，-1.53%；创业板指涨跌幅暂不可计算。海外方面，道指-1.03%、纳指-0.69%、…",
+    "filename": "2026-09-28.md",
+    "generated_at": "2026-09-28T03:26:50.244289+00:00",
+    "summary": "主线：A股普跌，光模块跌幅居前 最大分歧：黄金短空与中长线看多并存 盯盘：美元101附近与现货黄金4208美元 决策台提醒：当前无进行中的用户决策",
     "section_count": 8
   }
 }
