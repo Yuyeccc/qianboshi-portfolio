@@ -1,29 +1,29 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 13685,
-      "prediction_events": 38400,
-      "notes": 1221,
+      "structured_views": 13717,
+      "prediction_events": 38465,
+      "notes": 1229,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-09-28T09:50:56.843396+00:00"
+      "generated_at": "2026-09-29T09:50:47.310205+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3285
+        "value": 3293
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2421
+        "value": 2426
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7055
+        "value": 7073
       },
       {
         "name": "watch",
@@ -33,24 +33,24 @@
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 526
+        "value": 527
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2482
+        "value": 2492
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2944
+        "value": 2948
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1673
+        "value": 1680
       },
       {
         "name": "long",
@@ -60,7 +60,7 @@
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6249
+        "value": 6260
       }
     ],
     "source_contrib": [
@@ -74,7 +74,7 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 895
+        "views": 905
       },
       {
         "name": "笨笨的韭菜",
@@ -90,11 +90,11 @@
       },
       {
         "name": "李一恩",
-        "views": 632
+        "views": 641
       },
       {
         "name": "投机大拿",
-        "views": 551
+        "views": 564
       },
       {
         "name": "柏年说",
@@ -159,12 +159,12 @@
       },
       {
         "entity": "大盘",
-        "bullish": 169,
-        "bearish": 117,
-        "neutral": 248,
+        "bullish": 172,
+        "bearish": 116,
+        "neutral": 252,
         "consensus": "neutral",
-        "disagreement": 0.4201,
-        "updated": "2026-09-28T16:51:43"
+        "disagreement": 0.4128,
+        "updated": "2026-09-29T10:39:32"
       },
       {
         "entity": "低位",
@@ -223,34 +223,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "钱博士直播",
-        "date": "2026-09-27",
+        "analyst": "投机大拿",
+        "date": "2026-09-28",
         "stance": "neutral",
-        "claim": "涉及资产：美股 / 全球市场"
+        "claim": "美国ETF行情机制——美国大资本（先锋领航、贝莱德等）管理十多萬億资产，主要配置ETF，作为压舱石，没有那么多频繁调整，所以市场更稳。国内也在往这个方向走，险资"
       },
       {
-        "analyst": "钱博士直播",
-        "date": "2026-09-27",
+        "analyst": "投机大拿",
+        "date": "2026-09-28",
         "stance": "neutral",
-        "claim": "涉及资产：中美贸易"
+        "claim": "分析市场的方法论——先要把市场的具体现象搞清楚才能分析。在特定节点出现特定事件，要先看现象，再看事件会造成多大影响。"
       },
       {
-        "analyst": "钱博士直播",
-        "date": "2026-09-27",
-        "stance": "bearish",
-        "claim": "涉及资产：头部风电设备公司（含航天概念）"
+        "analyst": "投机大拿",
+        "date": "2026-09-28",
+        "stance": "neutral",
+        "claim": "美债/美联储利率是全球资产定价的锚——大家对所有资产定价时，更多还是锚定美国的实际收益率。利率上行导致估值下降，利率下行导致估值上调。"
       },
       {
-        "analyst": "钱博士直播",
-        "date": "2026-09-27",
-        "stance": "neutral",
-        "claim": "涉及资产：玻璃基板"
+        "analyst": "投机大拿",
+        "date": "2026-09-28",
+        "stance": "risk",
+        "claim": "美债收益率（无风险利率）如何影响股票估值——全球通用的估值方式是\"未来的现金折到今天值多少钱\"。当无风险收益率上升时，未来现金流折现值下降，股票估值被压低；利率"
       },
       {
-        "analyst": "钱博士直播",
-        "date": "2026-09-27",
+        "analyst": "投机大拿",
+        "date": "2026-09-28",
         "stance": "neutral",
-        "claim": "涉及资产：存储芯片 / HBM"
+        "claim": "涉及资产：美元、美债、黄金"
       }
     ]
   }

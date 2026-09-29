@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 13685,
-    "prediction_events": 38400,
-    "notes": 1221,
+    "structured_views": 13717,
+    "prediction_events": 38465,
+    "notes": 1229,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-09-28T09:50:55.069477+00:00"
+    "generated_at": "2026-09-29T09:50:46.537332+00:00"
   },
   "status": {
-    "last_checked": "2026-09-28 10:36",
+    "last_checked": "2026-09-29 10:36",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "2026-09-28.md",
-    "generated_at": "2026-09-28T03:26:50.244289+00:00",
-    "summary": "主线：A股普跌，光模块跌幅居前 最大分歧：黄金短空与中长线看多并存 盯盘：美元101附近与现货黄金4208美元 决策台提醒：当前无进行中的用户决策",
-    "section_count": 8
+    "filename": "2026-09-29.md",
+    "generated_at": "2026-09-29T03:09:20.358732+00:00",
+    "summary": "主线｜A股指数分化，科技股观察跌后承接。 最大分歧｜美股短线压力与中期流动性判断不同。 盯盘｜美元指数、黄金价格及科技股承接。 决策台提醒｜进行中决策0条；持仓集中度超限待确认。",
+    "section_count": 0
   }
 }
