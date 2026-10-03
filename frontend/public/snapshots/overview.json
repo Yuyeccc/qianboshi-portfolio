@@ -1,14 +1,14 @@
 {
   "metrics": {
-    "structured_views": 13717,
-    "prediction_events": 38465,
-    "notes": 1229,
+    "structured_views": 13813,
+    "prediction_events": 38625,
+    "notes": 1242,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-09-30T09:51:00.065284+00:00"
+    "generated_at": "2026-10-03T09:50:10.278983+00:00"
   },
   "status": {
-    "last_checked": "2026-09-29 10:36",
+    "last_checked": "2026-10-01 10:49",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": false

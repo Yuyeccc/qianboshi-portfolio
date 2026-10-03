@@ -1,29 +1,29 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 13717,
-      "prediction_events": 38465,
-      "notes": 1229,
+      "structured_views": 13813,
+      "prediction_events": 38625,
+      "notes": 1242,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-09-30T09:51:00.785447+00:00"
+      "generated_at": "2026-10-03T09:50:11.206363+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3293
+        "value": 3313
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2426
+        "value": 2438
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7073
+        "value": 7132
       },
       {
         "name": "watch",
@@ -33,34 +33,34 @@
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 527
+        "value": 532
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2492
+        "value": 2507
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2948
+        "value": 2962
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1680
+        "value": 1693
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 337
+        "value": 340
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6260
+        "value": 6311
       }
     ],
     "source_contrib": [
@@ -74,11 +74,11 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 905
+        "views": 909
       },
       {
         "name": "笨笨的韭菜",
-        "views": 796
+        "views": 812
       },
       {
         "name": "旗帜鲜明",
@@ -86,15 +86,15 @@
       },
       {
         "name": "趋势天哥",
-        "views": 703
+        "views": 710
       },
       {
         "name": "李一恩",
-        "views": 641
+        "views": 664
       },
       {
         "name": "投机大拿",
-        "views": 564
+        "views": 598
       },
       {
         "name": "柏年说",
@@ -159,12 +159,12 @@
       },
       {
         "entity": "大盘",
-        "bullish": 172,
-        "bearish": 116,
-        "neutral": 252,
+        "bullish": 162,
+        "bearish": 118,
+        "neutral": 263,
         "consensus": "neutral",
-        "disagreement": 0.4128,
-        "updated": "2026-09-29T10:39:32"
+        "disagreement": 0.4162,
+        "updated": "2026-10-01T11:03:09"
       },
       {
         "entity": "低位",
@@ -210,47 +210,38 @@
         "consensus": "neutral",
         "disagreement": 0.576,
         "updated": "2026-08-06T01:14:39"
-      },
-      {
-        "entity": "半导体ETF（159813.SZ）",
-        "bullish": 75,
-        "bearish": 56,
-        "neutral": 92,
-        "consensus": "neutral",
-        "disagreement": 0.487,
-        "updated": "2026-08-06T16:18:43"
       }
     ],
     "sample_views": [
       {
-        "analyst": "投机大拿",
-        "date": "2026-09-28",
+        "analyst": "李一恩",
+        "date": "2026-09-30",
         "stance": "neutral",
-        "claim": "美国ETF行情机制——美国大资本（先锋领航、贝莱德等）管理十多萬億资产，主要配置ETF，作为压舱石，没有那么多频繁调整，所以市场更稳。国内也在往这个方向走，险资"
+        "claim": "主播以米聊和飞信为例，说明在智能手机刚出来时，当时最被看好的通讯产品不是微信也不是QQ，而是米聊和飞信。手机QQ当时做得很差。主播以此类比当前AI时代，提醒观众"
       },
       {
-        "analyst": "投机大拿",
-        "date": "2026-09-28",
+        "analyst": "李一恩",
+        "date": "2026-09-30",
         "stance": "neutral",
-        "claim": "分析市场的方法论——先要把市场的具体现象搞清楚才能分析。在特定节点出现特定事件，要先看现象，再看事件会造成多大影响。"
+        "claim": "主播以腾讯历史为例，说明即使是划时代的产品，其发展过程也充满不确定性。腾讯在2004-2005年内部三头林立、效率低下，马化腾退休后重新出山改革组织架构，张晓农"
       },
       {
-        "analyst": "投机大拿",
-        "date": "2026-09-28",
+        "analyst": "李一恩",
+        "date": "2026-09-30",
         "stance": "neutral",
-        "claim": "美债/美联储利率是全球资产定价的锚——大家对所有资产定价时，更多还是锚定美国的实际收益率。利率上行导致估值下降，利率下行导致估值上调。"
+        "claim": "主播以\"宁愿在宝马车里哭，也不愿在自行车后面笑\"为引，提出新解：如果你是在宝马车里会哭的人，你就不应该坐宝马车，应该去等你的三轮车，因为你在三轮车里才会笑。类比"
       },
       {
-        "analyst": "投机大拿",
-        "date": "2026-09-28",
-        "stance": "risk",
-        "claim": "美债收益率（无风险利率）如何影响股票估值——全球通用的估值方式是\"未来的现金折到今天值多少钱\"。当无风险收益率上升时，未来现金流折现值下降，股票估值被压低；利率"
+        "analyst": "李一恩",
+        "date": "2026-09-30",
+        "stance": "neutral",
+        "claim": "主播提出\"谁有钱谁说得对\"的观点。巴菲特之所以能让大家相信长期投资，是因为他有钱；段永平被很多人骂，但大家还是跟他，因为他有一千多亿。主播以此自嘲，认为如果自己"
       },
       {
-        "analyst": "投机大拿",
-        "date": "2026-09-28",
-        "stance": "neutral",
-        "claim": "涉及资产：美元、美债、黄金"
+        "analyst": "李一恩",
+        "date": "2026-09-30",
+        "stance": "bullish",
+        "claim": "主播认为每个人一生中会遇到几次大机会。以30多岁的人为例：第一次是2000年互联网刚发明；第二次是2008-2009年iPhone发明（当时做苹果黄牛一个月赚几"
       }
     ]
   }
