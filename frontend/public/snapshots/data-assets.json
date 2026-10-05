@@ -1,34 +1,34 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 13813,
-      "prediction_events": 38625,
-      "notes": 1242,
+      "structured_views": 13839,
+      "prediction_events": 38665,
+      "notes": 1247,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-04T09:50:45.825534+00:00"
+      "generated_at": "2026-10-05T09:51:02.406664+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3313
+        "value": 3316
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2438
+        "value": 2443
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7132
+        "value": 7148
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 398
+        "value": 400
       },
       {
         "name": "risk",
@@ -45,12 +45,12 @@
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2962
+        "value": 2966
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1693
+        "value": 1698
       },
       {
         "name": "long",
@@ -60,7 +60,7 @@
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6311
+        "value": 6328
       }
     ],
     "source_contrib": [
@@ -74,7 +74,7 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 909
+        "views": 925
       },
       {
         "name": "笨笨的韭菜",
@@ -122,29 +122,29 @@
         "samples": 34
       },
       {
-        "name": "旗帜鲜明",
-        "hit_rate": 0.5821,
-        "samples": 67
-      },
-      {
-        "name": "李一恩",
-        "hit_rate": 0.561,
-        "samples": 164
-      },
-      {
         "name": "笨笨的韭菜",
         "hit_rate": 0.5588,
         "samples": 34
       },
       {
-        "name": "史诗级韭菜",
-        "hit_rate": 0.4615,
-        "samples": 13
+        "name": "李一恩",
+        "hit_rate": 0.5576,
+        "samples": 165
       },
       {
         "name": "投机大拿",
         "hit_rate": 0.4595,
         "samples": 37
+      },
+      {
+        "name": "钱博士短视频",
+        "hit_rate": 0.4386,
+        "samples": 57
+      },
+      {
+        "name": "钱博士直播",
+        "hit_rate": 0.4187,
+        "samples": 406
       }
     ],
     "debate_cards": [
@@ -201,47 +201,38 @@
         "consensus": "neutral",
         "disagreement": 0.4503,
         "updated": "2026-08-06T16:18:44"
-      },
-      {
-        "entity": "光模块",
-        "bullish": 84,
-        "bearish": 72,
-        "neutral": 84,
-        "consensus": "neutral",
-        "disagreement": 0.576,
-        "updated": "2026-08-06T01:14:39"
       }
     ],
     "sample_views": [
       {
-        "analyst": "李一恩",
-        "date": "2026-09-30",
-        "stance": "neutral",
-        "claim": "主播以米聊和飞信为例，说明在智能手机刚出来时，当时最被看好的通讯产品不是微信也不是QQ，而是米聊和飞信。手机QQ当时做得很差。主播以此类比当前AI时代，提醒观众"
+        "analyst": "土豆看财报",
+        "date": "2026-10-03",
+        "stance": "watch",
+        "claim": "科技股估值逻辑——高研发投入的真科技公司，PE高甚至亏损是正常现象，但需关注其在指数中的权重占比是否合理。"
       },
       {
-        "analyst": "李一恩",
-        "date": "2026-09-30",
-        "stance": "neutral",
-        "claim": "主播以腾讯历史为例，说明即使是划时代的产品，其发展过程也充满不确定性。腾讯在2004-2005年内部三头林立、效率低下，马化腾退休后重新出山改革组织架构，张晓农"
+        "analyst": "土豆看财报",
+        "date": "2026-10-03",
+        "stance": "watch",
+        "claim": "指数编制问题——当指数中亏损股权重较高时，剔除亏损股后的PE会失真，投资者需关注指数真实编制规则和成分股基本面。"
       },
       {
-        "analyst": "李一恩",
-        "date": "2026-09-30",
+        "analyst": "土豆看财报",
+        "date": "2026-10-03",
         "stance": "neutral",
-        "claim": "主播以\"宁愿在宝马车里哭，也不愿在自行车后面笑\"为引，提出新解：如果你是在宝马车里会哭的人，你就不应该坐宝马车，应该去等你的三轮车，因为你在三轮车里才会笑。类比"
+        "claim": "窄基指数与宽基指数的分析框架差异——窄基指数（如恒生科技仅30只成分股）必须对个股有深入理解，不能简单看整体PE；剔除亏损股计算PE的方法会严重低估真实估值水平"
       },
       {
-        "analyst": "李一恩",
-        "date": "2026-09-30",
+        "analyst": "土豆看财报",
+        "date": "2026-10-03",
         "stance": "neutral",
-        "claim": "主播提出\"谁有钱谁说得对\"的观点。巴菲特之所以能让大家相信长期投资，是因为他有钱；段永平被很多人骂，但大家还是跟他，因为他有一千多亿。主播以此自嘲，认为如果自己"
+        "claim": "涉及资产：MiniMax、智谱、天数智芯"
       },
       {
-        "analyst": "李一恩",
-        "date": "2026-09-30",
-        "stance": "bullish",
-        "claim": "主播认为每个人一生中会遇到几次大机会。以30多岁的人为例：第一次是2000年互联网刚发明；第二次是2008-2009年iPhone发明（当时做苹果黄牛一个月赚几"
+        "analyst": "土豆看财报",
+        "date": "2026-10-03",
+        "stance": "neutral",
+        "claim": "涉及资产：新能源车企（小鹏、理想、蔚来）"
       }
     ]
   }

@@ -7,7 +7,7 @@
       "hit": 2,
       "wrong": 2,
       "mixed": 1,
-      "generated_at": "2026-10-04T09:50:47.546242+00:00"
+      "generated_at": "2026-10-05T09:51:03.272243+00:00"
     },
     "decisions": [
       {
@@ -133,14 +133,14 @@
         "factors": [
           {
             "factor_name": "中国建筑股价",
-            "current_state": "近5日走强+0.70%",
+            "current_state": "近5日走强+1.40%",
             "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
             "factor_name": "地产链",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度持平",
+            "impact_direction": "neutral",
             "impact_strength": "medium"
           },
           {
@@ -171,7 +171,7 @@
           },
           {
             "factor_name": "创新药指数",
-            "current_state": "近5日走弱-3.11%",
+            "current_state": "近5日走弱-3.45%",
             "impact_direction": "negative",
             "impact_strength": "high"
           }
@@ -223,7 +223,7 @@
           },
           {
             "factor_name": "机器人ETF",
-            "current_state": "近5日走弱-4.23%",
+            "current_state": "近5日走弱-4.12%",
             "impact_direction": "negative",
             "impact_strength": "medium"
           }
@@ -249,7 +249,7 @@
           },
           {
             "factor_name": "电池ETF",
-            "current_state": "近5日走弱-5.43%",
+            "current_state": "近5日走弱-3.04%",
             "impact_direction": "negative",
             "impact_strength": "high"
           }
@@ -289,7 +289,7 @@
         "factors": [
           {
             "factor_name": "光模块景气",
-            "current_state": "近5日走弱-14.51%",
+            "current_state": "近5日走弱-13.79%",
             "impact_direction": "negative",
             "impact_strength": "high"
           },
@@ -341,8 +341,8 @@
         "factors": [
           {
             "factor_name": "地缘风险",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           },
           {

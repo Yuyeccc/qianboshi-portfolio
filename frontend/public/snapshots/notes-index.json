@@ -2,6 +2,54 @@
   "notes_data": {
     "data": [
       {
+        "note_id": "01155d4c4654",
+        "filename": "史诗级韭菜 BV1afHr68EJm.md",
+        "title": "史诗级韭菜 BV1afHr68EJm",
+        "note_date": "2026-10-04",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：本周国内主要更新了9月采购经理指数（PMI）和规模以上工业企业利润数据。PMI连续三个月上行，9月回到50.1荣枯线之上，整体偏乐观；但原材料购进价格涨幅明显大于出厂价格涨幅",
+        "structured_view_count": 6,
+        "size_bytes": 8106
+      },
+      {
+        "note_id": "5827c93234ee",
+        "filename": "史诗级韭菜 BV16fH76GEoD.md",
+        "title": "史诗级韭菜 BV16fH76GEoD",
+        "note_date": "2026-10-04",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 **今日市场：** 主播开播时指出当前选股页面\"一片绿\"，市场极度低迷。恒生科技指数已从6000多点跌至4000点左右，回撤约37%，70%以上的港股已跌穿2024年9月24日的价格水",
+        "structured_view_count": 10,
+        "size_bytes": 20159
+      },
+      {
+        "note_id": "b4375164a31d",
+        "filename": "土豆看财报 BV1NEHv6eE9X.md",
+        "title": "土豆看财报 BV1NEHv6eE9X",
+        "note_date": "2026-10-03",
+        "created_at": null,
+        "tags": [],
+        "source": "BV1xxxx（转录未提供BV号）",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：本期内容聚焦恒生科技指数的估值争议。主播针对评论区“恒生科技只有22倍PE”的说法进行反驳，指出该数据是剔除亏损股后的算法，具有误导性。主播通过官方数据指出恒生科技实际PE约",
+        "structured_view_count": 10,
+        "size_bytes": 6417
+      },
+      {
+        "note_id": "0db97a927d69",
+        "filename": "土豆看财报 BV1isam6VEt1.md",
+        "title": "土豆看财报 BV1isam6VEt1",
+        "note_date": "2026-10-02",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：本期内容聚焦恒生科技指数，主播认为该指数\"又又又创新低\"，并指出市场普遍误以为恒生科技很便宜、是价值洼地，但实际上它是一个\"越跌越贵\"的指数。核心矛盾在于：恒生科技从3月31",
+        "structured_view_count": 0,
+        "size_bytes": 7665
+      },
+      {
         "note_id": "66fcb758c632",
         "filename": "钱博士短视频 BV1wDao67ExC.md",
         "title": "钱博士短视频 BV1wDao67ExC",
@@ -14943,6 +14991,18 @@
         "size_bytes": 16788
       },
       {
+        "note_id": "6f852464af12",
+        "filename": "史诗级韭菜 BV1tFam6hEET.md",
+        "title": "史诗级韭菜 BV1tFam6hEET",
+        "note_date": null,
+        "created_at": null,
+        "tags": [],
+        "source": null,
+        "excerpt": "markdown --- date: 2026-10-02 source: 未提供 --- > 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：A股因国庆节休市（上交所、深交所放假），港股正常交易但表现极差，恒生科技指数盘中一",
+        "structured_view_count": 0,
+        "size_bytes": 10321
+      },
+      {
         "note_id": "d91ff08fe890",
         "filename": "史诗级韭菜 BV1Mpaj65EiF.md",
         "title": "史诗级韭菜 BV1Mpaj65EiF",
@@ -14957,8 +15017,8 @@
     ],
     "pagination": {
       "page": 1,
-      "page_size": 1242,
-      "total": 1242,
+      "page_size": 1247,
+      "total": 1247,
       "has_more": false
     }
   }
