@@ -7,7 +7,7 @@
       "hit": 2,
       "wrong": 2,
       "mixed": 1,
-      "generated_at": "2026-10-05T09:51:03.272243+00:00"
+      "generated_at": "2026-10-06T09:50:54.107323+00:00"
     },
     "decisions": [
       {
@@ -139,8 +139,8 @@
           },
           {
             "factor_name": "地产链",
-            "current_state": "观点热度持平",
-            "impact_direction": "neutral",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           },
           {
@@ -315,8 +315,8 @@
         "factors": [
           {
             "factor_name": "新能源用铝",
-            "current_state": "观点热度上升",
-            "impact_direction": "positive",
+            "current_state": "观点热度下降",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           },
           {

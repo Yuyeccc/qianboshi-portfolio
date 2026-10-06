@@ -2,6 +2,30 @@
   "notes_data": {
     "data": [
       {
+        "note_id": "a4799e8433ab",
+        "filename": "土豆看财报 BV11fHW6iEmt.md",
+        "title": "土豆看财报 BV11fHW6iEmt",
+        "note_date": "2026-10-05",
+        "created_at": null,
+        "tags": [],
+        "source": "BV号（转录中未提供）",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：主播围绕美债收益率高企（10年期接近5.3%）与国内降息预期两条主线，分析其对A股和港股各板块的利好利空影响。核心矛盾在于美债收益率若继续上行，将抽走股市资金并对多个成长板块",
+        "structured_view_count": 19,
+        "size_bytes": 14248
+      },
+      {
+        "note_id": "94b598cf8b66",
+        "filename": "史诗级韭菜 BV1SQHW63ERx.md",
+        "title": "史诗级韭菜 BV1SQHW63ERx",
+        "note_date": "2026-10-05",
+        "created_at": null,
+        "tags": [],
+        "source": "BV号未知",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 **今日市场：** 港股通因内地交易所不开盘而关闭，市场处于缩量调整状态。当日港股上涨主要由AI相关板块驱动，但大部分公司仍下跌，下跌家数持续超过1000家。市场卖空比率极高，达到约3",
+        "structured_view_count": 0,
+        "size_bytes": 11592
+      },
+      {
         "note_id": "01155d4c4654",
         "filename": "史诗级韭菜 BV1afHr68EJm.md",
         "title": "史诗级韭菜 BV1afHr68EJm",
@@ -15017,8 +15041,8 @@
     ],
     "pagination": {
       "page": 1,
-      "page_size": 1247,
-      "total": 1247,
+      "page_size": 1249,
+      "total": 1249,
       "has_more": false
     }
   }
