@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 13858,
-      "prediction_events": 38690,
-      "notes": 1249,
+      "structured_views": 13911,
+      "prediction_events": 38780,
+      "notes": 1254,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-07T09:50:15.902774+00:00"
+      "generated_at": "2026-10-08T09:50:42.000201+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3318
+        "value": 3328
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2446
+        "value": 2458
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7161
+        "value": 7188
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 400
+        "value": 401
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 533
+        "value": 536
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2507
+        "value": 2516
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2970
+        "value": 2981
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1699
+        "value": 1703
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 340
+        "value": 341
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6342
+        "value": 6370
       }
     ],
     "source_contrib": [
@@ -74,15 +74,15 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 925
+        "views": 946
       },
       {
         "name": "笨笨的韭菜",
-        "views": 812
+        "views": 821
       },
       {
         "name": "旗帜鲜明",
-        "views": 770
+        "views": 793
       },
       {
         "name": "趋势天哥",
@@ -138,8 +138,8 @@
       },
       {
         "name": "投机大拿",
-        "hit_rate": 0.4615,
-        "samples": 39
+        "hit_rate": 0.439,
+        "samples": 41
       },
       {
         "name": "钱博士短视频",
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "土豆看财报",
-        "date": "2026-10-05",
-        "stance": "risk",
-        "claim": "在下跌之前提醒风险是有必要的，因为没有人知道什么时候会下跌。当前属于涨不动但很容易暴跌的阶段。"
-      },
-      {
-        "analyst": "土豆看财报",
-        "date": "2026-10-05",
+        "analyst": "笨笨的韭菜",
+        "date": "2026-10-07",
         "stance": "neutral",
-        "claim": "国内降息对A股和港股的影响程度不同。国内降息对A股相关板块是大利好，但对港股影响较小，因为港股受人民币、港币和美元三方汇率关系制约。"
+        "claim": "涉及资产：存储、礼货"
       },
       {
-        "analyst": "土豆看财报",
-        "date": "2026-10-05",
-        "stance": "neutral",
-        "claim": "美债收益率下行至不同阈值时，对不同板块的利好存在先后顺序：4.5%利好光模块，4.2%利好国产替代和新能源，3.9%创新药可能创新高。"
-      },
-      {
-        "analyst": "土豆看财报",
-        "date": "2026-10-05",
-        "stance": "neutral",
-        "claim": "美债收益率对A股和港股的影响存在阈值差异。港股作为美元市场，美债收益率超过4.2%就容易被杀估值；A股和日韩市场则在4.5%左右才受到明显影响。美债收益率只要不"
-      },
-      {
-        "analyst": "土豆看财报",
-        "date": "2026-10-05",
+        "analyst": "笨笨的韭菜",
+        "date": "2026-10-07",
         "stance": "bearish",
-        "claim": "短线：看空 🐻📉（对全球股市）"
+        "claim": "涉及资产：猪肉、农业、传统消费"
+      },
+      {
+        "analyst": "笨笨的韭菜",
+        "date": "2026-10-07",
+        "stance": "bearish",
+        "claim": "中长线：看空 🐻📉"
+      },
+      {
+        "analyst": "笨笨的韭菜",
+        "date": "2026-10-07",
+        "stance": "neutral",
+        "claim": "涉及资产：国内半导体、光刻机、先进制程"
+      },
+      {
+        "analyst": "笨笨的韭菜",
+        "date": "2026-10-07",
+        "stance": "bullish",
+        "claim": "中长线：看多 🐂📈"
       }
     ]
   }

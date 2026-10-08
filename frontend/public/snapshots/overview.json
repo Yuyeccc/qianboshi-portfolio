@@ -1,17 +1,17 @@
 {
   "metrics": {
-    "structured_views": 13858,
-    "prediction_events": 38690,
-    "notes": 1249,
+    "structured_views": 13911,
+    "prediction_events": 38780,
+    "notes": 1254,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-10-07T09:50:15.269337+00:00"
+    "generated_at": "2026-10-08T09:50:40.114076+00:00"
   },
   "status": {
-    "last_checked": "2026-10-06 12:11",
+    "last_checked": "2026-10-08 10:21",
     "detected_today": 8,
     "source_count": 7,
-    "pipeline_running": false
+    "pipeline_running": true
   },
   "latest_brief": {
     "filename": "2026-09-29.md",
