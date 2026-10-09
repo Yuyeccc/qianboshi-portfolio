@@ -7,7 +7,7 @@
       "hit": 2,
       "wrong": 2,
       "mixed": 1,
-      "generated_at": "2026-10-08T09:50:45.546311+00:00"
+      "generated_at": "2026-10-09T09:50:23.836991+00:00"
     },
     "decisions": [
       {
@@ -119,7 +119,7 @@
           },
           {
             "factor_name": "美股AI映射",
-            "current_state": "近5日走强+5.74%",
+            "current_state": "近5日走强+2.40%",
             "impact_direction": "positive",
             "impact_strength": "medium"
           }
@@ -133,7 +133,7 @@
         "factors": [
           {
             "factor_name": "中国建筑股价",
-            "current_state": "近5日走强+2.82%",
+            "current_state": "近5日走强+3.79%",
             "impact_direction": "positive",
             "impact_strength": "high"
           },
@@ -165,14 +165,14 @@
           },
           {
             "factor_name": "创新药个股",
-            "current_state": "看多2/看空0/中性1（近30天）；药明康德看多(李一恩 9.30)",
+            "current_state": "看多3/看空0/中性2（近30天）；药明康德中性(史诗级韭菜 10.6)",
             "impact_direction": "positive",
             "impact_strength": "medium"
           },
           {
             "factor_name": "创新药指数",
-            "current_state": "近5日走强+2.26%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-1.78%",
+            "impact_direction": "negative",
             "impact_strength": "high"
           }
         ]
@@ -223,7 +223,7 @@
           },
           {
             "factor_name": "机器人ETF",
-            "current_state": "近5日走弱-5.41%",
+            "current_state": "近5日走弱-5.51%",
             "impact_direction": "negative",
             "impact_strength": "medium"
           }
@@ -249,7 +249,7 @@
           },
           {
             "factor_name": "电池ETF",
-            "current_state": "近5日走弱-3.04%",
+            "current_state": "近5日走弱-2.42%",
             "impact_direction": "negative",
             "impact_strength": "high"
           }
@@ -275,7 +275,7 @@
           },
           {
             "factor_name": "白酒指数",
-            "current_state": "近5日走强+0.49%",
+            "current_state": "近5日走强+0.99%",
             "impact_direction": "positive",
             "impact_strength": "medium"
           }
@@ -289,13 +289,13 @@
         "factors": [
           {
             "factor_name": "光模块景气",
-            "current_state": "近5日走弱-9.29%",
+            "current_state": "近5日走弱-8.59%",
             "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "半导体ETF",
-            "current_state": "近5日走弱-7.14%",
+            "current_state": "近5日走弱-9.18%",
             "impact_direction": "negative",
             "impact_strength": "high"
           },
@@ -327,8 +327,8 @@
           },
           {
             "factor_name": "紫金矿业代理",
-            "current_state": "近5日走弱-0.83%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+1.67%",
+            "impact_direction": "positive",
             "impact_strength": "medium"
           }
         ]

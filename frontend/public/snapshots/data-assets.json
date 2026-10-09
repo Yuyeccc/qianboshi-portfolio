@@ -1,29 +1,29 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 13911,
-      "prediction_events": 38780,
-      "notes": 1254,
+      "structured_views": 13929,
+      "prediction_events": 38820,
+      "notes": 1265,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-08T09:50:42.000201+00:00"
+      "generated_at": "2026-10-09T09:50:21.907053+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3328
+        "value": 3332
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2458
+        "value": 2464
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7188
+        "value": 7196
       },
       {
         "name": "watch",
@@ -40,17 +40,17 @@
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2516
+        "value": 2520
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2981
+        "value": 2983
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1703
+        "value": 1705
       },
       {
         "name": "long",
@@ -60,7 +60,7 @@
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6370
+        "value": 6380
       }
     ],
     "source_contrib": [
@@ -74,7 +74,7 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 946
+        "views": 955
       },
       {
         "name": "笨笨的韭菜",
@@ -107,11 +107,6 @@
     ],
     "analyst_rank": [
       {
-        "name": "马安强",
-        "hit_rate": 1.0,
-        "samples": 2
-      },
-      {
         "name": "财联社",
         "hit_rate": 0.8571,
         "samples": 7
@@ -122,9 +117,9 @@
         "samples": 34
       },
       {
-        "name": "旗帜鲜明",
-        "hit_rate": 0.5735,
-        "samples": 68
+        "name": "马安强",
+        "hit_rate": 0.75,
+        "samples": 4
       },
       {
         "name": "笨笨的韭菜",
@@ -135,6 +130,11 @@
         "name": "李一恩",
         "hit_rate": 0.5576,
         "samples": 165
+      },
+      {
+        "name": "旗帜鲜明",
+        "hit_rate": 0.5571,
+        "samples": 70
       },
       {
         "name": "投机大拿",
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-10-07",
-        "stance": "neutral",
-        "claim": "涉及资产：存储、礼货"
-      },
-      {
-        "analyst": "笨笨的韭菜",
+        "analyst": "土豆看财报",
         "date": "2026-10-07",
         "stance": "bearish",
-        "claim": "涉及资产：猪肉、农业、传统消费"
+        "claim": "越跌越买的散户行为模式——在下跌过程中每个价格阶梯加仓的散户都更多，形成典型的\"越跌越买\"套牢结构。"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-10-07",
-        "stance": "bearish",
-        "claim": "中长线：看空 🐻📉"
-      },
-      {
-        "analyst": "笨笨的韭菜",
+        "analyst": "土豆看财报",
         "date": "2026-10-07",
         "stance": "neutral",
-        "claim": "涉及资产：国内半导体、光刻机、先进制程"
+        "claim": "典型的震荡出货区特征——散户最喜欢接盘的位置往往套牢比例最高，机构通过不断震荡将筹码派发给散户。"
       },
       {
-        "analyst": "笨笨的韭菜",
+        "analyst": "土豆看财报",
+        "date": "2026-10-07",
+        "stance": "neutral",
+        "claim": "主播介绍了\"韭菜指数\"复盘方法——通过量化筹码结构（套牢盘比例、换手加权成本、各价格区间套牢分布）来判断指数上方压力位和突破难度。核心框架：将指数按价格区间划分"
+      },
+      {
+        "analyst": "土豆看财报",
+        "date": "2026-10-07",
+        "stance": "neutral",
+        "claim": "涉及资产：创业板指数"
+      },
+      {
+        "analyst": "土豆看财报",
         "date": "2026-10-07",
         "stance": "bullish",
-        "claim": "中长线：看多 🐂📈"
+        "claim": "中长线：中性偏多 🦀➡️"
       }
     ]
   }

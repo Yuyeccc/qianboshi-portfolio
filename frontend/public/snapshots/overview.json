@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 13911,
-    "prediction_events": 38780,
-    "notes": 1254,
+    "structured_views": 13929,
+    "prediction_events": 38820,
+    "notes": 1265,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-10-08T09:50:40.114076+00:00"
+    "generated_at": "2026-10-09T09:50:21.244540+00:00"
   },
   "status": {
-    "last_checked": "2026-10-08 10:21",
+    "last_checked": "2026-10-09 10:18",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "2026-09-29.md",
-    "generated_at": "2026-09-29T03:09:20.358732+00:00",
-    "summary": "主线｜A股指数分化，科技股观察跌后承接。 最大分歧｜美股短线压力与中期流动性判断不同。 盯盘｜美元指数、黄金价格及科技股承接。 决策台提醒｜进行中决策0条；持仓集中度超限待确认。",
-    "section_count": 0
+    "filename": "日报_2026-10-09.md",
+    "generated_at": "2026-10-09T02:38:45.731885+00:00",
+    "summary": "- 主线：科技大票\"赎回螺旋\"未解，资金转向银行/黄金防御 - 最大分歧：旗帜鲜明中长线看多 vs 短线科技大票看空 - 盯盘｜触发条件：上证3781能否守稳，科技大票能否止跌出拐…",
+    "section_count": 8
   }
 }
