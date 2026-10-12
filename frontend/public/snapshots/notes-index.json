@@ -2,6 +2,66 @@
   "notes_data": {
     "data": [
       {
+        "note_id": "1349752f4cfb",
+        "filename": "旗帜鲜明 BV13ApD6XEjr.md",
+        "title": "旗帜鲜明 BV13ApD6XEjr",
+        "note_date": "2026-10-12",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 **今日市场：** 上周五市场出现单针探底回升，但主播强调这仅是短期止跌，并非反转信号，达不到\"底部定桩量反包阳\"的标准。市场当前处于底部筹码互换阶段，而非拉升阶段。大盘反复震荡的目的",
+        "structured_view_count": 11,
+        "size_bytes": 17346
+      },
+      {
+        "note_id": "49795f334a4a",
+        "filename": "钱博士短视频 BV1Uapb6WEnc.md",
+        "title": "钱博士短视频 BV1Uapb6WEnc",
+        "note_date": "2026-10-09",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场走势主要由多条消息驱动。监管约谈保险公司要求不要继续砸盘的消息在外网传开，通播社亦有报道，武后（午后）指数立刻止跌，主播倾向于认为该消息为真，因为窗口指导是常见调控方法，配合打",
+        "structured_view_count": 7,
+        "size_bytes": 8197
+      },
+      {
+        "note_id": "55c00c3e8229",
+        "filename": "趋势天哥 BV1p6p46gEkC.md",
+        "title": "趋势天哥 BV1p6p46gEkC",
+        "note_date": "2026-10-09",
+        "created_at": null,
+        "tags": [],
+        "source": "直播转录",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：早盘开盘后市场继续极限杀跌，创业板最多跌超3.5%，科创50奔着5个点去。但ETF从早上开始就有一定流入，流入量比之前更大，但并未改变市场趋势。下午之后ETF流入速度和频率明",
+        "structured_view_count": 7,
+        "size_bytes": 6888
+      },
+      {
+        "note_id": "9e09254eda53",
+        "filename": "土豆看财报 BV1xipb6DEcv.md",
+        "title": "土豆看财报 BV1xipb6DEcv",
+        "note_date": "2026-10-09",
+        "created_at": null,
+        "tags": [],
+        "source": "BV号未提供",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：主播认为当天出现的是反弹而非反转。从ETF成交额数据来看，科创50ETF华夏成交107亿，仅为昨日成交量的1.27倍、14日平均的1.63倍，这个量级在七八月份下跌中多次出现",
+        "structured_view_count": 5,
+        "size_bytes": 9668
+      },
+      {
+        "note_id": "0f3cd238cef3",
+        "filename": "史诗级韭菜 BV1eqpt6cEe3.md",
+        "title": "史诗级韭菜 BV1eqpt6cEe3",
+        "note_date": "2026-10-09",
+        "created_at": null,
+        "tags": [],
+        "source": "未提供BV号",
+        "excerpt": "> 本文基于直播转录整理，可能有ASR错误。总结可能存在遗漏或错误，不能完全反映原视频观点，请以原视频及引用部分为准。 ## 精华总结 今日市场：A股经历深度下跌后国家队入场拉升。盘中沪指一度跌至-1.3%，尾盘回到-0.05%；创业板盘中一度跌至-3.4%后回正。全市场约800家下跌，消费板块表现较强（消费股涨约5%",
+        "structured_view_count": 9,
+        "size_bytes": 16853
+      },
+      {
         "note_id": "568517587705",
         "filename": "马安强 BV1hJHX6dED4.md",
         "title": "马安强 BV1hJHX6dED4",
@@ -15233,8 +15293,8 @@
     ],
     "pagination": {
       "page": 1,
-      "page_size": 1265,
-      "total": 1265,
+      "page_size": 1270,
+      "total": 1270,
       "has_more": false
     }
   }
