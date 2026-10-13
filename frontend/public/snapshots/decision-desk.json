@@ -7,7 +7,7 @@
       "hit": 2,
       "wrong": 2,
       "mixed": 1,
-      "generated_at": "2026-10-12T09:50:37.839869+00:00"
+      "generated_at": "2026-10-13T09:51:03.345937+00:00"
     },
     "decisions": [
       {
@@ -119,8 +119,8 @@
           },
           {
             "factor_name": "美股AI映射",
-            "current_state": "近5日走强+2.40%",
-            "impact_direction": "positive",
+            "current_state": "近5日走弱-1.11%",
+            "impact_direction": "negative",
             "impact_strength": "medium"
           }
         ]
@@ -133,7 +133,7 @@
         "factors": [
           {
             "factor_name": "中国建筑股价",
-            "current_state": "近5日走强+3.79%",
+            "current_state": "近5日走强+2.30%",
             "impact_direction": "positive",
             "impact_strength": "high"
           },
@@ -159,8 +159,8 @@
         "factors": [
           {
             "factor_name": "BD出海",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度持平",
+            "impact_direction": "neutral",
             "impact_strength": "high"
           },
           {
@@ -171,7 +171,7 @@
           },
           {
             "factor_name": "创新药指数",
-            "current_state": "近5日走弱-1.78%",
+            "current_state": "近5日走弱-5.96%",
             "impact_direction": "negative",
             "impact_strength": "high"
           }
@@ -223,7 +223,7 @@
           },
           {
             "factor_name": "机器人ETF",
-            "current_state": "近5日走弱-5.51%",
+            "current_state": "近5日走弱-8.48%",
             "impact_direction": "negative",
             "impact_strength": "medium"
           }
@@ -249,8 +249,8 @@
           },
           {
             "factor_name": "电池ETF",
-            "current_state": "近5日走弱-2.42%",
-            "impact_direction": "negative",
+            "current_state": "近5日走强+1.34%",
+            "impact_direction": "positive",
             "impact_strength": "high"
           }
         ]
@@ -275,7 +275,7 @@
           },
           {
             "factor_name": "白酒指数",
-            "current_state": "近5日走强+0.99%",
+            "current_state": "近5日走强+0.72%",
             "impact_direction": "positive",
             "impact_strength": "medium"
           }
@@ -289,13 +289,13 @@
         "factors": [
           {
             "factor_name": "光模块景气",
-            "current_state": "近5日走弱-8.59%",
+            "current_state": "近5日走弱-12.01%",
             "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "半导体ETF",
-            "current_state": "近5日走弱-9.18%",
+            "current_state": "近5日走弱-8.90%",
             "impact_direction": "negative",
             "impact_strength": "high"
           },
@@ -327,7 +327,7 @@
           },
           {
             "factor_name": "紫金矿业代理",
-            "current_state": "近5日走强+1.67%",
+            "current_state": "近5日走强+0.84%",
             "impact_direction": "positive",
             "impact_strength": "medium"
           }
@@ -353,7 +353,7 @@
           },
           {
             "factor_name": "美债实际利率",
-            "current_state": "近5日走弱-0.30%",
+            "current_state": "近5日走弱-1.34%",
             "impact_direction": "positive",
             "impact_strength": "high"
           }

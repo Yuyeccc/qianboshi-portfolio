@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 13968,
-    "prediction_events": 38820,
-    "notes": 1270,
+    "structured_views": 14009,
+    "prediction_events": 38975,
+    "notes": 1277,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-10-12T09:50:36.187649+00:00"
+    "generated_at": "2026-10-13T09:51:02.048938+00:00"
   },
   "status": {
-    "last_checked": "2026-10-12 14:15",
+    "last_checked": "2026-10-13 10:19",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-10-09.md",
-    "generated_at": "2026-10-09T02:38:45.731885+00:00",
-    "summary": "- 主线：科技大票\"赎回螺旋\"未解，资金转向银行/黄金防御 - 最大分歧：旗帜鲜明中长线看多 vs 短线科技大票看空 - 盯盘｜触发条件：上证3781能否守稳，科技大票能否止跌出拐…",
+    "filename": "日报_2026-10-13.md",
+    "generated_at": "2026-10-13T02:45:08.915969+00:00",
+    "summary": "- 主线：大科技/硬件继续回调，资金转向大金融、黄金 - 最大分歧：科技（旗帜鲜明/李一恩看空 vs 投机大拿看多） - 盯盘：光模块300502跌幅能否收窄、美元指数与黄金 - …",
     "section_count": 8
   }
 }
