@@ -9,7 +9,7 @@
         "content": "## 观点分析",
         "source": "趋势天哥 BV1m6ht6qEbw.md",
         "section": "观点分析",
-        "score": 0.4561,
+        "score": 0.4361,
         "raw_score": 0.4804,
         "type": "livestream"
       },
@@ -18,7 +18,7 @@
         "content": "## 市场知识",
         "source": "李一恩 BV1gjhk6nEVE.md",
         "section": "市场知识",
-        "score": 0.4544,
+        "score": 0.4344,
         "raw_score": 0.5721,
         "type": "livestream"
       },
@@ -60,15 +60,6 @@
       },
       {
         "rank": 7,
-        "content": "**仓位建议：** 未给出明确仓位管理建议，但强调保持稳定情绪，跌时鼓劲、涨时提醒仍是震荡格局。",
-        "source": "钱博士 BV1tGe36YE9f.md",
-        "section": "精华总结",
-        "score": 0.3373,
-        "raw_score": 0.4865,
-        "type": "livestream"
-      },
-      {
-        "rank": 8,
         "content": "## 市场知识",
         "source": "投机大拿 2026.06.23 BV1MjjS6YEZP.md",
         "section": "市场知识",
@@ -77,7 +68,7 @@
         "type": "livestream"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "content": "## 市场知识",
         "source": "旗帜鲜明 2026.06.25 BV1xv786kEX8.md",
         "section": "市场知识",
@@ -86,9 +77,18 @@
         "type": "livestream"
       },
       {
-        "rank": 10,
+        "rank": 9,
         "content": "## 市场知识",
         "source": "笨笨的韭菜 2026.04.06 BV1pASfBFESv.md",
+        "section": "市场知识",
+        "score": 0.3344,
+        "raw_score": 0.5721,
+        "type": "livestream"
+      },
+      {
+        "rank": 10,
+        "content": "## 市场知识",
+        "source": "笨笨的韭菜 2026.4.23 BV1T2oMBVEH3.md",
         "section": "市场知识",
         "score": 0.3344,
         "raw_score": 0.5721,

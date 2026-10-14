@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 14009,
-      "prediction_events": 38975,
-      "notes": 1277,
+      "structured_views": 14130,
+      "prediction_events": 39140,
+      "notes": 1284,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-13T09:51:02.414273+00:00"
+      "generated_at": "2026-10-14T09:50:52.498821+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3347
+        "value": 3359
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2484
+        "value": 2504
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7237
+        "value": 7319
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 402
+        "value": 404
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 539
+        "value": 544
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2530
+        "value": 2543
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 2997
+        "value": 3007
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1714
+        "value": 1723
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 343
+        "value": 345
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6425
+        "value": 6512
       }
     ],
     "source_contrib": [
@@ -70,7 +70,7 @@
       },
       {
         "name": "钱博士短视频",
-        "views": 1200
+        "views": 1213
       },
       {
         "name": "史诗级韭菜",
@@ -86,15 +86,15 @@
       },
       {
         "name": "趋势天哥",
-        "views": 717
+        "views": 724
       },
       {
         "name": "李一恩",
-        "views": 679
+        "views": 689
       },
       {
         "name": "投机大拿",
-        "views": 611
+        "views": 685
       },
       {
         "name": "柏年说",
@@ -112,6 +112,11 @@
         "samples": 7
       },
       {
+        "name": "土豆看财报",
+        "hit_rate": 0.8333,
+        "samples": 6
+      },
+      {
         "name": "任泽平",
         "hit_rate": 0.7941,
         "samples": 34
@@ -122,24 +127,19 @@
         "samples": 4
       },
       {
-        "name": "土豆看财报",
-        "hit_rate": 0.75,
-        "samples": 4
-      },
-      {
-        "name": "笨笨的韭菜",
-        "hit_rate": 0.5588,
-        "samples": 34
-      },
-      {
         "name": "李一恩",
-        "hit_rate": 0.5576,
-        "samples": 165
+        "hit_rate": 0.5706,
+        "samples": 170
       },
       {
         "name": "旗帜鲜明",
         "hit_rate": 0.5571,
         "samples": 70
+      },
+      {
+        "name": "笨笨的韭菜",
+        "hit_rate": 0.5429,
+        "samples": 35
       },
       {
         "name": "投机大拿",
@@ -206,33 +206,33 @@
     "sample_views": [
       {
         "analyst": "李一恩",
-        "date": "2026-10-12",
-        "stance": "bearish",
-        "claim": "真正考验信仰的是在下跌时依然选择相信。很多人在上涨时相信、下跌时就不信了，这是每次接盘的点。"
-      },
-      {
-        "analyst": "李一恩",
-        "date": "2026-10-12",
+        "date": "2026-10-13",
         "stance": "neutral",
-        "claim": "利率本质是供需关系。当前AI行业大量借钱建设算力中心，导致利率偏高。市场真正担心的是算力中心建出来之后回报在哪里，需要证明AI的商业化回报。"
+        "claim": "不要过于在乎别人的看法和评价，做自己的事就好。以小米和雷军为例，外界骂小米是组装厂时小米正常造车做手机，夸小米牛逼时也是正常造车做手机，不受外界评价影响。"
       },
       {
         "analyst": "李一恩",
-        "date": "2026-10-12",
-        "stance": "bullish",
-        "claim": "智能手机类比——2010年时大家只知道手机能玩游戏，不知道后面有打车、外卖、短视频等应用。但当时人们知道未来手机会能做很多东西，只是不知道哪一天会出现。当那一天"
+        "date": "2026-10-13",
+        "stance": "risk",
+        "claim": "投资中最大的风险不是市场本身，而是自己\"瞎搞\"——频繁操作、追涨杀跌。只要不瞎搞、拿着不动，最终结果都不会太差。很多人不是坏人，但忍不住乱动，最终害人害己。"
       },
       {
         "analyst": "李一恩",
-        "date": "2026-10-12",
+        "date": "2026-10-13",
         "stance": "neutral",
-        "claim": "市场对AI的三种论调——第一种（主播自己）：AI突破无处不在且速度极快，选择持有等待；第二种（傅鹏等）：AI需要歇半年，等更多科研成果出来才会有下一波行情；第三"
+        "claim": "A股市场每年都有暴跌，任何A股股民都经历过暴跌、腰斩、连续跌停，这是正常现象，不必因此恐慌。即使是葛卫东、陈小群等知名投资者也被闷杀过。"
       },
       {
         "analyst": "李一恩",
-        "date": "2026-10-12",
+        "date": "2026-10-13",
         "stance": "neutral",
-        "claim": "AI行业当前的核心分析框架——市场在等待新的叙事/范式。coding市场（全球五千亿美元）已被完全计价，无论业绩超预期还是低预期都是利空。三个潜在新方向：Per"
+        "claim": "长期投资 vs 短线投机的选择取决于个人年龄和生存状态。年轻人（二三十岁）未来还有二三十年职业生涯，应该做长期投资，坚持越久收获越大。五六十岁以上的人临近退休，"
+      },
+      {
+        "analyst": "李一恩",
+        "date": "2026-10-13",
+        "stance": "neutral",
+        "claim": "股票投资的核心是盈亏比，但盈亏比的本质不是简单的止损止盈比例，而是靠极端值——一辈子能拿得出手的交易就那么两三笔，一把成功可以吹一辈子。"
       }
     ]
   }
