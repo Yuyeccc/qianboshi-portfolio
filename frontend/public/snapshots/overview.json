@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 14130,
-    "prediction_events": 39140,
-    "notes": 1284,
+    "structured_views": 14235,
+    "prediction_events": 39310,
+    "notes": 1291,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-10-14T09:50:51.845730+00:00"
+    "generated_at": "2026-10-15T09:50:52.464044+00:00"
   },
   "status": {
-    "last_checked": "2026-10-14 10:18",
+    "last_checked": "2026-10-15 11:03",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "2026-10-14.md",
-    "generated_at": "2026-10-14T02:56:34.115416+00:00",
-    "summary": "已注入的数据足够生成八章盘中简报。我会采用10:29行情，并标明缓存口径冲突、联接基金估值及决策台缺失项。 钱博士盘中简报｜2026-10-14",
+    "filename": ".日报_2026-10-15.rsv4xqck.tmp.md",
+    "generated_at": "2026-10-15T03:45:15.161230+00:00",
+    "summary": "",
     "section_count": 0
   }
 }
