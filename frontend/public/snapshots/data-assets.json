@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 14235,
-      "prediction_events": 39310,
-      "notes": 1291,
+      "structured_views": 14319,
+      "prediction_events": 39445,
+      "notes": 1298,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-15T09:50:52.877078+00:00"
+      "generated_at": "2026-10-16T09:50:47.964888+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3378
+        "value": 3391
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2520
+        "value": 2544
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7385
+        "value": 7429
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 405
+        "value": 406
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 547
+        "value": 549
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2559
+        "value": 2572
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3018
+        "value": 3030
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1732
+        "value": 1736
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 347
+        "value": 349
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6579
+        "value": 6632
       }
     ],
     "source_contrib": [
@@ -70,11 +70,11 @@
       },
       {
         "name": "钱博士短视频",
-        "views": 1213
+        "views": 1221
       },
       {
         "name": "史诗级韭菜",
-        "views": 990
+        "views": 1018
       },
       {
         "name": "笨笨的韭菜",
@@ -85,12 +85,12 @@
         "views": 804
       },
       {
-        "name": "趋势天哥",
-        "views": 736
+        "name": "投机大拿",
+        "views": 741
       },
       {
-        "name": "投机大拿",
-        "views": 707
+        "name": "趋势天哥",
+        "views": 736
       },
       {
         "name": "李一恩",
@@ -123,8 +123,8 @@
       },
       {
         "name": "李一恩",
-        "hit_rate": 0.5665,
-        "samples": 173
+        "hit_rate": 0.5682,
+        "samples": 176
       },
       {
         "name": "旗帜鲜明",
@@ -133,18 +133,18 @@
       },
       {
         "name": "笨笨的韭菜",
-        "hit_rate": 0.5429,
-        "samples": 35
+        "hit_rate": 0.5135,
+        "samples": 37
+      },
+      {
+        "name": "土豆看财报",
+        "hit_rate": 0.4615,
+        "samples": 13
       },
       {
         "name": "投机大拿",
         "hit_rate": 0.439,
         "samples": 41
-      },
-      {
-        "name": "钱博士短视频",
-        "hit_rate": 0.4386,
-        "samples": 57
       }
     ],
     "debate_cards": [
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-10-14",
+        "analyst": "投机大拿",
+        "date": "2026-10-15",
         "stance": "neutral",
-        "claim": "投资心态——犯错就改正，不要一哭二闹三上吊，赶紧修正自己。不要给自己贴标签、加BUFF。"
+        "claim": "接受不了别人比自己强是心理问题——容不得人家手艺比自己水平长，老说人家来打广告。要客观接受一定有比你强的人，没准还能多学点东西。"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-10-14",
+        "analyst": "投机大拿",
+        "date": "2026-10-15",
         "stance": "neutral",
-        "claim": "AI企业发债与流动性虹吸——AI企业发债成本上升，与美债、美股形成双循环吸收全球流动性，导致非美资产被虹吸。"
+        "claim": "跑不跑不影响别人跑不跑——他跑的前提是你得进才跑得了。你在那怕着，这是基本交易规则的问题。很多股民市场跌了总觉得有人忽悠他不让他跑，但你不跑他就跑得了吗，得忽悠"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-10-14",
+        "analyst": "投机大拿",
+        "date": "2026-10-15",
         "stance": "neutral",
-        "claim": "市场情绪与筹码——当前市场不交易基本面，交易筹码和情绪。很多股民从今年年中以来大幅回撤，不管利润多少。"
+        "claim": "阴谋论的心理根源——总觉得别人在忽悠自己、老乡别走，但需要客观看待自己手里有什么让人惦记的。股票和钱不一样：要惦记你的股票就是让你把股票卖给他，要惦记你的钱就是"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-10-14",
-        "stance": "bullish",
-        "claim": "A股不能卖空，大幅低开后通常会有修复反弹。"
+        "analyst": "投机大拿",
+        "date": "2026-10-15",
+        "stance": "neutral",
+        "claim": "融券费率高于融资是正常的——因为券源有限，你把券融过来卖出会对人家持有资产的净值造成影响，所以融券高一点正常。国内对冲工具少，与西方国家情况不大一样。"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-10-14",
-        "stance": "neutral",
-        "claim": "面向C端消费者的传统消费股（\"老灯股\"）尽量不要碰，除非对细分消费领域研究很深。"
+        "analyst": "投机大拿",
+        "date": "2026-10-15",
+        "stance": "bearish",
+        "claim": "下跌时冲动卖出是因为经历聚焦在价格正在下跌的这个点上，一片茫然的大脑就点了卖出。如果看大的周期，视野宽了，情绪马上就消退了。"
       }
     ]
   }
