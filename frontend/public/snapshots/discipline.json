@@ -1,7 +1,7 @@
 {
   "discipline_data": {
     "meta": {
-      "generated_at": "2026-10-19T09:50:44.479082+00:00",
+      "generated_at": "2026-10-20T09:50:27.801119+00:00",
       "source": "live"
     },
     "principles": [
@@ -29,7 +29,7 @@
       "wrong": 2,
       "mixed": 1,
       "review_coverage_pct": 100,
-      "generated_at": "2026-10-19T09:50:44.479082+00:00"
+      "generated_at": "2026-10-20T09:50:27.801119+00:00"
     },
     "framework": [
       {
