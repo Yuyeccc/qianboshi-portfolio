@@ -1,29 +1,29 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 14319,
-      "prediction_events": 39445,
-      "notes": 1298,
+      "structured_views": 14364,
+      "prediction_events": 39530,
+      "notes": 1324,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-21T09:50:22.709954+00:00"
+      "generated_at": "2026-10-22T09:50:43.667334+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3391
+        "value": 3400
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2544
+        "value": 2557
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7429
+        "value": 7451
       },
       {
         "name": "watch",
@@ -33,34 +33,34 @@
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 549
+        "value": 550
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2572
+        "value": 2581
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3030
+        "value": 3039
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1736
+        "value": 1740
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 349
+        "value": 350
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6632
+        "value": 6654
       }
     ],
     "source_contrib": [
@@ -82,11 +82,11 @@
       },
       {
         "name": "旗帜鲜明",
-        "views": 804
+        "views": 834
       },
       {
         "name": "投机大拿",
-        "views": 741
+        "views": 756
       },
       {
         "name": "趋势天哥",
@@ -133,18 +133,18 @@
       },
       {
         "name": "笨笨的韭菜",
-        "hit_rate": 0.5135,
-        "samples": 37
+        "hit_rate": 0.5263,
+        "samples": 38
       },
       {
         "name": "土豆看财报",
-        "hit_rate": 0.4615,
-        "samples": 13
+        "hit_rate": 0.5,
+        "samples": 14
       },
       {
         "name": "投机大拿",
-        "hit_rate": 0.439,
-        "samples": 41
+        "hit_rate": 0.4419,
+        "samples": 43
       }
     ],
     "debate_cards": [
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "投机大拿",
-        "date": "2026-10-15",
+        "analyst": "旗帜鲜明",
+        "date": "2026-10-21",
         "stance": "neutral",
-        "claim": "接受不了别人比自己强是心理问题——容不得人家手艺比自己水平长，老说人家来打广告。要客观接受一定有比你强的人，没准还能多学点东西。"
+        "claim": "涉及资产：前二十大基金重仓股"
       },
       {
-        "analyst": "投机大拿",
-        "date": "2026-10-15",
+        "analyst": "旗帜鲜明",
+        "date": "2026-10-21",
         "stance": "neutral",
-        "claim": "跑不跑不影响别人跑不跑——他跑的前提是你得进才跑得了。你在那怕着，这是基本交易规则的问题。很多股民市场跌了总觉得有人忽悠他不让他跑，但你不跑他就跑得了吗，得忽悠"
+        "claim": "涉及资产：新能源车板块"
       },
       {
-        "analyst": "投机大拿",
-        "date": "2026-10-15",
-        "stance": "neutral",
-        "claim": "阴谋论的心理根源——总觉得别人在忽悠自己、老乡别走，但需要客观看待自己手里有什么让人惦记的。股票和钱不一样：要惦记你的股票就是让你把股票卖给他，要惦记你的钱就是"
-      },
-      {
-        "analyst": "投机大拿",
-        "date": "2026-10-15",
-        "stance": "neutral",
-        "claim": "融券费率高于融资是正常的——因为券源有限，你把券融过来卖出会对人家持有资产的净值造成影响，所以融券高一点正常。国内对冲工具少，与西方国家情况不大一样。"
-      },
-      {
-        "analyst": "投机大拿",
-        "date": "2026-10-15",
+        "analyst": "旗帜鲜明",
+        "date": "2026-10-21",
         "stance": "bearish",
-        "claim": "下跌时冲动卖出是因为经历聚焦在价格正在下跌的这个点上，一片茫然的大脑就点了卖出。如果看大的周期，视野宽了，情绪马上就消退了。"
+        "claim": "涉及资产：机器人板块"
+      },
+      {
+        "analyst": "旗帜鲜明",
+        "date": "2026-10-21",
+        "stance": "bullish",
+        "claim": "涉及资产：科创50指数"
+      },
+      {
+        "analyst": "旗帜鲜明",
+        "date": "2026-10-21",
+        "stance": "bearish",
+        "claim": "短线：中性偏空 🦀➡️"
       }
     ]
   }

@@ -1,8 +1,8 @@
 {
   "market_data": {
     "meta": {
-      "generated_at": "2026-10-21T09:50:24.297567+00:00",
-      "data_as_of": "2026-10-16",
+      "generated_at": "2026-10-22T09:50:44.605088+00:00",
+      "data_as_of": "2026-10-22",
       "source": "yfinance"
     },
     "us_indices": [
@@ -10,14 +10,9 @@
         "symbol": "^DJI",
         "name": "道琼斯",
         "name_en": "Dow Jones",
-        "price": 52177.69,
-        "change_pct": 1.08,
+        "price": 52856.09,
+        "change_pct": 0.69,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 51654.95,
-            "change_pct": 0.83
-          },
           {
             "date": "2026-10-13",
             "price": 51850.55,
@@ -37,6 +32,11 @@
             "date": "2026-10-16",
             "price": 52177.69,
             "change_pct": 1.08
+          },
+          {
+            "date": "2026-10-22",
+            "price": 52856.09,
+            "change_pct": 0.69
           }
         ]
       },
@@ -44,14 +44,9 @@
         "symbol": "^IXIC",
         "name": "纳斯达克",
         "name_en": "NASDAQ Composite",
-        "price": 26713.03,
-        "change_pct": 0.08,
+        "price": 26702.86,
+        "change_pct": 1.05,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 27366.17,
-            "change_pct": 0.64
-          },
           {
             "date": "2026-10-13",
             "price": 27245.9,
@@ -71,6 +66,11 @@
             "date": "2026-10-16",
             "price": 26713.03,
             "change_pct": 0.08
+          },
+          {
+            "date": "2026-10-22",
+            "price": 26702.86,
+            "change_pct": 1.05
           }
         ]
       },
@@ -78,14 +78,9 @@
         "symbol": "^GSPC",
         "name": "标普500",
         "name_en": "S&P 500",
-        "price": 7744.06,
-        "change_pct": 0.33,
+        "price": 7757.17,
+        "change_pct": 0.58,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 7811.54,
-            "change_pct": 0.59
-          },
           {
             "date": "2026-10-13",
             "price": 7807.24,
@@ -105,6 +100,11 @@
             "date": "2026-10-16",
             "price": 7744.06,
             "change_pct": 0.33
+          },
+          {
+            "date": "2026-10-22",
+            "price": 7757.17,
+            "change_pct": 0.58
           }
         ]
       }
@@ -114,14 +114,9 @@
         "symbol": "NVDA",
         "name": "英伟达",
         "name_en": "NVIDIA",
-        "price": 217.23,
-        "change_pct": -1.84,
+        "price": 216.47,
+        "change_pct": -0.29,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 229.28,
-            "change_pct": -0.52
-          },
           {
             "date": "2026-10-13",
             "price": 226.32,
@@ -141,6 +136,11 @@
             "date": "2026-10-16",
             "price": 217.23,
             "change_pct": -1.84
+          },
+          {
+            "date": "2026-10-22",
+            "price": 216.47,
+            "change_pct": -0.29
           }
         ]
       },
@@ -148,14 +148,9 @@
         "symbol": "TSLA",
         "name": "特斯拉",
         "name_en": "Tesla",
-        "price": 362.44,
-        "change_pct": -1.29,
+        "price": 373.71,
+        "change_pct": 1.54,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 382.7,
-            "change_pct": 2.05
-          },
           {
             "date": "2026-10-13",
             "price": 378.03,
@@ -175,6 +170,11 @@
             "date": "2026-10-16",
             "price": 362.44,
             "change_pct": -1.29
+          },
+          {
+            "date": "2026-10-22",
+            "price": 373.71,
+            "change_pct": 1.54
           }
         ]
       },
@@ -182,14 +182,9 @@
         "symbol": "AAPL",
         "name": "苹果",
         "name_en": "Apple",
-        "price": 342.0,
-        "change_pct": -0.28,
+        "price": 339.5,
+        "change_pct": -1.0,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 336.64,
-            "change_pct": -1.11
-          },
           {
             "date": "2026-10-13",
             "price": 340.97,
@@ -209,6 +204,11 @@
             "date": "2026-10-16",
             "price": 342.0,
             "change_pct": -0.28
+          },
+          {
+            "date": "2026-10-22",
+            "price": 339.5,
+            "change_pct": -1.0
           }
         ]
       },
@@ -216,14 +216,9 @@
         "symbol": "MSFT",
         "name": "微软",
         "name_en": "Microsoft",
-        "price": 539.44,
-        "change_pct": 1.08,
+        "price": 531.87,
+        "change_pct": -0.31,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 535.07,
-            "change_pct": 2.38
-          },
           {
             "date": "2026-10-13",
             "price": 541.15,
@@ -243,6 +238,11 @@
             "date": "2026-10-16",
             "price": 539.44,
             "change_pct": 1.08
+          },
+          {
+            "date": "2026-10-22",
+            "price": 531.87,
+            "change_pct": -0.31
           }
         ]
       },
@@ -250,14 +250,9 @@
         "symbol": "AMD",
         "name": "AMD",
         "name_en": "AMD",
-        "price": 562.23,
-        "change_pct": -1.5,
+        "price": 534.74,
+        "change_pct": -0.62,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 608.1,
-            "change_pct": -2.03
-          },
           {
             "date": "2026-10-13",
             "price": 594.24,
@@ -277,6 +272,11 @@
             "date": "2026-10-16",
             "price": 562.23,
             "change_pct": -1.5
+          },
+          {
+            "date": "2026-10-22",
+            "price": 534.74,
+            "change_pct": -0.62
           }
         ]
       },
@@ -284,14 +284,9 @@
         "symbol": "META",
         "name": "Meta",
         "name_en": "Meta Platforms",
-        "price": 736.72,
-        "change_pct": -0.11,
+        "price": 694.25,
+        "change_pct": -1.59,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 718.67,
-            "change_pct": -0.31
-          },
           {
             "date": "2026-10-13",
             "price": 742.96,
@@ -311,6 +306,11 @@
             "date": "2026-10-16",
             "price": 736.72,
             "change_pct": -0.11
+          },
+          {
+            "date": "2026-10-22",
+            "price": 694.25,
+            "change_pct": -1.59
           }
         ]
       },
@@ -318,14 +318,9 @@
         "symbol": "GOOGL",
         "name": "谷歌",
         "name_en": "Alphabet",
-        "price": 349.22,
-        "change_pct": 0.45,
+        "price": 340.28,
+        "change_pct": -1.13,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 351.66,
-            "change_pct": 0.97
-          },
           {
             "date": "2026-10-13",
             "price": 352.72,
@@ -345,6 +340,11 @@
             "date": "2026-10-16",
             "price": 349.22,
             "change_pct": 0.45
+          },
+          {
+            "date": "2026-10-22",
+            "price": 340.28,
+            "change_pct": -1.13
           }
         ]
       },
@@ -352,14 +352,9 @@
         "symbol": "AVGO",
         "name": "博通",
         "name_en": "Broadcom",
-        "price": 344.33,
-        "change_pct": -0.55,
+        "price": 334.37,
+        "change_pct": -0.07,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 361.54,
-            "change_pct": 0.39
-          },
           {
             "date": "2026-10-13",
             "price": 354.73,
@@ -379,6 +374,11 @@
             "date": "2026-10-16",
             "price": 344.33,
             "change_pct": -0.55
+          },
+          {
+            "date": "2026-10-22",
+            "price": 334.37,
+            "change_pct": -0.07
           }
         ]
       },
@@ -386,14 +386,9 @@
         "symbol": "MRVL",
         "name": "迈威尔",
         "name_en": "Marvell Technology",
-        "price": 241.24,
-        "change_pct": -1.65,
+        "price": 240.42,
+        "change_pct": 1.4,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 275.28,
-            "change_pct": 0.25
-          },
           {
             "date": "2026-10-13",
             "price": 265.86,
@@ -413,6 +408,11 @@
             "date": "2026-10-16",
             "price": 241.24,
             "change_pct": -1.65
+          },
+          {
+            "date": "2026-10-22",
+            "price": 240.42,
+            "change_pct": 1.4
           }
         ]
       },
@@ -420,14 +420,9 @@
         "symbol": "SMCI",
         "name": "超微",
         "name_en": "Super Micro Computer",
-        "price": 35.09,
-        "change_pct": -1.93,
+        "price": 32.47,
+        "change_pct": 1.15,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 41.86,
-            "change_pct": -2.13
-          },
           {
             "date": "2026-10-13",
             "price": 39.98,
@@ -447,6 +442,11 @@
             "date": "2026-10-16",
             "price": 35.09,
             "change_pct": -1.93
+          },
+          {
+            "date": "2026-10-22",
+            "price": 32.47,
+            "change_pct": 1.15
           }
         ]
       }
@@ -456,14 +456,9 @@
         "symbol": "000001.SS",
         "name": "上证指数",
         "name_en": "Shanghai Composite",
-        "price": 3727.0,
-        "change_pct": 0.53,
+        "price": 3684.86,
+        "change_pct": -1.35,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 3800.81,
-            "change_pct": -0.34
-          },
           {
             "date": "2026-10-13",
             "price": 3763.3,
@@ -483,6 +478,11 @@
             "date": "2026-10-16",
             "price": 3727.0,
             "change_pct": 0.53
+          },
+          {
+            "date": "2026-10-22",
+            "price": 3684.86,
+            "change_pct": -1.35
           }
         ]
       },
@@ -490,14 +490,9 @@
         "symbol": "399001.SZ",
         "name": "深证成指",
         "name_en": "Shenzhen Component",
-        "price": 11865.16,
-        "change_pct": 0.41,
+        "price": 11539.43,
+        "change_pct": -2.22,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 12444.07,
-            "change_pct": -1.56
-          },
           {
             "date": "2026-10-13",
             "price": 12151.61,
@@ -517,6 +512,11 @@
             "date": "2026-10-16",
             "price": 11865.16,
             "change_pct": 0.41
+          },
+          {
+            "date": "2026-10-22",
+            "price": 11539.43,
+            "change_pct": -2.22
           }
         ]
       },
@@ -524,14 +524,9 @@
         "symbol": "399006.SZ",
         "name": "创业板指",
         "name_en": "ChiNext Index",
-        "price": 2783.97,
-        "change_pct": 0.03,
+        "price": 2694.71,
+        "change_pct": -1.62,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 3043.34,
-            "change_pct": 0.22
-          },
           {
             "date": "2026-10-13",
             "price": 2898.33,
@@ -551,6 +546,11 @@
             "date": "2026-10-16",
             "price": 2783.97,
             "change_pct": 0.03
+          },
+          {
+            "date": "2026-10-22",
+            "price": 2694.71,
+            "change_pct": -1.62
           }
         ]
       }
@@ -560,24 +560,9 @@
         "symbol": "518880.SS",
         "name": "华安黄金ETF",
         "name_en": "Gold ETF",
-        "price": 8.51,
-        "change_pct": 0.12,
+        "price": 8.412,
+        "change_pct": -0.5321,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 8.6,
-            "change_pct": -0.23
-          },
-          {
-            "date": "2026-10-13",
-            "price": 8.55,
-            "change_pct": -0.81
-          },
-          {
-            "date": "2026-10-14",
-            "price": 8.53,
-            "change_pct": -0.7
-          },
           {
             "date": "2026-10-15",
             "price": 8.49,
@@ -587,6 +572,21 @@
             "date": "2026-10-16",
             "price": 8.51,
             "change_pct": 0.12
+          },
+          {
+            "date": "2026-10-19",
+            "price": 8.553,
+            "change_pct": -0.0117
+          },
+          {
+            "date": "2026-10-20",
+            "price": 8.457,
+            "change_pct": -1.1224
+          },
+          {
+            "date": "2026-10-21",
+            "price": 8.412,
+            "change_pct": -0.5321
           }
         ],
         "linked_decision": {
@@ -600,33 +600,33 @@
         "symbol": "159992.SZ",
         "name": "创新药ETF",
         "name_en": "Innovative Drug ETF",
-        "price": 0.823,
-        "change_pct": 1.6,
+        "price": 0.808,
+        "change_pct": -0.86,
         "trend": [
           {
-            "date": "2026-10-12",
-            "price": 0.83,
-            "change_pct": -1.54
+            "date": "2026-10-16",
+            "price": 0.796,
+            "change_pct": -1.73
           },
           {
-            "date": "2026-10-13",
-            "price": 0.82,
-            "change_pct": -1.2
+            "date": "2026-10-19",
+            "price": 0.804,
+            "change_pct": 1.01
           },
           {
-            "date": "2026-10-14",
-            "price": 0.81,
-            "change_pct": -1.22
+            "date": "2026-10-20",
+            "price": 0.815,
+            "change_pct": 1.37
           },
           {
-            "date": "2026-10-15",
-            "price": 0.81,
+            "date": "2026-10-21",
+            "price": 0.815,
             "change_pct": 0.0
           },
           {
-            "date": "2026-10-16",
-            "price": 0.823,
-            "change_pct": 1.6
+            "date": "2026-10-22",
+            "price": 0.808,
+            "change_pct": -0.86
           }
         ],
         "linked_decision": {
@@ -640,14 +640,9 @@
         "symbol": "512480.SS",
         "name": "半导体ETF",
         "name_en": "Semiconductor ETF",
-        "price": 0.84,
-        "change_pct": -2.33,
+        "price": 0.82,
+        "change_pct": -1.2,
         "trend": [
-          {
-            "date": "2026-10-12",
-            "price": 0.89,
-            "change_pct": -2.2
-          },
           {
             "date": "2026-10-13",
             "price": 0.87,
@@ -667,6 +662,11 @@
             "date": "2026-10-16",
             "price": 0.84,
             "change_pct": -2.33
+          },
+          {
+            "date": "2026-10-22",
+            "price": 0.82,
+            "change_pct": -1.2
           }
         ],
         "linked_decision": {
