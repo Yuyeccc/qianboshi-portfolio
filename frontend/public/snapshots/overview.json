@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 14364,
-    "prediction_events": 39530,
-    "notes": 1324,
+    "structured_views": 14588,
+    "prediction_events": 39895,
+    "notes": 1333,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-10-22T09:50:43.265487+00:00"
+    "generated_at": "2026-10-23T09:50:51.867535+00:00"
   },
   "status": {
-    "last_checked": "2026-10-22 10:19",
+    "last_checked": "2026-10-23 10:17",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-10-22.md",
-    "generated_at": "2026-10-22T02:43:20.822222+00:00",
-    "summary": "主线｜指数走弱，光模块跌幅突出 最大分歧｜短期探底与中长期看多并存 盯盘｜上证是否跌破3674点 决策台提醒｜进行中0条，验证统计不适用",
-    "section_count": 8
+    "filename": "2026-10-23.md",
+    "generated_at": "2026-10-23T02:56:14.838050+00:00",
+    "summary": "我会按10:38的盘中口径整理简报，核对行情冲突、观点证据链和组合纪律数据；缺失的决策与卡片信息会明确标注。 钱博士盘中简报｜2026-10-23",
+    "section_count": 0
   }
 }

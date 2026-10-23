@@ -7,7 +7,7 @@
       "hit": 2,
       "wrong": 2,
       "mixed": 1,
-      "generated_at": "2026-10-22T09:50:44.582832+00:00"
+      "generated_at": "2026-10-23T09:50:53.365579+00:00"
     },
     "decisions": [
       {
@@ -119,7 +119,7 @@
           },
           {
             "factor_name": "美股AI映射",
-            "current_state": "近5日走弱-5.59%",
+            "current_state": "近5日走弱-6.23%",
             "impact_direction": "negative",
             "impact_strength": "medium"
           }
@@ -171,7 +171,7 @@
           },
           {
             "factor_name": "创新药指数",
-            "current_state": "近5日走弱-2.41%",
+            "current_state": "近5日走弱-2.01%",
             "impact_direction": "negative",
             "impact_strength": "high"
           }
@@ -211,8 +211,8 @@
         "factors": [
           {
             "factor_name": "人形机器人量产",
-            "current_state": "观点热度下降",
-            "impact_direction": "negative",
+            "current_state": "观点热度上升",
+            "impact_direction": "positive",
             "impact_strength": "high"
           },
           {
@@ -289,13 +289,13 @@
         "factors": [
           {
             "factor_name": "光模块景气",
-            "current_state": "近5日走弱-24.31%",
+            "current_state": "近5日走弱-29.77%",
             "impact_direction": "negative",
             "impact_strength": "high"
           },
           {
             "factor_name": "半导体ETF",
-            "current_state": "近5日走弱-7.87%",
+            "current_state": "近5日走弱-9.20%",
             "impact_direction": "negative",
             "impact_strength": "high"
           },
@@ -327,7 +327,7 @@
           },
           {
             "factor_name": "紫金矿业代理",
-            "current_state": "近5日走弱-5.59%",
+            "current_state": "近5日走弱-9.36%",
             "impact_direction": "negative",
             "impact_strength": "medium"
           }
