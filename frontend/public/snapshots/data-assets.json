@@ -1,29 +1,29 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 14588,
-      "prediction_events": 39895,
-      "notes": 1333,
+      "structured_views": 14619,
+      "prediction_events": 39965,
+      "notes": 1353,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-26T09:50:13.811196+00:00"
+      "generated_at": "2026-10-27T09:50:18.844627+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3430
+        "value": 3439
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2609
+        "value": 2618
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7583
+        "value": 7596
       },
       {
         "name": "watch",
@@ -40,17 +40,17 @@
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2620
+        "value": 2630
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3083
+        "value": 3088
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1758
+        "value": 1761
       },
       {
         "name": "long",
@@ -60,7 +60,7 @@
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6775
+        "value": 6788
       }
     ],
     "source_contrib": [
@@ -78,7 +78,7 @@
       },
       {
         "name": "旗帜鲜明",
-        "views": 884
+        "views": 892
       },
       {
         "name": "笨笨的韭菜",
@@ -86,7 +86,7 @@
       },
       {
         "name": "投机大拿",
-        "views": 817
+        "views": 830
       },
       {
         "name": "趋势天哥",
@@ -94,7 +94,7 @@
       },
       {
         "name": "李一恩",
-        "views": 689
+        "views": 699
       },
       {
         "name": "柏年说",
@@ -122,9 +122,14 @@
         "samples": 4
       },
       {
+        "name": "旗帜鲜明",
+        "hit_rate": 0.5696,
+        "samples": 79
+      },
+      {
         "name": "李一恩",
-        "hit_rate": 0.5682,
-        "samples": 176
+        "hit_rate": 0.5674,
+        "samples": 178
       },
       {
         "name": "笨笨的韭菜",
@@ -140,11 +145,6 @@
         "name": "钱博士短视频",
         "hit_rate": 0.4386,
         "samples": 57
-      },
-      {
-        "name": "投机大拿",
-        "hit_rate": 0.4318,
-        "samples": 44
       }
     ],
     "debate_cards": [
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "旗帜鲜明",
-        "date": "2026-10-23",
+        "analyst": "李一恩",
+        "date": "2026-10-26",
         "stance": "neutral",
-        "claim": "从周线图观察割肉盘是否出现——之前越跌成交量越小（没人卖），最近两周成交量放大说明割肉盘出现，中长期资金开始建仓。沪深300连跌多个周，最近两周开始筹码互换。"
+        "claim": "涉及资产：东山精密"
       },
       {
-        "analyst": "旗帜鲜明",
-        "date": "2026-10-23",
+        "analyst": "李一恩",
+        "date": "2026-10-26",
         "stance": "neutral",
-        "claim": "判断市场是否见顶可以观察公募基金抱团比例。二季度公募基金持股情况披露后抱团比例达到60%，是历史最极致的抱团，当时就知道市场见顶了。三季度持股情况即将披露，要观"
+        "claim": "短线：中性 🦀➡️"
       },
       {
-        "analyst": "旗帜鲜明",
-        "date": "2026-10-23",
+        "analyst": "李一恩",
+        "date": "2026-10-26",
         "stance": "bullish",
-        "claim": "要卖趁早，要不卖就别在底部割。一旦在底部卖完之后反弹30-40个点，炒股生涯基本进入负面循环。真正炒股的人知道底部割不了，因为那不是你的钱说割就割。"
+        "claim": "短线：中性偏多 🦀➡️"
       },
       {
-        "analyst": "旗帜鲜明",
-        "date": "2026-10-23",
+        "analyst": "李一恩",
+        "date": "2026-10-26",
+        "stance": "bearish",
+        "claim": "短线：看空/承压 🐻📉"
+      },
+      {
+        "analyst": "李一恩",
+        "date": "2026-10-26",
         "stance": "neutral",
-        "claim": "选股能力越弱的越买宽基，选股能力越强的越选股少买。根据自己情况定好买多少、在什么位置之下开始买，买够结束，剩下交给时间。"
-      },
-      {
-        "analyst": "旗帜鲜明",
-        "date": "2026-10-23",
-        "stance": "bullish",
-        "claim": "底部不做T。如果想低开加仓做T就别想了，底部不做T。如果认为机会很好可以慢慢买，但不要折腾做T。"
+        "claim": "涉及资产：SK海力士、美光"
       }
     ]
   }
