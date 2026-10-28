@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 14619,
-      "prediction_events": 39965,
-      "notes": 1353,
+      "structured_views": 14827,
+      "prediction_events": 40255,
+      "notes": 1361,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-27T09:50:18.844627+00:00"
+      "generated_at": "2026-10-28T09:50:27.690963+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3439
+        "value": 3473
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2618
+        "value": 2651
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7596
+        "value": 7724
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 410
+        "value": 414
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 556
+        "value": 565
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2630
+        "value": 2671
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3088
+        "value": 3124
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1761
+        "value": 1777
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 352
+        "value": 354
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6788
+        "value": 6901
       }
     ],
     "source_contrib": [
@@ -70,27 +70,27 @@
       },
       {
         "name": "钱博士短视频",
-        "views": 1235
+        "views": 1241
       },
       {
         "name": "史诗级韭菜",
-        "views": 1049
+        "views": 1082
       },
       {
         "name": "旗帜鲜明",
-        "views": 892
+        "views": 966
       },
       {
         "name": "笨笨的韭菜",
-        "views": 858
+        "views": 869
       },
       {
         "name": "投机大拿",
-        "views": 830
+        "views": 861
       },
       {
         "name": "趋势天哥",
-        "views": 751
+        "views": 759
       },
       {
         "name": "李一恩",
@@ -98,7 +98,7 @@
       },
       {
         "name": "柏年说",
-        "views": 313
+        "views": 325
       },
       {
         "name": "任泽平",
@@ -122,19 +122,14 @@
         "samples": 4
       },
       {
-        "name": "旗帜鲜明",
-        "hit_rate": 0.5696,
-        "samples": 79
-      },
-      {
         "name": "李一恩",
         "hit_rate": 0.5674,
         "samples": 178
       },
       {
         "name": "笨笨的韭菜",
-        "hit_rate": 0.525,
-        "samples": 40
+        "hit_rate": 0.5366,
+        "samples": 41
       },
       {
         "name": "土豆看财报",
@@ -145,6 +140,11 @@
         "name": "钱博士短视频",
         "hit_rate": 0.4386,
         "samples": 57
+      },
+      {
+        "name": "钱博士直播",
+        "hit_rate": 0.4223,
+        "samples": 412
       }
     ],
     "debate_cards": [
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "李一恩",
-        "date": "2026-10-26",
+        "analyst": "柏年说",
+        "date": "2026-10-28",
         "stance": "neutral",
-        "claim": "涉及资产：东山精密"
+        "claim": "科技股投资的分化思维——产业浪潮向上不代表所有公司都赚钱，要思考\"去伪存真\"，大量同质化创业公司（如200多家数据中心公司）不可能全部活下来。"
       },
       {
-        "analyst": "李一恩",
-        "date": "2026-10-26",
+        "analyst": "柏年说",
+        "date": "2026-10-28",
         "stance": "neutral",
-        "claim": "短线：中性 🦀➡️"
+        "claim": "散户常见误区——追涨杀跌；在关键时期应\"拖住\"而非频繁操作。"
       },
       {
-        "analyst": "李一恩",
-        "date": "2026-10-26",
-        "stance": "bullish",
-        "claim": "短线：中性偏多 🦀➡️"
-      },
-      {
-        "analyst": "李一恩",
-        "date": "2026-10-26",
-        "stance": "bearish",
-        "claim": "短线：看空/承压 🐻📉"
-      },
-      {
-        "analyst": "李一恩",
-        "date": "2026-10-26",
+        "analyst": "柏年说",
+        "date": "2026-10-28",
         "stance": "neutral",
-        "claim": "涉及资产：SK海力士、美光"
+        "claim": "新股/明星公司上市定价的解读方法——若市场普遍预期2万亿、实际定价1.5万亿，不应简单视为\"便宜可冲\"，而应警惕\"是不是有什么问题\"，定价低于预期本身是负面信号"
+      },
+      {
+        "analyst": "柏年说",
+        "date": "2026-10-28",
+        "stance": "neutral",
+        "claim": "美债收益率与债券价格成反向关系，收益率下行即债券牛市（价格涨）。"
+      },
+      {
+        "analyst": "柏年说",
+        "date": "2026-10-28",
+        "stance": "neutral",
+        "claim": "原油与黄金的联动逻辑——原油单日成交千亿美金级别，是少数能承接大资金换仓的大宗品种；当产油国或缺油国库存告急时，会抛售黄金储备换油，从而压制金价。能跟原油成交量"
       }
     ]
   }
