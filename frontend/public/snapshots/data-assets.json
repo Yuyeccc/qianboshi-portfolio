@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 14827,
-      "prediction_events": 40255,
-      "notes": 1361,
+      "structured_views": 14984,
+      "prediction_events": 40490,
+      "notes": 1369,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-28T09:50:27.690963+00:00"
+      "generated_at": "2026-10-29T09:50:59.270983+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3473
+        "value": 3500
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2651
+        "value": 2678
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7724
+        "value": 7822
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 414
+        "value": 415
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 565
+        "value": 569
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2671
+        "value": 2702
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3124
+        "value": 3155
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1777
+        "value": 1792
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 354
+        "value": 358
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6901
+        "value": 6977
       }
     ],
     "source_contrib": [
@@ -74,23 +74,23 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 1082
+        "views": 1102
       },
       {
         "name": "旗帜鲜明",
-        "views": 966
-      },
-      {
-        "name": "笨笨的韭菜",
-        "views": 869
+        "views": 992
       },
       {
         "name": "投机大拿",
-        "views": 861
+        "views": 901
+      },
+      {
+        "name": "笨笨的韭菜",
+        "views": 887
       },
       {
         "name": "趋势天哥",
-        "views": 759
+        "views": 776
       },
       {
         "name": "李一恩",
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "柏年说",
+        "analyst": "趋势天哥",
         "date": "2026-10-28",
         "stance": "neutral",
-        "claim": "科技股投资的分化思维——产业浪潮向上不代表所有公司都赚钱，要思考\"去伪存真\"，大量同质化创业公司（如200多家数据中心公司）不可能全部活下来。"
+        "claim": "观察AI算力需求能否持续、AI需求是否真实，可重点跟踪海外大厂（微软、谷歌、三星等）财报中披露的资本开支、未来需求与经营信号，等这些事件落地后，逻辑与基本面才会"
       },
       {
-        "analyst": "柏年说",
+        "analyst": "趋势天哥",
         "date": "2026-10-28",
         "stance": "neutral",
-        "claim": "散户常见误区——追涨杀跌；在关键时期应\"拖住\"而非频繁操作。"
+        "claim": "涉及资产：中际旭创、新易盛"
       },
       {
-        "analyst": "柏年说",
+        "analyst": "趋势天哥",
         "date": "2026-10-28",
         "stance": "neutral",
-        "claim": "新股/明星公司上市定价的解读方法——若市场普遍预期2万亿、实际定价1.5万亿，不应简单视为\"便宜可冲\"，而应警惕\"是不是有什么问题\"，定价低于预期本身是负面信号"
+        "claim": "涉及资产：SK海力士、三星"
       },
       {
-        "analyst": "柏年说",
+        "analyst": "趋势天哥",
         "date": "2026-10-28",
-        "stance": "neutral",
-        "claim": "美债收益率与债券价格成反向关系，收益率下行即债券牛市（价格涨）。"
+        "stance": "bullish",
+        "claim": "中长线：看多 🐂📈"
       },
       {
-        "analyst": "柏年说",
+        "analyst": "趋势天哥",
         "date": "2026-10-28",
-        "stance": "neutral",
-        "claim": "原油与黄金的联动逻辑——原油单日成交千亿美金级别，是少数能承接大资金换仓的大宗品种；当产油国或缺油国库存告急时，会抛售黄金储备换油，从而压制金价。能跟原油成交量"
+        "stance": "bullish",
+        "claim": "短线：看多 🐂📈"
       }
     ]
   }
