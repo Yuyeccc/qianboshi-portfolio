@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 14984,
-      "prediction_events": 40490,
-      "notes": 1369,
+      "structured_views": 15177,
+      "prediction_events": 40785,
+      "notes": 1381,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-10-29T09:50:59.270983+00:00"
+      "generated_at": "2026-10-30T09:50:33.040750+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3500
+        "value": 3529
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2678
+        "value": 2714
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7822
+        "value": 7938
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 415
+        "value": 419
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 569
+        "value": 577
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2702
+        "value": 2735
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3155
+        "value": 3187
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1792
+        "value": 1810
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 358
+        "value": 362
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 6977
+        "value": 7083
       }
     ],
     "source_contrib": [
@@ -70,27 +70,27 @@
       },
       {
         "name": "钱博士短视频",
-        "views": 1241
+        "views": 1258
       },
       {
         "name": "史诗级韭菜",
-        "views": 1102
+        "views": 1132
       },
       {
         "name": "旗帜鲜明",
-        "views": 992
+        "views": 1034
       },
       {
         "name": "投机大拿",
-        "views": 901
+        "views": 933
       },
       {
         "name": "笨笨的韭菜",
-        "views": 887
+        "views": 912
       },
       {
         "name": "趋势天哥",
-        "views": 776
+        "views": 783
       },
       {
         "name": "李一恩",
@@ -98,7 +98,7 @@
       },
       {
         "name": "柏年说",
-        "views": 325
+        "views": 339
       },
       {
         "name": "任泽平",
@@ -107,14 +107,14 @@
     ],
     "analyst_rank": [
       {
-        "name": "财联社",
-        "hit_rate": 0.8571,
-        "samples": 7
-      },
-      {
         "name": "任泽平",
         "hit_rate": 0.7941,
         "samples": 34
+      },
+      {
+        "name": "财联社",
+        "hit_rate": 0.75,
+        "samples": 8
       },
       {
         "name": "马安强",
@@ -137,14 +137,14 @@
         "samples": 14
       },
       {
+        "name": "史诗级韭菜",
+        "hit_rate": 0.4444,
+        "samples": 18
+      },
+      {
         "name": "钱博士短视频",
         "hit_rate": 0.4386,
         "samples": 57
-      },
-      {
-        "name": "钱博士直播",
-        "hit_rate": 0.4223,
-        "samples": 412
       }
     ],
     "debate_cards": [
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "趋势天哥",
-        "date": "2026-10-28",
+        "analyst": "钱博士短视频",
+        "date": "2026-10-29",
         "stance": "neutral",
-        "claim": "观察AI算力需求能否持续、AI需求是否真实，可重点跟踪海外大厂（微软、谷歌、三星等）财报中披露的资本开支、未来需求与经营信号，等这些事件落地后，逻辑与基本面才会"
+        "claim": "历史上刑事介入证券市场做空的案例——2015年7月公安部副部长带队到证监会排查恶意卖空股票和股指线索，官方说法是针对境内证券市场出现的异常波动，部署全国公安机关"
       },
       {
-        "analyst": "趋势天哥",
-        "date": "2026-10-28",
+        "analyst": "钱博士短视频",
+        "date": "2026-10-29",
         "stance": "neutral",
-        "claim": "涉及资产：中际旭创、新易盛"
+        "claim": "主播引用《经济学人》文章观点——全球股市都很棒，中国股市是个例外；文中分析包括AI硬件出口非常好压制了国内消费政策推出、企业不愿意为AI付费等，但主播认为这些都"
       },
       {
-        "analyst": "趋势天哥",
-        "date": "2026-10-28",
-        "stance": "neutral",
-        "claim": "涉及资产：SK海力士、三星"
-      },
-      {
-        "analyst": "趋势天哥",
-        "date": "2026-10-28",
+        "analyst": "钱博士短视频",
+        "date": "2026-10-29",
         "stance": "bullish",
-        "claim": "中长线：看多 🐂📈"
+        "claim": "涉及资产：A股市场整体"
       },
       {
-        "analyst": "趋势天哥",
-        "date": "2026-10-28",
-        "stance": "bullish",
-        "claim": "短线：看多 🐂📈"
+        "analyst": "钱博士短视频",
+        "date": "2026-10-29",
+        "stance": "neutral",
+        "claim": "短线：中性 🦀➡️"
+      },
+      {
+        "analyst": "钱博士短视频",
+        "date": "2026-10-29",
+        "stance": "neutral",
+        "claim": "短线：中性 🦀➡️（主播仅陈述现象，未给出方向判断）"
       }
     ]
   }

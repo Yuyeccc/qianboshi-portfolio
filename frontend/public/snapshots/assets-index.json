@@ -8,8 +8,8 @@
         "description": "AI应用中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:04",
-        "factor_count": 81,
+        "updated_at": "2026-10-30T10:55:43",
+        "factor_count": 84,
         "factor_preview": [
           {
             "state_id": "AI_1_COMPUTE_DEMAND_2026-08-06",
@@ -63,17 +63,17 @@
             "created_at": "2026-08-06T01:06:08"
           }
         ],
-        "views_count": 3264,
+        "views_count": 3308,
         "stance_counts": {
-          "bullish": 1067,
-          "neutral": 1536,
-          "bearish": 547,
-          "watch": 66,
+          "bullish": 1075,
+          "neutral": 1559,
+          "bearish": 559,
+          "watch": 67,
           "risk": 48
         },
-        "bullish_count": 1067,
-        "bearish_count": 547,
-        "neutral_count": 1536
+        "bullish_count": 1075,
+        "bearish_count": 559,
+        "neutral_count": 1559
       },
       {
         "asset_id": "ALUMINUM",
@@ -82,8 +82,8 @@
         "description": "铝中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:12",
-        "factor_count": 92,
+        "updated_at": "2026-10-30T10:56:02",
+        "factor_count": 96,
         "factor_preview": [
           {
             "state_id": "ALUMINUM_1_ZIJIN_2026-08-06",
@@ -156,8 +156,8 @@
         "description": "白酒中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:13",
-        "factor_count": 66,
+        "updated_at": "2026-10-30T10:56:03",
+        "factor_count": 69,
         "factor_preview": [
           {
             "state_id": "BAIJIU_1_CONSUMPTION_CYCLE_2026-08-06",
@@ -211,17 +211,17 @@
             "created_at": "2026-08-06T01:10:54"
           }
         ],
-        "views_count": 1515,
+        "views_count": 1541,
         "stance_counts": {
-          "bearish": 374,
-          "neutral": 692,
-          "bullish": 383,
+          "bearish": 379,
+          "neutral": 711,
+          "bullish": 385,
           "watch": 32,
           "risk": 34
         },
-        "bullish_count": 383,
-        "bearish_count": 374,
-        "neutral_count": 692
+        "bullish_count": 385,
+        "bearish_count": 379,
+        "neutral_count": 711
       },
       {
         "asset_id": "BATTERY",
@@ -230,8 +230,8 @@
         "description": "电池主题（新能源/锂电，场内512460）中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:15",
-        "factor_count": 68,
+        "updated_at": "2026-10-30T10:56:05",
+        "factor_count": 72,
         "factor_preview": [
           {
             "state_id": "BATTERY_1_BATTERY_ETF_2026-09-23",
@@ -298,8 +298,8 @@
         "description": "中国建筑（601668，基建/中字头）中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:23",
-        "factor_count": 68,
+        "updated_at": "2026-10-30T10:56:11",
+        "factor_count": 72,
         "factor_preview": [
           {
             "state_id": "CHINA_CONSTRUCTION_1_CSCEC_PRICE_2026-09-23",
@@ -366,8 +366,8 @@
         "description": "黄金中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:24",
-        "factor_count": 146,
+        "updated_at": "2026-10-30T10:56:12",
+        "factor_count": 153,
         "factor_preview": [
           {
             "state_id": "GOLD_1_DXY_2026-08-06",
@@ -421,17 +421,17 @@
             "created_at": "2026-08-06T00:34:58"
           }
         ],
-        "views_count": 1142,
+        "views_count": 1146,
         "stance_counts": {
-          "bullish": 381,
-          "neutral": 431,
+          "bullish": 382,
+          "neutral": 433,
           "watch": 30,
-          "bearish": 261,
+          "bearish": 262,
           "risk": 39
         },
-        "bullish_count": 381,
-        "bearish_count": 261,
-        "neutral_count": 431
+        "bullish_count": 382,
+        "bearish_count": 262,
+        "neutral_count": 433
       },
       {
         "asset_id": "INNOV_DRUG",
@@ -440,8 +440,8 @@
         "description": "创新药中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:26",
-        "factor_count": 110,
+        "updated_at": "2026-10-30T10:56:14",
+        "factor_count": 115,
         "factor_preview": [
           {
             "state_id": "INNOV_DRUG_1_INNO_INDEX_2026-08-06",
@@ -495,17 +495,17 @@
             "created_at": "2026-08-06T12:13:16"
           }
         ],
-        "views_count": 631,
+        "views_count": 639,
         "stance_counts": {
-          "bullish": 207,
-          "neutral": 256,
-          "bearish": 118,
+          "bullish": 209,
+          "neutral": 259,
+          "bearish": 120,
           "risk": 29,
-          "watch": 21
+          "watch": 22
         },
-        "bullish_count": 207,
-        "bearish_count": 118,
-        "neutral_count": 256
+        "bullish_count": 209,
+        "bearish_count": 120,
+        "neutral_count": 259
       },
       {
         "asset_id": "ROBOT",
@@ -514,8 +514,8 @@
         "description": "机器人中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:28",
-        "factor_count": 66,
+        "updated_at": "2026-10-30T10:56:15",
+        "factor_count": 69,
         "factor_preview": [
           {
             "state_id": "ROBOT_1_HUMANOID_MASS_PRODUCTION_2026-08-06",
@@ -569,17 +569,17 @@
             "created_at": "2026-08-06T01:10:53"
           }
         ],
-        "views_count": 416,
+        "views_count": 421,
         "stance_counts": {
           "bullish": 108,
-          "neutral": 211,
+          "neutral": 216,
           "bearish": 72,
           "risk": 7,
           "watch": 18
         },
         "bullish_count": 108,
         "bearish_count": 72,
-        "neutral_count": 211
+        "neutral_count": 216
       },
       {
         "asset_id": "SEMI",
@@ -588,8 +588,8 @@
         "description": "半导体中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:30",
-        "factor_count": 88,
+        "updated_at": "2026-10-30T10:56:17",
+        "factor_count": 92,
         "factor_preview": [
           {
             "state_id": "SEMI_1_SOX_2026-08-06",
@@ -643,17 +643,17 @@
             "created_at": "2026-08-06T00:34:59"
           }
         ],
-        "views_count": 2416,
+        "views_count": 2437,
         "stance_counts": {
-          "bullish": 724,
-          "neutral": 1130,
+          "bullish": 726,
+          "neutral": 1144,
           "watch": 54,
-          "bearish": 466,
+          "bearish": 471,
           "risk": 42
         },
-        "bullish_count": 724,
-        "bearish_count": 466,
-        "neutral_count": 1130
+        "bullish_count": 726,
+        "bearish_count": 471,
+        "neutral_count": 1144
       },
       {
         "asset_id": "TECH",
@@ -662,8 +662,8 @@
         "description": "科技中期趋势分析框架",
         "version": null,
         "default_horizon": "medium",
-        "updated_at": "2026-10-29T10:35:31",
-        "factor_count": 110,
+        "updated_at": "2026-10-30T10:56:18",
+        "factor_count": 115,
         "factor_preview": [
           {
             "state_id": "TECH_1_SEMI_ETF_2026-08-06",
@@ -717,17 +717,17 @@
             "created_at": "2026-08-06T12:13:18"
           }
         ],
-        "views_count": 2345,
+        "views_count": 2384,
         "stance_counts": {
-          "bullish": 725,
-          "neutral": 1002,
-          "bearish": 490,
+          "bullish": 733,
+          "neutral": 1023,
+          "bearish": 499,
           "watch": 54,
-          "risk": 74
+          "risk": 75
         },
-        "bullish_count": 725,
-        "bearish_count": 490,
-        "neutral_count": 1002
+        "bullish_count": 733,
+        "bearish_count": 499,
+        "neutral_count": 1023
       }
     ],
     "total": 10

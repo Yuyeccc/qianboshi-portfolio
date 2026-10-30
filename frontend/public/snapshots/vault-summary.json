@@ -1,14 +1,14 @@
 {
   "vault_summary": {
     "meta": {
-      "generated_at": "2026-10-29T09:51:01.999542+00:00",
+      "generated_at": "2026-10-30T09:50:35.906031+00:00",
       "source": "obsidian-vault"
     },
-    "notes_count": 1369,
-    "views_count": 14984,
+    "notes_count": 1381,
+    "views_count": 15177,
     "chunks_count": null,
     "assets_count": 10,
-    "latest_note_date": "2026-10-28",
+    "latest_note_date": "2026-10-29",
     "modes": [
       "notes",
       "search",
