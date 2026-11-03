@@ -63,17 +63,17 @@
             "created_at": "2026-08-06T01:06:08"
           }
         ],
-        "views_count": 3308,
+        "views_count": 3315,
         "stance_counts": {
           "bullish": 1075,
-          "neutral": 1559,
-          "bearish": 559,
+          "neutral": 1562,
+          "bearish": 563,
           "watch": 67,
           "risk": 48
         },
         "bullish_count": 1075,
-        "bearish_count": 559,
-        "neutral_count": 1559
+        "bearish_count": 563,
+        "neutral_count": 1562
       },
       {
         "asset_id": "ALUMINUM",
@@ -137,17 +137,17 @@
             "created_at": "2026-08-06T12:13:14"
           }
         ],
-        "views_count": 263,
+        "views_count": 267,
         "stance_counts": {
-          "bullish": 93,
-          "neutral": 91,
+          "bullish": 94,
+          "neutral": 94,
           "bearish": 66,
           "risk": 9,
           "watch": 4
         },
-        "bullish_count": 93,
+        "bullish_count": 94,
         "bearish_count": 66,
-        "neutral_count": 91
+        "neutral_count": 94
       },
       {
         "asset_id": "BAIJIU",
@@ -211,17 +211,17 @@
             "created_at": "2026-08-06T01:10:54"
           }
         ],
-        "views_count": 1541,
+        "views_count": 1546,
         "stance_counts": {
           "bearish": 379,
-          "neutral": 711,
+          "neutral": 715,
           "bullish": 385,
           "watch": 32,
-          "risk": 34
+          "risk": 35
         },
         "bullish_count": 385,
         "bearish_count": 379,
-        "neutral_count": 711
+        "neutral_count": 715
       },
       {
         "asset_id": "BATTERY",
@@ -421,17 +421,17 @@
             "created_at": "2026-08-06T00:34:58"
           }
         ],
-        "views_count": 1146,
+        "views_count": 1152,
         "stance_counts": {
-          "bullish": 382,
-          "neutral": 433,
+          "bullish": 383,
+          "neutral": 436,
           "watch": 30,
-          "bearish": 262,
+          "bearish": 264,
           "risk": 39
         },
-        "bullish_count": 382,
-        "bearish_count": 262,
-        "neutral_count": 433
+        "bullish_count": 383,
+        "bearish_count": 264,
+        "neutral_count": 436
       },
       {
         "asset_id": "INNOV_DRUG",
@@ -495,17 +495,17 @@
             "created_at": "2026-08-06T12:13:16"
           }
         ],
-        "views_count": 639,
+        "views_count": 641,
         "stance_counts": {
           "bullish": 209,
-          "neutral": 259,
+          "neutral": 261,
           "bearish": 120,
           "risk": 29,
           "watch": 22
         },
         "bullish_count": 209,
         "bearish_count": 120,
-        "neutral_count": 259
+        "neutral_count": 261
       },
       {
         "asset_id": "ROBOT",
@@ -569,17 +569,17 @@
             "created_at": "2026-08-06T01:10:53"
           }
         ],
-        "views_count": 421,
+        "views_count": 422,
         "stance_counts": {
           "bullish": 108,
-          "neutral": 216,
+          "neutral": 217,
           "bearish": 72,
           "risk": 7,
           "watch": 18
         },
         "bullish_count": 108,
         "bearish_count": 72,
-        "neutral_count": 216
+        "neutral_count": 217
       },
       {
         "asset_id": "SEMI",
@@ -643,16 +643,16 @@
             "created_at": "2026-08-06T00:34:59"
           }
         ],
-        "views_count": 2437,
+        "views_count": 2439,
         "stance_counts": {
           "bullish": 726,
           "neutral": 1144,
           "watch": 54,
-          "bearish": 471,
-          "risk": 42
+          "bearish": 472,
+          "risk": 43
         },
         "bullish_count": 726,
-        "bearish_count": 471,
+        "bearish_count": 472,
         "neutral_count": 1144
       },
       {
@@ -717,17 +717,17 @@
             "created_at": "2026-08-06T12:13:18"
           }
         ],
-        "views_count": 2384,
+        "views_count": 2386,
         "stance_counts": {
           "bullish": 733,
-          "neutral": 1023,
-          "bearish": 499,
+          "neutral": 1024,
+          "bearish": 500,
           "watch": 54,
           "risk": 75
         },
         "bullish_count": 733,
-        "bearish_count": 499,
-        "neutral_count": 1023
+        "bearish_count": 500,
+        "neutral_count": 1024
       }
     ],
     "total": 10

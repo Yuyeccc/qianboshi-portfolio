@@ -1,8 +1,8 @@
 {
   "market_data": {
     "meta": {
-      "generated_at": "2026-11-02T09:50:24.077283+00:00",
-      "data_as_of": "2026-11-02",
+      "generated_at": "2026-11-03T09:50:33.743909+00:00",
+      "data_as_of": "2026-11-03",
       "source": "yfinance"
     },
     "us_indices": [
@@ -10,14 +10,9 @@
         "symbol": "^DJI",
         "name": "道琼斯",
         "name_en": "Dow Jones",
-        "price": 51770.31,
-        "change_pct": -1.09,
+        "price": 51983.98,
+        "change_pct": 0.41,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 52361.58,
-            "change_pct": 0.28
-          },
           {
             "date": "2026-10-28",
             "price": 52377.57,
@@ -37,6 +32,11 @@
             "date": "2026-11-02",
             "price": 51770.31,
             "change_pct": -1.09
+          },
+          {
+            "date": "2026-11-03",
+            "price": 51983.98,
+            "change_pct": 0.41
           }
         ]
       },
@@ -44,14 +44,9 @@
         "symbol": "^IXIC",
         "name": "纳斯达克",
         "name_en": "NASDAQ Composite",
-        "price": 25437.0,
-        "change_pct": -2.86,
+        "price": 25164.36,
+        "change_pct": -1.07,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 26169.38,
-            "change_pct": 0.82
-          },
           {
             "date": "2026-10-28",
             "price": 26477.81,
@@ -71,6 +66,11 @@
             "date": "2026-11-02",
             "price": 25437.0,
             "change_pct": -2.86
+          },
+          {
+            "date": "2026-11-03",
+            "price": 25164.36,
+            "change_pct": -1.07
           }
         ]
       },
@@ -78,14 +78,9 @@
         "symbol": "^GSPC",
         "name": "标普500",
         "name_en": "S&P 500",
-        "price": 7580.07,
-        "change_pct": -1.82,
+        "price": 7541.4,
+        "change_pct": -0.51,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 7676.77,
-            "change_pct": 0.7
-          },
           {
             "date": "2026-10-28",
             "price": 7722.6,
@@ -105,6 +100,11 @@
             "date": "2026-11-02",
             "price": 7580.07,
             "change_pct": -1.82
+          },
+          {
+            "date": "2026-11-03",
+            "price": 7541.4,
+            "change_pct": -0.51
           }
         ]
       }
@@ -117,11 +117,6 @@
         "price": 204.64,
         "change_pct": -4.22,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 216.0,
-            "change_pct": 2.39
-          },
           {
             "date": "2026-10-28",
             "price": 217.94,
@@ -141,6 +136,11 @@
             "date": "2026-11-02",
             "price": 204.64,
             "change_pct": -4.22
+          },
+          {
+            "date": "2026-11-03",
+            "price": 204.64,
+            "change_pct": -4.22
           }
         ]
       },
@@ -151,11 +151,6 @@
         "price": 399.81,
         "change_pct": -0.87,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 391.62,
-            "change_pct": 5.21
-          },
           {
             "date": "2026-10-28",
             "price": 407.46,
@@ -175,6 +170,11 @@
             "date": "2026-11-02",
             "price": 399.81,
             "change_pct": -0.87
+          },
+          {
+            "date": "2026-11-03",
+            "price": 399.81,
+            "change_pct": -0.87
           }
         ]
       },
@@ -185,11 +185,6 @@
         "price": 344.63,
         "change_pct": -1.23,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 343.91,
-            "change_pct": -1.1
-          },
           {
             "date": "2026-10-28",
             "price": 347.1,
@@ -209,6 +204,11 @@
             "date": "2026-11-02",
             "price": 344.63,
             "change_pct": -1.23
+          },
+          {
+            "date": "2026-11-03",
+            "price": 344.63,
+            "change_pct": -1.23
           }
         ]
       },
@@ -219,11 +219,6 @@
         "price": 521.91,
         "change_pct": -1.55,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 532.6,
-            "change_pct": 1.54
-          },
           {
             "date": "2026-10-28",
             "price": 531.33,
@@ -243,6 +238,11 @@
             "date": "2026-11-02",
             "price": 521.91,
             "change_pct": -1.55
+          },
+          {
+            "date": "2026-11-03",
+            "price": 521.91,
+            "change_pct": -1.55
           }
         ]
       },
@@ -253,11 +253,6 @@
         "price": 504.8,
         "change_pct": -10.88,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 531.28,
-            "change_pct": 2.8
-          },
           {
             "date": "2026-10-28",
             "price": 560.26,
@@ -277,6 +272,11 @@
             "date": "2026-11-02",
             "price": 504.8,
             "change_pct": -10.88
+          },
+          {
+            "date": "2026-11-03",
+            "price": 504.8,
+            "change_pct": -10.88
           }
         ]
       },
@@ -287,11 +287,6 @@
         "price": 614.99,
         "change_pct": -1.53,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 630.56,
-            "change_pct": -1.88
-          },
           {
             "date": "2026-10-28",
             "price": 620.19,
@@ -311,6 +306,11 @@
             "date": "2026-11-02",
             "price": 614.99,
             "change_pct": -1.53
+          },
+          {
+            "date": "2026-11-03",
+            "price": 614.99,
+            "change_pct": -1.53
           }
         ]
       },
@@ -321,11 +321,6 @@
         "price": 279.84,
         "change_pct": -1.4,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 316.8,
-            "change_pct": -1.06
-          },
           {
             "date": "2026-10-28",
             "price": 320.58,
@@ -345,6 +340,11 @@
             "date": "2026-11-02",
             "price": 279.84,
             "change_pct": -1.4
+          },
+          {
+            "date": "2026-11-03",
+            "price": 279.84,
+            "change_pct": -1.4
           }
         ]
       },
@@ -355,11 +355,6 @@
         "price": 326.08,
         "change_pct": -5.48,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 329.17,
-            "change_pct": 2.33
-          },
           {
             "date": "2026-10-28",
             "price": 342.33,
@@ -379,6 +374,11 @@
             "date": "2026-11-02",
             "price": 326.08,
             "change_pct": -5.48
+          },
+          {
+            "date": "2026-11-03",
+            "price": 326.08,
+            "change_pct": -5.48
           }
         ]
       },
@@ -389,11 +389,6 @@
         "price": 196.4,
         "change_pct": -10.05,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 233.78,
-            "change_pct": 2.31
-          },
           {
             "date": "2026-10-28",
             "price": 243.57,
@@ -413,6 +408,11 @@
             "date": "2026-11-02",
             "price": 196.4,
             "change_pct": -10.05
+          },
+          {
+            "date": "2026-11-03",
+            "price": 196.4,
+            "change_pct": -10.05
           }
         ]
       },
@@ -423,11 +423,6 @@
         "price": 32.95,
         "change_pct": -4.3,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 32.69,
-            "change_pct": -0.76
-          },
           {
             "date": "2026-10-28",
             "price": 35.09,
@@ -447,6 +442,11 @@
             "date": "2026-11-02",
             "price": 32.95,
             "change_pct": -4.3
+          },
+          {
+            "date": "2026-11-03",
+            "price": 32.95,
+            "change_pct": -4.3
           }
         ]
       }
@@ -456,14 +456,9 @@
         "symbol": "000001.SS",
         "name": "上证指数",
         "name_en": "Shanghai Composite",
-        "price": 3612.1627,
-        "change_pct": 0.37,
+        "price": 3607.6286,
+        "change_pct": -0.84,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 3686.8,
-            "change_pct": -0.29
-          },
           {
             "date": "2026-10-28",
             "price": 3674.9733,
@@ -483,6 +478,11 @@
             "date": "2026-11-02",
             "price": 3612.1627,
             "change_pct": 0.37
+          },
+          {
+            "date": "2026-11-03",
+            "price": 3607.6286,
+            "change_pct": -0.84
           }
         ]
       },
@@ -490,14 +490,9 @@
         "symbol": "399001.SZ",
         "name": "深证成指",
         "name_en": "Shenzhen Component",
-        "price": 10952.138,
-        "change_pct": 1.09,
+        "price": 11053.907,
+        "change_pct": 0.39,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 11523.08,
-            "change_pct": -0.1
-          },
           {
             "date": "2026-10-28",
             "price": 11424.935,
@@ -517,6 +512,11 @@
             "date": "2026-11-02",
             "price": 10952.138,
             "change_pct": 1.09
+          },
+          {
+            "date": "2026-11-03",
+            "price": 11053.907,
+            "change_pct": 0.39
           }
         ]
       },
@@ -524,14 +524,9 @@
         "symbol": "399006.SZ",
         "name": "创业板指",
         "name_en": "ChiNext Index",
-        "price": 2449.153,
-        "change_pct": 1.47,
+        "price": 2455.339,
+        "change_pct": -0.14,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 2638.23,
-            "change_pct": -1.71
-          },
           {
             "date": "2026-10-28",
             "price": 2616.054,
@@ -551,6 +546,11 @@
             "date": "2026-11-02",
             "price": 2449.153,
             "change_pct": 1.47
+          },
+          {
+            "date": "2026-11-03",
+            "price": 2455.339,
+            "change_pct": -0.14
           }
         ]
       }
@@ -560,14 +560,9 @@
         "symbol": "518880.SS",
         "name": "华安黄金ETF",
         "name_en": "Gold ETF",
-        "price": 7.963,
-        "change_pct": -1.87,
+        "price": 8.047,
+        "change_pct": 1.33,
         "trend": [
-          {
-            "date": "2026-10-22",
-            "price": 8.36,
-            "change_pct": -0.6182
-          },
           {
             "date": "2026-10-23",
             "price": 8.199,
@@ -587,6 +582,11 @@
             "date": "2026-11-02",
             "price": 7.963,
             "change_pct": -1.87
+          },
+          {
+            "date": "2026-11-03",
+            "price": 8.047,
+            "change_pct": 1.33
           }
         ],
         "linked_decision": {
@@ -600,14 +600,9 @@
         "symbol": "159992.SZ",
         "name": "创新药ETF",
         "name_en": "Innovative Drug ETF",
-        "price": 0.789,
-        "change_pct": 0.51,
+        "price": 0.791,
+        "change_pct": -0.38,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 0.781,
-            "change_pct": -3.94
-          },
           {
             "date": "2026-10-28",
             "price": 0.79,
@@ -627,6 +622,11 @@
             "date": "2026-11-02",
             "price": 0.789,
             "change_pct": 0.51
+          },
+          {
+            "date": "2026-11-03",
+            "price": 0.791,
+            "change_pct": -0.38
           }
         ],
         "linked_decision": {
@@ -640,14 +640,9 @@
         "symbol": "512480.SS",
         "name": "半导体ETF",
         "name_en": "Semiconductor ETF",
-        "price": 0.725,
-        "change_pct": 0.69,
+        "price": 0.726,
+        "change_pct": -1.63,
         "trend": [
-          {
-            "date": "2026-10-27",
-            "price": 0.8,
-            "change_pct": -4.76
-          },
           {
             "date": "2026-10-28",
             "price": 0.794,
@@ -667,6 +662,11 @@
             "date": "2026-11-02",
             "price": 0.725,
             "change_pct": 0.69
+          },
+          {
+            "date": "2026-11-03",
+            "price": 0.726,
+            "change_pct": -1.63
           }
         ],
         "linked_decision": {

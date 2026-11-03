@@ -1,39 +1,39 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 15177,
+      "structured_views": 15216,
       "prediction_events": 40785,
-      "notes": 1391,
+      "notes": 1400,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-11-02T09:50:23.023777+00:00"
+      "generated_at": "2026-11-03T09:50:31.835984+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3529
+        "value": 3533
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2714
+        "value": 2726
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7938
+        "value": 7958
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 419
+        "value": 420
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 577
+        "value": 579
       }
     ],
     "horizon_dist": [
@@ -45,22 +45,22 @@
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3187
+        "value": 3199
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1810
+        "value": 1813
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 362
+        "value": 363
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 7083
+        "value": 7106
       }
     ],
     "source_contrib": [
@@ -74,7 +74,7 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 1132
+        "views": 1148
       },
       {
         "name": "旗帜鲜明",
@@ -98,11 +98,11 @@
       },
       {
         "name": "柏年说",
-        "views": 339
+        "views": 344
       },
       {
-        "name": "任泽平",
-        "views": 266
+        "name": "土豆看财报",
+        "views": 270
       }
     ],
     "analyst_rank": [
@@ -205,34 +205,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "钱博士短视频",
-        "date": "2026-10-29",
-        "stance": "neutral",
-        "claim": "历史上刑事介入证券市场做空的案例——2015年7月公安部副部长带队到证监会排查恶意卖空股票和股指线索，官方说法是针对境内证券市场出现的异常波动，部署全国公安机关"
-      },
-      {
-        "analyst": "钱博士短视频",
-        "date": "2026-10-29",
-        "stance": "neutral",
-        "claim": "主播引用《经济学人》文章观点——全球股市都很棒，中国股市是个例外；文中分析包括AI硬件出口非常好压制了国内消费政策推出、企业不愿意为AI付费等，但主播认为这些都"
-      },
-      {
-        "analyst": "钱博士短视频",
-        "date": "2026-10-29",
+        "analyst": "柏年说",
+        "date": "2026-10-31",
         "stance": "bullish",
-        "claim": "涉及资产：A股市场整体"
+        "claim": "中长线：中性偏多 🦀➡️（逐步探底，价值发现角度）"
       },
       {
-        "analyst": "钱博士短视频",
-        "date": "2026-10-29",
-        "stance": "neutral",
-        "claim": "短线：中性 🦀➡️"
+        "analyst": "柏年说",
+        "date": "2026-10-31",
+        "stance": "bearish",
+        "claim": "涉及资产：A股、美股"
       },
       {
-        "analyst": "钱博士短视频",
-        "date": "2026-10-29",
+        "analyst": "柏年说",
+        "date": "2026-10-31",
         "stance": "neutral",
-        "claim": "短线：中性 🦀➡️（主播仅陈述现象，未给出方向判断）"
+        "claim": "短线：中性偏谨慎 🦀➡️"
+      },
+      {
+        "analyst": "柏年说",
+        "date": "2026-10-31",
+        "stance": "bearish",
+        "claim": "涉及资产：黄金、白银"
+      },
+      {
+        "analyst": "柏年说",
+        "date": "2026-10-31",
+        "stance": "bearish",
+        "claim": "短线：看空 🐻📉"
       }
     ]
   }
