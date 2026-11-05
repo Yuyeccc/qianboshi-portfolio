@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 15216,
-      "prediction_events": 40785,
-      "notes": 1400,
+      "structured_views": 15422,
+      "prediction_events": 41240,
+      "notes": 1413,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-11-03T09:50:31.835984+00:00"
+      "generated_at": "2026-11-05T09:50:06.081434+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3533
+        "value": 3586
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2726
+        "value": 2754
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 7958
+        "value": 8074
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 420
+        "value": 426
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 579
+        "value": 582
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2735
+        "value": 2796
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3199
+        "value": 3234
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1813
+        "value": 1829
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 363
+        "value": 364
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 7106
+        "value": 7199
       }
     ],
     "source_contrib": [
@@ -70,19 +70,19 @@
       },
       {
         "name": "钱博士短视频",
-        "views": 1258
+        "views": 1269
       },
       {
         "name": "史诗级韭菜",
-        "views": 1148
+        "views": 1163
       },
       {
         "name": "旗帜鲜明",
-        "views": 1034
+        "views": 1097
       },
       {
         "name": "投机大拿",
-        "views": 933
+        "views": 995
       },
       {
         "name": "笨笨的韭菜",
@@ -90,7 +90,7 @@
       },
       {
         "name": "趋势天哥",
-        "views": 783
+        "views": 792
       },
       {
         "name": "李一恩",
@@ -98,11 +98,11 @@
       },
       {
         "name": "柏年说",
-        "views": 344
+        "views": 353
       },
       {
         "name": "土豆看财报",
-        "views": 270
+        "views": 279
       }
     ],
     "analyst_rank": [
@@ -127,24 +127,24 @@
         "samples": 178
       },
       {
+        "name": "旗帜鲜明",
+        "hit_rate": 0.5618,
+        "samples": 89
+      },
+      {
         "name": "笨笨的韭菜",
         "hit_rate": 0.5366,
         "samples": 41
       },
       {
         "name": "土豆看财报",
-        "hit_rate": 0.5,
-        "samples": 14
+        "hit_rate": 0.5333,
+        "samples": 15
       },
       {
         "name": "史诗级韭菜",
         "hit_rate": 0.4444,
         "samples": 18
-      },
-      {
-        "name": "钱博士短视频",
-        "hit_rate": 0.4386,
-        "samples": 57
       }
     ],
     "debate_cards": [
@@ -168,12 +168,12 @@
       },
       {
         "entity": "低位",
-        "bullish": 97,
-        "bearish": 62,
-        "neutral": 169,
+        "bullish": 77,
+        "bearish": 84,
+        "neutral": 217,
         "consensus": "neutral",
-        "disagreement": 0.3573,
-        "updated": "2026-09-28T16:51:44"
+        "disagreement": 0.3899,
+        "updated": "2026-11-05T10:50:23"
       },
       {
         "entity": "国产替代",
@@ -192,47 +192,38 @@
         "consensus": "neutral",
         "disagreement": 0.4503,
         "updated": "2026-08-06T16:18:45"
-      },
-      {
-        "entity": "中际旭创（300308.SZ）",
-        "bullish": 106,
-        "bearish": 68,
-        "neutral": 117,
-        "consensus": "neutral",
-        "disagreement": 0.4503,
-        "updated": "2026-08-06T16:18:44"
       }
     ],
     "sample_views": [
       {
-        "analyst": "柏年说",
-        "date": "2026-10-31",
+        "analyst": "财联社",
+        "date": "2026-11-04",
         "stance": "bullish",
-        "claim": "中长线：中性偏多 🦀➡️（逐步探底，价值发现角度）"
+        "claim": "涉及资产：腾讯混元大模型（HUI3/HUI4）"
       },
       {
-        "analyst": "柏年说",
-        "date": "2026-10-31",
-        "stance": "bearish",
-        "claim": "涉及资产：A股、美股"
+        "analyst": "财联社",
+        "date": "2026-11-04",
+        "stance": "bullish",
+        "claim": "短线：中性偏多（纯题材炒作）🦀➡️"
       },
       {
-        "analyst": "柏年说",
-        "date": "2026-10-31",
+        "analyst": "财联社",
+        "date": "2026-11-04",
+        "stance": "bullish",
+        "claim": "涉及资产：创新药、CXO、医疗设备"
+      },
+      {
+        "analyst": "财联社",
+        "date": "2026-11-04",
         "stance": "neutral",
-        "claim": "短线：中性偏谨慎 🦀➡️"
+        "claim": "涉及资产：半导体设备板块"
       },
       {
-        "analyst": "柏年说",
-        "date": "2026-10-31",
-        "stance": "bearish",
-        "claim": "涉及资产：黄金、白银"
-      },
-      {
-        "analyst": "柏年说",
-        "date": "2026-10-31",
-        "stance": "bearish",
-        "claim": "短线：看空 🐻📉"
+        "analyst": "财联社",
+        "date": "2026-11-04",
+        "stance": "bullish",
+        "claim": "短线：看多 🐂📈"
       }
     ]
   }
