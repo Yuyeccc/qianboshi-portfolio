@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 import {
   AlertTriangle,
   ExternalLink,
@@ -12,10 +13,14 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { classifyQuestion, type ScreeningResult } from "@/utils/agentScreening";
-import { matchDemoReport } from "@/data/demoReport";
+import {
+  recoveryActionForResearchJob,
+  stageForResearchJob,
+} from "@/utils/researchJobState";
 import {
   fetchResearchJob,
   listResearchJobs,
+  readerReportUrl,
   reportKind,
   submitResearch,
   toViewReport,
@@ -70,6 +75,54 @@ const STATUS_DOT: Record<string, string> = {
   failed: "bg-market-negative",
 };
 
+function ReviewNotice({ report }: { report: unknown }) {
+  const { t } = useTranslation();
+  if (!report || typeof report !== "object") return null;
+  const meta = (report as { _meta?: Record<string, any> })._meta;
+  const critic = meta?.critic;
+  if (!critic) return null;
+  const issues = Array.isArray(critic.issues) ? critic.issues : [];
+  const revision = meta?.revision;
+  const initialCount = Array.isArray(revision?.initial_critic?.issues)
+    ? revision.initial_critic.issues.length
+    : 0;
+  const statusText =
+    critic.status === "completed" && critic.ok === true
+      ? t("agent.review.passed", "独立审查已完成，当前未发现需要修改的问题。")
+      : critic.status === "completed"
+        ? t("agent.review.issues", `独立审查发现 ${issues.length} 项仍需注意的问题。`)
+        : critic.status === "partial"
+          ? t("agent.review.partial", "已完成基础规则检查，但未完成全面语义审查。")
+          : t("agent.review.unavailable", "独立审查暂未完成。");
+  return (
+    <div className="mb-4 rounded-md border border-line bg-surfaceSubtle px-4 py-3 text-xs">
+      <p className="flex items-start gap-2 font-medium text-foreground">
+        <Info size={14} className="mt-0.5 shrink-0 text-primary" />
+        <span>{statusText}</span>
+      </p>
+      {revision?.status === "revised" && (
+        <p className="mt-1.5 text-muted">
+          {t("agent.review.revised", `初稿发现 ${initialCount} 项问题，已进行一次受限修订。`)}
+        </p>
+      )}
+      {(revision?.status === "invalid" || revision?.status === "error") && (
+        <p className="mt-1.5 text-muted">{t("agent.review.keptOriginal", "修订未采用，已保留原稿。")}</p>
+      )}
+      {issues.length > 0 && (
+        <ul className="mt-2 space-y-2 border-t border-line pt-2 text-muted">
+          {issues.slice(0, 3).map((issue: any, index: number) => (
+            <li key={index}>
+              <strong className="font-medium text-foreground">{issue.claim || t("agent.review.issueFallback", "待核问题")}</strong>
+              {issue.reason && <span className="mt-0.5 block">{issue.reason}</span>}
+            </li>
+          ))}
+          {issues.length > 3 && <li>{t("agent.review.more", `另有 ${issues.length - 3} 项，请在阅读版中查看。`)}</li>}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 function fmtTime(iso?: string | null): string {
   if (!iso) return "—";
   const d = new Date(iso);
@@ -96,12 +149,12 @@ const POLL_MAX = 75; // 10 分钟上限
 
 export default function AgentResearchPage() {
   const { t } = useTranslation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [input, setInput] = useState("");
   const [agentType, setAgentType] = useState<AgentType>("analyst");
   const [phase, setPhase] = useState<Phase>("idle");
   const [verdict, setVerdict] = useState<ScreeningResult | null>(null);
   const [stageIndex, setStageIndex] = useState(0);
-  const [isDemo, setIsDemo] = useState(false); // 无后端时降级演示流
   const [runError, setRunError] = useState<string | null>(null);
   const [job, setJob] = useState<ResearchJob | null>(null);
   const [viewReport, setViewReport] = useState<ReturnType<typeof toViewReport>>(null);
@@ -110,9 +163,13 @@ export default function AgentResearchPage() {
   const [renderKind, setRenderKind] = useState<RenderKind>("none");
   const [history, setHistory] = useState<ResearchJobSummary[]>([]);
   const [historyError, setHistoryError] = useState<string | null>(null);
-  const timersRef = useRef<number[]>([]);
+  const restoreTimerRef = useRef<number | null>(null);
   const pollRef = useRef<number | null>(null);
   const pollCountRef = useRef(0);
+  const activeJobRef = useRef<string | null>(null);
+  const pollingJobRef = useRef<string | null>(null);
+  const restoredJobRef = useRef<string | null>(null);
+  const initialJobIdRef = useRef(searchParams.get("job"));
   const reportSectionRef = useRef<HTMLElement | null>(null);
 
   /** 拉取最近任务历史（失败静默降级：区块隐藏，不阻断主流程） */
@@ -130,28 +187,63 @@ export default function AgentResearchPage() {
     void loadHistory();
   }, []);
 
+  useEffect(() => {
+    const jobId = initialJobIdRef.current;
+    if (!jobId || restoredJobRef.current === jobId || restoreTimerRef.current !== null) return;
+    // 延迟到当前 effect 周期后启动，避免 StrictMode 重放产生重复恢复。
+    restoreTimerRef.current = window.setTimeout(() => {
+      restoreTimerRef.current = null;
+      if (restoredJobRef.current === jobId || activeJobRef.current) return;
+      restoredJobRef.current = jobId;
+      startPolling("", jobId);
+    }, 0);
+  }, []);
+
   useEffect(
     () => () => {
-      timersRef.current.forEach((id) => window.clearTimeout(id));
-      if (pollRef.current !== null) window.clearInterval(pollRef.current);
+      clearScheduledRestore();
+      clearPolls();
+      activeJobRef.current = null;
     },
     [],
   );
 
   const locked = phase === "screening" || phase === "researching";
 
+  function clearScheduledRestore() {
+    if (restoreTimerRef.current !== null) {
+      window.clearTimeout(restoreTimerRef.current);
+      restoreTimerRef.current = null;
+    }
+  }
+
   function clearPolls() {
     if (pollRef.current !== null) {
       window.clearInterval(pollRef.current);
       pollRef.current = null;
     }
+    pollingJobRef.current = null;
     pollCountRef.current = 0;
   }
 
+  function setJobDeepLink(jobId: string | null) {
+    setSearchParams(
+      (current) => {
+        const next = new URLSearchParams(current);
+        if (jobId) next.set("job", jobId);
+        else next.delete("job");
+        return next;
+      },
+      { replace: true },
+    );
+  }
+
   function reset() {
+    clearScheduledRestore();
     clearPolls();
-    timersRef.current.forEach((id) => window.clearTimeout(id));
-    timersRef.current = [];
+    activeJobRef.current = null;
+    restoredJobRef.current = null;
+    setJobDeepLink(null);
     setVerdict(null);
     setStageIndex(0);
     setJob(null);
@@ -160,7 +252,6 @@ export default function AgentResearchPage() {
     setRawReport(null);
     setRenderKind("none");
     setRunError(null);
-    setIsDemo(false);
     setPhase("idle");
   }
 
@@ -186,7 +277,7 @@ export default function AgentResearchPage() {
       }
       setViewReport(view);
       setRiskReport(null);
-      setRawReport(null);
+      setRawReport(reportRaw);
       setRenderKind("analyst");
     }
     void jobId; // 渲染态已含报告全文，jobId 仅留作扩展
@@ -195,49 +286,55 @@ export default function AgentResearchPage() {
     window.setTimeout(() => reportSectionRef.current?.scrollIntoView({ behavior: "smooth" }), 60);
   }
 
-  /** 无后端/提交失败 -> 演示降级流（仅 analyst；持仓风险不做假数据演示） */
-  function startDemoFlow(q: string) {
-    if (agentType !== "analyst") {
-      setRunError(t("agent.noDemoForRisk"));
-      setPhase("failed");
-      return;
-    }
-    setIsDemo(true);
-    setPhase("screening");
-    timersRef.current.push(
-      window.setTimeout(() => {
-        setPhase("researching");
-        setStageIndex(2); // 计划中
-        let i = 2;
-        const iv = window.setInterval(() => {
-          i += 1;
-          setStageIndex(i);
-          if (i >= STAGES.length - 1) {
-            window.clearInterval(iv);
-            setPhase("done");
-          }
-        }, 900);
-        timersRef.current.push(iv);
-      }, 1000),
-    );
-  }
-
   function applyGate(verdictKey: string, reason: string) {
     setVerdict({ verdict: verdictKey as ScreeningResult["verdict"], reason });
     setPhase(verdictKey === "block" ? "blocked" : "clarify");
   }
 
-  /** 轮询研究任务状态 */
+  /** 提交、历史打开和深链恢复共用：立即拉取一次，再按固定间隔轮询。 */
   function startPolling(q: string, jobId: string) {
+    if (pollingJobRef.current === jobId) return;
+    clearScheduledRestore();
+    clearPolls();
+    activeJobRef.current = jobId;
+    pollingJobRef.current = jobId;
     setJob({ job_id: jobId, status: "queued", goal: q });
+    setViewReport(null);
+    setRiskReport(null);
+    setRawReport(null);
+    setRenderKind("none");
+    setRunError(null);
     setPhase("researching");
-    setStageIndex(1); // 安检已过
-    pollRef.current = window.setInterval(async () => {
+    setStageIndex(1); // 安检已过；后续只跟随后端真实 progress
+    let inFlight = false;
+
+    const poll = async () => {
+      if (
+        activeJobRef.current !== jobId ||
+        pollingJobRef.current !== jobId ||
+        inFlight
+      ) {
+        return;
+      }
+      inFlight = true;
       pollCountRef.current += 1;
       try {
         const latest = await fetchResearchJob(jobId);
+        if (activeJobRef.current !== jobId || pollingJobRef.current !== jobId) return;
         setJob(latest);
-        if (latest.status === "done") {
+        setInput(latest.goal);
+        if (
+          latest.agent_type === "analyst" ||
+          latest.agent_type === "portfolio_risk" ||
+          latest.agent_type === "decision_review"
+        ) {
+          setAgentType(latest.agent_type);
+        }
+        const nextStage = stageForResearchJob(latest.status, latest.progress?.stage);
+        if (nextStage) setStageIndex(STAGES.indexOf(nextStage));
+
+        const action = recoveryActionForResearchJob(latest.status);
+        if (action === "report") {
           clearPolls();
           if (latest.report) {
             openReport(latest.report, latest.agent_type, jobId);
@@ -247,23 +344,28 @@ export default function AgentResearchPage() {
           }
           return;
         }
-        if (latest.status === "failed") {
+        if (action === "error") {
           clearPolls();
           setRunError(latest.error || "unknown error");
           setPhase("failed");
           return;
         }
-        // queued/running：阶段随轮询缓慢推进（cap 在 judging）
-        setStageIndex((prev) => (prev < STAGES.length - 2 ? prev + 1 : prev));
+        setPhase("researching");
       } catch {
+        if (activeJobRef.current !== jobId || pollingJobRef.current !== jobId) return;
         // 网络闪断：忽略继续轮询；超时上限转失败
         if (pollCountRef.current >= POLL_MAX) {
           clearPolls();
           setRunError("poll timeout");
           setPhase("failed");
         }
+      } finally {
+        inFlight = false;
       }
-    }, POLL_MS);
+    };
+
+    void poll();
+    pollRef.current = window.setInterval(poll, POLL_MS);
   }
 
   async function submit() {
@@ -287,26 +389,18 @@ export default function AgentResearchPage() {
         applyGate(res.gate.verdict, res.gate.reason);
         return;
       }
-      // 网络/后端不可达 -> 演示降级
-      startDemoFlow(q);
+      setRunError(res.message);
+      setPhase("failed");
       return;
     }
+    setJobDeepLink(res.job.job_id);
     startPolling(q, res.job.job_id);
   }
 
-  /** 历史任务回看：拉完整 job（含 report 全文）并按产物协议渲染 */
-  async function openHistoryJob(summary: ResearchJobSummary) {
-    if (summary.status !== "done" || !summary.report_path) return;
-    try {
-      const full = await fetchResearchJob(summary.job_id);
-      if (full.status === "done" && full.report) {
-        setJob(full);
-        openReport(full.report, full.agent_type, full.job_id);
-      }
-    } catch {
-      setRunError("history load failed");
-      setPhase("failed");
-    }
+  /** 历史任务统一拉取完整状态；进行中继续轮询，完成/失败按真实状态恢复。 */
+  function openHistoryJob(summary: ResearchJobSummary) {
+    setJobDeepLink(summary.job_id);
+    startPolling(summary.goal, summary.job_id);
   }
 
   const busy = phase === "screening" || phase === "researching";
@@ -474,20 +568,17 @@ export default function AgentResearchPage() {
           {phase !== "screening" && (
             <>
               <StageStepper activeIndex={stageIndex} />
-              {phase === "researching" &&
-                (isDemo ? (
-                  <p className="text-xs text-muted">{t("agent.demoMode")}</p>
-                ) : (
-                  <p className="flex items-center gap-2 text-xs text-muted">
-                    <Loader2 size={12} className="animate-spin text-primary" />
-                    {t("agent.liveRunning")}
-                    {job?.started_at && (
-                      <span className="font-mono text-[10px] opacity-70">
-                        #{job.job_id.slice(0, 8)}
-                      </span>
-                    )}
-                  </p>
-                ))}
+              {phase === "researching" && (
+                <p className="flex items-center gap-2 text-xs text-muted">
+                  <Loader2 size={12} className="animate-spin text-primary" />
+                  <span>{job?.progress?.message || t("agent.liveRunning")}</span>
+                  {job?.started_at && (
+                    <span className="font-mono text-[10px] opacity-70">
+                      #{job.job_id.slice(0, 8)}
+                    </span>
+                  )}
+                </p>
+              )}
               {phase === "failed" && (
                 <div
                   role="alert"
@@ -513,10 +604,7 @@ export default function AgentResearchPage() {
             </>
           )}
           {phase === "done" &&
-            (isDemo ? (
-              // 演示模式仅 analyst（P0 行为保留）
-              <ReportView report={{ ...matchDemoReport(input.trim()), goal: input.trim() }} />
-            ) : renderKind === "risk" && riskReport ? (
+            (renderKind === "risk" && riskReport ? (
               <RiskReportView report={riskReport} live />
             ) : renderKind === "review" && rawReport ? (
               // decision_review 产物：协议未专配渲染组件前，只读 JSON 兜底
@@ -529,7 +617,23 @@ export default function AgentResearchPage() {
                 </pre>
               </div>
             ) : viewReport ? (
-              <ReportView report={viewReport} live />
+              <div>
+                <ReviewNotice report={rawReport} />
+                {job?.job_id && (
+                  <div className="mb-3 flex justify-end">
+                    <a
+                      href={readerReportUrl(job.job_id)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-md border border-line bg-surface px-3 py-1.5 text-xs font-medium text-primary transition-colors hover:bg-surfaceSubtle"
+                    >
+                      <ExternalLink size={13} />
+                      {t("agent.openReader", "打开阅读版")}
+                    </a>
+                  </div>
+                )}
+                <ReportView report={viewReport} live />
+              </div>
             ) : null)}
         </section>
       )}
@@ -588,15 +692,13 @@ export default function AgentResearchPage() {
                   <span className="text-[10px] tabular-nums text-muted">
                     {fmtTime(j.created_at)}
                   </span>
-                  {j.status === "done" && j.report_path && (
-                    <button
-                      type="button"
-                      onClick={() => void openHistoryJob(j)}
-                      className="inline-flex items-center gap-1 rounded-md border border-primary/30 bg-primary/5 px-2 py-0.5 text-[11px] font-medium text-primary transition-colors hover:bg-primary/10"
-                    >
-                      {t("agent.history.view")}
-                    </button>
-                  )}
+                  <button
+                    type="button"
+                    onClick={() => openHistoryJob(j)}
+                    className="inline-flex items-center gap-1 rounded-md border border-primary/30 bg-primary/5 px-2 py-0.5 text-[11px] font-medium text-primary transition-colors hover:bg-primary/10"
+                  >
+                    {t("agent.history.view")}
+                  </button>
                 </li>
               ))}
             </ul>

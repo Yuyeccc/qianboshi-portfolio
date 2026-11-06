@@ -1,7 +1,9 @@
+from contextlib import asynccontextmanager
 from typing import Any
 
 from fastapi import APIRouter, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 from app.repositories.architecture_repo import get_architecture_data
@@ -32,7 +34,9 @@ from app.research_service import (
     AGENT_SCRIPTS,
     gate_question,
     get_job,
+    get_reader_report,
     list_jobs,
+    recover_jobs,
     submit_job,
 )
 
@@ -58,9 +62,16 @@ class RagQueryRequest(BaseModel):
     page_size: int = Field(default=10, ge=1, le=100)
 
 
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    recover_jobs()
+    yield
+
+
 app = FastAPI(
     title="Qianboshi Portfolio API",
     version="0.1.0",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -316,6 +327,14 @@ def get_research_job(job_id: str) -> dict:
     if job is None:
         raise HTTPException(status_code=404, detail={"error": "research job not found"})
     return {"job": job}
+
+
+@api_router.get("/research/jobs/{job_id}/reader")
+def get_research_reader(job_id: str) -> FileResponse:
+    reader_path = get_reader_report(job_id)
+    if reader_path is None:
+        raise HTTPException(status_code=404, detail={"error": "reader report not found"})
+    return FileResponse(reader_path, media_type="text/html; charset=utf-8")
 
 
 @api_router.get("/research/jobs")

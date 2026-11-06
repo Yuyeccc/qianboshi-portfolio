@@ -31,6 +31,16 @@ export interface ResearchGate {
   matched?: string | null;
 }
 
+export interface ResearchProgressEvent {
+  stage: string;
+  message: string;
+  updated_at?: string | null;
+}
+
+export interface ResearchJobProgress extends ResearchProgressEvent {
+  events: ResearchProgressEvent[];
+}
+
 export interface ResearchJob {
   job_id: string;
   status: ResearchJobStatus;
@@ -43,6 +53,8 @@ export interface ResearchJob {
   finished_at?: string | null;
   report_path?: string | null;
   error?: string | null;
+  progress?: ResearchJobProgress | null;
+  pid?: number | null;
   report?: unknown;
 }
 
@@ -183,6 +195,10 @@ export async function submitResearch(
       message: err instanceof Error ? err.message : String(err),
     };
   }
+}
+
+export function readerReportUrl(jobId: string): string {
+  return `${apiBaseUrl}/v1/research/jobs/${encodeURIComponent(jobId)}/reader`;
 }
 
 export async function fetchResearchJob(jobId: string): Promise<ResearchJob> {

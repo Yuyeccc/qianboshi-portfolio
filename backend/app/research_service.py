@@ -9,8 +9,8 @@
 链路：
   POST /research/jobs
     -> intent_gate.classify_question()（fail-closed：block/clarify 一律拒收）
-    -> 写 {job_id}.json (queued) + daemon 线程
-    -> subprocess research_agent.py "<goal>" --job-id <job_id>（python 优先级：
+    -> 写 {job_id}.json (queued) + 有界线程池
+    -> Popen research_agent.py "<goal>" --job-id <job_id>（python 优先级：
        QIANBOSHI_RESEARCH_PYTHON -> C:/Python314/python.exe -> sys.executable）
     -> 扫 DATA_DIR/research/ 下 _meta.job_id == job_id 的产物文件精确关联
     -> 状态机 queued -> running -> done | failed
@@ -22,10 +22,15 @@ from __future__ import annotations
 
 import json
 import os
+import queue
+import re
+import signal
 import subprocess
 import sys
 import threading
+import time
 import uuid
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 
@@ -34,6 +39,27 @@ from app.config import AGENT_DIR, DATA_DIR, SCRIPTS_PATH
 JOBS_DIR = DATA_DIR / "research_jobs"
 RESEARCH_OUT_DIR = DATA_DIR / "research"
 SUB_TIMEOUT = 600  # 单次研究任务超时（秒）
+PROGRESS_EVENT_LIMIT = 20
+_PROGRESS_PATTERN = re.compile(r"^\[(\d+[a-z]?/\d+)\]", re.IGNORECASE)
+_job_lock = threading.RLock()
+_schedule_lock = threading.Lock()
+_scheduled_jobs: set[str] = set()
+
+
+def _create_executor() -> ThreadPoolExecutor:
+    try:
+        workers = int(os.environ.get("QIANBOSHI_RESEARCH_MAX_WORKERS", "2"))
+    except ValueError:
+        workers = 2
+    return ThreadPoolExecutor(max_workers=max(1, workers), thread_name_prefix="research-job")
+
+
+_executor = _create_executor()
+
+
+def _poll_interval() -> None:
+    time.sleep(0.05)
+
 
 # job 状态机合法值
 STATUS_QUEUED = "queued"
@@ -71,18 +97,20 @@ def _ensure_jobs_dir() -> None:
 
 def _write_job(job: dict) -> None:
     """原子写 job 文件：先写 temp 再 os.replace。"""
-    _ensure_jobs_dir()
-    tmp = JOBS_DIR / f".{job['job_id']}.tmp"
-    tmp.write_text(json.dumps(job, ensure_ascii=False, indent=1), encoding="utf-8")
-    os.replace(tmp, JOBS_DIR / f"{job['job_id']}.json")
+    with _job_lock:
+        _ensure_jobs_dir()
+        tmp = JOBS_DIR / f".{job['job_id']}.tmp"
+        tmp.write_text(json.dumps(job, ensure_ascii=False, indent=1), encoding="utf-8")
+        os.replace(tmp, JOBS_DIR / f"{job['job_id']}.json")
 
 
 def _update_job(job_id: str, **fields) -> None:
-    job = _load_job(job_id)
-    if job is None:
-        return
-    job.update(fields)
-    _write_job(job)
+    with _job_lock:
+        job = _load_job(job_id)
+        if job is None:
+            return
+        job.update(fields)
+        _write_job(job)
 
 
 def _load_job(job_id: str) -> dict | None:
@@ -93,6 +121,37 @@ def _load_job(job_id: str) -> dict | None:
         return json.loads(p.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError):
         return None
+
+
+def _parse_progress_line(line: str) -> dict | None:
+    message = line.strip()
+    match = _PROGRESS_PATTERN.match(message)
+    if match:
+        stage = match.group(1).lower()
+    elif message.startswith("完成"):
+        stage = "complete"
+    else:
+        return None
+    return {"stage": stage, "message": message}
+
+
+def _update_progress(job_id: str, stage: str, message: str) -> None:
+    with _job_lock:
+        job = _load_job(job_id)
+        if job is None:
+            return
+        previous = job.get("progress") or {}
+        events = list(previous.get("events") or [])
+        event = {"stage": stage, "message": message, "updated_at": _now()}
+        events.append(event)
+        job["progress"] = {**event, "events": events[-PROGRESS_EVENT_LIMIT:]}
+        _write_job(job)
+
+
+def _consume_output_line(job_id: str, line: str) -> None:
+    progress = _parse_progress_line(line)
+    if progress:
+        _update_progress(job_id, **progress)
 
 
 def _pick_python() -> str:
@@ -138,17 +197,33 @@ def gate_question(goal: str) -> dict:
         return {"verdict": "block", "reason": f"intent_gate_unavailable: {exc}", "rule_version": "n/a"}
 
 
+def _enqueue_job(job_id: str, goal: str, agent_type: str, recovered: bool = False) -> bool:
+    with _schedule_lock:
+        if job_id in _scheduled_jobs:
+            return False
+        _scheduled_jobs.add(job_id)
+    try:
+        future = _executor.submit(_run_job, job_id, goal, agent_type, recovered=recovered)
+    except Exception:
+        with _schedule_lock:
+            _scheduled_jobs.discard(job_id)
+        raise
+
+    def forget_job(_) -> None:
+        with _schedule_lock:
+            _scheduled_jobs.discard(job_id)
+
+    future.add_done_callback(forget_job)
+    return True
+
+
 def submit_job(
     goal: str,
     category: str | None = None,
     gate: dict | None = None,
     agent_type: str | None = None,
 ) -> dict:
-    """建 queued job 并起 daemon 线程执行；立即返回 job 状态（调用方勿阻塞）。
-
-    agent_type 缺省 → analyst（老 job 向后兼容）；非法值同样入队后 fail-closed
-    （_run_job 分派失败置 failed，见 resolve_agent_script）。
-    """
+    """建 queued job 并交给有界执行器；立即返回 job 状态（调用方勿阻塞）。"""
     agent_type = agent_type or DEFAULT_AGENT_TYPE
     job_id = uuid.uuid4().hex
     job = {
@@ -163,14 +238,149 @@ def submit_job(
         "finished_at": None,
         "report_path": None,
         "error": None,
+        "pid": None,
+        "progress": None,
     }
     _write_job(job)
-    threading.Thread(target=_run_job, args=(job_id, goal, agent_type), daemon=True).start()
+    _enqueue_job(job_id, goal, agent_type)
     return job
 
 
-def _run_job(job_id: str, goal: str, agent_type: str) -> None:
-    _update_job(job_id, status=STATUS_RUNNING, started_at=_now())
+def recover_jobs() -> None:
+    """恢复落盘的 queued/running 任务；执行器登记集合防止同进程重复入队。"""
+    _ensure_jobs_dir()
+    for path in JOBS_DIR.glob("*.json"):
+        job = _load_job(path.stem)
+        if not job or job.get("status") not in {STATUS_QUEUED, STATUS_RUNNING} or not job.get("goal"):
+            continue
+        _enqueue_job(
+            job["job_id"],
+            job["goal"],
+            job.get("agent_type") or DEFAULT_AGENT_TYPE,
+            recovered=True,
+        )
+
+
+def _windows_pid_alive(pid: int) -> bool:
+    import ctypes
+
+    kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    kernel32.OpenProcess.restype = ctypes.c_void_p
+    handle = kernel32.OpenProcess(0x00100000, False, int(pid))  # SYNCHRONIZE
+    if not handle:
+        return False
+    try:
+        return kernel32.WaitForSingleObject(ctypes.c_void_p(handle), 0) == 0x00000102
+    finally:
+        kernel32.CloseHandle(ctypes.c_void_p(handle))
+
+
+def _pid_alive(pid: int | None) -> bool:
+    if not pid:
+        return False
+    if os.name == "nt":
+        return _windows_pid_alive(int(pid))
+    try:
+        os.kill(int(pid), 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    except OSError:
+        return False
+    return True
+
+
+def _monitor_recovered_process(job_id: str, pid: int) -> None:
+    """旧进程仍存活时只监控；恢复后最多再等待一个完整超时时长。"""
+    deadline = time.monotonic() + SUB_TIMEOUT
+    while _pid_alive(pid):
+        if time.monotonic() >= deadline:
+            try:
+                os.kill(pid, signal.SIGTERM)
+            except OSError:
+                pass
+            _update_job(
+                job_id,
+                status=STATUS_FAILED,
+                finished_at=_now(),
+                error=f"timeout after {SUB_TIMEOUT}s (subprocess killed)",
+            )
+            return
+        _poll_interval()
+
+    report_path = _find_report(job_id)
+    if report_path is None:
+        _update_job(
+            job_id,
+            status=STATUS_FAILED,
+            finished_at=_now(),
+            error="recovered subprocess exited but no report file matched job_id in data/research",
+        )
+        return
+    _update_job(
+        job_id,
+        status=STATUS_DONE,
+        finished_at=_now(),
+        report_path=str(report_path),
+        error=None,
+    )
+
+
+def _consume_process(proc, job_id: str) -> tuple[int, str, bool]:
+    lines: queue.Queue[str | None] = queue.Queue()
+
+    def read_output() -> None:
+        for line in proc.stdout:
+            lines.put(line)
+        lines.put(None)
+
+    reader = threading.Thread(target=read_output, daemon=True)
+    reader.start()
+    captured: list[str] = []
+    deadline = time.monotonic() + SUB_TIMEOUT
+    timed_out = False
+
+    while True:
+        try:
+            line = lines.get(timeout=0.05)
+        except queue.Empty:
+            line = ""
+        if line is None:
+            break
+        if line:
+            captured.append(line)
+            _consume_output_line(job_id, line)
+
+        returncode = proc.poll()
+        if returncode is not None and not reader.is_alive() and lines.empty():
+            break
+        if returncode is None and time.monotonic() >= deadline:
+            proc.kill()
+            timed_out = True
+
+    reader.join(timeout=1)
+    returncode = proc.wait()
+    return returncode, "".join(captured), timed_out
+
+
+def _run_job(job_id: str, goal: str, agent_type: str, recovered: bool = False) -> None:
+    if recovered:
+        previous = _load_job(job_id)
+        if previous and previous.get("status") == STATUS_RUNNING and _pid_alive(previous.get("pid")):
+            _monitor_recovered_process(job_id, previous["pid"])
+            return
+
+    _update_job(
+        job_id,
+        status=STATUS_RUNNING,
+        started_at=_now(),
+        finished_at=None,
+        report_path=None,
+        error=None,
+        pid=None,
+        progress=None,
+    )
 
     script = resolve_agent_script(agent_type)
     if script is None:
@@ -193,20 +403,27 @@ def _run_job(job_id: str, goal: str, agent_type: str) -> None:
     py = _pick_python()
     env = os.environ.copy()
     env.pop("PYTHONPATH", None)  # 跑批环境要求干净 PYTHONPATH
+    env["PYTHONUNBUFFERED"] = "1"  # 阶段日志实时进入后端进度事件
     cmd = [py, str(script), goal, "--job-id", job_id]
 
     try:
-        proc = subprocess.run(
+        proc = subprocess.Popen(
             cmd,
-            capture_output=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
             text=True,
             encoding="utf-8",
             errors="replace",
-            timeout=SUB_TIMEOUT,
             cwd=str(AGENT_DIR),
             env=env,
         )
-    except subprocess.TimeoutExpired:
+        _update_job(job_id, pid=proc.pid)
+        returncode, output_text, timed_out = _consume_process(proc, job_id)
+    except OSError as exc:
+        _update_job(job_id, status=STATUS_FAILED, finished_at=_now(), error=f"subprocess failed to start: {exc}")
+        return
+
+    if timed_out:
         _update_job(
             job_id,
             status=STATUS_FAILED,
@@ -214,20 +431,14 @@ def _run_job(job_id: str, goal: str, agent_type: str) -> None:
             error=f"timeout after {SUB_TIMEOUT}s (subprocess killed)",
         )
         return
-    except OSError as exc:
-        _update_job(job_id, status=STATUS_FAILED, finished_at=_now(), error=f"subprocess failed to start: {exc}")
-        return
 
-    stdout = (proc.stdout or "").strip()
-    stderr = (proc.stderr or "").strip()
-
-    if proc.returncode != 0:
-        tail = (stderr or stdout)[-2000:]
+    if returncode != 0:
+        tail = output_text.strip()[-2000:]
         _update_job(
             job_id,
             status=STATUS_FAILED,
             finished_at=_now(),
-            error=f"exit={proc.returncode}: {tail}",
+            error=f"exit={returncode}: {tail}",
         )
         return
 
@@ -265,6 +476,36 @@ def get_job(job_id: str) -> dict | None:
     return job
 
 
+def get_reader_report(job_id: str) -> Path | None:
+    """返回任务所属的 HTML 阅读版，禁止借报告字段跳出研究产物目录。"""
+    job = _load_job(job_id)
+    if not job or job.get("status") != STATUS_DONE or not job.get("report_path"):
+        return None
+    root = RESEARCH_OUT_DIR.resolve()
+    report_path = Path(job["report_path"]).resolve()
+    if report_path.parent != root or not report_path.is_file():
+        return None
+    try:
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+    reader_name = (report.get("_meta") or {}).get("reader_report") or report_path.with_suffix(".html").name
+    reader_path = (root / str(reader_name)).resolve()
+    if reader_path.parent != root or reader_path.suffix.lower() != ".html":
+        return None
+    if not reader_path.exists():
+        try:
+            scripts = str(SCRIPTS_PATH)
+            if scripts not in sys.path:
+                sys.path.insert(0, scripts)
+            from research_renderer import render_reader_html  # noqa: E402
+
+            reader_path.write_text(render_reader_html(report), encoding="utf-8")
+        except (ImportError, OSError):
+            return None
+    return reader_path if reader_path.is_file() else None
+
+
 def list_jobs(limit: int = 20) -> list[dict]:
     """最近 limit 个 job 摘要（不含 report 全文）。"""
     _ensure_jobs_dir()
@@ -285,6 +526,8 @@ def list_jobs(limit: int = 20) -> list[dict]:
                 "finished_at": data.get("finished_at"),
                 "report_path": data.get("report_path"),
                 "error": data.get("error"),
+                "pid": data.get("pid"),
+                "progress": data.get("progress"),
             }
         )
     jobs.sort(key=lambda j: j.get("created_at") or "", reverse=True)

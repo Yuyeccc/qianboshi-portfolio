@@ -1,16 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
+import { STAGES } from "@/utils/researchJobState";
 
-export const STAGES = [
-  "submitted",
-  "screening",
-  "planning",
-  "retrieving",
-  "judging",
-  "done",
-] as const;
-
-export type StageKey = (typeof STAGES)[number];
+export { STAGES };
+export type { StageKey } from "@/utils/researchJobState";
 
 interface Props {
   /** 当前推进到的阶段 index（含） */

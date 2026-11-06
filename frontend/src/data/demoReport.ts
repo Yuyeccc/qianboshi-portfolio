@@ -308,22 +308,3 @@ const PROPERTY_REPORT: DemoReport = {
 };
 
 export const DEMO_REPORTS: DemoReport[] = [GOLD_REPORT, PROPERTY_REPORT];
-
-/** 按用户输入关键词选择最匹配的演示报告（P0 占位，P1 由真实 Agent 输出替换） */
-export function matchDemoReport(input: string): DemoReport {
-  const norm = input.toLowerCase();
-  // 全文匹配打分：命中关键词数最多者胜
-  let best = GOLD_REPORT;
-  let bestScore = 0;
-  for (const report of DEMO_REPORTS) {
-    const score = report.matchKeywords.reduce(
-      (acc, kw) => acc + (norm.includes(kw.toLowerCase()) ? 1 : 0),
-      0,
-    );
-    if (score > bestScore) {
-      bestScore = score;
-      best = report;
-    }
-  }
-  return best;
-}
