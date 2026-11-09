@@ -15,7 +15,11 @@ from app.repositories.asset_vault_repo import (
 from app.repositories.assets_repo import get_assets_data
 from app.repositories.brief_repo import get_brief, list_briefs
 from app.repositories.cognitive_repo import get_cognitive_data, get_dimensions_page
-from app.repositories.decisions_repo import get_decisions_data
+from app.repositories.decisions_repo import (
+    get_decisions_data,
+    get_theses_data,
+    get_thesis_history_data,
+)
 from app.repositories.discipline_repo import get_discipline_data
 from app.repositories.market_repo import get_market_data
 from app.repositories.overview_repo import (
@@ -121,6 +125,19 @@ def get_assets() -> dict:
 @api_router.get("/decisions")
 def get_decisions() -> dict:
     return {"decisions_data": get_decisions_data()}
+
+
+@api_router.get("/theses")
+def get_theses(asset_id: str | None = None) -> dict:
+    return {"theses": get_theses_data(asset_id=asset_id)}
+
+
+@api_router.get("/theses/{thesis_id}/history")
+def get_thesis_history(thesis_id: str) -> dict:
+    history = get_thesis_history_data(thesis_id)
+    if history is None:
+        raise HTTPException(status_code=404, detail={"error": "not found"})
+    return {"history": history}
 
 
 @api_router.get("/briefs")

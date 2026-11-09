@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 15422,
-      "prediction_events": 41240,
-      "notes": 1413,
+      "structured_views": 15524,
+      "prediction_events": 41405,
+      "notes": 1428,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-11-08T09:50:16.977768+00:00"
+      "generated_at": "2026-11-09T09:50:40.882635+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3586
+        "value": 3600
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2754
+        "value": 2776
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 8074
+        "value": 8131
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 426
+        "value": 429
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 582
+        "value": 588
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2796
+        "value": 2806
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3234
+        "value": 3251
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1829
+        "value": 1842
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 364
+        "value": 366
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 7199
+        "value": 7259
       }
     ],
     "source_contrib": [
@@ -74,19 +74,19 @@
       },
       {
         "name": "史诗级韭菜",
-        "views": 1163
+        "views": 1178
       },
       {
         "name": "旗帜鲜明",
-        "views": 1097
+        "views": 1113
       },
       {
         "name": "投机大拿",
-        "views": 995
+        "views": 1018
       },
       {
         "name": "笨笨的韭菜",
-        "views": 912
+        "views": 924
       },
       {
         "name": "趋势天哥",
@@ -98,11 +98,11 @@
       },
       {
         "name": "柏年说",
-        "views": 353
+        "views": 377
       },
       {
         "name": "土豆看财报",
-        "views": 279
+        "views": 291
       }
     ],
     "analyst_rank": [
@@ -122,24 +122,24 @@
         "samples": 4
       },
       {
+        "name": "土豆看财报",
+        "hit_rate": 0.6,
+        "samples": 20
+      },
+      {
+        "name": "旗帜鲜明",
+        "hit_rate": 0.5761,
+        "samples": 92
+      },
+      {
         "name": "李一恩",
         "hit_rate": 0.5674,
         "samples": 178
       },
       {
-        "name": "旗帜鲜明",
-        "hit_rate": 0.5618,
-        "samples": 89
-      },
-      {
         "name": "笨笨的韭菜",
         "hit_rate": 0.5366,
         "samples": 41
-      },
-      {
-        "name": "土豆看财报",
-        "hit_rate": 0.5333,
-        "samples": 15
       },
       {
         "name": "史诗级韭菜",
@@ -183,47 +183,38 @@
         "consensus": "neutral",
         "disagreement": 0.4706,
         "updated": "2026-08-06T16:18:41"
-      },
-      {
-        "entity": "新易盛（300502.SZ）",
-        "bullish": 106,
-        "bearish": 68,
-        "neutral": 117,
-        "consensus": "neutral",
-        "disagreement": 0.4503,
-        "updated": "2026-08-06T16:18:45"
       }
     ],
     "sample_views": [
       {
-        "analyst": "财联社",
-        "date": "2026-11-04",
-        "stance": "bullish",
-        "claim": "涉及资产：腾讯混元大模型（HUI3/HUI4）"
-      },
-      {
-        "analyst": "财联社",
-        "date": "2026-11-04",
-        "stance": "bullish",
-        "claim": "短线：中性偏多（纯题材炒作）🦀➡️"
-      },
-      {
-        "analyst": "财联社",
-        "date": "2026-11-04",
-        "stance": "bullish",
-        "claim": "涉及资产：创新药、CXO、医疗设备"
-      },
-      {
-        "analyst": "财联社",
-        "date": "2026-11-04",
+        "analyst": "笨笨的韭菜",
+        "date": "2026-11-08",
         "stance": "neutral",
-        "claim": "涉及资产：半导体设备板块"
+        "claim": "涉及资产：A股AI短剧出海概念股（主播提到某\"叫什么文化\"的股票但未想起全名，称其\"经常暴涨又跌回来\"\"不赚钱\"）"
       },
       {
-        "analyst": "财联社",
-        "date": "2026-11-04",
-        "stance": "bullish",
-        "claim": "短线：看多 🐂📈"
+        "analyst": "笨笨的韭菜",
+        "date": "2026-11-08",
+        "stance": "neutral",
+        "claim": "中长线：中性 🦀➡️（行业会越来越卷）"
+      },
+      {
+        "analyst": "笨笨的韭菜",
+        "date": "2026-11-08",
+        "stance": "neutral",
+        "claim": "短线：中性 🦀➡️（不参与）"
+      },
+      {
+        "analyst": "笨笨的韭菜",
+        "date": "2026-11-08",
+        "stance": "neutral",
+        "claim": "涉及资产：A股大盘"
+      },
+      {
+        "analyst": "笨笨的韭菜",
+        "date": "2026-11-08",
+        "stance": "neutral",
+        "claim": "中长线：中性 🦀➡️（宏观政策未出，谨慎）"
       }
     ]
   }

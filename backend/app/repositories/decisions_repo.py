@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import sys
 from datetime import datetime, timezone
 from typing import Any
 
+from app.config import SCRIPTS_PATH
 from app.repositories.overview_repo import DATABASE_PATH
 
 
@@ -17,6 +19,24 @@ HORIZON_LABELS = {
 
 def _database_uri() -> str:
     return f"file:{DATABASE_PATH.as_posix()}?mode=ro"
+
+
+def get_theses_data(asset_id: str | None = None) -> list[dict[str, Any]]:
+    scripts_path = str(SCRIPTS_PATH)
+    if scripts_path not in sys.path:
+        sys.path.insert(0, scripts_path)
+    from thesis_memory_agent import fetch_theses
+
+    return fetch_theses(db_path=DATABASE_PATH, asset_id=asset_id)
+
+
+def get_thesis_history_data(thesis_id: str) -> list[dict[str, Any]] | None:
+    scripts_path = str(SCRIPTS_PATH)
+    if scripts_path not in sys.path:
+        sys.path.insert(0, scripts_path)
+    from thesis_memory_agent import fetch_thesis_history
+
+    return fetch_thesis_history(thesis_id, db_path=DATABASE_PATH)
 
 
 def _text(value: Any, default: str = "") -> str:
