@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 15524,
-    "prediction_events": 41405,
-    "notes": 1428,
+    "structured_views": 15607,
+    "prediction_events": 41565,
+    "notes": 1439,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-11-09T09:50:40.221556+00:00"
+    "generated_at": "2026-11-10T09:50:56.309886+00:00"
   },
   "status": {
-    "last_checked": "2026-11-09 10:19",
+    "last_checked": "2026-11-10 10:17",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-11-09.md",
-    "generated_at": "2026-11-09T03:13:50.160238+00:00",
-    "summary": "- 主线：指数回暖，创新药与光模块领涨。 - 最大分歧：AI硬件短压与光模块估值修复并存。 - 盯盘：新易盛涨幅能否维持4%以上。 - 最大风险：黄金仓位集中、科技波动加剧。 - …",
+    "filename": "日报_2026-11-10.md",
+    "generated_at": "2026-11-10T03:28:26.360844+00:00",
+    "summary": "今日总览 - 主线：光模块盘中走强，科技反弹 - 最大分歧：指数偏多，科技持续性存疑 - 盯盘：今晚美国CPI及科技反弹能否延续 - 决策台提醒：无进行中决策，暂无验证项",
     "section_count": 8
   }
 }

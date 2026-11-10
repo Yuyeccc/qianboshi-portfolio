@@ -1,29 +1,29 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 15524,
-      "prediction_events": 41405,
-      "notes": 1428,
+      "structured_views": 15607,
+      "prediction_events": 41565,
+      "notes": 1439,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-11-09T09:50:40.882635+00:00"
+      "generated_at": "2026-11-10T09:50:57.422722+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3600
+        "value": 3628
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2776
+        "value": 2789
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 8131
+        "value": 8173
       },
       {
         "name": "watch",
@@ -40,27 +40,27 @@
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2806
+        "value": 2818
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3251
+        "value": 3269
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1842
+        "value": 1856
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 366
+        "value": 370
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 7259
+        "value": 7294
       }
     ],
     "source_contrib": [
@@ -78,11 +78,11 @@
       },
       {
         "name": "旗帜鲜明",
-        "views": 1113
+        "views": 1137
       },
       {
         "name": "投机大拿",
-        "views": 1018
+        "views": 1026
       },
       {
         "name": "笨笨的韭菜",
@@ -94,7 +94,7 @@
       },
       {
         "name": "李一恩",
-        "views": 699
+        "views": 720
       },
       {
         "name": "柏年说",
@@ -123,13 +123,13 @@
       },
       {
         "name": "土豆看财报",
-        "hit_rate": 0.6,
-        "samples": 20
+        "hit_rate": 0.6522,
+        "samples": 23
       },
       {
         "name": "旗帜鲜明",
-        "hit_rate": 0.5761,
-        "samples": 92
+        "hit_rate": 0.5745,
+        "samples": 94
       },
       {
         "name": "李一恩",
@@ -142,9 +142,9 @@
         "samples": 41
       },
       {
-        "name": "史诗级韭菜",
-        "hit_rate": 0.4444,
-        "samples": 18
+        "name": "柏年说",
+        "hit_rate": 0.5,
+        "samples": 22
       }
     ],
     "debate_cards": [
@@ -159,21 +159,21 @@
       },
       {
         "entity": "大盘",
-        "bullish": 162,
-        "bearish": 118,
-        "neutral": 263,
+        "bullish": 143,
+        "bearish": 119,
+        "neutral": 290,
         "consensus": "neutral",
-        "disagreement": 0.4162,
-        "updated": "2026-10-01T11:03:09"
+        "disagreement": 0.4212,
+        "updated": "2026-11-10T11:04:20"
       },
       {
         "entity": "低位",
-        "bullish": 77,
-        "bearish": 84,
-        "neutral": 217,
+        "bullish": 80,
+        "bearish": 82,
+        "neutral": 224,
         "consensus": "neutral",
-        "disagreement": 0.3899,
-        "updated": "2026-11-05T10:50:23"
+        "disagreement": 0.3951,
+        "updated": "2026-11-10T11:04:23"
       },
       {
         "entity": "国产替代",
@@ -187,34 +187,34 @@
     ],
     "sample_views": [
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-11-08",
+        "analyst": "财联社",
+        "date": "2026-11-09",
         "stance": "neutral",
-        "claim": "涉及资产：A股AI短剧出海概念股（主播提到某\"叫什么文化\"的股票但未想起全名，称其\"经常暴涨又跌回来\"\"不赚钱\"）"
+        "claim": "抄底/预测底部无意义——连7天均线都没上就谈不上止跌；预测底部和预测顶部一样，容易抄在半山腰或地板下还有十八层地狱。"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-11-08",
-        "stance": "neutral",
-        "claim": "中长线：中性 🦀➡️（行业会越来越卷）"
+        "analyst": "财联社",
+        "date": "2026-11-09",
+        "stance": "bearish",
+        "claim": "交易理念——顺势而为，跟随趋势与资金流向，找阻力小、有赚钱效应的方向；基本面归基本面、操作归操作，技术破位/放量下跌要减仓，不能以基本面为借口死拿；建立标准交易"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-11-08",
+        "analyst": "财联社",
+        "date": "2026-11-09",
         "stance": "neutral",
-        "claim": "短线：中性 🦀➡️（不参与）"
+        "claim": "确定性vs估值——确定性越高的板块（如电力、军工式明确增长）市场给的估值越低、越偏红利防御；想象空间大的科技类可给夸张估值。"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-11-08",
+        "analyst": "财联社",
+        "date": "2026-11-09",
         "stance": "neutral",
-        "claim": "涉及资产：A股大盘"
+        "claim": "机构预期悖论——11-12月机构年度路演给出明年预期，若预期极低，则明年一季报反而可能大幅超预期；若预期普遍乐观，则一季报不一定好。"
       },
       {
-        "analyst": "笨笨的韭菜",
-        "date": "2026-11-08",
+        "analyst": "财联社",
+        "date": "2026-11-09",
         "stance": "neutral",
-        "claim": "中长线：中性 🦀➡️（宏观政策未出，谨慎）"
+        "claim": "渗透率框架——行业渗透率达30-50%时会出现业绩驱动的大幅炒作；部分行业有两段行情（预期段+业绩段），第二段级别更高。"
       }
     ]
   }

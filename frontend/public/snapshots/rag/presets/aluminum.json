@@ -9,7 +9,7 @@
         "content": "仓位建议：不建议因涨了几个点就清仓，若担心回调可砍掉1/10或1/8仓位做后备队，但反对\"熬了大半年跌幅、涨几个点就跑\"的行为。",
         "source": "史诗级韭菜 BV1Sp4b6PEFA.md",
         "section": "精华总结",
-        "score": 0.7738,
+        "score": 0.7538,
         "raw_score": 0.4692,
         "type": "livestream"
       },
@@ -18,21 +18,12 @@
         "content": "## 观点分析",
         "source": "旗帜鲜明 BV1T7nQ6LEGP.md",
         "section": "观点分析",
-        "score": 0.5761,
+        "score": 0.5561,
         "raw_score": 0.4804,
         "type": "livestream"
       },
       {
         "rank": 3,
-        "content": "仓位建议：从节前一直强调到现在——把仓位控制住。",
-        "source": "趋势天哥 BV1V4Jy6AE4H.md",
-        "section": "精华总结",
-        "score": 0.3674,
-        "raw_score": 0.5368,
-        "type": "livestream"
-      },
-      {
-        "rank": 4,
         "content": "## 留下的思考\n\n复产是假的，锂价是不是该涨？还是说消息本身就是放出来砸盘的？",
         "source": "2026.7.4 枧下窝复产纯属瞎扯 短视频解读.md",
         "section": "留下的思考",
@@ -41,7 +32,7 @@
         "type": "short_video"
       },
       {
-        "rank": 5,
+        "rank": 4,
         "content": "## 精简版\n\n【核心判断】光通讯先跌了，半导体还撑着\n【关键区分】谣言恐慌→修复；机构出货→继续跌",
         "source": "2026.6.26 牛市是不是结束了 短视频解读.md",
         "section": "精简版",
@@ -50,13 +41,22 @@
         "type": "short_video"
       },
       {
-        "rank": 6,
+        "rank": 5,
         "content": "## 结论\n\n（需要结合当时具体数据判断，但核心思路是：板块极度拥挤时追高风险大）",
         "source": "2026.6.25 半导体再次进入逼空行情 短视频解读.md",
         "section": "结论",
         "score": 0.351,
         "raw_score": 0.4551,
         "type": "short_video"
+      },
+      {
+        "rank": 6,
+        "content": "仓位建议：从节前一直强调到现在——把仓位控制住。",
+        "source": "趋势天哥 BV1V4Jy6AE4H.md",
+        "section": "精华总结",
+        "score": 0.3474,
+        "raw_score": 0.5368,
+        "type": "livestream"
       },
       {
         "rank": 7,
