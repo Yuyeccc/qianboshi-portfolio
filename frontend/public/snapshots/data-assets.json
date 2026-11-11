@@ -1,66 +1,66 @@
 {
   "assets": {
     "metrics": {
-      "structured_views": 15607,
-      "prediction_events": 41565,
-      "notes": 1439,
+      "structured_views": 15751,
+      "prediction_events": 41795,
+      "notes": 1450,
       "rag_chunks": 11011,
       "analysts": 13,
       "asset_cards": 10,
-      "generated_at": "2026-11-10T09:50:57.422722+00:00"
+      "generated_at": "2026-11-11T09:50:57.918802+00:00"
     },
     "stance_dist": [
       {
         "name": "bullish",
         "label_zh": "看多",
-        "value": 3628
+        "value": 3665
       },
       {
         "name": "bearish",
         "label_zh": "看空",
-        "value": 2789
+        "value": 2805
       },
       {
         "name": "neutral",
         "label_zh": "中性",
-        "value": 8173
+        "value": 8253
       },
       {
         "name": "watch",
         "label_zh": "观察",
-        "value": 429
+        "value": 432
       },
       {
         "name": "risk",
         "label_zh": "风险",
-        "value": 588
+        "value": 596
       }
     ],
     "horizon_dist": [
       {
         "name": "intraday",
         "label_zh": "日内",
-        "value": 2818
+        "value": 2847
       },
       {
         "name": "short",
         "label_zh": "短期",
-        "value": 3269
+        "value": 3294
       },
       {
         "name": "medium",
         "label_zh": "中期",
-        "value": 1856
+        "value": 1868
       },
       {
         "name": "long",
         "label_zh": "长期",
-        "value": 370
+        "value": 372
       },
       {
         "name": "unknown",
         "label_zh": "未标注",
-        "value": 7294
+        "value": 7370
       }
     ],
     "source_contrib": [
@@ -70,19 +70,19 @@
       },
       {
         "name": "钱博士短视频",
-        "views": 1269
+        "views": 1275
       },
       {
         "name": "史诗级韭菜",
-        "views": 1178
+        "views": 1187
       },
       {
         "name": "旗帜鲜明",
-        "views": 1137
+        "views": 1172
       },
       {
         "name": "投机大拿",
-        "views": 1026
+        "views": 1066
       },
       {
         "name": "笨笨的韭菜",
@@ -90,11 +90,11 @@
       },
       {
         "name": "趋势天哥",
-        "views": 792
+        "views": 803
       },
       {
         "name": "李一恩",
-        "views": 720
+        "views": 744
       },
       {
         "name": "柏年说",
@@ -102,7 +102,7 @@
       },
       {
         "name": "土豆看财报",
-        "views": 291
+        "views": 310
       }
     ],
     "analyst_rank": [
@@ -112,14 +112,14 @@
         "samples": 34
       },
       {
-        "name": "财联社",
-        "hit_rate": 0.75,
-        "samples": 8
-      },
-      {
         "name": "马安强",
         "hit_rate": 0.75,
         "samples": 4
+      },
+      {
+        "name": "财联社",
+        "hit_rate": 0.7273,
+        "samples": 11
       },
       {
         "name": "土豆看财报",
@@ -127,14 +127,14 @@
         "samples": 23
       },
       {
-        "name": "旗帜鲜明",
-        "hit_rate": 0.5745,
-        "samples": 94
-      },
-      {
         "name": "李一恩",
         "hit_rate": 0.5674,
         "samples": 178
+      },
+      {
+        "name": "旗帜鲜明",
+        "hit_rate": 0.5612,
+        "samples": 98
       },
       {
         "name": "笨笨的韭菜",
@@ -159,62 +159,53 @@
       },
       {
         "entity": "大盘",
-        "bullish": 143,
-        "bearish": 119,
-        "neutral": 290,
+        "bullish": 162,
+        "bearish": 124,
+        "neutral": 309,
         "consensus": "neutral",
-        "disagreement": 0.4212,
-        "updated": "2026-11-10T11:04:20"
+        "disagreement": 0.4066,
+        "updated": "2026-11-11T10:52:56"
       },
       {
         "entity": "低位",
-        "bullish": 80,
-        "bearish": 82,
-        "neutral": 224,
+        "bullish": 88,
+        "bearish": 84,
+        "neutral": 237,
         "consensus": "neutral",
-        "disagreement": 0.3951,
-        "updated": "2026-11-10T11:04:23"
-      },
-      {
-        "entity": "国产替代",
-        "bullish": 98,
-        "bearish": 76,
-        "neutral": 130,
-        "consensus": "neutral",
-        "disagreement": 0.4706,
-        "updated": "2026-08-06T16:18:41"
+        "disagreement": 0.3898,
+        "updated": "2026-11-11T10:53:00"
       }
     ],
     "sample_views": [
       {
-        "analyst": "财联社",
-        "date": "2026-11-09",
+        "analyst": "李一恩",
+        "date": "2026-11-10",
         "stance": "neutral",
-        "claim": "抄底/预测底部无意义——连7天均线都没上就谈不上止跌；预测底部和预测顶部一样，容易抄在半山腰或地板下还有十八层地狱。"
+        "claim": "关于\"正规市场\"——世界上没有什么正规市场，以兄弟们的能力去美股也是死。过去20年涨得最多的是加密市场，但在加密市场破产的人也最多。"
       },
       {
-        "analyst": "财联社",
-        "date": "2026-11-09",
+        "analyst": "李一恩",
+        "date": "2026-11-10",
+        "stance": "neutral",
+        "claim": "当\"穷哥们\"（大众）开始相信你、吹捧你的时候，就要怀疑自己了，应该赶紧跑。不需要获得大众的认同，巴菲特也不被这帮人认同。"
+      },
+      {
+        "analyst": "李一恩",
+        "date": "2026-11-10",
+        "stance": "neutral",
+        "claim": "不要被道德绑架做交易。本轮问题之一是当时被道德绑架（大家希望你站出来）而继续持仓，遇到极端行情。下次不会被道德绑架。"
+      },
+      {
+        "analyst": "李一恩",
+        "date": "2026-11-10",
+        "stance": "neutral",
+        "claim": "交易纪律——涨上去后先卖本金，留利润在里面玩，最后格局到最后有多少是多少。本轮教训是顶部没执行每天卖5%的纪律。"
+      },
+      {
+        "analyst": "李一恩",
+        "date": "2026-11-10",
         "stance": "bearish",
-        "claim": "交易理念——顺势而为，跟随趋势与资金流向，找阻力小、有赚钱效应的方向；基本面归基本面、操作归操作，技术破位/放量下跌要减仓，不能以基本面为借口死拿；建立标准交易"
-      },
-      {
-        "analyst": "财联社",
-        "date": "2026-11-09",
-        "stance": "neutral",
-        "claim": "确定性vs估值——确定性越高的板块（如电力、军工式明确增长）市场给的估值越低、越偏红利防御；想象空间大的科技类可给夸张估值。"
-      },
-      {
-        "analyst": "财联社",
-        "date": "2026-11-09",
-        "stance": "neutral",
-        "claim": "机构预期悖论——11-12月机构年度路演给出明年预期，若预期极低，则明年一季报反而可能大幅超预期；若预期普遍乐观，则一季报不一定好。"
-      },
-      {
-        "analyst": "财联社",
-        "date": "2026-11-09",
-        "stance": "neutral",
-        "claim": "渗透率框架——行业渗透率达30-50%时会出现业绩驱动的大幅炒作；部分行业有两段行情（预期段+业绩段），第二段级别更高。"
+        "claim": "参考纳斯达克2000-2010年\"失去的十年\"——2000年互联网泡沫见顶后从5000点跌到1000点，之后连续10年周线级别慢慢修复，科技股有涨但一直在修复下"
       }
     ]
   }

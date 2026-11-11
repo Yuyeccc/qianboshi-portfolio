@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 15607,
-    "prediction_events": 41565,
-    "notes": 1439,
+    "structured_views": 15751,
+    "prediction_events": 41795,
+    "notes": 1450,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-11-10T09:50:56.309886+00:00"
+    "generated_at": "2026-11-11T09:50:57.271507+00:00"
   },
   "status": {
-    "last_checked": "2026-11-10 10:17",
+    "last_checked": "2026-11-11 10:18",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-11-10.md",
-    "generated_at": "2026-11-10T03:28:26.360844+00:00",
-    "summary": "今日总览 - 主线：光模块盘中走强，科技反弹 - 最大分歧：指数偏多，科技持续性存疑 - 盯盘：今晚美国CPI及科技反弹能否延续 - 决策台提醒：无进行中决策，暂无验证项",
+    "filename": "日报_2026-11-11.md",
+    "generated_at": "2026-11-11T03:15:32.087260+00:00",
+    "summary": "主线：光模块领涨，半导体表现分化。 最大分歧：短线强反弹与中期偏空观点冲突。 盯盘：光模块涨幅能否维持、黄金4000关口。 决策台提醒：进行中0条，验证状态不适用。",
     "section_count": 8
   }
 }
