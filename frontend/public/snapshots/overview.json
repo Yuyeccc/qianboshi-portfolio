@@ -1,22 +1,22 @@
 {
   "metrics": {
-    "structured_views": 15872,
-    "prediction_events": 42015,
-    "notes": 1461,
+    "structured_views": 15991,
+    "prediction_events": 42210,
+    "notes": 1469,
     "rag_chunks": 11011,
     "source_count": 7,
-    "generated_at": "2026-11-12T09:50:18.576540+00:00"
+    "generated_at": "2026-11-13T09:50:31.583186+00:00"
   },
   "status": {
-    "last_checked": "2026-11-12 10:18",
+    "last_checked": "2026-11-13 10:17",
     "detected_today": 8,
     "source_count": 7,
     "pipeline_running": true
   },
   "latest_brief": {
-    "filename": "日报_2026-11-12.md",
-    "generated_at": "2026-11-12T02:54:45.073193+00:00",
-    "summary": "- 主线：半导体设备、光模块领涨科技反弹 - 最大分歧：大盘处于底部区间，短线仍有回踩争议 - 盯盘：科技放量持续性及证券能否带来增量 - 最大风险：黄金仓位集中，科技反弹尚未确认…",
+    "filename": "日报_2026-11-13.md",
+    "generated_at": "2026-11-13T02:45:02.690786+00:00",
+    "summary": "- 主线：指数分化，半导体设备逆势活跃 - 最大分歧：科技短线反弹与中期下行并存 - 盯盘：深成指跌幅、科技硬件承接与黄金 - 最大风险：成长板块调整及组合集中度 - 决策台提醒：…",
     "section_count": 8
   }
 }
